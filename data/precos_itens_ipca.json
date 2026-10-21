@@ -1,0 +1,135 @@
+{
+  "fonte": "IBGE/SIDRA tabelas 1419 e 7060 (variação mensal do IPCA encadeada)",
+  "itens": [
+    {
+      "codigo": "7171",
+      "item": "Alimentação no domicílio",
+      "grupo": "Agregado",
+      "variacao_bolsonaro_pct": 56.1,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 14.0,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7173",
+      "item": "Arroz",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 56.9,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 3.9,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "12222",
+      "item": "Feijão-carioca",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 112.8,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 3.0,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7283",
+      "item": "Carnes",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 72.6,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 18.5,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7291",
+      "item": "Contrafilé",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 71.3,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 20.3,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "12393",
+      "item": "Leite longa vida",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 63.5,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 21.2,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7392",
+      "item": "Café moído",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 70.1,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 44.3,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7375",
+      "item": "Pão francês",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 33.8,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 18.1,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7385",
+      "item": "Óleo de soja",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 140.7,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": -12.2,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7355",
+      "item": "Ovo de galinha",
+      "grupo": "Alimento",
+      "variacao_bolsonaro_pct": 71.5,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": -0.6,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7657",
+      "item": "Gasolina",
+      "grupo": "Energia",
+      "variacao_bolsonaro_pct": 13.7,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 32.2,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7482",
+      "item": "Gás de botijão",
+      "grupo": "Energia",
+      "variacao_bolsonaro_pct": 61.0,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 5.6,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    },
+    {
+      "codigo": "7485",
+      "item": "Energia elétrica residencial",
+      "grupo": "Energia",
+      "variacao_bolsonaro_pct": 12.5,
+      "meses_bolsonaro": 48,
+      "variacao_lula_pct": 30.5,
+      "meses_lula": 45,
+      "ultimo_mes": "202609"
+    }
+  ]
+}

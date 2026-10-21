@@ -1,0 +1,74 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-20",
+    "nota": "Séries trimestrais de desemprego e renda por sexo e cor/raça vêm da API do IBGE (arquivo minorias_pnad.json, gerado pelo build_database.py)."
+  },
+  "homicidios_negros": {
+    "fonte": "Atlas da Violência 2025 (Ipea/FBSP) e Anuário Brasileiro de Segurança Pública 2026",
+    "url": "https://www.poder360.com.br/poder-pesquisas/pessoas-negras-sao-77-dos-homicidios-no-brasil/",
+    "destaques": [
+      {
+        "indicador": "Vítimas de homicídio que eram negras (2023)",
+        "valor": "77,0%",
+        "detalhe": "35.213 de 45.747 homicídios"
+      },
+      {
+        "indicador": "Taxa de homicídio de negros x não negros (2023)",
+        "valor": "28,9 x 10,6",
+        "detalhe": "por 100 mil habitantes"
+      },
+      {
+        "indicador": "Risco relativo de um negro ser assassinado",
+        "valor": "2,7x",
+        "detalhe": "2,4x em 2013; 2,8x em 2022 — a desigualdade cresceu na década"
+      },
+      {
+        "indicador": "Vítimas negras de mortes por intervenção policial (2025)",
+        "valor": "82%",
+        "detalhe": "Anuário 2026; 79,9% dos homicídios dolosos"
+      }
+    ]
+  },
+  "pessoas_trans": {
+    "fonte": "ANTRA — Dossiês anuais de assassinatos de pessoas trans",
+    "url": "https://www.band.com.br/noticias/80-pessoas-trans-e-travestis-foram-assassinadas-no-brasil-em-2025-202601260814",
+    "nota": "A ANTRA alerta para subnotificação: em 2025 os assassinatos caíram, mas as tentativas de homicídio subiram. O Brasil lidera o ranking mundial pelo 18º ano. 2021 não confirmado nesta revisão.",
+    "serie": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "assassinatos": 124
+      },
+      {
+        "ano": 2020,
+        "governo": "Bolsonaro",
+        "assassinatos": 175
+      },
+      {
+        "ano": 2021,
+        "governo": "Bolsonaro",
+        "assassinatos": null
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "assassinatos": 131
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "assassinatos": 145
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "assassinatos": 122
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "assassinatos": 80
+      }
+    ]
+  }
+}

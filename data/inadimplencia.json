@@ -1,0 +1,49 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-20",
+    "nota": "A série mensal oficial da carteira de crédito (Banco Central) está em inadimplencia_bcb.json. Os pontos abaixo são as únicas medições de pessoas e famílias com contas em atraso que conseguimos confirmar em fonte pública; não formam série contínua."
+  },
+  "pessoas_e_familias": [
+    {
+      "fonte": "CNC — Peic (famílias com contas em atraso)",
+      "ponto": "Out/2022",
+      "valor": "30,3%",
+      "detalhe": "Recorde da série na época",
+      "url": "https://maisretorno.com/portal/brasil-tem-recorde-de-303-das-familias-inadimplentes-em-outubro-mostra-cnc"
+    },
+    {
+      "fonte": "CNC — Peic (famílias com contas em atraso)",
+      "ponto": "Abr/2025",
+      "valor": "29,1%",
+      "detalhe": "",
+      "url": "https://www12.senado.leg.br/noticias/infomaterias/2026/05/dividas-em-recorde-assombram-as-familias-brasileiras"
+    },
+    {
+      "fonte": "CNC — Peic (famílias com contas em atraso)",
+      "ponto": "Abr/2026",
+      "valor": "29,7%",
+      "detalhe": "12,3% dessas famílias dizem que não conseguirão quitar as dívidas",
+      "url": "https://www12.senado.leg.br/noticias/infomaterias/2026/05/dividas-em-recorde-assombram-as-familias-brasileiras"
+    },
+    {
+      "fonte": "Serasa Experian (pessoas negativadas)",
+      "ponto": "Fev/2026",
+      "valor": "81,7 milhões",
+      "detalhe": "Alta de 38,1% em dez anos",
+      "url": "https://www.serasa.com.br/imprensa/10-anos-do-mapa-de-inadimplencia/"
+    },
+    {
+      "fonte": "Serasa Experian (pessoas negativadas)",
+      "ponto": "Ago/2026",
+      "valor": "≈ 84 milhões",
+      "detalhe": "Maior número da série, após 20 meses seguidos de alta (fontes citam 83,9 e 84,0 milhões)",
+      "url": "https://www.serasaexperian.com.br/conteudos/indicadores-economicos/"
+    }
+  ],
+  "desenrola": {
+    "fonte": "Ministério da Fazenda e B3, via Istoé Dinheiro (balanço intermediário de dez/2023)",
+    "url": "https://istoedinheiro.com.br/desenrola-aponta-renegociacao-r-29-bi-dividas",
+    "resumo": "10,7 milhões de pessoas renegociaram R$ 29 bilhões até dez/2023; na faixa 2, 1 milhão de pessoas renegociaram R$ 5 bi com descontos médios de 90% à vista e 85% parcelado.",
+    "desenrola_3": "Desenrola 3 (2026): R$ 150 bi em dívidas elegíveis, desconto mínimo de 90% e dívidas de até R$ 10 mil (Ranking dos Políticos, 15/10/2026)."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "custo_dieese_sp": [
+    {
+      "ano": 2018,
+      "governo": "Base",
+      "valor_cesta_sp": 467.41,
+      "horas_trabalho_necessarias": 108.6,
+      "pct_salario_minimo": 48.9
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro",
+      "valor_cesta_sp": 506.5,
+      "horas_trabalho_necessarias": 111.7,
+      "pct_salario_minimo": 50.8
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro",
+      "valor_cesta_sp": 631.46,
+      "horas_trabalho_necessarias": 133.1,
+      "pct_salario_minimo": 60.4
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro",
+      "valor_cesta_sp": 690.52,
+      "horas_trabalho_necessarias": 138.1,
+      "pct_salario_minimo": 62.8
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro",
+      "valor_cesta_sp": 791.29,
+      "horas_trabalho_necessarias": 143.6,
+      "pct_salario_minimo": 65.3
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula",
+      "valor_cesta_sp": 772.51,
+      "horas_trabalho_necessarias": 128.8,
+      "pct_salario_minimo": 58.5
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula",
+      "valor_cesta_sp": 810.15,
+      "horas_trabalho_necessarias": 126.2,
+      "pct_salario_minimo": 57.4
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula",
+      "valor_cesta_sp": 835.4,
+      "horas_trabalho_necessarias": 121.1,
+      "pct_salario_minimo": 55.0
+    }
+  ],
+  "poder_compra_salario_minimo": {
+    "descricao": "Quantas cestas básicas (São Paulo, DIEESE) o salário mínimo compra",
+    "agosto_2022": 1.62,
+    "agosto_2026": 1.8,
+    "minimo_governo_bolsonaro": {
+      "valor": 1.5,
+      "mes": "abr/2022"
+    },
+    "fonte": "Agência Lupa e Ranking dos Políticos, checagens do debate da Band (18/10/2026), com dados do DIEESE"
+  },
+  "nota": "Valores anuais do DIEESE (cesta de São Paulo, dezembro de cada ano). Variação de preços de alimentos específicos passou a ser calculada diretamente do IPCA oficial (arquivo precos_itens_ipca.json)."
+}

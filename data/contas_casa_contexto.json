@@ -1,0 +1,40 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-20"
+  },
+  "bandeiras_2025": {
+    "fonte": "Aneel, via Tribuna de Minas (02/09/2025)",
+    "url": "https://tribunademinas.com.br/noticias/economia/02-09-2025/bandeira-vermelha-conta-de-luz.html",
+    "itens": [
+      {
+        "periodo": "Início de 2025",
+        "bandeira": "Verde/amarela",
+        "acrescimo": "R$ 0 a R$ 1,88 por 100 kWh"
+      },
+      {
+        "periodo": "Jun e jul/2025",
+        "bandeira": "Vermelha 1",
+        "acrescimo": "R$ 4,46 por 100 kWh"
+      },
+      {
+        "periodo": "Ago e set/2025",
+        "bandeira": "Vermelha 2",
+        "acrescimo": "R$ 7,87 por 100 kWh"
+      }
+    ],
+    "motivo": "Baixo nível dos reservatórios das hidrelétricas, que obriga o uso de termelétricas, mais caras."
+  },
+  "tarifa_social": {
+    "fonte": "Governo federal, via Cenário Energia",
+    "url": "https://cenarioenergia.com.br/2025/07/07/programa-luz-do-povo-entra-em-vigor-e-garante-energia-gratuita-para-60-milhoes-de-brasileiros/",
+    "resumo": "Desde 5/jul/2025, famílias do CadÚnico com renda de até meio salário mínimo per capita e consumo de até 80 kWh/mês têm isenção da energia, sem pedir nada. Custo estimado de até R$ 10 bi/ano, pago pela CDE (encargo na conta de todos os consumidores)."
+  },
+  "saneamento_marco_legal": {
+    "meta": "99% da população com água e 90% com coleta e tratamento de esgoto até 2033 (Lei 14.026/2020).",
+    "estudo": "Trata Brasil e GO Associados (jul/2026): 51 projetos de concessão, PPP e desestatização entre 2020 e 2026, com cerca de R$ 423,5 bi em investimentos previstos e 2,4 mil municípios; o Brasil investiu cerca de R$ 29,1 bi em 2024. Conclusão: o país não cumprirá as metas de 2033.",
+    "url_estudo": "https://www.conjur.com.br/2026-jul-16/investimento-em-saneamento-e-insuficiente-para-cumprir-meta-ate-2033/",
+    "cobertura_trata_brasil": "Dados de 2025 (SNIS/SINISA): cerca de 83% a 85% da população com água tratada, 55% a 56% com coleta de esgoto e 45% a 46% do esgoto gerado tratado. A metodologia mudou do SNIS para o SINISA em 2024, o que afeta a comparação entre anos.",
+    "url_cobertura": "https://capitalaberto.com.br/empresas/2026/09/saneamento-busca-folego-para-cumprir-meta-de-2033",
+    "gargalo": "Para o analista da Fitch citado pela Capital Aberto, \"o gargalo não é o dinheiro, é a bancabilidade\" dos projetos; juros altos encarecem o crédito do setor."
+  }
+}

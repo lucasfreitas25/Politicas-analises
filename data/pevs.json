@@ -1,0 +1,447 @@
+{
+  "silvicultura": [
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 16338707.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 4077824.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 2135631.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 9724125.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 5103263.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 15505640.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 3924562.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 2162429.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 8995345.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 4581148.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 18906850.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 5406653.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 2288531.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 10721878.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 5810540.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 23869851.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 6585170.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 2659456.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 13555627.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 7229365.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 27914703.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 7027982.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 3537023.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 16432007.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 9789696.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 31723951.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 7491956.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 4260225.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 19403367.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 11656805.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 37788378.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 7983393.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 4580101.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 24572816.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 15141641.0
+    }
+  ],
+  "extracao": [
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 4182804.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 592039.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 399783.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 24908.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 4469054.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 589351.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 403226.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 28358.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 4729968.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 694306.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 559701.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 40984.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 6220926.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 770972.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 761864.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 44420.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 6202850.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 830126.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 648425.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 51800.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 6222803.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 853147.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 589566.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 66704.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 7119436.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 959129.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 578805.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 76780.0
+    }
+  ]
+}

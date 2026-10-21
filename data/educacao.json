@@ -1,0 +1,139 @@
+{
+  "ideb": [
+    {
+      "ano": 2017,
+      "governo": "Temer",
+      "anos_iniciais": 5.8,
+      "anos_finais": 4.7,
+      "ensino_medio": 3.8
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro",
+      "anos_iniciais": 5.9,
+      "anos_finais": 4.9,
+      "ensino_medio": 4.2
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro",
+      "anos_iniciais": 5.8,
+      "anos_finais": 5.1,
+      "ensino_medio": 4.2
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula",
+      "anos_iniciais": 6.0,
+      "anos_finais": 5.0,
+      "ensino_medio": 4.3
+    }
+  ],
+  "analfabetismo_pnadc": [
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "taxa_analfabetismo_15mais": 6.3
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro",
+      "taxa_analfabetismo_15mais": 6.1
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro",
+      "taxa_analfabetismo_15mais": 5.6
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula",
+      "taxa_analfabetismo_15mais": 5.4
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula",
+      "taxa_analfabetismo_15mais": 5.3
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula",
+      "taxa_analfabetismo_15mais": 4.9
+    }
+  ],
+  "orcamento_mec_bi_reais": [
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro",
+      "orcamento_pago": 118.5,
+      "orcamento_discricionario": 20.8
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro",
+      "orcamento_pago": 116.3,
+      "orcamento_discricionario": 18.2
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro",
+      "orcamento_pago": 117.9,
+      "orcamento_discricionario": 17.5
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro",
+      "orcamento_pago": 121.2,
+      "orcamento_discricionario": 19.1
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula",
+      "orcamento_pago": 142.8,
+      "orcamento_discricionario": 24.6
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula",
+      "orcamento_pago": 158.4,
+      "orcamento_discricionario": 27.2
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula",
+      "orcamento_pago": 169.5,
+      "orcamento_discricionario": 29.8
+    }
+  ],
+  "programas_impacto": [
+    {
+      "governo": "Bolsonaro",
+      "programa": "Novo FUNDEB (EC 108/2020)",
+      "descricao": "Tornou o Fundo permanente na Constituição e elevou a complementação da União de 10% para 23% até 2026.",
+      "pontos_positivos": "Maior aporte histórico de recursos para educação básica municipal e estadual.",
+      "criticas": "Articulação foi amplamente liderada pelo Congresso Nacional com resistências iniciais da equipe econômica governamental."
+    },
+    {
+      "governo": "Bolsonaro",
+      "programa": "Escolas Cívico-Militares (PECIM)",
+      "descricao": "Incentivo a modelos de gestão compartilhada com militares em escolas públicas.",
+      "pontos_positivos": "Aprovação de parte das comunidades escolares onde foi implantado por foco em disciplina.",
+      "criticas": "Baixo alcance estrutural (cerca de 200 escolas em todo o país) e descontinuidade de diretrizes pedagógicas inclusivas."
+    },
+    {
+      "governo": "Lula",
+      "programa": "Programa Pé-de-Meia (Lei 14.818/2024)",
+      "descricao": "Poupança e incentivo financeiro mensal de até R$ 200 + bônus de aprovação de R$ 1.000/ano para estudantes do ensino médio público de famílias do CadÚnico.",
+      "pontos_positivos": "Ataque direto à evasão escolar no ensino médio, que atinge cerca de 500 mil jovens por ano; incentivo à conclusão.",
+      "criticas": "Custo fiscal elevado (cerca de R$ 7 a 8 bilhões/ano) fora dos limites orçamentários convencionais via fundos privados."
+    },
+    {
+      "governo": "Lula",
+      "programa": "Compromisso Nacional Criança Alfabetizada",
+      "descricao": "Articulação com estados e municípios com foco em garantir que 100% das crianças estejam alfabetizadas ao final do 2º ano do ensino fundamental.",
+      "pontos_positivos": "Retomada da pactuação federativa e recuperação das perdas causadas pelo fechamento das escolas na pandemia.",
+      "criticas": "Resultados dependem de execução na ponta pelas prefeituras e requerem anos para aferição no Saeb."
+    }
+  ],
+  "nota_analfabetismo": "IBGE, PNAD Contínua Educação (SIDRA 7113). Não houve coleta do módulo em 2020 e 2021 (pandemia)."
+}

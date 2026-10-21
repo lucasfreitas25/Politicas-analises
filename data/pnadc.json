@@ -1,0 +1,1023 @@
+{
+  "series_mensal": [
+    {
+      "periodo_codigo": "201809",
+      "periodo": "jul-ago-set 2018",
+      "ano": 2018,
+      "governo": "Temer/Anterior",
+      "taxa_desocupacao": 12.0,
+      "rendimento_medio_real": 3326.0,
+      "massa_rendimento_real_milhoes": 297260.0,
+      "populacao_ocupada_mil": 181067.0
+    },
+    {
+      "periodo_codigo": "201810",
+      "periodo": "ago-set-out 2018",
+      "ano": 2018,
+      "governo": "Temer/Anterior",
+      "taxa_desocupacao": 11.8,
+      "rendimento_medio_real": 3329.0,
+      "massa_rendimento_real_milhoes": 298687.0,
+      "populacao_ocupada_mil": 181774.0
+    },
+    {
+      "periodo_codigo": "201811",
+      "periodo": "set-out-nov 2018",
+      "ano": 2018,
+      "governo": "Temer/Anterior",
+      "taxa_desocupacao": 11.7,
+      "rendimento_medio_real": 3331.0,
+      "massa_rendimento_real_milhoes": 299948.0,
+      "populacao_ocupada_mil": 182352.0
+    },
+    {
+      "periodo_codigo": "201812",
+      "periodo": "out-nov-dez 2018",
+      "ano": 2018,
+      "governo": "Temer/Anterior",
+      "taxa_desocupacao": 11.7,
+      "rendimento_medio_real": 3351.0,
+      "massa_rendimento_real_milhoes": 301508.0,
+      "populacao_ocupada_mil": 182200.0
+    },
+    {
+      "periodo_codigo": "201901",
+      "periodo": "nov-dez-jan 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.2,
+      "rendimento_medio_real": 3371.0,
+      "massa_rendimento_real_milhoes": 301684.0,
+      "populacao_ocupada_mil": 181216.0
+    },
+    {
+      "periodo_codigo": "201902",
+      "periodo": "dez-jan-fev 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.5,
+      "rendimento_medio_real": 3383.0,
+      "massa_rendimento_real_milhoes": 301358.0,
+      "populacao_ocupada_mil": 180387.0
+    },
+    {
+      "periodo_codigo": "201903",
+      "periodo": "jan-fev-mar 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.8,
+      "rendimento_medio_real": 3369.0,
+      "massa_rendimento_real_milhoes": 299911.0,
+      "populacao_ocupada_mil": 180297.0
+    },
+    {
+      "periodo_codigo": "201904",
+      "periodo": "fev-mar-abr 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.6,
+      "rendimento_medio_real": 3351.0,
+      "massa_rendimento_real_milhoes": 300285.0,
+      "populacao_ocupada_mil": 181463.0
+    },
+    {
+      "periodo_codigo": "201905",
+      "periodo": "mar-abr-mai 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.4,
+      "rendimento_medio_real": 3328.0,
+      "massa_rendimento_real_milhoes": 299752.0,
+      "populacao_ocupada_mil": 182485.0
+    },
+    {
+      "periodo_codigo": "201906",
+      "periodo": "abr-mai-jun 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.1,
+      "rendimento_medio_real": 3328.0,
+      "massa_rendimento_real_milhoes": 300879.0,
+      "populacao_ocupada_mil": 183186.0
+    },
+    {
+      "periodo_codigo": "201907",
+      "periodo": "mai-jun-jul 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.9,
+      "rendimento_medio_real": 3320.0,
+      "massa_rendimento_real_milhoes": 300788.0,
+      "populacao_ocupada_mil": 183585.0
+    },
+    {
+      "periodo_codigo": "201908",
+      "periodo": "jun-jul-ago 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.9,
+      "rendimento_medio_real": 3333.0,
+      "massa_rendimento_real_milhoes": 302477.0,
+      "populacao_ocupada_mil": 183812.0
+    },
+    {
+      "periodo_codigo": "201909",
+      "periodo": "jul-ago-set 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.9,
+      "rendimento_medio_real": 3333.0,
+      "massa_rendimento_real_milhoes": 303347.0,
+      "populacao_ocupada_mil": 184315.0
+    },
+    {
+      "periodo_codigo": "201910",
+      "periodo": "ago-set-out 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.7,
+      "rendimento_medio_real": 3357.0,
+      "massa_rendimento_real_milhoes": 306575.0,
+      "populacao_ocupada_mil": 184905.0
+    },
+    {
+      "periodo_codigo": "201911",
+      "periodo": "set-out-nov 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.3,
+      "rendimento_medio_real": 3372.0,
+      "massa_rendimento_real_milhoes": 309255.0,
+      "populacao_ocupada_mil": 185651.0
+    },
+    {
+      "periodo_codigo": "201912",
+      "periodo": "out-nov-dez 2019",
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.1,
+      "rendimento_medio_real": 3361.0,
+      "massa_rendimento_real_milhoes": 308692.0,
+      "populacao_ocupada_mil": 185864.0
+    },
+    {
+      "periodo_codigo": "202001",
+      "periodo": "nov-dez-jan 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.3,
+      "rendimento_medio_real": 3369.0,
+      "massa_rendimento_real_milhoes": 308260.0,
+      "populacao_ocupada_mil": 185122.0
+    },
+    {
+      "periodo_codigo": "202002",
+      "periodo": "dez-jan-fev 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.7,
+      "rendimento_medio_real": 3372.0,
+      "massa_rendimento_real_milhoes": 307069.0,
+      "populacao_ocupada_mil": 184230.0
+    },
+    {
+      "periodo_codigo": "202003",
+      "periodo": "jan-fev-mar 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.4,
+      "rendimento_medio_real": 3399.0,
+      "massa_rendimento_real_milhoes": 304456.0,
+      "populacao_ocupada_mil": 181158.0
+    },
+    {
+      "periodo_codigo": "202004",
+      "periodo": "fev-mar-abr 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.7,
+      "rendimento_medio_real": 3436.0,
+      "massa_rendimento_real_milhoes": 297782.0,
+      "populacao_ocupada_mil": 175320.0
+    },
+    {
+      "periodo_codigo": "202005",
+      "periodo": "mar-abr-mai 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 13.1,
+      "rendimento_medio_real": 3493.0,
+      "massa_rendimento_real_milhoes": 291043.0,
+      "populacao_ocupada_mil": 168621.0
+    },
+    {
+      "periodo_codigo": "202006",
+      "periodo": "abr-mai-jun 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 13.6,
+      "rendimento_medio_real": 3546.0,
+      "massa_rendimento_real_milhoes": 286323.0,
+      "populacao_ocupada_mil": 163409.0
+    },
+    {
+      "periodo_codigo": "202007",
+      "periodo": "mai-jun-jul 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.1,
+      "rendimento_medio_real": 3588.0,
+      "massa_rendimento_real_milhoes": 284853.0,
+      "populacao_ocupada_mil": 160729.0
+    },
+    {
+      "periodo_codigo": "202008",
+      "periodo": "jun-jul-ago 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.8,
+      "rendimento_medio_real": 3583.0,
+      "massa_rendimento_real_milhoes": 283695.0,
+      "populacao_ocupada_mil": 160364.0
+    },
+    {
+      "periodo_codigo": "202009",
+      "periodo": "jul-ago-set 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.9,
+      "rendimento_medio_real": 3586.0,
+      "massa_rendimento_real_milhoes": 286665.0,
+      "populacao_ocupada_mil": 161962.0
+    },
+    {
+      "periodo_codigo": "202010",
+      "periodo": "ago-set-out 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.6,
+      "rendimento_medio_real": 3533.0,
+      "massa_rendimento_real_milhoes": 288765.0,
+      "populacao_ocupada_mil": 165580.0
+    },
+    {
+      "periodo_codigo": "202011",
+      "periodo": "set-out-nov 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.3,
+      "rendimento_medio_real": 3495.0,
+      "massa_rendimento_real_milhoes": 290003.0,
+      "populacao_ocupada_mil": 168075.0
+    },
+    {
+      "periodo_codigo": "202012",
+      "periodo": "out-nov-dez 2020",
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.2,
+      "rendimento_medio_real": 3442.0,
+      "massa_rendimento_real_milhoes": 287856.0,
+      "populacao_ocupada_mil": 169375.0
+    },
+    {
+      "periodo_codigo": "202101",
+      "periodo": "nov-dez-jan 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.4,
+      "rendimento_medio_real": 3434.0,
+      "massa_rendimento_real_milhoes": 287038.0,
+      "populacao_ocupada_mil": 169304.0
+    },
+    {
+      "periodo_codigo": "202102",
+      "periodo": "dez-jan-fev 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.6,
+      "rendimento_medio_real": 3403.0,
+      "massa_rendimento_real_milhoes": 284803.0,
+      "populacao_ocupada_mil": 169483.0
+    },
+    {
+      "periodo_codigo": "202103",
+      "periodo": "jan-fev-mar 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.9,
+      "rendimento_medio_real": 3412.0,
+      "massa_rendimento_real_milhoes": 284850.0,
+      "populacao_ocupada_mil": 169056.0
+    },
+    {
+      "periodo_codigo": "202104",
+      "periodo": "fev-mar-abr 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.8,
+      "rendimento_medio_real": 3371.0,
+      "massa_rendimento_real_milhoes": 282861.0,
+      "populacao_ocupada_mil": 169855.0
+    },
+    {
+      "periodo_codigo": "202105",
+      "periodo": "mar-abr-mai 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.7,
+      "rendimento_medio_real": 3368.0,
+      "massa_rendimento_real_milhoes": 284687.0,
+      "populacao_ocupada_mil": 171132.0
+    },
+    {
+      "periodo_codigo": "202106",
+      "periodo": "abr-mai-jun 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 14.2,
+      "rendimento_medio_real": 3316.0,
+      "massa_rendimento_real_milhoes": 284194.0,
+      "populacao_ocupada_mil": 173541.0
+    },
+    {
+      "periodo_codigo": "202107",
+      "periodo": "mai-jun-jul 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 13.7,
+      "rendimento_medio_real": 3285.0,
+      "massa_rendimento_real_milhoes": 285628.0,
+      "populacao_ocupada_mil": 176034.0
+    },
+    {
+      "periodo_codigo": "202108",
+      "periodo": "jun-jul-ago 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 13.2,
+      "rendimento_medio_real": 3238.0,
+      "massa_rendimento_real_milhoes": 284887.0,
+      "populacao_ocupada_mil": 178102.0
+    },
+    {
+      "periodo_codigo": "202109",
+      "periodo": "jul-ago-set 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.7,
+      "rendimento_medio_real": 3181.0,
+      "massa_rendimento_real_milhoes": 283723.0,
+      "populacao_ocupada_mil": 180548.0
+    },
+    {
+      "periodo_codigo": "202110",
+      "periodo": "ago-set-out 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 12.1,
+      "rendimento_medio_real": 3135.0,
+      "massa_rendimento_real_milhoes": 282654.0,
+      "populacao_ocupada_mil": 182504.0
+    },
+    {
+      "periodo_codigo": "202111",
+      "periodo": "set-out-nov 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.6,
+      "rendimento_medio_real": 3093.0,
+      "massa_rendimento_real_milhoes": 281962.0,
+      "populacao_ocupada_mil": 184441.0
+    },
+    {
+      "periodo_codigo": "202112",
+      "periodo": "out-nov-dez 2021",
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.1,
+      "rendimento_medio_real": 3068.0,
+      "massa_rendimento_real_milhoes": 282207.0,
+      "populacao_ocupada_mil": 186065.0
+    },
+    {
+      "periodo_codigo": "202201",
+      "periodo": "nov-dez-jan 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.2,
+      "rendimento_medio_real": 3097.0,
+      "massa_rendimento_real_milhoes": 283936.0,
+      "populacao_ocupada_mil": 185445.0
+    },
+    {
+      "periodo_codigo": "202202",
+      "periodo": "dez-jan-fev 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.2,
+      "rendimento_medio_real": 3100.0,
+      "massa_rendimento_real_milhoes": 283676.0,
+      "populacao_ocupada_mil": 185061.0
+    },
+    {
+      "periodo_codigo": "202203",
+      "periodo": "jan-fev-mar 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 11.1,
+      "rendimento_medio_real": 3113.0,
+      "massa_rendimento_real_milhoes": 284942.0,
+      "populacao_ocupada_mil": 185123.0
+    },
+    {
+      "periodo_codigo": "202204",
+      "periodo": "fev-mar-abr 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 10.5,
+      "rendimento_medio_real": 3101.0,
+      "massa_rendimento_real_milhoes": 287770.0,
+      "populacao_ocupada_mil": 187594.0
+    },
+    {
+      "periodo_codigo": "202205",
+      "periodo": "mar-abr-mai 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 9.8,
+      "rendimento_medio_real": 3121.0,
+      "massa_rendimento_real_milhoes": 292737.0,
+      "populacao_ocupada_mil": 189590.0
+    },
+    {
+      "periodo_codigo": "202206",
+      "periodo": "abr-mai-jun 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 9.3,
+      "rendimento_medio_real": 3144.0,
+      "massa_rendimento_real_milhoes": 297399.0,
+      "populacao_ocupada_mil": 191130.0
+    },
+    {
+      "periodo_codigo": "202207",
+      "periodo": "mai-jun-jul 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 9.1,
+      "rendimento_medio_real": 3188.0,
+      "massa_rendimento_real_milhoes": 302769.0,
+      "populacao_ocupada_mil": 191898.0
+    },
+    {
+      "periodo_codigo": "202208",
+      "periodo": "jun-jul-ago 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 8.9,
+      "rendimento_medio_real": 3216.0,
+      "massa_rendimento_real_milhoes": 306558.0,
+      "populacao_ocupada_mil": 192608.0
+    },
+    {
+      "periodo_codigo": "202209",
+      "periodo": "jul-ago-set 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 8.7,
+      "rendimento_medio_real": 3259.0,
+      "massa_rendimento_real_milhoes": 311731.0,
+      "populacao_ocupada_mil": 193169.0
+    },
+    {
+      "periodo_codigo": "202210",
+      "periodo": "ago-set-out 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 8.3,
+      "rendimento_medio_real": 3279.0,
+      "massa_rendimento_real_milhoes": 314860.0,
+      "populacao_ocupada_mil": 193956.0
+    },
+    {
+      "periodo_codigo": "202211",
+      "periodo": "set-out-nov 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 8.1,
+      "rendimento_medio_real": 3310.0,
+      "massa_rendimento_real_milhoes": 318173.0,
+      "populacao_ocupada_mil": 194062.0
+    },
+    {
+      "periodo_codigo": "202212",
+      "periodo": "out-nov-dez 2022",
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "taxa_desocupacao": 7.9,
+      "rendimento_medio_real": 3317.0,
+      "massa_rendimento_real_milhoes": 317953.0,
+      "populacao_ocupada_mil": 193445.0
+    },
+    {
+      "periodo_codigo": "202301",
+      "periodo": "nov-dez-jan 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 8.4,
+      "rendimento_medio_real": 3332.0,
+      "massa_rendimento_real_milhoes": 317211.0,
+      "populacao_ocupada_mil": 192053.0
+    },
+    {
+      "periodo_codigo": "202302",
+      "periodo": "dez-jan-fev 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 8.6,
+      "rendimento_medio_real": 3330.0,
+      "massa_rendimento_real_milhoes": 315444.0,
+      "populacao_ocupada_mil": 191046.0
+    },
+    {
+      "periodo_codigo": "202303",
+      "periodo": "jan-fev-mar 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 8.8,
+      "rendimento_medio_real": 3338.0,
+      "massa_rendimento_real_milhoes": 315187.0,
+      "populacao_ocupada_mil": 190469.0
+    },
+    {
+      "periodo_codigo": "202304",
+      "periodo": "fev-mar-abr 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 8.5,
+      "rendimento_medio_real": 3328.0,
+      "massa_rendimento_real_milhoes": 314767.0,
+      "populacao_ocupada_mil": 190846.0
+    },
+    {
+      "periodo_codigo": "202305",
+      "periodo": "mar-abr-mai 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 8.3,
+      "rendimento_medio_real": 3322.0,
+      "massa_rendimento_real_milhoes": 315469.0,
+      "populacao_ocupada_mil": 191581.0
+    },
+    {
+      "periodo_codigo": "202306",
+      "periodo": "abr-mai-jun 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 8.0,
+      "rendimento_medio_real": 3337.0,
+      "massa_rendimento_real_milhoes": 318364.0,
+      "populacao_ocupada_mil": 192530.0
+    },
+    {
+      "periodo_codigo": "202307",
+      "periodo": "mai-jun-jul 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.9,
+      "rendimento_medio_real": 3349.0,
+      "massa_rendimento_real_milhoes": 321074.0,
+      "populacao_ocupada_mil": 193422.0
+    },
+    {
+      "periodo_codigo": "202308",
+      "periodo": "jun-jul-ago 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.8,
+      "rendimento_medio_real": 3359.0,
+      "massa_rendimento_real_milhoes": 323008.0,
+      "populacao_ocupada_mil": 194016.0
+    },
+    {
+      "periodo_codigo": "202309",
+      "periodo": "jul-ago-set 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.7,
+      "rendimento_medio_real": 3391.0,
+      "massa_rendimento_real_milhoes": 326796.0,
+      "populacao_ocupada_mil": 194391.0
+    },
+    {
+      "periodo_codigo": "202310",
+      "periodo": "ago-set-out 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.6,
+      "rendimento_medio_real": 3403.0,
+      "massa_rendimento_real_milhoes": 329099.0,
+      "populacao_ocupada_mil": 195111.0
+    },
+    {
+      "periodo_codigo": "202311",
+      "periodo": "set-out-nov 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.5,
+      "rendimento_medio_real": 3432.0,
+      "massa_rendimento_real_milhoes": 333080.0,
+      "populacao_ocupada_mil": 195736.0
+    },
+    {
+      "periodo_codigo": "202312",
+      "periodo": "out-nov-dez 2023",
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.4,
+      "rendimento_medio_real": 3418.0,
+      "massa_rendimento_real_milhoes": 333530.0,
+      "populacao_ocupada_mil": 196725.0
+    },
+    {
+      "periodo_codigo": "202401",
+      "periodo": "nov-dez-jan 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.6,
+      "rendimento_medio_real": 3456.0,
+      "massa_rendimento_real_milhoes": 336009.0,
+      "populacao_ocupada_mil": 195988.0
+    },
+    {
+      "periodo_codigo": "202402",
+      "periodo": "dez-jan-fev 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.8,
+      "rendimento_medio_real": 3471.0,
+      "massa_rendimento_real_milhoes": 336277.0,
+      "populacao_ocupada_mil": 195290.0
+    },
+    {
+      "periodo_codigo": "202403",
+      "periodo": "jan-fev-mar 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.9,
+      "rendimento_medio_real": 3468.0,
+      "massa_rendimento_real_milhoes": 335857.0,
+      "populacao_ocupada_mil": 195209.0
+    },
+    {
+      "periodo_codigo": "202404",
+      "periodo": "fev-mar-abr 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.5,
+      "rendimento_medio_real": 3484.0,
+      "massa_rendimento_real_milhoes": 339564.0,
+      "populacao_ocupada_mil": 196430.0
+    },
+    {
+      "periodo_codigo": "202405",
+      "periodo": "mar-abr-mai 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.1,
+      "rendimento_medio_real": 3505.0,
+      "massa_rendimento_real_milhoes": 343486.0,
+      "populacao_ocupada_mil": 197493.0
+    },
+    {
+      "periodo_codigo": "202406",
+      "periodo": "abr-mai-jun 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.9,
+      "rendimento_medio_real": 3528.0,
+      "massa_rendimento_real_milhoes": 347370.0,
+      "populacao_ocupada_mil": 198456.0
+    },
+    {
+      "periodo_codigo": "202407",
+      "periodo": "mai-jun-jul 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.8,
+      "rendimento_medio_real": 3507.0,
+      "massa_rendimento_real_milhoes": 345964.0,
+      "populacao_ocupada_mil": 198807.0
+    },
+    {
+      "periodo_codigo": "202408",
+      "periodo": "jun-jul-ago 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.6,
+      "rendimento_medio_real": 3526.0,
+      "massa_rendimento_real_milhoes": 349408.0,
+      "populacao_ocupada_mil": 199753.0
+    },
+    {
+      "periodo_codigo": "202409",
+      "periodo": "jul-ago-set 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.4,
+      "rendimento_medio_real": 3514.0,
+      "massa_rendimento_real_milhoes": 350098.0,
+      "populacao_ocupada_mil": 200771.0
+    },
+    {
+      "periodo_codigo": "202410",
+      "periodo": "ago-set-out 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.2,
+      "rendimento_medio_real": 3533.0,
+      "massa_rendimento_real_milhoes": 354062.0,
+      "populacao_ocupada_mil": 201936.0
+    },
+    {
+      "periodo_codigo": "202411",
+      "periodo": "set-out-nov 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.1,
+      "rendimento_medio_real": 3549.0,
+      "massa_rendimento_real_milhoes": 356777.0,
+      "populacao_ocupada_mil": 202538.0
+    },
+    {
+      "periodo_codigo": "202412",
+      "periodo": "out-nov-dez 2024",
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.2,
+      "rendimento_medio_real": 3563.0,
+      "massa_rendimento_real_milhoes": 357847.0,
+      "populacao_ocupada_mil": 202355.0
+    },
+    {
+      "periodo_codigo": "202501",
+      "periodo": "nov-dez-jan 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.5,
+      "rendimento_medio_real": 3580.0,
+      "massa_rendimento_real_milhoes": 356581.0,
+      "populacao_ocupada_mil": 200659.0
+    },
+    {
+      "periodo_codigo": "202502",
+      "periodo": "dez-jan-fev 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.8,
+      "rendimento_medio_real": 3594.0,
+      "massa_rendimento_real_milhoes": 356836.0,
+      "populacao_ocupada_mil": 200036.0
+    },
+    {
+      "periodo_codigo": "202503",
+      "periodo": "jan-fev-mar 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 7.0,
+      "rendimento_medio_real": 3605.0,
+      "massa_rendimento_real_milhoes": 357633.0,
+      "populacao_ocupada_mil": 199797.0
+    },
+    {
+      "periodo_codigo": "202504",
+      "periodo": "fev-mar-abr 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.6,
+      "rendimento_medio_real": 3593.0,
+      "massa_rendimento_real_milhoes": 359200.0,
+      "populacao_ocupada_mil": 201319.0
+    },
+    {
+      "periodo_codigo": "202505",
+      "periodo": "mar-abr-mai 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.2,
+      "rendimento_medio_real": 3609.0,
+      "massa_rendimento_real_milhoes": 362955.0,
+      "populacao_ocupada_mil": 202539.0
+    },
+    {
+      "periodo_codigo": "202506",
+      "periodo": "abr-mai-jun 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.8,
+      "rendimento_medio_real": 3643.0,
+      "massa_rendimento_real_milhoes": 367986.0,
+      "populacao_ocupada_mil": 203413.0
+    },
+    {
+      "periodo_codigo": "202507",
+      "periodo": "mai-jun-jul 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.6,
+      "rendimento_medio_real": 3641.0,
+      "massa_rendimento_real_milhoes": 368222.0,
+      "populacao_ocupada_mil": 203636.0
+    },
+    {
+      "periodo_codigo": "202508",
+      "periodo": "jun-jul-ago 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.6,
+      "rendimento_medio_real": 3641.0,
+      "massa_rendimento_real_milhoes": 368081.0,
+      "populacao_ocupada_mil": 203578.0
+    },
+    {
+      "periodo_codigo": "202509",
+      "periodo": "jul-ago-set 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.6,
+      "rendimento_medio_real": 3653.0,
+      "massa_rendimento_real_milhoes": 369375.0,
+      "populacao_ocupada_mil": 203624.0
+    },
+    {
+      "periodo_codigo": "202510",
+      "periodo": "ago-set-out 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.4,
+      "rendimento_medio_real": 3669.0,
+      "massa_rendimento_real_milhoes": 371626.0,
+      "populacao_ocupada_mil": 203922.0
+    },
+    {
+      "periodo_codigo": "202511",
+      "periodo": "set-out-nov 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.2,
+      "rendimento_medio_real": 3708.0,
+      "massa_rendimento_real_milhoes": 377392.0,
+      "populacao_ocupada_mil": 204869.0
+    },
+    {
+      "periodo_codigo": "202512",
+      "periodo": "out-nov-dez 2025",
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.1,
+      "rendimento_medio_real": 3742.0,
+      "massa_rendimento_real_milhoes": 380651.0,
+      "populacao_ocupada_mil": 204807.0
+    },
+    {
+      "periodo_codigo": "202601",
+      "periodo": "nov-dez-jan 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.4,
+      "rendimento_medio_real": 3772.0,
+      "massa_rendimento_real_milhoes": 382500.0,
+      "populacao_ocupada_mil": 204139.0
+    },
+    {
+      "periodo_codigo": "202602",
+      "periodo": "dez-jan-fev 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.8,
+      "rendimento_medio_real": 3783.0,
+      "massa_rendimento_real_milhoes": 381597.0,
+      "populacao_ocupada_mil": 203083.0
+    },
+    {
+      "periodo_codigo": "202603",
+      "periodo": "jan-fev-mar 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 6.1,
+      "rendimento_medio_real": 3804.0,
+      "massa_rendimento_real_milhoes": 383015.0,
+      "populacao_ocupada_mil": 202733.0
+    },
+    {
+      "periodo_codigo": "202604",
+      "periodo": "fev-mar-abr 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.8,
+      "rendimento_medio_real": 3785.0,
+      "massa_rendimento_real_milhoes": 382426.0,
+      "populacao_ocupada_mil": 203441.0
+    },
+    {
+      "periodo_codigo": "202605",
+      "periodo": "mar-abr-mai 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.6,
+      "rendimento_medio_real": 3752.0,
+      "massa_rendimento_real_milhoes": 380401.0,
+      "populacao_ocupada_mil": 204176.0
+    },
+    {
+      "periodo_codigo": "202606",
+      "periodo": "abr-mai-jun 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.4,
+      "rendimento_medio_real": 3747.0,
+      "massa_rendimento_real_milhoes": 381170.0,
+      "populacao_ocupada_mil": 204875.0
+    },
+    {
+      "periodo_codigo": "202607",
+      "periodo": "mai-jun-jul 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.3,
+      "rendimento_medio_real": 3760.0,
+      "massa_rendimento_real_milhoes": 383324.0,
+      "populacao_ocupada_mil": 205372.0
+    },
+    {
+      "periodo_codigo": "202608",
+      "periodo": "jun-jul-ago 2026",
+      "ano": 2026,
+      "governo": "Lula (2023-atual)",
+      "taxa_desocupacao": 5.3,
+      "rendimento_medio_real": 3777.0,
+      "massa_rendimento_real_milhoes": 385566.0,
+      "populacao_ocupada_mil": 205648.0
+    }
+  ],
+  "caged": [
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro",
+      "saldo_postos_formais": 644079,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro",
+      "saldo_postos_formais": -189393,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro",
+      "saldo_postos_formais": 2782295,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro",
+      "saldo_postos_formais": 2014894,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula",
+      "saldo_postos_formais": 1455279,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula",
+      "saldo_postos_formais": 1677575,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula",
+      "saldo_postos_formais": 1279498,
+      "parcial": false,
+      "meses": 12
+    },
+    {
+      "ano": 2026,
+      "governo": "Lula",
+      "saldo_postos_formais": 1134033,
+      "parcial": true,
+      "nota": "Acumulado jan-ago/2026",
+      "meses": 8
+    }
+  ]
+}

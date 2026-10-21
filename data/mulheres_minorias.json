@@ -1,0 +1,94 @@
+{
+  "desemprego_por_grupo": [
+    {
+      "ano": 2019,
+      "mulheres": 14.1,
+      "homens": 10.3,
+      "pretos_pardos": 13.5,
+      "brancos": 9.2
+    },
+    {
+      "ano": 2020,
+      "mulheres": 16.5,
+      "homens": 12.1,
+      "pretos_pardos": 15.8,
+      "brancos": 10.8
+    },
+    {
+      "ano": 2021,
+      "mulheres": 16.4,
+      "homens": 11.2,
+      "pretos_pardos": 15.2,
+      "brancos": 10.3
+    },
+    {
+      "ano": 2022,
+      "mulheres": 11.6,
+      "homens": 7.7,
+      "pretos_pardos": 10.7,
+      "brancos": 7.3
+    },
+    {
+      "ano": 2023,
+      "mulheres": 9.2,
+      "homens": 6.5,
+      "pretos_pardos": 8.9,
+      "brancos": 6.2
+    },
+    {
+      "ano": 2024,
+      "mulheres": 8.1,
+      "homens": 5.6,
+      "pretos_pardos": 7.8,
+      "brancos": 5.4
+    }
+  ],
+  "razao_salarial": [
+    {
+      "ano": 2019,
+      "mulher_vs_homem_pct": 77.7,
+      "negro_vs_branco_pct": 55.8
+    },
+    {
+      "ano": 2020,
+      "mulher_vs_homem_pct": 78.1,
+      "negro_vs_branco_pct": 56.2
+    },
+    {
+      "ano": 2021,
+      "mulher_vs_homem_pct": 78.9,
+      "negro_vs_branco_pct": 55.4
+    },
+    {
+      "ano": 2022,
+      "mulher_vs_homem_pct": 78.5,
+      "negro_vs_branco_pct": 56.0
+    },
+    {
+      "ano": 2023,
+      "mulher_vs_homem_pct": 80.6,
+      "negro_vs_branco_pct": 57.5
+    },
+    {
+      "ano": 2024,
+      "mulher_vs_homem_pct": 81.8,
+      "negro_vs_branco_pct": 58.6
+    }
+  ],
+  "politicas_impacto": [
+    {
+      "governo": "Bolsonaro",
+      "tema": "Auxílio Emergencial & Auxílio Brasil",
+      "detalhes": "Pagamento de cota em dobro para mães chefes de família no Auxílio Emergencial (R$ 1.200) e prioridade de titularidade feminina no Auxílio Brasil (mais de 80% das famílias beneficiadas tinham mulher como responsável).",
+      "pontos_positivos": "Garantia de sobrevivência imediata para milhões de mulheres chefes de família na pandemia.",
+      "criticas": "Falta de condicionalidades de saúde e educação (frequência escolar e vacinação foram flexibilizadas) e corte de verbas em programas específicos de enfrentamento à violência contra a mulher."
+    },
+    {
+      "governo": "Lula",
+      "tema": "Lei de Igualdade Salarial (Lei 14.611/2023) & Bolsa Família",
+      "detalhes": "Obrigatoriedade de relatórios de transparência salarial para empresas com mais de 100 empregados e aplicação de multas severas por discriminação; retorno das condicionalidades de vacinação e frequência escolar no Bolsa Família com adicional de R$ 150 por criança até 6 anos.",
+      "pontos_positivos": "Maior marco legal contra a disparidade de remuneração entre homens e mulheres na mesma função; fortalecimento da renda básica materna.",
+      "criticas": "Resistência de setores empresariais que questionaram a metodologia dos relatórios de transparência na justiça."
+    }
+  ]
+}

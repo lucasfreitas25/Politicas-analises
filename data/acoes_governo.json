@@ -1,0 +1,92 @@
+[
+  {
+    "area": "Previdência & Fiscal",
+    "tema": "Reforma da Previdência (EC 103/2019)",
+    "governo": "Bolsonaro",
+    "ano": 2019,
+    "descricao": "Estabeleceu idade mínima para aposentadoria (62 anos para mulheres e 65 anos para homens), tempo mínimo de contribuição e novas regras de transição.",
+    "impactos_positivos": "Economia estimada em cerca de R$ 800 bilhões em 10 anos, contendo a trajetória explosiva do déficit atuarial do INSS e transmitindo confiança fiscal a investidores.",
+    "impactos_negativos_criticas": "Dificultou a aposentadoria para trabalhadores de baixa qualificação e informais; manteve regras mais vantajosas para carreiras militares e categorias corporativas organizadas."
+  },
+  {
+    "area": "Tributário",
+    "tema": "Reforma Tributária sobre o Consumo (EC 132/2023)",
+    "governo": "Lula",
+    "ano": 2023,
+    "descricao": "Extinguiu cinco tributos cumulativos (PIS, Cofins, IPI, ICMS e ISS) e criou o IVA Dual (CBS federal e IBS subnacional), com alíquota padrão, cashback social e cesta básica isenta.",
+    "impactos_positivos": "Fim de 35 anos de paralisia legislativa; simplificação profunda do manicômio tributário brasileiro, fim da guerra fiscal e expectativa de ganho de produtividade de até 10% do PIB em 15 anos.",
+    "impactos_negativos_criticas": "Período de transição longo até 2033; risco de alíquota final do IVA ser uma das mais altas do mundo (estimada em cerca de 27% a 28%) devido a exceções concedidas a setores de serviços e lobbies."
+  },
+  {
+    "area": "Infraestrutura",
+    "tema": "Novo Marco Legal do Saneamento Básico (Lei 14.026/2020)",
+    "governo": "Bolsonaro",
+    "ano": 2020,
+    "descricao": "Obrigou a concorrência entre empresas públicas e privadas na concessão de serviços de água e esgoto, com meta de universalização de 99% de água e 90% de esgoto até 2033.",
+    "impactos_positivos": "Desbloqueou mais de R$ 100 bilhões em leilões e investimentos privados (ex: Cedae no RJ, Corsan no RS, Alagoas e Amapá), acelerando obras de esgotamento sanitário.",
+    "impactos_negativos_criticas": "Resistência de companhias estaduais públicas; risco de desassistência de municípios deficitários ou muito pobres que não atraem interesse da iniciativa privada."
+  },
+  {
+    "area": "Proteção Social",
+    "tema": "Novo Bolsa Família & Auxílio Emergencial",
+    "governo": "Comparativo Bolsonaro x Lula",
+    "ano": "2020 - 2023",
+    "descricao": "Bolsonaro: Auxílio Emergencial (R$ 600 a R$ 1.200) na pandemia e criação do Auxílio Brasil permanente de R$ 600 em 2022. Lula: Restruturação do Bolsa Família com mínimo de R$ 600 + adicional de R$ 150 por criança de até 6 anos e R$ 50 para gestantes/jovens.",
+    "impactos_positivos": "Bolsonaro impediu que 30 milhões de pessoas caíssem na miséria durante os lockdowns de 2020. Lula refinou a equidade social ao pagar mais para famílias maiores e retomar a exigência de vacinação e frequência escolar.",
+    "impactos_negativos_criticas": "Bolsonaro foi criticado pelo desmonte do cadastro unificado em 2022 e explosão de famílias unipessoais fraudulentas. Lula foi criticado pelo custo fiscal de mais de R$ 170 bilhões anuais e dependência contínua de transferências sem porta de saída massiva para o emprego formal."
+  },
+  {
+    "area": "Fiscal & Orçamento",
+    "tema": "Teto de Gastos (EC 95) vs. Novo Arcabouço Fiscal (LC 200/2023)",
+    "governo": "Comparativo Bolsonaro x Lula",
+    "ano": "2019 - 2023",
+    "descricao": "Bolsonaro operou sob o Teto de Gastos rígido (corrigido pela inflação), mas recorreu a diversas PECs excepcionais (PEC da Guerra, PEC dos Precatórios, PEC Kamikaze). Lula revogou o Teto e aprovou o Arcabouço (gastos crescem entre 70% da receita com teto de 2,5% real).",
+    "impactos_positivos": "Teto impôs disciplina contábil e desincentivou inchaço do Estado. Arcabouço garantiu previsibilidade e impediu cortes drásticos em investimentos públicos, saúde e educação.",
+    "impactos_negativos_criticas": "Teto foi desrespeitado repetidas vezes via manobras e acumulou precatórios bilionários. Arcabouço depende fortemente de aumento perpétuo de arrecadação e enfrenta ceticismo sobre a capacidade de zerar o déficit primário sem cortar gastos obrigatórios."
+  },
+  {
+    "area": "Monetário & Financeiro",
+    "tema": "Autonomia Legal do Banco Central (LC 179/2021)",
+    "governo": "Bolsonaro",
+    "ano": 2021,
+    "descricao": "Mandatos fixos e não coincidentes de 4 anos para a diretoria do Banco Central, blindando a política monetária de pressões político-eleitorais do Presidente da República.",
+    "impactos_positivos": "Reconhecimento internacional, credibilidade técnica contra a inflação e garantia de que o BC pode subir juros mesmo em ano eleitoral para conter altas de preços.",
+    "impactos_negativos_criticas": "Criação de atrito público entre o governo eleito em 2022 (Lula) e a autoridade monetária (Roberto Campos Neto), com críticas de que juros reais excessivamente altos travaram o investimento produtivo."
+  },
+  {
+    "area": "Meio Ambiente",
+    "tema": "Controle do Desmatamento & Transição Ecológica",
+    "governo": "Comparativo Bolsonaro x Lula",
+    "ano": "2019 - 2024",
+    "descricao": "Bolsonaro: flexibilização de fiscalizações, redução do poder sancionador do Ibama/ICMBio, bloqueio do Fundo Amazônia e defesa da mineração em terras indígenas. Lula: retomada das operações de fiscalização, reativação do Fundo Amazônia e meta de desmatamento zero até 2030.",
+    "impactos_positivos": "Lula reduziu o desmatamento na Amazônia em cerca de 50% em 2023/2024 e restabeleceu a liderança diplomática climática do Brasil (anfitrião da COP30 em Belém). Bolsonaro atendeu reivindicações do agronegócio por regularização fundiária e menor burocracia ambiental.",
+    "impactos_negativos_criticas": "Bolsonaro enfrentou recordes de desmatamento (passando de 13 mil km² no PRODES) e boicotes comerciais da Europa. Lula enfrentou queima recorde no Cerrado e Pantanal em 2024 durante a pior seca histórica e atrasos em licenças ambientais estratégicas (Foz do Amazonas e Ferrogro)."
+  },
+  {
+    "area": "Dívidas & Crédito",
+    "tema": "Programa Desenrola Brasil (Lei 14.690/2023)",
+    "governo": "Lula",
+    "ano": 2023,
+    "descricao": "Programa de renegociação de dívidas bancárias e não bancárias com garantia do Tesouro Nacional para pessoas que ganham até 2 salários mínimos, somado ao teto de 100% no rotativo do cartão de crédito.",
+    "impactos_positivos": "Limpou o nome de mais de 15 milhões de brasileiros com descontos médios de 83%, reabilitando o consumidor para a economia e pondo fim aos juros de mais de 400% ao ano no cartão.",
+    "impactos_negativos_criticas": "Não resolve a raiz da falta de educação financeira das famílias e gerou custo com fundos garantidores da União; risco de reincidência de inadimplência em 18 a 24 meses."
+  },
+  {
+    "area": "Desestatização & Gestão Pública",
+    "tema": "Privatizações vs. Retomada de Investimentos Estatais",
+    "governo": "Comparativo Bolsonaro x Lula",
+    "ano": "2019 - 2024",
+    "descricao": "Bolsonaro privatizou a Eletrobras, BR Distribuidora e realizou dezenas de concessões de aeroportos, portos e rodovias. Lula suspendeu a privatização de Correios, Petrobras e EBC, retomando o papel de estatais como indutoras do desenvolvimento.",
+    "impactos_positivos": "Bolsonaro arrecadou dezenas de bilhões de reais para o Tesouro e transferiu riscos de investimento para o mercado. Lula fortaleceu investimentos em refinarias e conteúdo local na indústria naval.",
+    "impactos_negativos_criticas": "Privatização da Eletrobras foi criticada pela perda de controle societário de empresa estratégica e custo de termelétricas embutido em emendas. A volta de compras locais e interferências em dividendos de estatais gerou desconfiança no mercado de capitais."
+  },
+  {
+    "area": "Educação & Juventude",
+    "tema": "Pé-de-Meia vs. Novo FUNDEB",
+    "governo": "Comparativo Bolsonaro x Lula",
+    "ano": "2020 - 2024",
+    "descricao": "Bolsonaro promulgou o Novo FUNDEB constitucionalizado com aumento de aportes da União. Lula lançou o Pé-de-Meia para pagar poupança a alunos do ensino médio público.",
+    "impactos_positivos": "Ambas as medidas elevaram substancialmente o fluxo financeiro voltado à educação básica e combate ao abandono escolar.",
+    "impactos_negativos_criticas": "Ambas enfrentam desafios de sustentabilidade orçamentária e necessidade de comprovar melhoria nos índices de aprendizagem do SAEB e PISA."
+  }
+]

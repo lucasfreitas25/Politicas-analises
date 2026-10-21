@@ -1,0 +1,4538 @@
+[
+  {
+    "periodo_codigo": "201909",
+    "periodo": "setembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.32
+  },
+  {
+    "periodo_codigo": "201909",
+    "periodo": "setembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 108.93
+  },
+  {
+    "periodo_codigo": "201909",
+    "periodo": "setembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.87
+  },
+  {
+    "periodo_codigo": "201910",
+    "periodo": "outubro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.64
+  },
+  {
+    "periodo_codigo": "201910",
+    "periodo": "outubro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 109.41
+  },
+  {
+    "periodo_codigo": "201910",
+    "periodo": "outubro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.85
+  },
+  {
+    "periodo_codigo": "201911",
+    "periodo": "novembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.24
+  },
+  {
+    "periodo_codigo": "201911",
+    "periodo": "novembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 107.5
+  },
+  {
+    "periodo_codigo": "201911",
+    "periodo": "novembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.59
+  },
+  {
+    "periodo_codigo": "201912",
+    "periodo": "dezembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.84
+  },
+  {
+    "periodo_codigo": "201912",
+    "periodo": "dezembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.82
+  },
+  {
+    "periodo_codigo": "201912",
+    "periodo": "dezembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.04
+  },
+  {
+    "periodo_codigo": "202001",
+    "periodo": "janeiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.14
+  },
+  {
+    "periodo_codigo": "202001",
+    "periodo": "janeiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.74
+  },
+  {
+    "periodo_codigo": "202001",
+    "periodo": "janeiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.1
+  },
+  {
+    "periodo_codigo": "202002",
+    "periodo": "fevereiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.88
+  },
+  {
+    "periodo_codigo": "202002",
+    "periodo": "fevereiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.34
+  },
+  {
+    "periodo_codigo": "202002",
+    "periodo": "fevereiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.5
+  },
+  {
+    "periodo_codigo": "202003",
+    "periodo": "março 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 93.97
+  },
+  {
+    "periodo_codigo": "202003",
+    "periodo": "março 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.89
+  },
+  {
+    "periodo_codigo": "202003",
+    "periodo": "março 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 92.64
+  },
+  {
+    "periodo_codigo": "202004",
+    "periodo": "abril 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 75.35
+  },
+  {
+    "periodo_codigo": "202004",
+    "periodo": "abril 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.6
+  },
+  {
+    "periodo_codigo": "202004",
+    "periodo": "abril 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 72.06
+  },
+  {
+    "periodo_codigo": "202005",
+    "periodo": "maio 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 81.3
+  },
+  {
+    "periodo_codigo": "202005",
+    "periodo": "maio 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 96.05
+  },
+  {
+    "periodo_codigo": "202005",
+    "periodo": "maio 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 79.2
+  },
+  {
+    "periodo_codigo": "202006",
+    "periodo": "junho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 89.67
+  },
+  {
+    "periodo_codigo": "202006",
+    "periodo": "junho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.93
+  },
+  {
+    "periodo_codigo": "202006",
+    "periodo": "junho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 88.55
+  },
+  {
+    "periodo_codigo": "202007",
+    "periodo": "julho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 97.68
+  },
+  {
+    "periodo_codigo": "202007",
+    "periodo": "julho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 107.11
+  },
+  {
+    "periodo_codigo": "202007",
+    "periodo": "julho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 96.29
+  },
+  {
+    "periodo_codigo": "202008",
+    "periodo": "agosto 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.64
+  },
+  {
+    "periodo_codigo": "202008",
+    "periodo": "agosto 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.46
+  },
+  {
+    "periodo_codigo": "202008",
+    "periodo": "agosto 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.02
+  },
+  {
+    "periodo_codigo": "202009",
+    "periodo": "setembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.38
+  },
+  {
+    "periodo_codigo": "202009",
+    "periodo": "setembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.15
+  },
+  {
+    "periodo_codigo": "202009",
+    "periodo": "setembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.76
+  },
+  {
+    "periodo_codigo": "202010",
+    "periodo": "outubro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.98
+  },
+  {
+    "periodo_codigo": "202010",
+    "periodo": "outubro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.01
+  },
+  {
+    "periodo_codigo": "202010",
+    "periodo": "outubro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.45
+  },
+  {
+    "periodo_codigo": "202011",
+    "periodo": "novembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.39
+  },
+  {
+    "periodo_codigo": "202011",
+    "periodo": "novembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.69
+  },
+  {
+    "periodo_codigo": "202011",
+    "periodo": "novembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.09
+  },
+  {
+    "periodo_codigo": "202012",
+    "periodo": "dezembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.92
+  },
+  {
+    "periodo_codigo": "202012",
+    "periodo": "dezembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.78
+  },
+  {
+    "periodo_codigo": "202012",
+    "periodo": "dezembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.39
+  },
+  {
+    "periodo_codigo": "202101",
+    "periodo": "janeiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.53
+  },
+  {
+    "periodo_codigo": "202101",
+    "periodo": "janeiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.03
+  },
+  {
+    "periodo_codigo": "202101",
+    "periodo": "janeiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.74
+  },
+  {
+    "periodo_codigo": "202102",
+    "periodo": "fevereiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.11
+  },
+  {
+    "periodo_codigo": "202102",
+    "periodo": "fevereiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.05
+  },
+  {
+    "periodo_codigo": "202102",
+    "periodo": "fevereiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.33
+  },
+  {
+    "periodo_codigo": "202103",
+    "periodo": "março 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.94
+  },
+  {
+    "periodo_codigo": "202103",
+    "periodo": "março 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.31
+  },
+  {
+    "periodo_codigo": "202103",
+    "periodo": "março 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.96
+  },
+  {
+    "periodo_codigo": "202104",
+    "periodo": "abril 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.98
+  },
+  {
+    "periodo_codigo": "202104",
+    "periodo": "abril 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.48
+  },
+  {
+    "periodo_codigo": "202104",
+    "periodo": "abril 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.45
+  },
+  {
+    "periodo_codigo": "202105",
+    "periodo": "maio 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.15
+  },
+  {
+    "periodo_codigo": "202105",
+    "periodo": "maio 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.19
+  },
+  {
+    "periodo_codigo": "202105",
+    "periodo": "maio 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.39
+  },
+  {
+    "periodo_codigo": "202106",
+    "periodo": "junho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.87
+  },
+  {
+    "periodo_codigo": "202106",
+    "periodo": "junho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.96
+  },
+  {
+    "periodo_codigo": "202106",
+    "periodo": "junho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.5
+  },
+  {
+    "periodo_codigo": "202107",
+    "periodo": "julho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.44
+  },
+  {
+    "periodo_codigo": "202107",
+    "periodo": "julho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.09
+  },
+  {
+    "periodo_codigo": "202107",
+    "periodo": "julho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.88
+  },
+  {
+    "periodo_codigo": "202108",
+    "periodo": "agosto 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.39
+  },
+  {
+    "periodo_codigo": "202108",
+    "periodo": "agosto 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.82
+  },
+  {
+    "periodo_codigo": "202108",
+    "periodo": "agosto 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.49
+  },
+  {
+    "periodo_codigo": "202109",
+    "periodo": "setembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.06
+  },
+  {
+    "periodo_codigo": "202109",
+    "periodo": "setembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.5
+  },
+  {
+    "periodo_codigo": "202109",
+    "periodo": "setembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.47
+  },
+  {
+    "periodo_codigo": "202110",
+    "periodo": "outubro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.63
+  },
+  {
+    "periodo_codigo": "202110",
+    "periodo": "outubro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.71
+  },
+  {
+    "periodo_codigo": "202110",
+    "periodo": "outubro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.69
+  },
+  {
+    "periodo_codigo": "202111",
+    "periodo": "novembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.72
+  },
+  {
+    "periodo_codigo": "202111",
+    "periodo": "novembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.73
+  },
+  {
+    "periodo_codigo": "202111",
+    "periodo": "novembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.19
+  },
+  {
+    "periodo_codigo": "202112",
+    "periodo": "dezembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.23
+  },
+  {
+    "periodo_codigo": "202112",
+    "periodo": "dezembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.39
+  },
+  {
+    "periodo_codigo": "202112",
+    "periodo": "dezembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.84
+  },
+  {
+    "periodo_codigo": "202201",
+    "periodo": "janeiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.98
+  },
+  {
+    "periodo_codigo": "202201",
+    "periodo": "janeiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.97
+  },
+  {
+    "periodo_codigo": "202201",
+    "periodo": "janeiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.0
+  },
+  {
+    "periodo_codigo": "202202",
+    "periodo": "fevereiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.93
+  },
+  {
+    "periodo_codigo": "202202",
+    "periodo": "fevereiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.08
+  },
+  {
+    "periodo_codigo": "202202",
+    "periodo": "fevereiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.87
+  },
+  {
+    "periodo_codigo": "202203",
+    "periodo": "março 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.05
+  },
+  {
+    "periodo_codigo": "202203",
+    "periodo": "março 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.29
+  },
+  {
+    "periodo_codigo": "202203",
+    "periodo": "março 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.92
+  },
+  {
+    "periodo_codigo": "202204",
+    "periodo": "abril 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.7
+  },
+  {
+    "periodo_codigo": "202204",
+    "periodo": "abril 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.24
+  },
+  {
+    "periodo_codigo": "202204",
+    "periodo": "abril 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.51
+  },
+  {
+    "periodo_codigo": "202205",
+    "periodo": "maio 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.19
+  },
+  {
+    "periodo_codigo": "202205",
+    "periodo": "maio 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 96.81
+  },
+  {
+    "periodo_codigo": "202205",
+    "periodo": "maio 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.74
+  },
+  {
+    "periodo_codigo": "202206",
+    "periodo": "junho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.18
+  },
+  {
+    "periodo_codigo": "202206",
+    "periodo": "junho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 97.38
+  },
+  {
+    "periodo_codigo": "202206",
+    "periodo": "junho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.78
+  },
+  {
+    "periodo_codigo": "202207",
+    "periodo": "julho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.21
+  },
+  {
+    "periodo_codigo": "202207",
+    "periodo": "julho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.17
+  },
+  {
+    "periodo_codigo": "202207",
+    "periodo": "julho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.22
+  },
+  {
+    "periodo_codigo": "202208",
+    "periodo": "agosto 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.79
+  },
+  {
+    "periodo_codigo": "202208",
+    "periodo": "agosto 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 96.64
+  },
+  {
+    "periodo_codigo": "202208",
+    "periodo": "agosto 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.01
+  },
+  {
+    "periodo_codigo": "202209",
+    "periodo": "setembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.22
+  },
+  {
+    "periodo_codigo": "202209",
+    "periodo": "setembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.02
+  },
+  {
+    "periodo_codigo": "202209",
+    "periodo": "setembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.38
+  },
+  {
+    "periodo_codigo": "202210",
+    "periodo": "outubro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.77
+  },
+  {
+    "periodo_codigo": "202210",
+    "periodo": "outubro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 108.21
+  },
+  {
+    "periodo_codigo": "202210",
+    "periodo": "outubro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.69
+  },
+  {
+    "periodo_codigo": "202211",
+    "periodo": "novembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.79
+  },
+  {
+    "periodo_codigo": "202211",
+    "periodo": "novembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.24
+  },
+  {
+    "periodo_codigo": "202211",
+    "periodo": "novembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.91
+  },
+  {
+    "periodo_codigo": "202212",
+    "periodo": "dezembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.95
+  },
+  {
+    "periodo_codigo": "202212",
+    "periodo": "dezembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 97.04
+  },
+  {
+    "periodo_codigo": "202212",
+    "periodo": "dezembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.96
+  },
+  {
+    "periodo_codigo": "202301",
+    "periodo": "janeiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.71
+  },
+  {
+    "periodo_codigo": "202301",
+    "periodo": "janeiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.58
+  },
+  {
+    "periodo_codigo": "202301",
+    "periodo": "janeiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.04
+  },
+  {
+    "periodo_codigo": "202302",
+    "periodo": "fevereiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.56
+  },
+  {
+    "periodo_codigo": "202302",
+    "periodo": "fevereiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.6
+  },
+  {
+    "periodo_codigo": "202302",
+    "periodo": "fevereiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.57
+  },
+  {
+    "periodo_codigo": "202303",
+    "periodo": "março 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.26
+  },
+  {
+    "periodo_codigo": "202303",
+    "periodo": "março 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.86
+  },
+  {
+    "periodo_codigo": "202303",
+    "periodo": "março 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.61
+  },
+  {
+    "periodo_codigo": "202304",
+    "periodo": "abril 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.79
+  },
+  {
+    "periodo_codigo": "202304",
+    "periodo": "abril 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.34
+  },
+  {
+    "periodo_codigo": "202304",
+    "periodo": "abril 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.81
+  },
+  {
+    "periodo_codigo": "202305",
+    "periodo": "maio 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.5
+  },
+  {
+    "periodo_codigo": "202305",
+    "periodo": "maio 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.42
+  },
+  {
+    "periodo_codigo": "202305",
+    "periodo": "maio 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.55
+  },
+  {
+    "periodo_codigo": "202306",
+    "periodo": "junho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.15
+  },
+  {
+    "periodo_codigo": "202306",
+    "periodo": "junho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 108.0
+  },
+  {
+    "periodo_codigo": "202306",
+    "periodo": "junho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.9
+  },
+  {
+    "periodo_codigo": "202307",
+    "periodo": "julho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.54
+  },
+  {
+    "periodo_codigo": "202307",
+    "periodo": "julho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.68
+  },
+  {
+    "periodo_codigo": "202307",
+    "periodo": "julho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.22
+  },
+  {
+    "periodo_codigo": "202308",
+    "periodo": "agosto 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.05
+  },
+  {
+    "periodo_codigo": "202308",
+    "periodo": "agosto 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.39
+  },
+  {
+    "periodo_codigo": "202308",
+    "periodo": "agosto 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.52
+  },
+  {
+    "periodo_codigo": "202309",
+    "periodo": "setembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.72
+  },
+  {
+    "periodo_codigo": "202309",
+    "periodo": "setembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 109.04
+  },
+  {
+    "periodo_codigo": "202309",
+    "periodo": "setembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.36
+  },
+  {
+    "periodo_codigo": "202310",
+    "periodo": "outubro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.13
+  },
+  {
+    "periodo_codigo": "202310",
+    "periodo": "outubro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 109.47
+  },
+  {
+    "periodo_codigo": "202310",
+    "periodo": "outubro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 98.88
+  },
+  {
+    "periodo_codigo": "202311",
+    "periodo": "novembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.27
+  },
+  {
+    "periodo_codigo": "202311",
+    "periodo": "novembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 112.91
+  },
+  {
+    "periodo_codigo": "202311",
+    "periodo": "novembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.48
+  },
+  {
+    "periodo_codigo": "202312",
+    "periodo": "dezembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.08
+  },
+  {
+    "periodo_codigo": "202312",
+    "periodo": "dezembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 116.42
+  },
+  {
+    "periodo_codigo": "202312",
+    "periodo": "dezembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.33
+  },
+  {
+    "periodo_codigo": "202401",
+    "periodo": "janeiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.73
+  },
+  {
+    "periodo_codigo": "202401",
+    "periodo": "janeiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 110.11
+  },
+  {
+    "periodo_codigo": "202401",
+    "periodo": "janeiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.34
+  },
+  {
+    "periodo_codigo": "202402",
+    "periodo": "fevereiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.71
+  },
+  {
+    "periodo_codigo": "202402",
+    "periodo": "fevereiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.87
+  },
+  {
+    "periodo_codigo": "202402",
+    "periodo": "fevereiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.75
+  },
+  {
+    "periodo_codigo": "202403",
+    "periodo": "março 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.02
+  },
+  {
+    "periodo_codigo": "202403",
+    "periodo": "março 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.84
+  },
+  {
+    "periodo_codigo": "202403",
+    "periodo": "março 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.02
+  },
+  {
+    "periodo_codigo": "202404",
+    "periodo": "abril 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.73
+  },
+  {
+    "periodo_codigo": "202404",
+    "periodo": "abril 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.15
+  },
+  {
+    "periodo_codigo": "202404",
+    "periodo": "abril 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.56
+  },
+  {
+    "periodo_codigo": "202405",
+    "periodo": "maio 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.24
+  },
+  {
+    "periodo_codigo": "202405",
+    "periodo": "maio 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.84
+  },
+  {
+    "periodo_codigo": "202405",
+    "periodo": "maio 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 99.37
+  },
+  {
+    "periodo_codigo": "202406",
+    "periodo": "junho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.24
+  },
+  {
+    "periodo_codigo": "202406",
+    "periodo": "junho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 108.73
+  },
+  {
+    "periodo_codigo": "202406",
+    "periodo": "junho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.56
+  },
+  {
+    "periodo_codigo": "202407",
+    "periodo": "julho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.63
+  },
+  {
+    "periodo_codigo": "202407",
+    "periodo": "julho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.42
+  },
+  {
+    "periodo_codigo": "202407",
+    "periodo": "julho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.21
+  },
+  {
+    "periodo_codigo": "202408",
+    "periodo": "agosto 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.4
+  },
+  {
+    "periodo_codigo": "202408",
+    "periodo": "agosto 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 107.43
+  },
+  {
+    "periodo_codigo": "202408",
+    "periodo": "agosto 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.64
+  },
+  {
+    "periodo_codigo": "202409",
+    "periodo": "setembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.39
+  },
+  {
+    "periodo_codigo": "202409",
+    "periodo": "setembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.8
+  },
+  {
+    "periodo_codigo": "202409",
+    "periodo": "setembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.97
+  },
+  {
+    "periodo_codigo": "202410",
+    "periodo": "outubro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.43
+  },
+  {
+    "periodo_codigo": "202410",
+    "periodo": "outubro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.97
+  },
+  {
+    "periodo_codigo": "202410",
+    "periodo": "outubro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.5
+  },
+  {
+    "periodo_codigo": "202411",
+    "periodo": "novembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.87
+  },
+  {
+    "periodo_codigo": "202411",
+    "periodo": "novembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 107.82
+  },
+  {
+    "periodo_codigo": "202411",
+    "periodo": "novembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.38
+  },
+  {
+    "periodo_codigo": "202412",
+    "periodo": "dezembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.75
+  },
+  {
+    "periodo_codigo": "202412",
+    "periodo": "dezembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 108.48
+  },
+  {
+    "periodo_codigo": "202412",
+    "periodo": "dezembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.78
+  },
+  {
+    "periodo_codigo": "202501",
+    "periodo": "janeiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.58
+  },
+  {
+    "periodo_codigo": "202501",
+    "periodo": "janeiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.24
+  },
+  {
+    "periodo_codigo": "202501",
+    "periodo": "janeiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.28
+  },
+  {
+    "periodo_codigo": "202502",
+    "periodo": "fevereiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.12
+  },
+  {
+    "periodo_codigo": "202502",
+    "periodo": "fevereiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 108.07
+  },
+  {
+    "periodo_codigo": "202502",
+    "periodo": "fevereiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.38
+  },
+  {
+    "periodo_codigo": "202503",
+    "periodo": "março 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.71
+  },
+  {
+    "periodo_codigo": "202503",
+    "periodo": "março 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 111.59
+  },
+  {
+    "periodo_codigo": "202503",
+    "periodo": "março 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.43
+  },
+  {
+    "periodo_codigo": "202504",
+    "periodo": "abril 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.04
+  },
+  {
+    "periodo_codigo": "202504",
+    "periodo": "abril 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 112.04
+  },
+  {
+    "periodo_codigo": "202504",
+    "periodo": "abril 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.29
+  },
+  {
+    "periodo_codigo": "202505",
+    "periodo": "maio 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.2
+  },
+  {
+    "periodo_codigo": "202505",
+    "periodo": "maio 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 114.54
+  },
+  {
+    "periodo_codigo": "202505",
+    "periodo": "maio 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.56
+  },
+  {
+    "periodo_codigo": "202506",
+    "periodo": "junho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.14
+  },
+  {
+    "periodo_codigo": "202506",
+    "periodo": "junho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 112.53
+  },
+  {
+    "periodo_codigo": "202506",
+    "periodo": "junho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.53
+  },
+  {
+    "periodo_codigo": "202507",
+    "periodo": "julho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.81
+  },
+  {
+    "periodo_codigo": "202507",
+    "periodo": "julho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 114.51
+  },
+  {
+    "periodo_codigo": "202507",
+    "periodo": "julho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.12
+  },
+  {
+    "periodo_codigo": "202508",
+    "periodo": "agosto 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.72
+  },
+  {
+    "periodo_codigo": "202508",
+    "periodo": "agosto 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 114.63
+  },
+  {
+    "periodo_codigo": "202508",
+    "periodo": "agosto 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.96
+  },
+  {
+    "periodo_codigo": "202509",
+    "periodo": "setembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.29
+  },
+  {
+    "periodo_codigo": "202509",
+    "periodo": "setembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 112.6
+  },
+  {
+    "periodo_codigo": "202509",
+    "periodo": "setembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.92
+  },
+  {
+    "periodo_codigo": "202510",
+    "periodo": "outubro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.39
+  },
+  {
+    "periodo_codigo": "202510",
+    "periodo": "outubro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 116.51
+  },
+  {
+    "periodo_codigo": "202510",
+    "periodo": "outubro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.5
+  },
+  {
+    "periodo_codigo": "202511",
+    "periodo": "novembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.21
+  },
+  {
+    "periodo_codigo": "202511",
+    "periodo": "novembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 113.82
+  },
+  {
+    "periodo_codigo": "202511",
+    "periodo": "novembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.57
+  },
+  {
+    "periodo_codigo": "202512",
+    "periodo": "dezembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.14
+  },
+  {
+    "periodo_codigo": "202512",
+    "periodo": "dezembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 114.85
+  },
+  {
+    "periodo_codigo": "202512",
+    "periodo": "dezembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 100.06
+  },
+  {
+    "periodo_codigo": "202601",
+    "periodo": "janeiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 104.27
+  },
+  {
+    "periodo_codigo": "202601",
+    "periodo": "janeiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 116.51
+  },
+  {
+    "periodo_codigo": "202601",
+    "periodo": "janeiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 102.2
+  },
+  {
+    "periodo_codigo": "202602",
+    "periodo": "fevereiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.25
+  },
+  {
+    "periodo_codigo": "202602",
+    "periodo": "fevereiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 117.76
+  },
+  {
+    "periodo_codigo": "202602",
+    "periodo": "fevereiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.19
+  },
+  {
+    "periodo_codigo": "202603",
+    "periodo": "março 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.36
+  },
+  {
+    "periodo_codigo": "202603",
+    "periodo": "março 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 118.19
+  },
+  {
+    "periodo_codigo": "202603",
+    "periodo": "março 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.14
+  },
+  {
+    "periodo_codigo": "202604",
+    "periodo": "abril 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 106.57
+  },
+  {
+    "periodo_codigo": "202604",
+    "periodo": "abril 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 122.28
+  },
+  {
+    "periodo_codigo": "202604",
+    "periodo": "abril 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.46
+  },
+  {
+    "periodo_codigo": "202605",
+    "periodo": "maio 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 105.47
+  },
+  {
+    "periodo_codigo": "202605",
+    "periodo": "maio 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 118.91
+  },
+  {
+    "periodo_codigo": "202605",
+    "periodo": "maio 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.29
+  },
+  {
+    "periodo_codigo": "202606",
+    "periodo": "junho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.81
+  },
+  {
+    "periodo_codigo": "202606",
+    "periodo": "junho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 118.54
+  },
+  {
+    "periodo_codigo": "202606",
+    "periodo": "junho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.26
+  },
+  {
+    "periodo_codigo": "202607",
+    "periodo": "julho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.87
+  },
+  {
+    "periodo_codigo": "202607",
+    "periodo": "julho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 117.32
+  },
+  {
+    "periodo_codigo": "202607",
+    "periodo": "julho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.68
+  },
+  {
+    "periodo_codigo": "202608",
+    "periodo": "agosto 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 103.25
+  },
+  {
+    "periodo_codigo": "202608",
+    "periodo": "agosto 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 116.56
+  },
+  {
+    "periodo_codigo": "202608",
+    "periodo": "agosto 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Índice com ajuste sazonal (2022=100)",
+    "valor": 101.01
+  },
+  {
+    "periodo_codigo": "201909",
+    "periodo": "setembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.3
+  },
+  {
+    "periodo_codigo": "201909",
+    "periodo": "setembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -6.5
+  },
+  {
+    "periodo_codigo": "201909",
+    "periodo": "setembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "201910",
+    "periodo": "outubro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.2
+  },
+  {
+    "periodo_codigo": "201910",
+    "periodo": "outubro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -7.3
+  },
+  {
+    "periodo_codigo": "201910",
+    "periodo": "outubro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.3
+  },
+  {
+    "periodo_codigo": "201911",
+    "periodo": "novembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.3
+  },
+  {
+    "periodo_codigo": "201911",
+    "periodo": "novembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -8.2
+  },
+  {
+    "periodo_codigo": "201911",
+    "periodo": "novembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "201912",
+    "periodo": "dezembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.1
+  },
+  {
+    "periodo_codigo": "201912",
+    "periodo": "dezembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -9.7
+  },
+  {
+    "periodo_codigo": "201912",
+    "periodo": "dezembro 2019",
+    "ano": 2019,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.2
+  },
+  {
+    "periodo_codigo": "202001",
+    "periodo": "janeiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.0
+  },
+  {
+    "periodo_codigo": "202001",
+    "periodo": "janeiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -11.1
+  },
+  {
+    "periodo_codigo": "202001",
+    "periodo": "janeiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.5
+  },
+  {
+    "periodo_codigo": "202002",
+    "periodo": "fevereiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.2
+  },
+  {
+    "periodo_codigo": "202002",
+    "periodo": "fevereiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -10.5
+  },
+  {
+    "periodo_codigo": "202002",
+    "periodo": "fevereiro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.2
+  },
+  {
+    "periodo_codigo": "202003",
+    "periodo": "março 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.0
+  },
+  {
+    "periodo_codigo": "202003",
+    "periodo": "março 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -9.5
+  },
+  {
+    "periodo_codigo": "202003",
+    "periodo": "março 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.3
+  },
+  {
+    "periodo_codigo": "202004",
+    "periodo": "abril 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.9
+  },
+  {
+    "periodo_codigo": "202004",
+    "periodo": "abril 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -7.2
+  },
+  {
+    "periodo_codigo": "202004",
+    "periodo": "abril 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.3
+  },
+  {
+    "periodo_codigo": "202005",
+    "periodo": "maio 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.4
+  },
+  {
+    "periodo_codigo": "202005",
+    "periodo": "maio 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -6.3
+  },
+  {
+    "periodo_codigo": "202005",
+    "periodo": "maio 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.3
+  },
+  {
+    "periodo_codigo": "202006",
+    "periodo": "junho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.6
+  },
+  {
+    "periodo_codigo": "202006",
+    "periodo": "junho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.1
+  },
+  {
+    "periodo_codigo": "202006",
+    "periodo": "junho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.7
+  },
+  {
+    "periodo_codigo": "202007",
+    "periodo": "julho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.6
+  },
+  {
+    "periodo_codigo": "202007",
+    "periodo": "julho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.3
+  },
+  {
+    "periodo_codigo": "202007",
+    "periodo": "julho 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.8
+  },
+  {
+    "periodo_codigo": "202008",
+    "periodo": "agosto 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.7
+  },
+  {
+    "periodo_codigo": "202008",
+    "periodo": "agosto 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.3
+  },
+  {
+    "periodo_codigo": "202008",
+    "periodo": "agosto 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.9
+  },
+  {
+    "periodo_codigo": "202009",
+    "periodo": "setembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.4
+  },
+  {
+    "periodo_codigo": "202009",
+    "periodo": "setembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.4
+  },
+  {
+    "periodo_codigo": "202009",
+    "periodo": "setembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.6
+  },
+  {
+    "periodo_codigo": "202010",
+    "periodo": "outubro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.5
+  },
+  {
+    "periodo_codigo": "202010",
+    "periodo": "outubro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.3
+  },
+  {
+    "periodo_codigo": "202010",
+    "periodo": "outubro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.7
+  },
+  {
+    "periodo_codigo": "202011",
+    "periodo": "novembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.2
+  },
+  {
+    "periodo_codigo": "202011",
+    "periodo": "novembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.2
+  },
+  {
+    "periodo_codigo": "202011",
+    "periodo": "novembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -5.3
+  },
+  {
+    "periodo_codigo": "202012",
+    "periodo": "dezembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.5
+  },
+  {
+    "periodo_codigo": "202012",
+    "periodo": "dezembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -3.4
+  },
+  {
+    "periodo_codigo": "202012",
+    "periodo": "dezembro 2020",
+    "ano": 2020,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.6
+  },
+  {
+    "periodo_codigo": "202101",
+    "periodo": "janeiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.2
+  },
+  {
+    "periodo_codigo": "202101",
+    "periodo": "janeiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.0
+  },
+  {
+    "periodo_codigo": "202101",
+    "periodo": "janeiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.5
+  },
+  {
+    "periodo_codigo": "202102",
+    "periodo": "fevereiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.2
+  },
+  {
+    "periodo_codigo": "202102",
+    "periodo": "fevereiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.5
+  },
+  {
+    "periodo_codigo": "202102",
+    "periodo": "fevereiro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -4.4
+  },
+  {
+    "periodo_codigo": "202103",
+    "periodo": "março 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -3.1
+  },
+  {
+    "periodo_codigo": "202103",
+    "periodo": "março 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.5
+  },
+  {
+    "periodo_codigo": "202103",
+    "periodo": "março 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -3.2
+  },
+  {
+    "periodo_codigo": "202104",
+    "periodo": "abril 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.2
+  },
+  {
+    "periodo_codigo": "202104",
+    "periodo": "abril 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.8
+  },
+  {
+    "periodo_codigo": "202104",
+    "periodo": "abril 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.7
+  },
+  {
+    "periodo_codigo": "202105",
+    "periodo": "maio 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.9
+  },
+  {
+    "periodo_codigo": "202105",
+    "periodo": "maio 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.5
+  },
+  {
+    "periodo_codigo": "202105",
+    "periodo": "maio 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 5.8
+  },
+  {
+    "periodo_codigo": "202106",
+    "periodo": "junho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.6
+  },
+  {
+    "periodo_codigo": "202106",
+    "periodo": "junho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.1
+  },
+  {
+    "periodo_codigo": "202106",
+    "periodo": "junho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.7
+  },
+  {
+    "periodo_codigo": "202107",
+    "periodo": "julho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.0
+  },
+  {
+    "periodo_codigo": "202107",
+    "periodo": "julho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.4
+  },
+  {
+    "periodo_codigo": "202107",
+    "periodo": "julho 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 8.2
+  },
+  {
+    "periodo_codigo": "202108",
+    "periodo": "agosto 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.2
+  },
+  {
+    "periodo_codigo": "202108",
+    "periodo": "agosto 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.4
+  },
+  {
+    "periodo_codigo": "202108",
+    "periodo": "agosto 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 8.4
+  },
+  {
+    "periodo_codigo": "202109",
+    "periodo": "setembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.5
+  },
+  {
+    "periodo_codigo": "202109",
+    "periodo": "setembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.8
+  },
+  {
+    "periodo_codigo": "202109",
+    "periodo": "setembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.5
+  },
+  {
+    "periodo_codigo": "202110",
+    "periodo": "outubro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 5.7
+  },
+  {
+    "periodo_codigo": "202110",
+    "periodo": "outubro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.6
+  },
+  {
+    "periodo_codigo": "202110",
+    "periodo": "outubro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.5
+  },
+  {
+    "periodo_codigo": "202111",
+    "periodo": "novembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 5.0
+  },
+  {
+    "periodo_codigo": "202111",
+    "periodo": "novembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.5
+  },
+  {
+    "periodo_codigo": "202111",
+    "periodo": "novembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 5.6
+  },
+  {
+    "periodo_codigo": "202112",
+    "periodo": "dezembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.9
+  },
+  {
+    "periodo_codigo": "202112",
+    "periodo": "dezembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.0
+  },
+  {
+    "periodo_codigo": "202112",
+    "periodo": "dezembro 2021",
+    "ano": 2021,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.3
+  },
+  {
+    "periodo_codigo": "202201",
+    "periodo": "janeiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.3
+  },
+  {
+    "periodo_codigo": "202201",
+    "periodo": "janeiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.5
+  },
+  {
+    "periodo_codigo": "202201",
+    "periodo": "janeiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.6
+  },
+  {
+    "periodo_codigo": "202202",
+    "periodo": "fevereiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.1
+  },
+  {
+    "periodo_codigo": "202202",
+    "periodo": "fevereiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.1
+  },
+  {
+    "periodo_codigo": "202202",
+    "periodo": "fevereiro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.3
+  },
+  {
+    "periodo_codigo": "202203",
+    "periodo": "março 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.0
+  },
+  {
+    "periodo_codigo": "202203",
+    "periodo": "março 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.1
+  },
+  {
+    "periodo_codigo": "202203",
+    "periodo": "março 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.2
+  },
+  {
+    "periodo_codigo": "202204",
+    "periodo": "abril 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202204",
+    "periodo": "abril 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.7
+  },
+  {
+    "periodo_codigo": "202204",
+    "periodo": "abril 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202205",
+    "periodo": "maio 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.7
+  },
+  {
+    "periodo_codigo": "202205",
+    "periodo": "maio 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.0
+  },
+  {
+    "periodo_codigo": "202205",
+    "periodo": "maio 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.8
+  },
+  {
+    "periodo_codigo": "202206",
+    "periodo": "junho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.6
+  },
+  {
+    "periodo_codigo": "202206",
+    "periodo": "junho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.8
+  },
+  {
+    "periodo_codigo": "202206",
+    "periodo": "junho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.7
+  },
+  {
+    "periodo_codigo": "202207",
+    "periodo": "julho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.8
+  },
+  {
+    "periodo_codigo": "202207",
+    "periodo": "julho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.9
+  },
+  {
+    "periodo_codigo": "202207",
+    "periodo": "julho 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.9
+  },
+  {
+    "periodo_codigo": "202208",
+    "periodo": "agosto 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.6
+  },
+  {
+    "periodo_codigo": "202208",
+    "periodo": "agosto 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.4
+  },
+  {
+    "periodo_codigo": "202208",
+    "periodo": "agosto 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.6
+  },
+  {
+    "periodo_codigo": "202209",
+    "periodo": "setembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.3
+  },
+  {
+    "periodo_codigo": "202209",
+    "periodo": "setembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -3.3
+  },
+  {
+    "periodo_codigo": "202209",
+    "periodo": "setembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.1
+  },
+  {
+    "periodo_codigo": "202210",
+    "periodo": "outubro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.5
+  },
+  {
+    "periodo_codigo": "202210",
+    "periodo": "outubro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.0
+  },
+  {
+    "periodo_codigo": "202210",
+    "periodo": "outubro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.4
+  },
+  {
+    "periodo_codigo": "202211",
+    "periodo": "novembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.1
+  },
+  {
+    "periodo_codigo": "202211",
+    "periodo": "novembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.7
+  },
+  {
+    "periodo_codigo": "202211",
+    "periodo": "novembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.8
+  },
+  {
+    "periodo_codigo": "202212",
+    "periodo": "dezembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.7
+  },
+  {
+    "periodo_codigo": "202212",
+    "periodo": "dezembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -3.2
+  },
+  {
+    "periodo_codigo": "202212",
+    "periodo": "dezembro 2022",
+    "ano": 2022,
+    "governo": "Bolsonaro (2019-2022)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.4
+  },
+  {
+    "periodo_codigo": "202301",
+    "periodo": "janeiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202301",
+    "periodo": "janeiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.6
+  },
+  {
+    "periodo_codigo": "202301",
+    "periodo": "janeiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.1
+  },
+  {
+    "periodo_codigo": "202302",
+    "periodo": "fevereiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202302",
+    "periodo": "fevereiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.3
+  },
+  {
+    "periodo_codigo": "202302",
+    "periodo": "fevereiro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202303",
+    "periodo": "março 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202303",
+    "periodo": "março 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -2.1
+  },
+  {
+    "periodo_codigo": "202303",
+    "periodo": "março 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.3
+  },
+  {
+    "periodo_codigo": "202304",
+    "periodo": "abril 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202304",
+    "periodo": "abril 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.9
+  },
+  {
+    "periodo_codigo": "202304",
+    "periodo": "abril 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202305",
+    "periodo": "maio 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202305",
+    "periodo": "maio 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.1
+  },
+  {
+    "periodo_codigo": "202305",
+    "periodo": "maio 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.1
+  },
+  {
+    "periodo_codigo": "202306",
+    "periodo": "junho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.1
+  },
+  {
+    "periodo_codigo": "202306",
+    "periodo": "junho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.3
+  },
+  {
+    "periodo_codigo": "202306",
+    "periodo": "junho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.3
+  },
+  {
+    "periodo_codigo": "202307",
+    "periodo": "julho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202307",
+    "periodo": "julho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.3
+  },
+  {
+    "periodo_codigo": "202307",
+    "periodo": "julho 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "202308",
+    "periodo": "agosto 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202308",
+    "periodo": "agosto 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.3
+  },
+  {
+    "periodo_codigo": "202308",
+    "periodo": "agosto 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.8
+  },
+  {
+    "periodo_codigo": "202309",
+    "periodo": "setembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202309",
+    "periodo": "setembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.7
+  },
+  {
+    "periodo_codigo": "202309",
+    "periodo": "setembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.9
+  },
+  {
+    "periodo_codigo": "202310",
+    "periodo": "outubro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202310",
+    "periodo": "outubro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.8
+  },
+  {
+    "periodo_codigo": "202310",
+    "periodo": "outubro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.7
+  },
+  {
+    "periodo_codigo": "202311",
+    "periodo": "novembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202311",
+    "periodo": "novembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 5.4
+  },
+  {
+    "periodo_codigo": "202311",
+    "periodo": "novembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.9
+  },
+  {
+    "periodo_codigo": "202312",
+    "periodo": "dezembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.1
+  },
+  {
+    "periodo_codigo": "202312",
+    "periodo": "dezembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.3
+  },
+  {
+    "periodo_codigo": "202312",
+    "periodo": "dezembro 2023",
+    "ano": 2023,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.1
+  },
+  {
+    "periodo_codigo": "202401",
+    "periodo": "janeiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.4
+  },
+  {
+    "periodo_codigo": "202401",
+    "periodo": "janeiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.7
+  },
+  {
+    "periodo_codigo": "202401",
+    "periodo": "janeiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.9
+  },
+  {
+    "periodo_codigo": "202402",
+    "periodo": "fevereiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.0
+  },
+  {
+    "periodo_codigo": "202402",
+    "periodo": "fevereiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.7
+  },
+  {
+    "periodo_codigo": "202402",
+    "periodo": "fevereiro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202403",
+    "periodo": "março 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.7
+  },
+  {
+    "periodo_codigo": "202403",
+    "periodo": "março 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.6
+  },
+  {
+    "periodo_codigo": "202403",
+    "periodo": "março 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "202404",
+    "periodo": "abril 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.5
+  },
+  {
+    "periodo_codigo": "202404",
+    "periodo": "abril 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.3
+  },
+  {
+    "periodo_codigo": "202404",
+    "periodo": "abril 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.5
+  },
+  {
+    "periodo_codigo": "202405",
+    "periodo": "maio 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.2
+  },
+  {
+    "periodo_codigo": "202405",
+    "periodo": "maio 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.3
+  },
+  {
+    "periodo_codigo": "202405",
+    "periodo": "maio 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.4
+  },
+  {
+    "periodo_codigo": "202406",
+    "periodo": "junho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.5
+  },
+  {
+    "periodo_codigo": "202406",
+    "periodo": "junho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 5.4
+  },
+  {
+    "periodo_codigo": "202406",
+    "periodo": "junho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.8
+  },
+  {
+    "periodo_codigo": "202407",
+    "periodo": "julho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.2
+  },
+  {
+    "periodo_codigo": "202407",
+    "periodo": "julho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.7
+  },
+  {
+    "periodo_codigo": "202407",
+    "periodo": "julho 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.7
+  },
+  {
+    "periodo_codigo": "202408",
+    "periodo": "agosto 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.4
+  },
+  {
+    "periodo_codigo": "202408",
+    "periodo": "agosto 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.9
+  },
+  {
+    "periodo_codigo": "202408",
+    "periodo": "agosto 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.9
+  },
+  {
+    "periodo_codigo": "202409",
+    "periodo": "setembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.6
+  },
+  {
+    "periodo_codigo": "202409",
+    "periodo": "setembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.8
+  },
+  {
+    "periodo_codigo": "202409",
+    "periodo": "setembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.4
+  },
+  {
+    "periodo_codigo": "202410",
+    "periodo": "outubro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.0
+  },
+  {
+    "periodo_codigo": "202410",
+    "periodo": "outubro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.6
+  },
+  {
+    "periodo_codigo": "202410",
+    "periodo": "outubro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.9
+  },
+  {
+    "periodo_codigo": "202411",
+    "periodo": "novembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.1
+  },
+  {
+    "periodo_codigo": "202411",
+    "periodo": "novembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.1
+  },
+  {
+    "periodo_codigo": "202411",
+    "periodo": "novembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.2
+  },
+  {
+    "periodo_codigo": "202412",
+    "periodo": "dezembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.1
+  },
+  {
+    "periodo_codigo": "202412",
+    "periodo": "dezembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.0
+  },
+  {
+    "periodo_codigo": "202412",
+    "periodo": "dezembro 2024",
+    "ano": 2024,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.7
+  },
+  {
+    "periodo_codigo": "202501",
+    "periodo": "janeiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.9
+  },
+  {
+    "periodo_codigo": "202501",
+    "periodo": "janeiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.0
+  },
+  {
+    "periodo_codigo": "202501",
+    "periodo": "janeiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.6
+  },
+  {
+    "periodo_codigo": "202502",
+    "periodo": "fevereiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.6
+  },
+  {
+    "periodo_codigo": "202502",
+    "periodo": "fevereiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.7
+  },
+  {
+    "periodo_codigo": "202502",
+    "periodo": "fevereiro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.4
+  },
+  {
+    "periodo_codigo": "202503",
+    "periodo": "março 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.1
+  },
+  {
+    "periodo_codigo": "202503",
+    "periodo": "março 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -1.3
+  },
+  {
+    "periodo_codigo": "202503",
+    "periodo": "março 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.0
+  },
+  {
+    "periodo_codigo": "202504",
+    "periodo": "abril 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.4
+  },
+  {
+    "periodo_codigo": "202504",
+    "periodo": "abril 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "202504",
+    "periodo": "abril 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.0
+  },
+  {
+    "periodo_codigo": "202505",
+    "periodo": "maio 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.8
+  },
+  {
+    "periodo_codigo": "202505",
+    "periodo": "maio 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.3
+  },
+  {
+    "periodo_codigo": "202505",
+    "periodo": "maio 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.3
+  },
+  {
+    "periodo_codigo": "202506",
+    "periodo": "junho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.4
+  },
+  {
+    "periodo_codigo": "202506",
+    "periodo": "junho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.5
+  },
+  {
+    "periodo_codigo": "202506",
+    "periodo": "junho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.8
+  },
+  {
+    "periodo_codigo": "202507",
+    "periodo": "julho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.9
+  },
+  {
+    "periodo_codigo": "202507",
+    "periodo": "julho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.1
+  },
+  {
+    "periodo_codigo": "202507",
+    "periodo": "julho 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.1
+  },
+  {
+    "periodo_codigo": "202508",
+    "periodo": "agosto 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.6
+  },
+  {
+    "periodo_codigo": "202508",
+    "periodo": "agosto 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.1
+  },
+  {
+    "periodo_codigo": "202508",
+    "periodo": "agosto 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.7
+  },
+  {
+    "periodo_codigo": "202509",
+    "periodo": "setembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.5
+  },
+  {
+    "periodo_codigo": "202509",
+    "periodo": "setembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.8
+  },
+  {
+    "periodo_codigo": "202509",
+    "periodo": "setembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 1.5
+  },
+  {
+    "periodo_codigo": "202510",
+    "periodo": "outubro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.9
+  },
+  {
+    "periodo_codigo": "202510",
+    "periodo": "outubro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 2.8
+  },
+  {
+    "periodo_codigo": "202510",
+    "periodo": "outubro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.6
+  },
+  {
+    "periodo_codigo": "202511",
+    "periodo": "novembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.7
+  },
+  {
+    "periodo_codigo": "202511",
+    "periodo": "novembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 3.6
+  },
+  {
+    "periodo_codigo": "202511",
+    "periodo": "novembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.1
+  },
+  {
+    "periodo_codigo": "202512",
+    "periodo": "dezembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.6
+  },
+  {
+    "periodo_codigo": "202512",
+    "periodo": "dezembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 4.9
+  },
+  {
+    "periodo_codigo": "202512",
+    "periodo": "dezembro 2025",
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.2
+  },
+  {
+    "periodo_codigo": "202601",
+    "periodo": "janeiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.5
+  },
+  {
+    "periodo_codigo": "202601",
+    "periodo": "janeiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.3
+  },
+  {
+    "periodo_codigo": "202601",
+    "periodo": "janeiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.6
+  },
+  {
+    "periodo_codigo": "202602",
+    "periodo": "fevereiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.3
+  },
+  {
+    "periodo_codigo": "202602",
+    "periodo": "fevereiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.3
+  },
+  {
+    "periodo_codigo": "202602",
+    "periodo": "fevereiro 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.9
+  },
+  {
+    "periodo_codigo": "202603",
+    "periodo": "março 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.4
+  },
+  {
+    "periodo_codigo": "202603",
+    "periodo": "março 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.2
+  },
+  {
+    "periodo_codigo": "202603",
+    "periodo": "março 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.8
+  },
+  {
+    "periodo_codigo": "202604",
+    "periodo": "abril 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.7
+  },
+  {
+    "periodo_codigo": "202604",
+    "periodo": "abril 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 7.3
+  },
+  {
+    "periodo_codigo": "202604",
+    "periodo": "abril 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "202605",
+    "periodo": "maio 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.4
+  },
+  {
+    "periodo_codigo": "202605",
+    "periodo": "maio 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.8
+  },
+  {
+    "periodo_codigo": "202605",
+    "periodo": "maio 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.7
+  },
+  {
+    "periodo_codigo": "202606",
+    "periodo": "junho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.7
+  },
+  {
+    "periodo_codigo": "202606",
+    "periodo": "junho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.9
+  },
+  {
+    "periodo_codigo": "202606",
+    "periodo": "junho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "202607",
+    "periodo": "julho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.6
+  },
+  {
+    "periodo_codigo": "202607",
+    "periodo": "julho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.5
+  },
+  {
+    "periodo_codigo": "202607",
+    "periodo": "julho 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  },
+  {
+    "periodo_codigo": "202608",
+    "periodo": "agosto 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "1 Indústria geral",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 0.6
+  },
+  {
+    "periodo_codigo": "202608",
+    "periodo": "agosto 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "2 Indústrias extrativas",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": 6.3
+  },
+  {
+    "periodo_codigo": "202608",
+    "periodo": "agosto 2026",
+    "ano": 2026,
+    "governo": "Lula (2023-atual)",
+    "atividade": "3 Indústrias de transformação",
+    "variavel": "Acumulado em 12 meses (%)",
+    "valor": -0.5
+  }
+]

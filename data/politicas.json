@@ -1,0 +1,1009 @@
+[
+  {
+    "id": 1,
+    "area": "Fiscal & Tributária",
+    "governo": "Bolsonaro",
+    "ano": "2019",
+    "politica": "Reforma da Previdência (EC 103/2019)",
+    "descricao": "Idade mínima de 62 anos (mulheres) e 65 (homens), novas alíquotas progressivas e regras de transição.",
+    "impactos_positivos": "Economia estimada em cerca de R$ 800 bi em 10 anos; conteve a trajetória do déficit do INSS e melhorou a confiança fiscal.",
+    "impactos_negativos": "Endureceu o acesso para trabalhadores de baixa renda e informais; militares tiveram regras mais brandas em lei separada.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Dividida",
+      "evidencia": "Datafolha (2019): em abril, 41% a favor e 51% contra; em julho, 47% a favor e 44% contra (empate técnico).",
+      "fonte": "Datafolha, via Exame",
+      "url": "https://exame.com/economia/cresce-para-47-apoio-da-populacao-a-reforma-da-previdencia-diz-datafolha"
+    },
+    "fonte": "Emenda Constitucional 103/2019"
+  },
+  {
+    "id": 2,
+    "area": "Fiscal & Tributária",
+    "governo": "Bolsonaro",
+    "ano": "2021",
+    "politica": "PEC dos Precatórios (EC 113 e 114/2021)",
+    "descricao": "Limitou o pagamento anual de dívidas judiciais da União e mudou a correção do teto de gastos.",
+    "impactos_positivos": "Abriu espaço no orçamento de 2022 para o Auxílio Brasil.",
+    "impactos_negativos": "Adiou dívidas reconhecidas pela Justiça (\"PEC do Calote\"); o governo seguinte pagou R$ 92,4 bi atrasados em 2023, inflando aquele déficit.",
+    "status": "Limite derrubado pelo STF (2023)",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Poder360 / Gazeta do Povo"
+  },
+  {
+    "id": 3,
+    "area": "Fiscal & Tributária",
+    "governo": "Bolsonaro",
+    "ano": "2022",
+    "politica": "Teto do ICMS sobre combustíveis e energia (LC 194/2022) e PEC Kamikaze",
+    "descricao": "Corte de impostos e benefícios sociais a poucos meses da eleição.",
+    "impactos_positivos": "Gerou deflação em jul–set/2022 e aliviou o preço da gasolina e da conta de luz.",
+    "impactos_negativos": "Perda de arrecadação dos estados, depois compensada pela União; medidas temporárias criadas em ano eleitoral driblando a lei eleitoral via PEC.",
+    "status": "Parcialmente revertido",
+    "status_categoria": "Em vigor em parte",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "LC 194/2022; EC 123/2022"
+  },
+  {
+    "id": 4,
+    "area": "Fiscal & Tributária",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Teto de gastos (EC 95) mantido com exceções",
+    "descricao": "Gasto federal corrigido só pela inflação, com sucessivas PECs para gastos extras (pandemia, precatórios, auxílios).",
+    "impactos_positivos": "Disciplina de gastos e superávits primários em 2021 e 2022.",
+    "impactos_negativos": "Regra furada várias vezes; investimento público em mínimas históricas; dívida bruta chegou a 86,9% do PIB em 2020.",
+    "status": "Substituído pelo arcabouço (2023)",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Banco Central — SGS 13762"
+  },
+  {
+    "id": 5,
+    "area": "Fiscal & Tributária",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "PEC da Transição (EC 126/2022)",
+    "descricao": "Ampliou o teto de gastos de 2023 em R$ 145 bi para manter o Bolsa Família de R$ 600 e reforçar saúde e educação.",
+    "impactos_positivos": "Garantiu a continuidade dos R$ 600, que não estavam previstos no orçamento enviado pelo governo anterior.",
+    "impactos_negativos": "Elevou o patamar permanente de gastos; 2023 fechou com déficit primário de R$ 230,5 bi (2,1% do PIB).",
+    "status": "Concluída",
+    "status_categoria": "Concluída",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Aos Fatos; Tesouro Nacional"
+  },
+  {
+    "id": 6,
+    "area": "Fiscal & Tributária",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Novo arcabouço fiscal (LC 200/2023)",
+    "descricao": "Gasto cresce 70% da variação da receita, com teto real de 2,5% ao ano e metas de resultado primário.",
+    "impactos_positivos": "Regra mais previsível que o teto, preservando investimentos mínimos.",
+    "impactos_negativos": "Depende de aumento contínuo de arrecadação; metas foram descumpridas na prática (déficits em 2024 e 2025) e a dívida bruta subiu para 82,9% do PIB (ago/2026).",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Dividida",
+      "evidencia": "AtlasIntel (out/2026): 37% consideram o arcabouço um erro; o percentual de acerto é maior, mas não foi divulgado na matéria.",
+      "fonte": "AtlasIntel/Bloomberg, via InfoMoney",
+      "url": "https://www.infomoney.com.br/politica/farmacia-popular-e-a-medida-mais-aprovada-do-governo-lula-aponta-atlasintel/"
+    },
+    "fonte": "Banco Central; Agência Lupa"
+  },
+  {
+    "id": 7,
+    "area": "Fiscal & Tributária",
+    "governo": "Lula",
+    "ano": "2023–2033",
+    "politica": "Reforma tributária do consumo (EC 132/2023 e LC 214/2025)",
+    "descricao": "Troca PIS, Cofins, IPI, ICMS e ISS por um IVA dual (CBS e IBS), com cesta básica isenta e cashback para os mais pobres.",
+    "impactos_positivos": "Fim de décadas de impasse; simplificação, fim da guerra fiscal entre estados e ganhos de produtividade esperados.",
+    "impactos_negativos": "Transição longa (até 2033) e alíquota padrão estimada entre as mais altas do mundo por causa das exceções setoriais.",
+    "status": "Em implantação",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "EC 132/2023"
+  },
+  {
+    "id": 8,
+    "area": "Fiscal & Tributária",
+    "governo": "Lula",
+    "ano": "2025–2026",
+    "politica": "Isenção do IR até R$ 5 mil e imposto mínimo para altas rendas",
+    "descricao": "Isenção para quem ganha até R$ 5 mil/mês, desconto parcial até R$ 7 mil, compensada por tributação mínima de rendas acima de R$ 600 mil/ano e de dividendos.",
+    "impactos_positivos": "Aumenta a renda líquida de milhões de trabalhadores e torna o IR mais progressivo; aprovado por unanimidade no Senado.",
+    "impactos_negativos": "Risco de a compensação arrecadar menos que o previsto; críticas de setores sobre a tributação de dividendos.",
+    "status": "Em vigor desde jan/2026",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "Datafolha (abr/2025): cerca de 70% aprovam a isenção e 76% apoiam cobrar mais de quem ganha mais de R$ 50 mil. Genial/Quaest (out/2025): 79% a favor da isenção e 64% concordam em taxar os mais ricos para compensar. AtlasIntel (out/2026): 84% consideram um acerto.",
+      "fonte": "Datafolha, Quaest e AtlasIntel",
+      "url": "https://www.infomoney.com.br/politica/farmacia-popular-e-a-medida-mais-aprovada-do-governo-lula-aponta-atlasintel/"
+    },
+    "fonte": "PL 1087/2025"
+  },
+  {
+    "id": 9,
+    "area": "Economia & Crédito",
+    "governo": "Bolsonaro",
+    "ano": "2019",
+    "politica": "Lei de Liberdade Econômica (Lei 13.874/2019)",
+    "descricao": "Dispensa de alvará para atividades de baixo risco, digitalização de documentos e limites à intervenção do Estado.",
+    "impactos_positivos": "Reduziu burocracia para abrir e operar pequenos negócios.",
+    "impactos_negativos": "Impacto econômico difícil de medir; algumas flexibilizações trabalhistas foram retiradas na tramitação.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Lei 13.874/2019"
+  },
+  {
+    "id": 10,
+    "area": "Economia & Crédito",
+    "governo": "Bolsonaro",
+    "ano": "2021",
+    "politica": "Autonomia do Banco Central (LC 179/2021)",
+    "descricao": "Mandatos fixos e não coincidentes para a diretoria do BC.",
+    "impactos_positivos": "Blindou a política monetária de pressão eleitoral; credibilidade no combate à inflação.",
+    "impactos_negativos": "Atritos públicos entre o governo seguinte e o BC sobre o nível dos juros.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "LC 179/2021"
+  },
+  {
+    "id": 11,
+    "area": "Economia & Crédito",
+    "governo": "Bolsonaro",
+    "ano": "2020",
+    "politica": "Lançamento do Pix (Banco Central)",
+    "descricao": "Sistema de pagamentos instantâneos gratuito para pessoas físicas, lançado em nov/2020.",
+    "impactos_positivos": "Inclusão financeira de dezenas de milhões e queda do custo de transações.",
+    "impactos_negativos": "Projeto concebido no BC desde 2018 (governo Temer); mérito é principalmente da autoridade monetária.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Agência Lupa; Aos Fatos"
+  },
+  {
+    "id": 12,
+    "area": "Economia & Crédito",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Desenrola Brasil (Lei 14.690/2023) e teto do rotativo",
+    "descricao": "Renegociação de dívidas com garantia do Tesouro para quem ganha até 2 salários mínimos; juros do rotativo do cartão limitados a 100% da dívida.",
+    "impactos_positivos": "10,7 milhões de pessoas renegociaram R$ 29 bi até dez/2023 (balanço do Ministério da Fazenda e da B3); na faixa 2, descontos médios de 90% à vista e 85% parcelado.",
+    "impactos_negativos": "Endividamento das famílias seguiu subindo até o recorde de 81,7% (set/2026, CNC); risco de reincidência.",
+    "status": "Nova fase em 2026 (Desenrola 3)",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "AtlasIntel/Bloomberg (out/2026): 67% aprovam o Desenrola. Em paralelo, o endividamento das famílias segue em recorde (81,7%, CNC).",
+      "fonte": "AtlasIntel/Bloomberg",
+      "url": "https://www.fetecpr.org.br/retomado-por-lula-farmacia-popular-tem-89-de-aprovacao-diz-atlas-programa-corre-risco-com-flavio/"
+    },
+    "fonte": "CNC — Peic; Aos Fatos"
+  },
+  {
+    "id": 13,
+    "area": "Economia & Crédito",
+    "governo": "Lula",
+    "ano": "2024",
+    "politica": "Nova Indústria Brasil",
+    "descricao": "Política industrial com crédito subsidiado do BNDES, compras públicas e conteúdo local.",
+    "impactos_positivos": "Mais de R$ 750 bi disponibilizados para 2023–2026; BNDES liberou cerca de R$ 330 bi.",
+    "impactos_negativos": "Críticas ao retorno de subsídios e proteção a setores; o PIB da indústria cresceu só 1,4% em 2025.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Ranking dos Políticos"
+  },
+  {
+    "id": 14,
+    "area": "Economia & Crédito",
+    "governo": "Lula",
+    "ano": "2025–2026",
+    "politica": "Tarifaço dos EUA e resposta brasileira",
+    "descricao": "Tarifa de 50% imposta por Trump em jul/2025, ligada ao julgamento de Jair Bolsonaro; o governo negociou e criou linhas de apoio a exportadores.",
+    "impactos_positivos": "Exportações bateram recorde em 2025 (US$ 348,7 bi) apesar do tarifaço; reduções para carne, café e frutas em nov/2025.",
+    "impactos_negativos": "Vendas aos EUA caíram 6,6% em 2025; nova tarifa (seção 301) entrou em vigor em jul/2026 sem acordo fechado.",
+    "status": "Em disputa",
+    "status_categoria": "Em tramitação ou disputa",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "MDIC; Exame"
+  },
+  {
+    "id": 15,
+    "area": "Trabalho & Renda",
+    "governo": "Bolsonaro",
+    "ano": "2020",
+    "politica": "BEm — redução de jornada e suspensão de contratos (Lei 14.020/2020)",
+    "descricao": "Governo complementou salários de trabalhadores com jornada reduzida ou contrato suspenso na pandemia.",
+    "impactos_positivos": "Cerca de 10 milhões de trabalhadores tiveram acordos de redução ou suspensão em 2020; ajudou a preservar vínculos formais.",
+    "impactos_negativos": "Não alcançou informais, que foram os mais atingidos; desemprego chegou a 14,9%.",
+    "status": "Encerrado",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "TCU; Lei 14.020/2020"
+  },
+  {
+    "id": 16,
+    "area": "Trabalho & Renda",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Salário mínimo corrigido só pela inflação",
+    "descricao": "Fim da política de ganho real após a regra herdada (ganho de 1,14% em 2019).",
+    "impactos_positivos": "Menor pressão sobre gastos da Previdência e benefícios atrelados ao mínimo.",
+    "impactos_negativos": "Poder de compra do mínimo caiu a 1,5 cesta básica em abr/2022, o ponto mais baixo do período.",
+    "status": "Substituída em 2023",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Ranking dos Políticos; DIEESE"
+  },
+  {
+    "id": 17,
+    "area": "Trabalho & Renda",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Política de valorização do salário mínimo (Lei 14.663/2023)",
+    "descricao": "Reajuste pela inflação mais o crescimento do PIB de dois anos antes, limitado a 2,5% de ganho real desde 2025.",
+    "impactos_positivos": "Mínimo passou a comprar 1,8 cesta em SP (ago/2026), contra 1,62 em ago/2022; rendimento médio real subiu 13,9%.",
+    "impactos_negativos": "Pressiona gastos da Previdência e do BPC; o limite de 2,5% foi criado para conter o impacto fiscal.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "IBGE; DIEESE"
+  },
+  {
+    "id": 18,
+    "area": "Trabalho & Renda",
+    "governo": "Lula",
+    "ano": "2026",
+    "politica": "PEC do fim da escala 6x1 (jornada de 40 horas)",
+    "descricao": "Reduz a jornada máxima de 44 para 40 horas semanais, sem redução salarial, de forma gradual.",
+    "impactos_positivos": "Pode beneficiar cerca de 26,8 milhões de trabalhadores (DIEESE); aprovada no Senado por 75 a 1 com apoio de governo e oposição.",
+    "impactos_negativos": "Entidades empresariais alertam para aumento de custos, especialmente em comércio e serviços, e risco de informalidade.",
+    "status": "Aprovada, aguardando promulgação",
+    "status_categoria": "Em tramitação ou disputa",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "Datafolha (dez/2024): 64% a favor e 33% contra. Genial/Quaest (mai/2026): cerca de 70% a favor e 22% contra. No Senado, a PEC passou por 75 votos a 1. Entidades empresariais alertam para aumento de custos.",
+      "fonte": "Datafolha, via Portal de Prefeitura",
+      "url": "https://portaldeprefeitura.com.br/noticias/fim-da-escala-6x1-e-defendida-por-64-dos-brasileiros-diz-datafolha/586206/"
+    },
+    "fonte": "Senado Federal; O Povo"
+  },
+  {
+    "id": 19,
+    "area": "Proteção Social",
+    "governo": "Bolsonaro",
+    "ano": "2020–2021",
+    "politica": "Auxílio Emergencial",
+    "descricao": "Transferência de R$ 600 (R$ 1.200 para mães chefes de família) na pandemia, depois reduzida.",
+    "impactos_positivos": "Atingiu cerca de 68 milhões de pessoas e fez a pobreza cair de 32,6% (2019) para 31,1% (2020), apesar da recessão.",
+    "impactos_negativos": "Custo de R$ 293 bi pagos (Caixa, até fev/2021), com fraudes e pagamentos indevidos; ajudou a levar o déficit primário a 9,2% do PIB.",
+    "status": "Encerrado",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "Datafolha (ago/2020): aprovação do governo foi a maior do mandato (37% ótimo/bom; rejeição caiu de 44% para 34%), com o auxílio apontado como principal fator. Mede a popularidade do governo, não só do auxílio.",
+      "fonte": "Datafolha, via A Gazeta",
+      "url": "https://www.agazeta.com.br/brasil/auxilio-deu-gas-a-popularidade-de-bolsonaro-diz-mourao-apos-datafolha-0820"
+    },
+    "fonte": "IBGE/SIS; Banco Central"
+  },
+  {
+    "id": 20,
+    "area": "Proteção Social",
+    "governo": "Bolsonaro",
+    "ano": "2021–2022",
+    "politica": "Auxílio Brasil (Lei 14.284/2021) e piso de R$ 400 (Lei 14.342/2022)",
+    "descricao": "Substituiu o Bolsa Família; piso de R$ 400 tornado permanente por lei e elevado temporariamente a R$ 600 em 2022.",
+    "impactos_positivos": "Dobrou o valor médio do benefício em relação ao antigo Bolsa Família (~R$ 190).",
+    "impactos_negativos": "Afrouxou condicionalidades e gerou explosão de cadastros unipessoais; aumento para R$ 600 aprovado em ano eleitoral e só até dez/2022.",
+    "status": "Substituído em 2023",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Dividida",
+      "evidencia": "Datafolha (dez/2021): 43% avaliaram que o governo agiu mal ao trocar o Bolsa Família pelo Auxílio Brasil; 41% avaliaram como positivo.",
+      "fonte": "Datafolha, via Mais Goiás",
+      "url": "https://www.maisgoias.com.br/brasil/economia/datafolha-mostra-brasileiro-dividido-sobre-substituicao-do-bolsa-familia-por-auxilio-brasil/"
+    },
+    "fonte": "Agência Câmara; Agência Lupa"
+  },
+  {
+    "id": 21,
+    "area": "Proteção Social",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Novo Bolsa Família (Lei 14.601/2023)",
+    "descricao": "Piso de R$ 600 por família, R$ 150 por criança até 6 anos e R$ 50 para gestantes e jovens; volta das condicionalidades de saúde e educação.",
+    "impactos_positivos": "Pobreza caiu para 23,1% e extrema pobreza para 3,5% em 2024, menores níveis da série (IBGE).",
+    "impactos_negativos": "Custo de R$ 160 a 170 bi/ano; piso ficou sem reajuste de mar/2023 a set/2026; críticas sobre portas de saída para o emprego formal.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "Datafolha (divulgada em 1º/out/2026): 64% a favor e 31% contra o reajuste do piso de R$ 600 para R$ 691 (83% entre beneficiários, 58% entre não beneficiários). A maior parte das entrevistas foi feita antes do anúncio. Mede o reajuste, não o programa inteiro.",
+      "fonte": "Datafolha, via Seu Crédito Digital",
+      "url": "https://seucreditodigital.com.br/bolsa-familia-691-reajuste-aprovacao/"
+    },
+    "fonte": "IBGE — Síntese de Indicadores Sociais"
+  },
+  {
+    "id": 22,
+    "area": "Proteção Social",
+    "governo": "Lula",
+    "ano": "2025",
+    "politica": "Gás do Povo e Luz do Povo",
+    "descricao": "Botijão de gás gratuito para famílias de baixa renda do CadÚnico e isenção da conta de luz até 80 kWh/mês.",
+    "impactos_positivos": "Gás do Povo chegou a cerca de 15 milhões de famílias (92% chefiadas por mulheres); tarifa social ampliada para até 60 milhões de pessoas.",
+    "impactos_negativos": "Custo de até R$ 10 bi/ano da tarifa social repassado à conta de luz dos demais consumidores (CDE); lançados perto do ano eleitoral.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "AtlasIntel/Bloomberg (3 a 8/out/2026, 5.026 entrevistas, margem de 1 ponto): 60% apontam o Gás do Povo como acerto. Não há pesquisa específica sobre o Luz do Povo.",
+      "fonte": "AtlasIntel/Bloomberg",
+      "url": "https://www.fetecpr.org.br/retomado-por-lula-farmacia-popular-tem-89-de-aprovacao-diz-atlas-programa-corre-risco-com-flavio/"
+    },
+    "fonte": "Governo federal; Exame"
+  },
+  {
+    "id": 23,
+    "area": "Proteção Social",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Minha Casa, Minha Vida retomado (Lei 14.620/2023)",
+    "descricao": "Volta da faixa 1 com subsídio quase integral para famílias de baixa renda.",
+    "impactos_positivos": "Retomada de contratações para a população mais pobre, que tinham sido praticamente zeradas no Casa Verde e Amarela.",
+    "impactos_negativos": "Custo fiscal e dependência de recursos do FGTS.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Lei 14.620/2023"
+  },
+  {
+    "id": 24,
+    "area": "Saúde",
+    "governo": "Bolsonaro",
+    "ano": "2020–2022",
+    "politica": "Gestão da pandemia de Covid-19",
+    "descricao": "Quatro ministros da Saúde, defesa de tratamentos sem eficácia comprovada e compra de vacinas a partir do fim de 2020.",
+    "impactos_positivos": "O governo contratou a CoronaVac (jan/2021) e outras vacinas; o Brasil aplicou centenas de milhões de doses pelo SUS.",
+    "impactos_negativos": "Atraso na compra de vacinas apontado pela CPI da Covid; mais de 700 mil mortes (716 mil até abr/2025).",
+    "status": "Encerrado",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Ministério da Saúde; Ranking dos Políticos"
+  },
+  {
+    "id": 25,
+    "area": "Saúde",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Retomada do Mais Médicos e Farmácia Popular gratuita",
+    "descricao": "Novos editais do Mais Médicos e, desde fev/2025, gratuidade de todos os 41 itens do Farmácia Popular.",
+    "impactos_positivos": "Médicos do programa passaram de 12.843 (dez/2022) para cerca de 26.400 (ago/2025); recorde de 14,7 milhões de cirurgias eletivas em 2025.",
+    "impactos_negativos": "Filas no SUS persistem; custo crescente e críticas a médicos sem revalidação de diploma.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "AtlasIntel/Bloomberg (out/2026): a gratuidade da Farmácia Popular é considerada acerto por 89%, a medida mais aprovada do governo na pesquisa.",
+      "fonte": "AtlasIntel/Bloomberg, via InfoMoney",
+      "url": "https://www.infomoney.com.br/politica/farmacia-popular-e-a-medida-mais-aprovada-do-governo-lula-aponta-atlasintel/"
+    },
+    "fonte": "Ranking dos Políticos"
+  },
+  {
+    "id": 26,
+    "area": "Educação",
+    "governo": "Bolsonaro",
+    "ano": "2020",
+    "politica": "Novo Fundeb permanente (EC 108/2020)",
+    "descricao": "Tornou o fundo permanente e elevou a complementação da União de 10% para 23% até 2026.",
+    "impactos_positivos": "Maior aporte federal da história na educação básica.",
+    "impactos_negativos": "Aprovação liderada pelo Congresso, com resistência inicial da equipe econômica.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "EC 108/2020"
+  },
+  {
+    "id": 27,
+    "area": "Educação",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Escolas cívico-militares e instabilidade no MEC",
+    "descricao": "Programa de gestão compartilhada com militares; quatro ministros da Educação empossados em quatro anos (cinco nomeações, contando Decotelli, que não tomou posse).",
+    "impactos_positivos": "Aprovação de parte das comunidades escolares atendidas.",
+    "impactos_negativos": "Alcance de 202 a 216 escolas, conforme a contagem; prisão do ex-ministro Milton Ribeiro (2022) no caso dos pastores; programa encerrado em 2023.",
+    "status": "Encerrado",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa nacional. Pesquisa do Paraná (nov/2025), encomendada pelo governo estadual para o modelo próprio do estado, mostrou 89% de aprovação de pais e 90% de professores.",
+      "fonte": "Paraná Pesquisas, via Governo do Paraná",
+      "url": "https://www.parana.pr.gov.br/Audio/Modelo-civico-militar-na-educacao-do-Parana-e-aprovado-por-90-de-pais-e-professores"
+    },
+    "fonte": "MEC"
+  },
+  {
+    "id": 28,
+    "area": "Educação",
+    "governo": "Lula",
+    "ano": "2024",
+    "politica": "Pé-de-Meia (Lei 14.818/2024)",
+    "descricao": "Poupança de até R$ 200/mês mais bônus anual para alunos do ensino médio público de famílias do CadÚnico.",
+    "impactos_positivos": "Ataca a evasão escolar no ensino médio.",
+    "impactos_negativos": "Custo estimado pelo TCU em R$ 12,5 bi/ano; em jan/2025 o TCU chegou a bloquear R$ 6 bi por financiamento fora do orçamento e deu 120 dias para regularizar.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Boa",
+      "evidencia": "AtlasIntel/Bloomberg (out/2026): 61% aprovam o Pé-de-Meia. O TCU questionou o financiamento fora do orçamento em 2025.",
+      "fonte": "AtlasIntel/Bloomberg",
+      "url": "https://www.fetecpr.org.br/retomado-por-lula-farmacia-popular-tem-89-de-aprovacao-diz-atlas-programa-corre-risco-com-flavio/"
+    },
+    "fonte": "Lei 14.818/2024"
+  },
+  {
+    "id": 29,
+    "area": "Educação",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Compromisso Nacional Criança Alfabetizada",
+    "descricao": "Pacto com estados e municípios para alfabetizar todas as crianças até o fim do 2º ano.",
+    "impactos_positivos": "Retomada da coordenação federal após as perdas de aprendizagem da pandemia; analfabetismo caiu para 4,9% (2025).",
+    "impactos_negativos": "Resultados dependem das prefeituras e levam anos para aparecer nas avaliações.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "IBGE SIDRA 7113"
+  },
+  {
+    "id": 30,
+    "area": "Segurança Pública",
+    "governo": "Bolsonaro",
+    "ano": "2019",
+    "politica": "Pacote Anticrime (Lei 13.964/2019)",
+    "descricao": "Endureceu penas, ampliou o tempo máximo de prisão para 40 anos e criou o juiz de garantias.",
+    "impactos_positivos": "Penas maiores para crimes graves e ferramentas de investigação.",
+    "impactos_negativos": "Partes vetadas ou suspensas; o juiz de garantias só foi validado pelo STF em 2023.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Lei 13.964/2019"
+  },
+  {
+    "id": 31,
+    "area": "Segurança Pública",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Flexibilização de armas e munições para CACs",
+    "descricao": "Decretos ampliaram limites de compra, calibres e acesso de caçadores, atiradores e colecionadores.",
+    "impactos_positivos": "Defensores apontam o direito individual à legítima defesa; mortes violentas seguiram em queda.",
+    "impactos_negativos": "Acervo de CACs passou de cerca de 350 mil para mais de 1 milhão de armas; estudos mostram desvio de armas para facções.",
+    "status": "Revogada em 2023",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Baixa",
+      "evidencia": "Datafolha (citado em jun/2022): 72% rejeitam a ideia de que armas trazem mais segurança ao país. A matéria não informa a data exata da pesquisa.",
+      "fonte": "Datafolha, via Jornal do Brasil",
+      "url": "https://www.jb.com.br/pais/2022/06/1038169-brasil-armado-as-vesperas-das-eleicoes-especialistas-avaliam-efeitos-do-aumento-dos-cacs-no-pais.html"
+    },
+    "fonte": "Instituto Sou da Paz; Ranking dos Políticos"
+  },
+  {
+    "id": 32,
+    "area": "Segurança Pública",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Decreto de armas (11.615/2023)",
+    "descricao": "Revogou os decretos anteriores, transferiu o controle de CACs para a PF e restringiu calibres e munições.",
+    "impactos_positivos": "Recadastramento obrigatório e maior rastreabilidade; mortes violentas no menor nível desde 2012 (2025).",
+    "impactos_negativos": "Críticas de atiradores e da oposição; facções seguem ampliando território (19% da população, Datafolha 2026).",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não há pesquisa específica sobre o decreto. Indiretamente, o Datafolha registrou 72% de rejeição à ideia de que armas aumentam a segurança (jun/2022).",
+      "fonte": "Datafolha, via Jornal do Brasil",
+      "url": "https://www.jb.com.br/pais/2022/06/1038169-brasil-armado-as-vesperas-das-eleicoes-especialistas-avaliam-efeitos-do-aumento-dos-cacs-no-pais.html"
+    },
+    "fonte": "FBSP — Anuário 2026"
+  },
+  {
+    "id": 33,
+    "area": "Segurança Pública",
+    "governo": "Lula",
+    "ano": "2024",
+    "politica": "Veto ao fim da \"saidinha\" (Lei 14.843/2024)",
+    "descricao": "Lula vetou o fim da saída temporária para visita à família; o Congresso derrubou o veto.",
+    "impactos_positivos": "Defensores do veto argumentam que a saída ajuda na ressocialização.",
+    "impactos_negativos": "Tema impopular e explorado pela oposição; casos de crimes cometidos por presos na saidinha.",
+    "status": "Veto derrubado",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Agência Lupa"
+  },
+  {
+    "id": 34,
+    "area": "Segurança Pública",
+    "governo": "Lula",
+    "ano": "2026",
+    "politica": "Lei Antifacção (Lei 15.358/2026) e PEC da Segurança",
+    "descricao": "Penas de 20 a 40 anos para líderes de facções, com agravantes; PEC dá à União papel maior na segurança pública.",
+    "impactos_positivos": "Endurecimento penal com apoio no Congresso; investimento em 138 presídios de segurança máxima.",
+    "impactos_negativos": "A PEC segue em tramitação; especialistas questionam o efeito de penas maiores sem investigação e inteligência.",
+    "status": "Lei em vigor; PEC tramitando",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Ranking dos Políticos"
+  },
+  {
+    "id": 35,
+    "area": "Meio Ambiente & Clima",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Afrouxamento da fiscalização ambiental",
+    "descricao": "Menos autuações do Ibama/ICMBio, congelamento do Fundo Amazônia e apoio à mineração em terras indígenas.",
+    "impactos_positivos": "O agronegócio defendia menos burocracia e regularização fundiária.",
+    "impactos_negativos": "Desmatamento na Amazônia chegou a 13.038 km² em 2021, maior desde 2006; boicotes comerciais e perda de recursos internacionais.",
+    "status": "Revertido em 2023",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Inpe — PRODES"
+  },
+  {
+    "id": 36,
+    "area": "Meio Ambiente & Clima",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Retomada do PPCDAm e do Fundo Amazônia",
+    "descricao": "Volta das operações de fiscalização, reativação do Fundo Amazônia e meta de desmatamento zero até 2030.",
+    "impactos_positivos": "Desmatamento na Amazônia caiu para 5.796 km² em 2025 (menor em 11 anos); emissões do país caíram 16,7% em 2024.",
+    "impactos_negativos": "Cerrado teve alta até 2023 (11.012 km²); 2024 teve recorde de queimadas desde 2010 na seca extrema.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Inpe; SEEG"
+  },
+  {
+    "id": 37,
+    "area": "Meio Ambiente & Clima",
+    "governo": "Lula",
+    "ano": "2025",
+    "politica": "Lei Geral do Licenciamento Ambiental (Lei 15.190/2025)",
+    "descricao": "Lula sancionou com 63 vetos; o Congresso derrubou a maioria deles em nov/2025.",
+    "impactos_positivos": "Setor produtivo defende licenças mais rápidas e previsíveis para obras e empreendimentos.",
+    "impactos_negativos": "Ambientalistas chamam de \"PL da Devastação\": autolicenciamento amplo e dispensa de estudos para obras de impacto.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Dividida",
+      "evidencia": "Sem pesquisa de opinião. Organizações ambientais chamaram a derrubada dos vetos de \"retrocesso grave\"; o setor produtivo defende licenças mais rápidas.",
+      "fonte": "Imprensa (Diário de Pernambuco)",
+      "url": "https://www.diariodepernambuco.com.br/politica/2025/11/11701615-organizacoes-veem-retrocesso-grave-em-queda-de-vetos-de-pl-ambiental.html"
+    },
+    "fonte": "Movimento Econômico; Jornal Opção"
+  },
+  {
+    "id": 38,
+    "area": "Meio Ambiente & Clima",
+    "governo": "Lula",
+    "ano": "2025",
+    "politica": "Petróleo na Margem Equatorial",
+    "descricao": "Ibama liberou em out/2025 a perfuração da Petrobras na foz do Amazonas.",
+    "impactos_positivos": "Potencial de novas receitas e empregos no Norte; descoberta de hidrocarbonetos anunciada.",
+    "impactos_negativos": "Contradição com o discurso climático às vésperas da COP30; risco ambiental em área sensível.",
+    "status": "Em exploração",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Ranking dos Políticos"
+  },
+  {
+    "id": 39,
+    "area": "Meio Ambiente & Clima",
+    "governo": "Lula",
+    "ano": "2025",
+    "politica": "COP30 em Belém",
+    "descricao": "Brasil sediou a conferência do clima da ONU em nov/2025 e lançou o fundo de florestas tropicais (TFFF).",
+    "impactos_positivos": "Recuperação do protagonismo diplomático na agenda climática.",
+    "impactos_negativos": "Resultados práticos limitados e críticas pela expansão do petróleo ao mesmo tempo.",
+    "status": "Concluída",
+    "status_categoria": "Concluída",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Governo federal"
+  },
+  {
+    "id": 40,
+    "area": "Direitos & Minorias",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Paralisação das demarcações e crise Yanomami",
+    "descricao": "Nenhuma terra indígena homologada; expansão do garimpo ilegal em territórios indígenas.",
+    "impactos_positivos": "Atendeu reivindicações de produtores e garimpeiros por segurança jurídica.",
+    "impactos_negativos": "Emergência sanitária na TI Yanomami declarada em jan/2023, com mortes por desnutrição e malária.",
+    "status": "Revertido parcialmente",
+    "status_categoria": "Em vigor em parte",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Agência Gov; Ministério da Saúde"
+  },
+  {
+    "id": 41,
+    "area": "Direitos & Minorias",
+    "governo": "Bolsonaro",
+    "ano": "2021",
+    "politica": "Lei da violência psicológica contra a mulher (Lei 14.188/2021)",
+    "descricao": "Criou o crime de violência psicológica e o programa Sinal Vermelho.",
+    "impactos_positivos": "Ampliou a proteção legal às mulheres.",
+    "impactos_negativos": "Feminicídios subiram de 1.326 (2019) para 1.455 (2022), segundo os Anuários do FBSP.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "FBSP"
+  },
+  {
+    "id": 42,
+    "area": "Direitos & Minorias",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Lei de Igualdade Salarial (Lei 14.611/2023)",
+    "descricao": "Obriga empresas com 100+ empregados a publicar relatórios de transparência salarial e endurece multas por discriminação.",
+    "impactos_positivos": "Razão salarial mulher/homem subiu de 77,9% (fim de 2022) para 80,3% (2º tri/2026), pela PNAD.",
+    "impactos_negativos": "Questionamentos judiciais de entidades empresariais sobre a metodologia dos relatórios.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "IBGE SIDRA 5436"
+  },
+  {
+    "id": 43,
+    "area": "Direitos & Minorias",
+    "governo": "Lula",
+    "ano": "2024",
+    "politica": "Pacote antifeminicídio (Lei 14.994/2024)",
+    "descricao": "Tornou o feminicídio crime autônomo com pena de 20 a 40 anos.",
+    "impactos_positivos": "Maior pena do Código Penal para o crime.",
+    "impactos_negativos": "Feminicídios bateram recorde em 2025 (1.571), em parte pela melhor notificação.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "FBSP — Anuário 2026"
+  },
+  {
+    "id": 44,
+    "area": "Direitos & Minorias",
+    "governo": "Lula",
+    "ano": "2023–2026",
+    "politica": "Retomada das demarcações indígenas",
+    "descricao": "20 terras indígenas homologadas (cerca de 2,5 milhões de hectares) entre 2023 e mar/2026.",
+    "impactos_positivos": "Fim de cinco anos sem homologações; meta da transição (14 áreas) superada.",
+    "impactos_negativos": "Mais de 240 áreas pendentes; Congresso aprovou o marco temporal (Lei 14.701/2023) derrubando vetos de Lula.",
+    "status": "Em andamento",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Agência Gov / MPI"
+  },
+  {
+    "id": 45,
+    "area": "Infraestrutura & Energia",
+    "governo": "Bolsonaro",
+    "ano": "2020",
+    "politica": "Novo Marco do Saneamento (Lei 14.026/2020)",
+    "descricao": "Obrigou licitação entre empresas públicas e privadas, com meta de 99% de água e 90% de esgoto até 2033.",
+    "impactos_positivos": "Destravou leilões bilionários (Cedae, Corsan, Alagoas, Amapá) e investimentos privados.",
+    "impactos_negativos": "Resistência de estatais estaduais e risco de municípios pobres ficarem sem interessados.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Lei 14.026/2020"
+  },
+  {
+    "id": 46,
+    "area": "Infraestrutura & Energia",
+    "governo": "Bolsonaro",
+    "ano": "2021–2022",
+    "politica": "Privatização da Eletrobras (Lei 14.182/2021)",
+    "descricao": "Capitalização de R$ 33,7 bi (jun/2022) que reduziu a fatia da União de cerca de 72% para 45% do capital votante, com voto limitado a 10% por acionista.",
+    "impactos_positivos": "Receita para o Tesouro e transferência de investimentos ao setor privado.",
+    "impactos_negativos": "\"Jabutis\" na lei obrigaram a contratação de termelétricas a gás, com custo para o consumidor; perda de controle de empresa estratégica.",
+    "status": "Concluída",
+    "status_categoria": "Concluída",
+    "repercussao": {
+      "nivel": "Baixa",
+      "evidencia": "Datafolha: em 2019, 67% eram contra a venda de estatais (Correios, Petrobras, Eletrobras, BB, Caixa); em mar/2023, privatizar a Petrobras tinha 37% a favor e 53% contra, e os Correios 45% a favor e 46% contra.",
+      "fonte": "Datafolha, via TNH1",
+      "url": "https://www.tnh1.com.br/noticia/nid/datafolha-aponta-que-apoio-a-privatizacao-cresce-mas-ainda-e-minoritario/"
+    },
+    "fonte": "Lei 14.182/2021"
+  },
+  {
+    "id": 47,
+    "area": "Infraestrutura & Energia",
+    "governo": "Bolsonaro",
+    "ano": "2021",
+    "politica": "Leilão do 5G",
+    "descricao": "Leilão de frequências com obrigações de cobertura em vez de arrecadação máxima.",
+    "impactos_positivos": "Anatel estimou o valor econômico em R$ 47,2 bi, quase todo convertido em obrigações de cobertura (outorgas de R$ 7,4 bi); acelerou a chegada do 5G.",
+    "impactos_negativos": "Metas de cobertura rural e em rodovias com prazos longos.",
+    "status": "Concluído",
+    "status_categoria": "Concluída",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Anatel"
+  },
+  {
+    "id": 48,
+    "area": "Infraestrutura & Energia",
+    "governo": "Lula",
+    "ano": "2023",
+    "politica": "Novo PAC",
+    "descricao": "Programa de investimentos em obras públicas e concessões, com retomada de obras paradas.",
+    "impactos_positivos": "Retomada de milhares de obras (o MEC tinha 5.642 paradas no início do mandato).",
+    "impactos_negativos": "TCU ainda contava 11.941 obras paralisadas em 2024; execução abaixo do anunciado.",
+    "status": "Em vigor",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Aos Fatos; TCU"
+  },
+  {
+    "id": 49,
+    "area": "Relações Exteriores",
+    "governo": "Bolsonaro",
+    "ano": "2019–2022",
+    "politica": "Alinhamento aos EUA e atritos diplomáticos",
+    "descricao": "Aproximação com o governo Trump, atritos com China, França e Argentina e saída da Celac (2020).",
+    "impactos_positivos": "Conclusão política do acordo Mercosul–União Europeia (2019).",
+    "impactos_negativos": "Isolamento internacional, especialmente na pauta ambiental, e bloqueio de recursos estrangeiros.",
+    "status": "Encerrado",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Itamaraty"
+  },
+  {
+    "id": 50,
+    "area": "Relações Exteriores",
+    "governo": "Lula",
+    "ano": "2023–2026",
+    "politica": "Retomada do multilateralismo",
+    "descricao": "Presidência do G20 (2024), COP30 (2025), retorno à Celac e ênfase no Sul Global e no BRICS.",
+    "impactos_positivos": "Reinserção internacional; diversificação de mercados (exportações para a China +12% em 2026).",
+    "impactos_negativos": "Críticas por posições ambíguas sobre Rússia e Venezuela; relação tensa com os EUA e o tarifaço.",
+    "status": "Em andamento",
+    "status_categoria": "Em vigor",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "MDIC; Aos Fatos"
+  },
+  {
+    "id": 51,
+    "area": "Instituições & Democracia",
+    "governo": "Bolsonaro",
+    "ano": "2020–2022",
+    "politica": "Orçamento secreto (emendas de relator RP9)",
+    "descricao": "Distribuição de bilhões em emendas sem identificar o parlamentar autor.",
+    "impactos_positivos": "Base governista argumentava que levava recursos a municípios.",
+    "impactos_negativos": "Falta de transparência e uso político (R$ 16,5 bi em 2022); o STF declarou o mecanismo inconstitucional por 6 a 5 em dez/2022.",
+    "status": "Declarado inconstitucional",
+    "status_categoria": "Deixou de valer",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "STF"
+  },
+  {
+    "id": 52,
+    "area": "Instituições & Democracia",
+    "governo": "Bolsonaro",
+    "ano": "2021–2023",
+    "politica": "Ataques às urnas e trama golpista",
+    "descricao": "Questionamentos sem prova ao sistema eleitoral e articulação para impedir a posse do eleito, culminando no 8 de janeiro.",
+    "impactos_positivos": "Apoiadores alegam perseguição política e penas desproporcionais.",
+    "impactos_negativos": "Jair Bolsonaro foi condenado pela 1ª Turma do STF a 27 anos e 3 meses por tentativa de golpe (set/2025) e está inelegível.",
+    "status": "Julgado",
+    "status_categoria": "Concluída",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "Aos Fatos; STF"
+  },
+  {
+    "id": 53,
+    "area": "Instituições & Democracia",
+    "governo": "Lula",
+    "ano": "2019–2025",
+    "politica": "Fraude nos descontos do INSS",
+    "descricao": "Associações descontaram mensalidades não autorizadas de aposentados; esquema cresceu a partir de 2019 e foi desarticulado pela PF e CGU em 2025.",
+    "impactos_positivos": "Governo devolveu mais de R$ 3,5 bi a cerca de 5 milhões de aposentados.",
+    "impactos_negativos": "R$ 6,3 bi descontados entre 2019 e 2024; investigações atingiram sindicato ligado ao irmão de Lula e o filho do presidente é investigado.",
+    "status": "Em investigação",
+    "status_categoria": "Em tramitação ou disputa",
+    "repercussao": {
+      "nivel": "Sem dado",
+      "evidencia": "Não encontramos pesquisa de opinião ou cobertura que meça a repercussão desta política.",
+      "fonte": "",
+      "url": ""
+    },
+    "fonte": "CGU; Ranking dos Políticos"
+  }
+]

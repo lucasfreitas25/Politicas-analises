@@ -1,0 +1,65 @@
+[
+  {
+    "ano": 2016,
+    "governo": "Temer",
+    "agua_rede_pct": 85.8,
+    "agua_diaria_pct": 87.3
+  },
+  {
+    "ano": 2017,
+    "governo": "Temer",
+    "agua_rede_pct": 85.7,
+    "agua_diaria_pct": 86.8
+  },
+  {
+    "ano": 2018,
+    "governo": "Temer",
+    "agua_rede_pct": 85.8,
+    "agua_diaria_pct": 88.3
+  },
+  {
+    "ano": 2019,
+    "governo": "Bolsonaro",
+    "esgoto_rede_pct": 62.4,
+    "esgoto_fossa_ligada_pct": 5.7,
+    "agua_rede_pct": 85.5,
+    "agua_diaria_pct": 88.5,
+    "esgoto_adequado_pct": 68.1
+  },
+  {
+    "ano": 2022,
+    "governo": "Bolsonaro",
+    "esgoto_rede_pct": 63.0,
+    "esgoto_fossa_ligada_pct": 6.3,
+    "agua_rede_pct": 85.5,
+    "agua_diaria_pct": 88.2,
+    "esgoto_adequado_pct": 69.3
+  },
+  {
+    "ano": 2023,
+    "governo": "Lula",
+    "esgoto_rede_pct": 63.5,
+    "esgoto_fossa_ligada_pct": 6.2,
+    "agua_rede_pct": 85.9,
+    "agua_diaria_pct": 89.1,
+    "esgoto_adequado_pct": 69.7
+  },
+  {
+    "ano": 2024,
+    "governo": "Lula",
+    "esgoto_rede_pct": 63.9,
+    "esgoto_fossa_ligada_pct": 6.5,
+    "agua_rede_pct": 86.3,
+    "agua_diaria_pct": 88.4,
+    "esgoto_adequado_pct": 70.4
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula",
+    "esgoto_rede_pct": 65.3,
+    "esgoto_fossa_ligada_pct": 6.1,
+    "agua_rede_pct": 86.1,
+    "agua_diaria_pct": 88.5,
+    "esgoto_adequado_pct": 71.4
+  }
+]

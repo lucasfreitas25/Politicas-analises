@@ -1,0 +1,489 @@
+{
+  "efetivos": [
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 213809445.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 41231856.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 18947352.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 214689984.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 40556109.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 19971802.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 217836282.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 41211188.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 20623064.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 224601992.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 42550892.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 20544899.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 234851536.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 44388351.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 21520872.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 238620910.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 43124200.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 21799960.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 238213713.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 43761696.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 21967689.0
+    }
+  ],
+  "produtos": [
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 33907899.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 4429735.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 42407352.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 34871669.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 4604930.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 46088931.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 35316667.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 4767022.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 52493135.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 35183066.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 4821802.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 55678534.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 34554161.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 4852117.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 62494156.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 35248212.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 4981477.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 64164183.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 35722139.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 5425711.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 68235733.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 39344516.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 14033274.0
+    },
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 503628.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 43141581.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 15166912.0
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 495247.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 56348186.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 17837156.0
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 633710.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 67987725.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 21875425.0
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 851354.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 79919856.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 25947202.0
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro (2019-2022)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 982362.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 79999170.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 30364242.0
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula (2023-atual)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 906893.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 87478477.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 31935238.0
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula (2023-atual)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 1026739.0
+    }
+  ]
+}

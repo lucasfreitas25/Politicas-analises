@@ -1,0 +1,88 @@
+{
+  "mortes_violentas": [
+    {
+      "ano": 2018,
+      "governo": "Base 2018",
+      "taxa_mvi_100k": 27.5,
+      "total_mvi": 57358,
+      "feminicidios": 1229
+    },
+    {
+      "ano": 2019,
+      "governo": "Bolsonaro",
+      "taxa_mvi_100k": 22.7,
+      "total_mvi": 47773,
+      "feminicidios": 1326
+    },
+    {
+      "ano": 2020,
+      "governo": "Bolsonaro",
+      "taxa_mvi_100k": 23.6,
+      "total_mvi": 50448,
+      "feminicidios": 1350
+    },
+    {
+      "ano": 2021,
+      "governo": "Bolsonaro",
+      "taxa_mvi_100k": 24.0,
+      "total_mvi": 48431,
+      "feminicidios": 1347
+    },
+    {
+      "ano": 2022,
+      "governo": "Bolsonaro",
+      "taxa_mvi_100k": 23.4,
+      "total_mvi": 47508,
+      "feminicidios": 1455
+    },
+    {
+      "ano": 2023,
+      "governo": "Lula",
+      "taxa_mvi_100k": 22.8,
+      "total_mvi": 46328,
+      "feminicidios": 1475
+    },
+    {
+      "ano": 2024,
+      "governo": "Lula",
+      "taxa_mvi_100k": 20.8,
+      "total_mvi": 44127,
+      "feminicidios": 1504
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula",
+      "taxa_mvi_100k": 19.1,
+      "total_mvi": 40775,
+      "feminicidios": 1571
+    }
+  ],
+  "armas_e_drogas": [
+    {
+      "governo": "Bolsonaro (2019-2022)",
+      "registro_cacs": 783385,
+      "apreensao_cocaina_ton": 398.5,
+      "apreensao_maconha_ton": 1850.0
+    },
+    {
+      "governo": "Lula (2023-2024)",
+      "registro_cacs": 142000,
+      "apreensao_cocaina_ton": 215.2,
+      "apreensao_maconha_ton": 1120.0
+    }
+  ],
+  "destaques": {
+    "bolsonaro": {
+      "queda_homicidios": "Queda contínua de mortes violentas em relação aos picos históricos de 2016-2017 (que passavam de 60 mil mortes/ano), impulsionada por criação do SUSP, isolamento de chefes de facções em presídios federais e políticas estaduais.",
+      "politica_armas": "Flexibilização ampla do acesso a armas e munições via decretos para Caçadores, Atiradores e Colecionadores (CACs), com aumento de mais de 300% no acervo civil particular.",
+      "desafio_feminicidio": "Aumento dos casos registrados de feminicídio (1.447 em 2022) e violência doméstica durante o período da pandemia."
+    },
+    "lula": {
+      "continuidade_queda": "Em 2025 as mortes violentas intencionais caíram 8,2% (40.775), taxa de 19,1 por 100 mil — a menor desde 2012. Roubos de celular caíram 37,4% entre 2022 e 2025.",
+      "reordenamento_armas": "Revogação dos decretos de armas via Decreto 11.615/2023, com recadastramento obrigatório pela PF, restrição de calibres e redução de limites de compra de munições.",
+      "desafio_crime_organizado": "Expansão de milícias e facções com ramificações em lavagem de dinheiro, crimes ambientais na Amazônia e fortalecimento do narcotráfico marítimo internacional.",
+      "desafio_feminicidio": "Feminicídios bateram recorde em 2025 (1.571, +4%), assim como mortes por intervenção policial (6.602, +5,4%)."
+    }
+  },
+  "nota_metodologica": "Fonte: Anuários Brasileiros de Segurança Pública (FBSP). Mortes violentas: 2019–2020 das edições 2020–2021, 2021–2022 da edição 2023 (taxas com população do Censo 2022), 2023–2025 das edições 2024–2026. Feminicídios: 2021–2025 da edição 2026, que revisa os anos anteriores; 2019–2020 das edições da época. Como as taxas usam bases populacionais diferentes, compare preferencialmente os números absolutos."
+}

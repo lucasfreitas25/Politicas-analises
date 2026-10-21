@@ -1,0 +1,72 @@
+[
+  {
+    "ano": 2012,
+    "governo": "Temer",
+    "gini": 0.54
+  },
+  {
+    "ano": 2013,
+    "governo": "Temer",
+    "gini": 0.532
+  },
+  {
+    "ano": 2014,
+    "governo": "Temer",
+    "gini": 0.526
+  },
+  {
+    "ano": 2015,
+    "governo": "Temer",
+    "gini": 0.524
+  },
+  {
+    "ano": 2016,
+    "governo": "Temer",
+    "gini": 0.537
+  },
+  {
+    "ano": 2017,
+    "governo": "Temer",
+    "gini": 0.539
+  },
+  {
+    "ano": 2018,
+    "governo": "Temer",
+    "gini": 0.545
+  },
+  {
+    "ano": 2019,
+    "governo": "Bolsonaro",
+    "gini": 0.543
+  },
+  {
+    "ano": 2020,
+    "governo": "Bolsonaro",
+    "gini": 0.523
+  },
+  {
+    "ano": 2021,
+    "governo": "Bolsonaro",
+    "gini": 0.543
+  },
+  {
+    "ano": 2022,
+    "governo": "Bolsonaro",
+    "gini": 0.517
+  },
+  {
+    "ano": 2023,
+    "governo": "Lula",
+    "gini": 0.517
+  },
+  {
+    "ano": 2024,
+    "governo": "Lula",
+    "gini": 0.504
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula",
+    "gini": 0.511
+  }
+]

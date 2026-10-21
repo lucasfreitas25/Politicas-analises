@@ -1,0 +1,246 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-20"
+  },
+  "pobreza": {
+    "fonte": "IBGE — Síntese de Indicadores Sociais (linhas do Banco Mundial de US$ 6,85 e US$ 2,15 PPC)",
+    "url": "https://www.ibge.gov.br/estatisticas/sociais/trabalho/9221-sintese-de-indicadores-sociais.html",
+    "nota": "2020 foi atípico por causa do Auxílio Emergencial. Pobreza: série revisada da SIS 2025; extrema pobreza de 2021–2022 da edição de 2023. Extrema pobreza de 2019–2020 não localizada na mesma base.",
+    "serie": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "pobreza_pct": 32.6,
+        "extrema_pobreza_pct": null
+      },
+      {
+        "ano": 2020,
+        "governo": "Bolsonaro",
+        "pobreza_pct": 31.1,
+        "extrema_pobreza_pct": null
+      },
+      {
+        "ano": 2021,
+        "governo": "Bolsonaro",
+        "pobreza_pct": 36.8,
+        "extrema_pobreza_pct": 9.0
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "pobreza_pct": 31.6,
+        "extrema_pobreza_pct": 5.9
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "pobreza_pct": 27.3,
+        "extrema_pobreza_pct": 4.4
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "pobreza_pct": 23.1,
+        "extrema_pobreza_pct": 3.5
+      }
+    ]
+  },
+  "desmatamento_prodes": {
+    "fonte": "Inpe — PRODES Amazônia Legal (ano de agosto a julho)",
+    "url": "https://terrabrasilis.dpi.inpe.br/",
+    "nota": "O ano PRODES vai de agosto a julho: o dado de 2023 (ago/2022–jul/2023) cobre 5 meses de Bolsonaro e 7 de Lula.",
+    "serie": [
+      {
+        "ano": 2018,
+        "governo": "Temer",
+        "km2": 7536
+      },
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "km2": 10129
+      },
+      {
+        "ano": 2020,
+        "governo": "Bolsonaro",
+        "km2": 10851
+      },
+      {
+        "ano": 2021,
+        "governo": "Bolsonaro",
+        "km2": 13038
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "km2": 11594
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "km2": 9064
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "km2": 6518
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "km2": 5796
+      }
+    ]
+  },
+  "analfabetismo": {
+    "fonte": "IBGE — PNAD Contínua Educação (SIDRA 7113)",
+    "url": "https://sidra.ibge.gov.br/tabela/7113",
+    "serie": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "taxa": 6.1
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "taxa": 5.6
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "taxa": 5.4
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "taxa": 5.3
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "taxa": 4.9
+      }
+    ]
+  },
+  "desmatamento_cerrado": {
+    "fonte": "Inpe — PRODES Cerrado (ano de agosto a julho)",
+    "url": "https://data.inpe.br/wp-content/uploads/sites/3/2025/10/2025_1022NT_PRODESCerrado_2025.pdf",
+    "nota": "No Cerrado o desmatamento subiu até 2023 (maior desde 2015) e só depois caiu. Grande parte é legal (autorizada pelos estados, dentro do Código Florestal).",
+    "serie": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "km2": 6319
+      },
+      {
+        "ano": 2020,
+        "governo": "Bolsonaro",
+        "km2": 7905
+      },
+      {
+        "ano": 2021,
+        "governo": "Bolsonaro",
+        "km2": 8531
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "km2": 10689
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "km2": 11012
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "km2": 8174
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "km2": 7235
+      }
+    ]
+  },
+  "queimadas": {
+    "fonte": "Inpe — Programa Queimadas (focos de calor no Brasil, satélite de referência)",
+    "url": "https://www.poder360.com.br/poder-sustentavel/brasil-tem-queda-de-518-no-numero-de-focos-de-queimadas-em-2025/",
+    "nota": "2024 teve a seca mais severa da série histórica e o maior número de focos desde 2010. 2025 é parcial (até 23/12). Totais nacionais de 2021 e 2022 não foram confirmados nesta revisão e ficam em branco.",
+    "serie": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "focos": 197632
+      },
+      {
+        "ano": 2020,
+        "governo": "Bolsonaro",
+        "focos": 222798
+      },
+      {
+        "ano": 2021,
+        "governo": "Bolsonaro",
+        "focos": null
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "focos": null
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "focos": 189901
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "focos": 278299
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "focos": 134047
+      }
+    ]
+  },
+  "emissoes": {
+    "fonte": "SEEG 13 — Observatório do Clima (GtCO2e, GWP-AR5)",
+    "url": "https://www.poder360.com.br/poder-sustentavel/brasil-reduz-167-das-emissoes-de-gases-do-efeito-estufa/",
+    "nota": "Cada edição do SEEG revisa toda a série; por isso só são mostrados os anos da edição mais recente obtidos nesta revisão. A queda de 16,7% em 2024 é a 2ª maior desde 1990, puxada pela redução do desmatamento (-32,5% nas emissões por uso da terra).",
+    "serie": [
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "brutas": 2.576,
+        "liquidas": 1.92
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "brutas": 2.145,
+        "liquidas": 1.489
+      }
+    ]
+  },
+  "terras_indigenas": {
+    "fonte": "Agência Gov / MPI (balanço de mar/2026)",
+    "url": "https://agenciagov.ebc.com.br/noticias/202603/em-tres-anos-presidente-lula-homologou-20-terras-indigenas-em-todo-o-brasil",
+    "nota": "Bolsonaro não homologou nenhuma terra indígena (2019–2022). Lula homologou 20 (cerca de 2,5 milhões de hectares) de 2023 a mar/2026; a Funai lista mais de 240 áreas ainda pendentes. Em 2023 o Congresso aprovou o marco temporal (Lei 14.701) derrubando vetos de Lula.",
+    "serie": [
+      {
+        "governo": "Bolsonaro",
+        "periodo": "2019–2022",
+        "homologadas": 0
+      },
+      {
+        "governo": "Lula",
+        "periodo": "2023–mar/2026",
+        "homologadas": 20
+      }
+    ]
+  }
+}

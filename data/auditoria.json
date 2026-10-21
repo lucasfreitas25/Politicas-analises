@@ -1,0 +1,442 @@
+[
+  {
+    "area": "Macroeconomia",
+    "item": "Selic no fim de 2025",
+    "antes": "12,50%",
+    "depois": "15,00%",
+    "fonte": "BCB SGS 432",
+    "observacao": "Erro grave: a Selic subiu a 15% em jun/2025."
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Selic no fim de 2026",
+    "antes": "11,50% (projeção apresentada como fato)",
+    "depois": "13,75% (out/2026)",
+    "fonte": "BCB SGS 432",
+    "observacao": ""
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Selic média de Lula (scorecard)",
+    "antes": "11,95%",
+    "depois": "13,27%",
+    "fonte": "BCB SGS 432",
+    "observacao": ""
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Dólar no fim de 2024",
+    "antes": "R$ 5,75",
+    "depois": "R$ 6,19",
+    "fonte": "BCB SGS 1 (PTAX venda)",
+    "observacao": ""
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Dívida bruta (dez/2024)",
+    "antes": "77,8%",
+    "depois": "76,3%",
+    "fonte": "BCB SGS 13762",
+    "observacao": "Também corrigidos 2021 (78,3 → 77,3), 2023 (74,3 → 73,8), 2025 (79,2 → 78,6) e 2026 (80,1 projetado → 82,9 em ago)."
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Dívida bruta usada no scorecard para Lula",
+    "antes": "77,8% (dez/2024)",
+    "depois": "82,9% (ago/2026, dado mais recente)",
+    "fonte": "BCB SGS 13762",
+    "observacao": ""
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "PIB 2019",
+    "antes": "1,2%",
+    "depois": "1,3%",
+    "fonte": "IBGE SIDRA 6784",
+    "observacao": "Revisão das Contas Nacionais."
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "PIB 2026",
+    "antes": "2,1% (projeção apresentada como fato)",
+    "depois": "1,9% acumulado em 4 trimestres até o 2º tri (parcial)",
+    "fonte": "IBGE SIDRA 5932",
+    "observacao": ""
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Crescimento médio de Lula",
+    "antes": "2,8% a.a.",
+    "depois": "3,0% a.a. (2023–2025)",
+    "fonte": "IBGE",
+    "observacao": ""
+  },
+  {
+    "area": "Macroeconomia",
+    "item": "Balança comercial 2026",
+    "antes": "US$ 65,0 bi (projeção)",
+    "depois": "Removido — ano em curso",
+    "fonte": "MDIC/Secex",
+    "observacao": ""
+  },
+  {
+    "area": "Inflação",
+    "item": "IPCA 2025",
+    "antes": "4,10%",
+    "depois": "4,26%",
+    "fonte": "IBGE (BCB SGS 433)",
+    "observacao": ""
+  },
+  {
+    "area": "Inflação",
+    "item": "IPCA acumulado de Lula",
+    "antes": "14,85%",
+    "depois": "18,87% (jan/2023–set/2026)",
+    "fonte": "IBGE (BCB SGS 433)",
+    "observacao": ""
+  },
+  {
+    "area": "Inflação",
+    "item": "IPCA médio anual de Lula",
+    "antes": "4,45%",
+    "depois": "4,72%",
+    "fonte": "Cálculo sobre a série oficial",
+    "observacao": ""
+  },
+  {
+    "area": "Inflação",
+    "item": "Maior IPCA 12m de Lula",
+    "antes": "5,19% (set/2023)",
+    "depois": "5,53% (abr/2025)",
+    "fonte": "Cálculo sobre a série oficial",
+    "observacao": ""
+  },
+  {
+    "area": "Inflação",
+    "item": "Menor IPCA 12m de Bolsonaro",
+    "antes": "2,13% (mai/2020)",
+    "depois": "1,88% (mai/2020)",
+    "fonte": "Cálculo sobre a série oficial",
+    "observacao": ""
+  },
+  {
+    "area": "Alimentos",
+    "item": "Tabela de preços de 7 alimentos",
+    "antes": "Preços e variações sem fonte (ex.: carnes -12,6% e feijão -13,4% com Lula)",
+    "depois": "Variações oficiais do IPCA: carnes +18,5%, feijão +3,0%, café +44,3% com Lula",
+    "fonte": "IBGE SIDRA 1419/7060",
+    "observacao": "Os valores anteriores não batiam com nenhuma série oficial."
+  },
+  {
+    "area": "Trabalho",
+    "item": "Saldo CAGED de Lula",
+    "antes": "+6,06 milhões",
+    "depois": "+5,55 milhões (jan/2023–ago/2026)",
+    "fonte": "MTE — Novo CAGED (série com ajustes)",
+    "observacao": "Revisão 2: ver linha \"CAGED — revisão com série ajustada\"."
+  },
+  {
+    "area": "Trabalho",
+    "item": "Saldo CAGED 2024",
+    "antes": "1.685.250",
+    "depois": "1.677.575",
+    "fonte": "MTE",
+    "observacao": ""
+  },
+  {
+    "area": "Trabalho",
+    "item": "Saldo CAGED 2025",
+    "antes": "1.740.000 (estimado)",
+    "depois": "1.279.498",
+    "fonte": "MTE",
+    "observacao": ""
+  },
+  {
+    "area": "Trabalho",
+    "item": "Saldo CAGED 2026",
+    "antes": "1.150.000 (estimado)",
+    "depois": "1.134.033 (jan–ago)",
+    "fonte": "MTE",
+    "observacao": ""
+  },
+  {
+    "area": "Trabalho",
+    "item": "Saldo CAGED 2022",
+    "antes": "2.013.161",
+    "depois": "2.013.261",
+    "fonte": "MTE",
+    "observacao": "Erro de digitação."
+  },
+  {
+    "area": "Trabalho",
+    "item": "Desemprego médio Bolsonaro / Lula",
+    "antes": "11,5% / 7,1%",
+    "depois": "12,1% / 6,7%",
+    "fonte": "IBGE SIDRA 4099",
+    "observacao": ""
+  },
+  {
+    "area": "Trabalho",
+    "item": "Rendimento real no fim de cada período",
+    "antes": "R$ 3.090 / R$ 3.280",
+    "depois": "R$ 3.317 / R$ 3.777",
+    "fonte": "IBGE SIDRA 6390",
+    "observacao": "Os valores anteriores não correspondiam à série deflacionada."
+  },
+  {
+    "area": "Segurança",
+    "item": "Feminicídios 2024",
+    "antes": "1.410",
+    "depois": "1.504",
+    "fonte": "FBSP Anuário 2026",
+    "observacao": ""
+  },
+  {
+    "area": "Segurança",
+    "item": "Mortes violentas 2024",
+    "antes": "44.800 (taxa 19,9)",
+    "depois": "44.127 (taxa 20,8)",
+    "fonte": "FBSP Anuários 2025/2026",
+    "observacao": ""
+  },
+  {
+    "area": "Segurança",
+    "item": "Mortes violentas 2025",
+    "antes": "Ausente",
+    "depois": "40.775 (taxa 19,1)",
+    "fonte": "FBSP Anuário 2026",
+    "observacao": "Dado novo."
+  },
+  {
+    "area": "Segurança",
+    "item": "Taxas de 2022 e 2023",
+    "antes": "21,6 e 20,8",
+    "depois": "23,3 e 22,8 (base Censo 2022)",
+    "fonte": "FBSP",
+    "observacao": ""
+  },
+  {
+    "area": "Agro",
+    "item": "Safra 2024/25",
+    "antes": "326,9 Mt",
+    "depois": "350,2 Mt",
+    "fonte": "CONAB 12º levantamento",
+    "observacao": ""
+  },
+  {
+    "area": "Agro",
+    "item": "Safra 2025/26",
+    "antes": "334,5 Mt (estimativa antiga)",
+    "depois": "361,7 Mt",
+    "fonte": "CONAB, set/2026",
+    "observacao": ""
+  },
+  {
+    "area": "Agro",
+    "item": "Safra 2022/23",
+    "antes": "322,8 Mt",
+    "depois": "324,4 Mt (revisado)",
+    "fonte": "CONAB",
+    "observacao": ""
+  },
+  {
+    "area": "Educação",
+    "item": "Analfabetismo mais recente",
+    "antes": "5,2% (2024)",
+    "depois": "5,3% (2024) e 4,9% (2025)",
+    "fonte": "IBGE SIDRA 7113",
+    "observacao": ""
+  },
+  {
+    "area": "Visão geral",
+    "item": "Gráfico radar",
+    "antes": "Notas de 0 a 100 digitadas à mão, sem fórmula",
+    "depois": "Calculadas a partir do scorecard (normalização por indicador)",
+    "fonte": "—",
+    "observacao": "Antes não havia critério reproduzível."
+  },
+  {
+    "area": "Minorias",
+    "item": "Desemprego por sexo e raça",
+    "antes": "Valores anuais sem fonte (ex.: mulheres 8,1% em 2024)",
+    "depois": "Série trimestral oficial (SIDRA 4093 e 6402)",
+    "fonte": "IBGE — PNAD Contínua",
+    "observacao": "Agora coletada pela API."
+  },
+  {
+    "area": "Minorias",
+    "item": "Razão salarial mulher/homem",
+    "antes": "78,5% (2022) → 81,8% (2024), sem fonte",
+    "depois": "77,9% (4º tri/2022) → 80,3% (2º tri/2026)",
+    "fonte": "IBGE SIDRA 5436",
+    "observacao": "Rendimento habitual real de todos os trabalhos."
+  },
+  {
+    "area": "Checagens",
+    "item": "Falas repetidas",
+    "antes": "Mesma fala contada várias vezes (por agência e por evento)",
+    "depois": "237 checagens consolidadas em 172 falas únicas",
+    "fonte": "—",
+    "observacao": "A visão por falas únicas virou o padrão; a lista completa por agência continua disponível."
+  },
+  {
+    "area": "Checagens (2ª revisão)",
+    "item": "Lupa e Ranking dos Políticos",
+    "antes": "—",
+    "depois": "194 de 194 checagens reconferidas na página original: todas conferem, inclusive os placares oficiais",
+    "fonte": "Agência Lupa; Ranking dos Políticos",
+    "observacao": ""
+  },
+  {
+    "area": "Checagens (2ª revisão)",
+    "item": "Estadão Verifica",
+    "antes": "5 checagens copiadas de fonte secundária (Coletivo Bereia), 2 com rótulo errado",
+    "depois": "28 checagens extraídas do texto original; mansão de R$ 10 mi = \"exagerado\" (não \"enganoso\"); salário mínimo = \"enganoso\" (não \"falso\")",
+    "fonte": "Estadão Verifica",
+    "observacao": "A fonte secundária resumia mal os rótulos."
+  },
+  {
+    "area": "Checagens (2ª revisão)",
+    "item": "Aos Fatos — rótulos",
+    "antes": "\"Verdadeiro, com ressalva\" em 2 falas de Lula; \"Falta contexto\" no prontuário de Flávio",
+    "depois": "\"Verdadeiro\" (7,5% e obras paradas) e \"Já existe\" (prontuário), como no texto da agência",
+    "fonte": "Aos Fatos",
+    "observacao": ""
+  },
+  {
+    "area": "Checagens (2ª revisão)",
+    "item": "Aos Fatos — fala omitida",
+    "antes": "Fala de Lula sobre déficit de 2,8% (Globo, 15/10) não estava na base",
+    "depois": "Incluída: Aos Fatos a tratou como fato (déficit do 1º ano do governo), enquanto o Ranking a classificou como falsa",
+    "fonte": "Aos Fatos",
+    "observacao": "Exemplo de como o mesmo trecho recebe leituras diferentes."
+  },
+  {
+    "area": "Checagens (2ª revisão)",
+    "item": "Contrapontos",
+    "antes": "3 com fonte trocada ou informação que não estava na fonte citada",
+    "depois": "Fonte corrigida (Lupa no lugar de Aos Fatos) e trechos sem respaldo removidos",
+    "fonte": "—",
+    "observacao": ""
+  },
+  {
+    "area": "Segurança (2ª revisão)",
+    "item": "Feminicídios 2019–2023",
+    "antes": "1.330 / 1.354 / 1.341 / 1.447 / 1.467",
+    "depois": "1.326 / 1.350 / 1.347 / 1.455 / 1.475",
+    "fonte": "Anuários FBSP (edição 2026 para 2021–2023)",
+    "observacao": "O Anuário revisa anos anteriores a cada edição."
+  },
+  {
+    "area": "Segurança (2ª revisão)",
+    "item": "Mortes violentas 2021 e taxa de 2022",
+    "antes": "47.503 (22,3) e taxa 23,3",
+    "depois": "48.431 (24,0) e taxa 23,4",
+    "fonte": "Anuário FBSP 2023",
+    "observacao": ""
+  },
+  {
+    "area": "Social (2ª revisão)",
+    "item": "Pobreza 2021",
+    "antes": "36,7%",
+    "depois": "36,8% (série revisada da SIS 2025)",
+    "fonte": "IBGE — SIS",
+    "observacao": ""
+  },
+  {
+    "area": "Políticas (2ª revisão)",
+    "item": "BEm (2020)",
+    "antes": "\"Mais de 20 milhões de acordos\"",
+    "depois": "Cerca de 10 milhões de trabalhadores",
+    "fonte": "TCU / governo federal",
+    "observacao": ""
+  },
+  {
+    "area": "Políticas (2ª revisão)",
+    "item": "Leilão do 5G",
+    "antes": "\"R$ 47 bi em compromissos\"",
+    "depois": "Valor econômico estimado de R$ 47,2 bi; outorgas de R$ 7,4 bi",
+    "fonte": "Anatel / Teletime",
+    "observacao": ""
+  },
+  {
+    "area": "Políticas (2ª revisão)",
+    "item": "Eletrobras",
+    "antes": "União com \"cerca de 40% do capital\"",
+    "depois": "De ~72% para 45% do capital votante, voto limitado a 10%",
+    "fonte": "Chesf — demonstrações 2022",
+    "observacao": ""
+  },
+  {
+    "area": "Políticas (2ª revisão)",
+    "item": "Pé-de-Meia",
+    "antes": "Custo de R$ 7 a 8 bi/ano",
+    "depois": "R$ 12,5 bi/ano (TCU), com bloqueio de R$ 6 bi em jan/2025",
+    "fonte": "TCU",
+    "observacao": ""
+  },
+  {
+    "area": "Políticas (2ª revisão)",
+    "item": "MEC no governo Bolsonaro",
+    "antes": "\"Cinco ministros\"; \"cerca de 200 escolas\" cívico-militares",
+    "depois": "Quatro ministros empossados; 202 a 216 escolas",
+    "fonte": "MEC / imprensa",
+    "observacao": ""
+  },
+  {
+    "area": "Links (2ª revisão)",
+    "item": "Fontes quebradas",
+    "antes": "CAGED (404), CNC/Peic (404), CONAB (certificado inválido), raiz do SIDRA (bloqueada)",
+    "depois": "Trocadas por páginas que respondem e por tabelas específicas do SIDRA",
+    "fonte": "—",
+    "observacao": "A página do IBGE (SIS) bloqueia apenas acesso automatizado e foi mantida."
+  },
+  {
+    "area": "Trabalho (3ª revisão)",
+    "item": "CAGED — revisão com série ajustada",
+    "antes": "2020: +142.690 · 2021: +2.776.733 · 2022: +2.013.161/2.013.261 · 2023: +1.483.598 (valores das primeiras divulgações de cada ano)",
+    "depois": "2020: −189.393 · 2021: +2.782.295 · 2022: +2.014.894 · 2023: +1.455.279 (série com ajustes de dez/2025)",
+    "fonte": "MTE — Novo CAGED, apresentação de dez/2025 (pág. 11)",
+    "observacao": "O painel do MTE usa a série com ajustes (declarações fora do prazo). 2020 virou negativo. Total Bolsonaro: +5,25 mi; Lula: +5,55 mi."
+  },
+  {
+    "area": "Inadimplência (3ª revisão)",
+    "item": "Página \"Endividamento\"",
+    "antes": "Famílias endividadas (CNC), inadimplentes e negativados (Serasa) em séries anuais sem fonte confirmada",
+    "depois": "Página \"Inadimplência\": só carteiras em atraso (BCB, série mensal oficial) e pontos de contas em atraso confirmados (CNC e Serasa)",
+    "fonte": "Banco Central — SGS 21082 a 21151",
+    "observacao": "Séries removidas: Serasa 2019–2024 (63,8 → 72,5 mi) e CNC 2019–2025, que não conseguimos confirmar."
+  },
+  {
+    "area": "Inadimplência (3ª revisão)",
+    "item": "Balanço do Desenrola",
+    "antes": "15,2 milhões de pessoas, R$ 53,1 bi e desconto médio de 83%",
+    "depois": "10,7 milhões de pessoas e R$ 29 bi até dez/2023 (balanço intermediário); faixa 2 com descontos médios de 90% e 85%",
+    "fonte": "Ministério da Fazenda e B3, via Istoé Dinheiro",
+    "observacao": "Não encontramos balanço final do programa."
+  },
+  {
+    "area": "Saneamento (3ª revisão)",
+    "item": "Marco do Saneamento — números do setor",
+    "antes": "Rascunho com \"66 leilões, R$ 370 bi, 1.550 cidades\" (da busca, não da fonte)",
+    "depois": "51 projetos, R$ 423,5 bi previstos e 2,4 mil municípios (Trata Brasil/GO Associados, jul/2026)",
+    "fonte": "Conjur",
+    "observacao": "Conferido na matéria original antes de entrar no painel."
+  },
+  {
+    "area": "Repercussão (3ª revisão)",
+    "item": "AtlasIntel — Desenrola 67% e Pé-de-Meia 61%",
+    "antes": "Apareciam só no resumo da busca",
+    "depois": "Confirmados em duas matérias independentes (Plantão Brasil e Fetec-PR); Gás do Povo 60% também confirmado",
+    "fonte": "AtlasIntel/Bloomberg (3 a 8/out/2026)",
+    "observacao": "O InfoMoney lista só parte das medidas."
+  },
+  {
+    "area": "Pipeline",
+    "item": "build_database.py",
+    "antes": "Sobrescrevia o scorecard com versão menor (12 de 17 itens) e gravava valores fixos",
+    "depois": "Selic, câmbio, dívida, PIB, IPCA e Gini vêm das APIs; scorecard e CONAB não são mais sobrescritos",
+    "fonte": "—",
+    "observacao": ""
+  }
+]

@@ -1,0 +1,159 @@
+import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+from modules.data_loader import get_ipca_data
+from modules.ui_components import (
+    apply_plotly_theme,
+    COLOR_BOLSONARO,
+    COLOR_LULA,
+    COLOR_ACCENT,
+    COLOR_GOLD,
+    COLOR_NEUTRAL
+)
+
+def render_tab_inflation():
+    st.markdown('<div class="section-title">📈 Inflação e Preços: IPCA (IBGE)</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-subtitle">Acompanhamento oficial do Índice Nacional de Preços ao Consumidor Amplo (IPCA), metas do CMN, trajetória acumulada nos mandatos e decomposição setorial por grupos de consumo.</div>',
+        unsafe_allow_html=True
+    )
+
+    df_hist, df_grupos, resumo = get_ipca_data()
+
+    if df_hist.empty:
+        st.warning("Dados do IPCA não encontrados.")
+        return
+
+    # 1. Cards de Resumo da Inflação
+    b_res = resumo.get("Bolsonaro", {})
+    l_res = resumo.get("Lula", {})
+    
+    col_c1, col_c2, col_c3, col_c4 = st.columns(4)
+    with col_c1:
+        st.markdown(f"""
+        <div class="kpi-card" style="text-align: center;">
+          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">IPCA Total Bolsonaro (4 anos)</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #93c5fd; font-family: monospace; margin: 8px 0;">{b_res.get('acumulado_total_pct')}%</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Janeiro 2019 a Dezembro 2022</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_c2:
+        st.markdown(f"""
+        <div class="kpi-card" style="text-align: center;">
+          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">IPCA Total Lula (Acumulado)</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #fda4af; font-family: monospace; margin: 8px 0;">{l_res.get('acumulado_total_pct')}%</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Jan/2023 a {l_res.get('anos', [{}])[-1].get('ano', '')} · {l_res.get('meses', '')} meses</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_c3:
+        st.markdown(f"""
+        <div class="kpi-card" style="text-align: center;">
+          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Média Anualizada Bolsonaro</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #60a5fa; font-family: monospace; margin: 8px 0;">{b_res.get('media_anual_pct')}%</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Pico em 12 meses: {b_res.get('maior_12m_pct')}% ({b_res.get('maior_12m_mes')})</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_c4:
+        st.markdown(f"""
+        <div class="kpi-card" style="text-align: center;">
+          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Média Anualizada Lula</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #fb7185; font-family: monospace; margin: 8px 0;">{l_res.get('media_anual_pct')}%</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Pico em 12 meses: {l_res.get('maior_12m_pct')}% ({l_res.get('maior_12m_mes')})</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # 2. Curva Comparativa da Inflação Acumulada no Mandato (Mês 1 ao Mês 48)
+    st.subheader("1. Inflação Acumulada no Mandato (Mês a Mês)")
+    st.caption("Evolução do percentual acumulado de inflação a partir do 1º mês de cada governo (Base 0%).")
+
+    df_bols = df_hist[df_hist["governo"] == "Bolsonaro (2019-2022)"].copy().reset_index(drop=True)
+    df_lula = df_hist[df_hist["governo"] == "Lula (2023-atual)"].copy().reset_index(drop=True)
+    
+    df_bols["mes_mandato"] = df_bols.index + 1
+    df_lula["mes_mandato"] = df_lula.index + 1
+
+    fig_acum = go.Figure()
+    fig_acum.add_trace(go.Scatter(
+        x=df_bols["mes_mandato"],
+        y=df_bols["indice_acumulado_mandato"],
+        mode="lines+markers",
+        name="Governo Bolsonaro (2019-2022)",
+        line=dict(color=COLOR_BOLSONARO, width=3.5),
+        marker=dict(size=5, color=COLOR_BOLSONARO),
+        hovertemplate="<b>Mês:</b> %{x} de mandato<br><b>Acumulado:</b> %{y:.2f}%<extra>Bolsonaro</extra>"
+    ))
+    fig_acum.add_trace(go.Scatter(
+        x=df_lula["mes_mandato"],
+        y=df_lula["indice_acumulado_mandato"],
+        mode="lines+markers",
+        name="Governo Lula (2023-atual)",
+        line=dict(color=COLOR_LULA, width=3.5),
+        marker=dict(size=5, color=COLOR_LULA),
+        hovertemplate="<b>Mês:</b> %{x} de mandato<br><b>Acumulado:</b> %{y:.2f}%<extra>Lula</extra>"
+    ))
+
+    fig_acum.update_xaxes(title_text="Mês de Mandato (1 = Janeiro do 1º ano)", dtick=5)
+    fig_acum.update_yaxes(title_text="Inflação Acumulada (%)")
+    apply_plotly_theme(fig_acum, title="Trajetória da Inflação Acumulada no Mandato (%)")
+    st.plotly_chart(fig_acum, use_container_width=True)
+
+    # 3. IPCA Mensal e Histórico Completo
+    st.subheader("2. Série Histórica Mensal do IPCA (%)")
+    st.caption("Taxa de variação percentual mensal do IPCA oficial.")
+
+    df_plot_hist = df_hist[df_hist["ano"] >= 2019].copy()
+    
+    colors_bars = [
+        COLOR_BOLSONARO if g == "Bolsonaro (2019-2022)" else COLOR_LULA
+        for g in df_plot_hist["governo"]
+    ]
+
+    fig_bars = go.Figure()
+    fig_bars.add_trace(go.Bar(
+        x=df_plot_hist["mes_ano"],
+        y=df_plot_hist["ipca_mensal"],
+        marker_color=colors_bars,
+        hovertemplate="<b>Mês/Ano:</b> %{x}<br><b>IPCA:</b> %{y:.2f}%<extra></extra>"
+    ))
+    fig_bars.update_xaxes(nticks=14, tickangle=-45)
+    apply_plotly_theme(fig_bars, title="Variação Mensal do IPCA (%) — Cores por Governo")
+    st.plotly_chart(fig_bars, use_container_width=True)
+
+    # 4. Decomposição pelos 9 Grupos do IBGE
+    st.subheader("3. Decomposição Setorial do IPCA (Grupos de Consumo)")
+    st.caption("Comportamento dos 9 grandes grupos da cesta de consumo das famílias do IBGE.")
+
+    if not df_grupos.empty:
+        df_12m = df_grupos[df_grupos["variavel"] == "Acumulado 12M"]
+        if not df_12m.empty:
+            ult_periodo = df_12m["periodo"].iloc[-1]
+            df_ult_grupos = df_12m[df_12m["periodo"] == ult_periodo].sort_values("valor", ascending=True)
+            
+            fig_grp = go.Figure()
+            fig_grp.add_trace(go.Bar(
+                y=df_ult_grupos["grupo"],
+                x=df_ult_grupos["valor"],
+                orientation="h",
+                marker_color="#38bdf8",
+                text=df_ult_grupos["valor"].apply(lambda v: f"{v:.2f}%"),
+                textposition="outside",
+                textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif"),
+                hovertemplate="<b>Grupo:</b> %{y}<br><b>Variação 12M:</b> %{x:.2f}%<extra></extra>"
+            ))
+            apply_plotly_theme(fig_grp, title=f"Inflação em 12 Meses por Grupo de Consumo ({ult_periodo})")
+            st.plotly_chart(fig_grp, use_container_width=True)
+
+    # Box Explicativo da Inflação
+    st.markdown("""
+    <div class="info-box">
+      <b>🔍 Fatores Inflacionários Chave:</b><br/>
+      • <b>Choques Globais (2020-2022):</b> A pandemia desarticulou cadeias logísticas de frete marítimo, microchips e insumos agrícolas (fertilizantes), somada ao início da Guerra na Ucrânia em 2022 que explodiu os preços de combustíveis e commodities alimentares (soja, trigo).<br/>
+      • <b>Deflação do ICMS (2022):</b> Em meados de 2022, a aprovação do teto de ICMS sobre combustíveis e energia pelo Congresso Nacional provocou três meses de deflação artificial (-0,68% em jul, -0,36% em ago e -0,29% em set), desacelerando o IPCA anual daquele ano.<br/>
+      • <b>Estabilização (2023-atual):</b> A normalização das cadeias globais de suprimento, a deflação de grãos no atacado pela supersafra de 2023 e o ciclo de juros altos do Banco Central mantiveram o IPCA controlado na faixa de 4% a 5% ao ano.
+    </div>
+    """, unsafe_allow_html=True)
