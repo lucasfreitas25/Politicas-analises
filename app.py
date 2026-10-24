@@ -19,7 +19,7 @@ def load_css():
 load_css()
 
 # Importar módulos de visualização
-from modules.ui_components import render_hero_banner
+from modules.ui_components import render_hero_banner, celular_pelo_navegador
 from modules.ux import render_tipos_fonte, render_print_button, render_acessibilidade, ativar_dicas_automaticas
 from modules.tabs_overview import render_tab_overview
 from modules.tabs_labor import render_tab_labor
@@ -126,6 +126,8 @@ with st.sidebar:
                 st.error(f"Erro na sincronização: {e}")
 
     render_print_button()
+    st.toggle("Modo celular (layout compacto)", value=celular_pelo_navegador(), key="modo_celular",
+              help="Troca tabelas largas por cartões, deixa gráficos e legendas menores. Liga sozinho em celulares; use aqui para forçar em qualquer tela.")
     render_acessibilidade()
 
     st.markdown("""

@@ -56,7 +56,8 @@ def _comparador_historico(a, b, todos):
             st.info("Falta dado comparável para um dos governos (*): a série oficial não cobre esse período.")
         st.markdown("---")
 
-    sel = governos if todos else [a, b]
+    from modules.historico_ui import governos_ativos
+    sel = governos_ativos(todos, a, b)
     linhas = [(g, ind["mandato"].get(g)) for g in sel]
     fig = go.Figure(go.Bar(
         x=[g for g, _ in linhas], y=[v if v is not None else 0 for _, v in linhas],

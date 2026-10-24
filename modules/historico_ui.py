@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 from modules.data_loader import load_json
-from modules.ui_components import apply_plotly_theme, render_source, fmt_br, COR_MANDATO, classe_gov
+from modules.ui_components import apply_plotly_theme, render_source, fmt_br, COR_MANDATO, classe_gov, eh_celular
 
 CMP = {"ok": ("✔", "mesma metodologia em toda a série"), "ajustado": ("≈", "ajustada (períodos ou bases diferentes)"),
        "ressalva": ("⚠", "a metodologia muda ou falta parte da série")}
@@ -76,8 +76,44 @@ def _classe(rank, n):
     return f"hist-c{1 + round(4 * rank / (n - 1))}"
 
 
+def quadro_cartoes_html(indicadores, governos):
+    """Versão para celular do quadro: um cartão por indicador, com um 'selo' por governo (cor = posição entre os mostrados)."""
+    saida, eixo_atual = [], None
+    for ind in sorted(indicadores, key=lambda i: ORDEM_EIXO.index(i["eixo"]) if i["eixo"] in ORDEM_EIXO else 9):
+        if ind["eixo"] != eixo_atual:
+            eixo_atual = ind["eixo"]
+            saida.append(f'<div class="hist-eixo-m">{html.escape(eixo_atual)}</div>')
+        vals = {g: ind["mandato"].get(g) for g in governos}
+        com = sorted([g for g in governos if vals[g] is not None], key=lambda g: vals[g], reverse=ind["maior_melhor"])
+        pos = {g: i for i, g in enumerate(com)}
+        sem_lado = bool(ind.get("sem_lado_melhor"))
+        outra, parcial = _marcados(ind)
+        chips = []
+        for g in governos:
+            cor = COR_MANDATO.get(g, "#64748b")
+            if g not in pos:
+                chips.append(f'<div class="chip-gov hist-vazio" style="border-left-color:{cor};"><span>{html.escape(g)}</span><b>Sem dado</b></div>')
+                continue
+            marca = ("*" if g in outra else "") + ("†" if g in parcial else "")
+            classe = "hist-c0" if sem_lado else _classe(pos[g], len(com))
+            top = " 🥇" if pos[g] == 0 and not sem_lado and len(com) > 1 else ""
+            chips.append(f'<div class="chip-gov {classe}" style="border-left-color:{cor};"><span>{html.escape(g)}</span>'
+                         f'<b>{fmt(vals[g], ind["unidade"])}{marca}{top}</b></div>')
+        simbolo = CMP[ind["comparabilidade"]][0]
+        saida.append(
+            f'<div class="ind-card"><div class="ind-card-t"><b>{html.escape(ind["nome"])}</b>'
+            f'<div class="hist-sub">{html.escape(ind["unidade"])} · {seta_txt(ind)} · {simbolo} · '
+            f'<a href="{html.escape(ind["url"], quote=True)}" target="_blank">dados ↗</a></div></div>'
+            f'<div class="chip-grid">{"".join(chips)}</div></div>')
+    return "".join(saida)
+
+
 def quadro_html(indicadores, governos, destaque=None):
-    """Tabela indicador x mandato com cores relativas (verde = melhor posição na linha, vermelho = pior)."""
+    """Tabela indicador x mandato com cores relativas (verde = melhor posição na linha, vermelho = pior).
+    No celular vira uma lista de cartões, para não obrigar a rolar para o lado."""
+    from modules.ui_components import eh_celular
+    if eh_celular():
+        return quadro_cartoes_html(indicadores, governos)
     linhas, eixo_atual = [], None
     for ind in sorted(indicadores, key=lambda i: ORDEM_EIXO.index(i["eixo"]) if i["eixo"] in ORDEM_EIXO else 9):
         if ind["eixo"] != eixo_atual:
@@ -290,8 +326,24 @@ def render_seletor():
             if c4.button("↺ Voltar para Bolsonaro x Lula 3", key="gov_reset", width="stretch"):
                 st.session_state["gov_reset_pedido"] = True
                 st.rerun()
+        if todos:
+            # no modo "Todos" dá para tirar ou pôr cada governo, o que evita tabelas e gráficos com 9 colunas no celular
+            st.session_state.setdefault("gov_lista", list(governos))
+            st.session_state["gov_lista"] = [g for g in st.session_state["gov_lista"] if g in governos] or list(governos)
+            st.session_state["_w_gov_lista"] = st.session_state["gov_lista"]
+            st.pills("Governos mostrados (toque para tirar ou pôr)", governos, selection_mode="multi", key="_w_gov_lista",
+                     on_change=lambda: st.session_state.__setitem__("gov_lista", st.session_state["_w_gov_lista"] or list(governos)))
     st.session_state["gov_a"], st.session_state["gov_b"], st.session_state["gov_todos"] = a, b, todos
     return a, b, todos
+
+
+def governos_ativos(todos, a, b):
+    """Governos que a página deve mostrar: A e B, ou, no modo Todos, os que estão marcados no filtro (ao menos um)."""
+    governos = nomes_governos()
+    if not todos:
+        return [a, b]
+    marcados = [g for g in st.session_state.get("gov_lista", governos) if g in governos]
+    return [g for g in governos if g in marcados] or list(governos)
 
 
 def _valor_txt(ind, gov):
@@ -381,7 +433,7 @@ def _grafico_anual_par(ind, chave, governos_sel):
         fig.add_trace(go.Bar(
             x=[str(x) for x in sub.index], y=sub.values, name=g,
             marker=dict(color=COR_MANDATO.get(g), pattern=dict(shape=["/" if x in outra or x in parcial else "" for x in sub.index], fgcolor="rgba(15,23,42,0.55)")),
-            text=rot if len(anual) <= 16 else None, textposition="outside", hovertemplate="%{x}: %{y}<extra>" + g + "</extra>"))
+            text=rot if len(anual) <= (8 if eh_celular() else 16) else None, textposition="outside", hovertemplate="%{x}: %{y}<extra>" + g + "</extra>"))
     apply_plotly_theme(fig, title=f"{ind['nome'].split(' (')[0]} — por ano", height=420)
     fig.update_layout(hovermode="closest", bargap=0.25)
     fig.update_xaxes(type="category", categoryorder="category ascending")
@@ -411,19 +463,43 @@ def _grafico_categorias(bloco, sel, chave):
             g = st.segmented_control("Itens", list(grupos) + ["Todos"], default=list(grupos)[0], key=f"cat_grp_{chave}") or list(grupos)[0]
         if g != "Todos":
             nomes = [n for n in nomes if n in grupos[g]]
+    from modules.ui_components import eh_celular, quebrar
+    celular = eh_celular()
+    if celular and len(sel) > 3:
+        # muitos governos no celular: um item por vez, com uma barra por governo (o mapa de cores não cabe na tela)
+        item = st.selectbox("Escolha o item", nomes, key=f"cat_item_{chave}")
+        vals = [cats[item].get(g) for g in sel]
+        fig = go.Figure(go.Bar(y=sel, x=[v if v is not None else 0 for v in vals], orientation="h", marker_color=[COR_MANDATO.get(g) for g in sel],
+                               text=[fmt_br(v) if v is not None else "Sem dado" for v in vals], textposition="outside", cliponaxis=False,
+                               textfont=dict(size=12, color="#ffffff"), hovertemplate="%{y}: %{text}<extra></extra>"))
+        apply_plotly_theme(fig, title=f"{item} ({unidade})", height=44 * len(sel) + 130)
+        fig.update_yaxes(autorange="reversed", tickfont=dict(size=12, color="#f8fafc"))
+        fig.update_layout(showlegend=False, hovermode="closest", margin=dict(l=8, r=40, t=70, b=20))
+        st.plotly_chart(fig, width="stretch", key=f"cat_{chave}")
+        faltam = [g for g in sel if cats[item].get(g) is None]
+        if faltam:
+            st.caption("Sem dado: " + ", ".join(faltam) + ".")
+        st.caption(bloco.get("metodo", "") + " " + bloco.get("nota", ""))
+        render_source(html.escape(bloco["fonte"]), bloco["url"])
+        return
     ref = next((x for x in reversed(sel) if any(cats[n].get(x) is not None for n in nomes)), sel[-1])
     nomes = sorted(nomes, key=lambda n: -(cats[n].get(ref) if cats[n].get(ref) is not None else -1e9))
+    rotulo = (lambda n: quebrar(n, 22)) if celular else (lambda n: n)
     if len(sel) <= 3:
         fig = go.Figure()
         for gov in sel:
             vals = [cats[n].get(gov) for n in nomes]
             fig.add_trace(go.Bar(
-                y=nomes, x=[v if v is not None else 0 for v in vals], orientation="h", name=gov, marker_color=COR_MANDATO.get(gov),
+                y=[rotulo(n) for n in nomes], x=[v if v is not None else 0 for v in vals], orientation="h", name=gov, marker_color=COR_MANDATO.get(gov),
                 text=[fmt_br(v) if v is not None else "Sem dado" for v in vals], textposition="outside", cliponaxis=False,
+                textfont=dict(size=11 if celular else 12),
                 hovertemplate="%{y}: %{text}<extra>" + gov + "</extra>"))
         fig.update_layout(barmode="group", bargap=0.25)
-        apply_plotly_theme(fig, title=f"{bloco['nome'].split(' (')[0]} ({unidade})", height=max(380, len(nomes) * (16 * len(sel) + 16) + 140))
+        altura = len(nomes) * ((30 if celular else 16) * len(sel) + (22 if celular else 16)) + 140
+        apply_plotly_theme(fig, title=f"{bloco['nome'].split(' (')[0]} ({unidade})", height=max(380, altura))
         fig.update_yaxes(autorange="reversed")
+        if celular:
+            fig.update_layout(margin=dict(l=8, r=48, t=90, b=70))
         fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.08, x=0.5, xanchor="center", yanchor="top"))
     else:
         z = [[cats[n].get(gov) for gov in sel] for n in nomes]
@@ -470,6 +546,33 @@ def _sem_dado(titulo_secao, sel, motivo=None):
         unsafe_allow_html=True)
 
 
+def _visao_geral_todos(d, sel, titulo):
+    """Visão Geral para vários governos: quadro (ou cartões, no celular) com todos os indicadores e um gráfico ano a ano à escolha."""
+    from modules.tabs_overview import CONTEXTO
+    from modules.ui_components import PARTIDO, PERIODO
+    inds = [{**v, "chave": k} for k, v in d["indicadores"].items() if "visao-geral" in v.get("abas", [])]
+    st.markdown(quadro_html(inds, sel), unsafe_allow_html=True)
+    st.caption(LEGENDA)
+    st.markdown("---")
+    nomes = {i["nome"]: i["chave"] for i in inds}
+    k = nomes[st.selectbox("Ver ano a ano:", list(nomes), key="vg_hist_sel")]
+    ind = {**d["indicadores"][k], "chave": k}
+    st.subheader(ind["nome"].split(" (")[0])
+    st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
+    if _cobertura_mensal(d, ind, sel):
+        _grafico_mensal(d, ind, k, sel)
+        if ind.get("mensal_tipo") == "acumulado":
+            _grafico_anual_par(ind, k, sel)
+    else:
+        _grafico_anual_par(ind, k, sel)
+    faltam = [g for g in sel if ind["mandato"].get(g) is None]
+    if faltam:
+        st.caption("Sem dado para: " + ", ".join(faltam) + ".")
+    _fonte(ind)
+    linhas = "".join(f'• <b>Governo {html.escape(g)} ({PARTIDO[g]}, {PERIODO[g]}):</b> {html.escape(CONTEXTO[g])}<br/>' for g in sel)
+    st.markdown(f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}</div>', unsafe_allow_html=True)
+
+
 def render_aba_comparada(aba, a, b, todos):
     """Refaz a aba para outro par de governos (ou todos) no mesmo molde da aba Bolsonaro x Lula:
     cabeçalho, cartões 'A ➔ B', as mesmas seções numeradas (com gráfico, 'Sem dado' ou programas) e caixa de contexto no fim.
@@ -480,10 +583,13 @@ def render_aba_comparada(aba, a, b, todos):
         st.info("Escolha dois governos diferentes.")
         return True
     st.markdown(css_governos(), unsafe_allow_html=True)
-    governos = nomes_governos(d)
-    sel = governos if todos else [a, b]
+    governos = governos_ativos(todos, a, b)
+    sel = governos
     titulo, sub = TITULOS.get(aba, (aba, ""))
     render_section_header(titulo, sub + (" Todos os governos, de FHC a Lula 3." if todos else f" {a} x {b}."))
+    if aba == "visao-geral":
+        _visao_geral_todos(d, sel, titulo)
+        return True
     molde = MOLDE.get(aba, [])
     chaves = [k for k, v in d.get("indicadores", {}).items() if aba in v.get("abas", [])]
     usados = [k for _, ks, _ in molde for k in ks]
@@ -549,55 +655,5 @@ def render_aba_comparada(aba, a, b, todos):
         '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
         'estoques viram variação no mandato). "Sem dado" = não há série comparável para o governo; número com * = dado de outra metodologia; † = ano parcial. '
         'Detalhes que só existem para Bolsonaro x Lula 3 (notícias, recortes por bioma ou modalidade) aparecem ao voltar ao padrão.</span></div>',
-        unsafe_allow_html=True)
-    return True
-    st.markdown(css_governos(), unsafe_allow_html=True)
-    governos = nomes_governos(d)
-    sel = governos if todos else [a, b]
-    titulo, sub = TITULOS.get(aba, (aba, ""))
-    render_section_header(titulo, sub + (" Todos os governos, de FHC a Lula 3." if todos else f" {a} x {b}."))
-    inds = [{**d["indicadores"][k], "chave": k} for k in chaves]
-
-    # 1. Cartões (ou o quadro com todos os mandatos)
-    if todos:
-        st.markdown(quadro_html(inds, governos), unsafe_allow_html=True)
-        st.caption(LEGENDA)
-    else:
-        cols = st.columns(3)
-        for i, ind in enumerate(inds):
-            with cols[i % 3]:
-                _stat_par(ind, a, b)
-    if aba == "visao-geral":
-        nomes = {i["nome"]: i["chave"] for i in inds}
-        k = nomes[st.selectbox("Ver ano a ano:", list(nomes), key="vg_hist_sel")]
-        inds = [{**d["indicadores"][k], "chave": k}]
-
-    # 2. Um gráfico por indicador, numerado como nas abas originais
-    for n, ind in enumerate(inds, start=1):
-        st.markdown("---")
-        st.subheader(f"{n}. {ind['nome'].split(' (')[0]}")
-        st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
-        if _cobertura_mensal(d, ind, sel):
-            _grafico_mensal(d, ind, ind["chave"], sel)
-            if ind.get("mensal_tipo") == "acumulado":
-                _grafico_anual_par(ind, ind["chave"], sel)
-        else:
-            _grafico_anual_par(ind, ind["chave"], sel)
-        _fonte(ind)
-
-    # 3. Programas de cada governo (benefícios e críticas), quando a área já foi mapeada
-    if aba == "saude":
-        from modules.programas_ui import render_programas
-        st.markdown("---")
-        render_programas("Saúde", sel, chave="cmp")
-
-    # 4. Contexto de cada período
-    from modules.tabs_overview import CONTEXTO
-    linhas = "".join(f'• <b>Governo {html.escape(g)} ({PARTIDO[g]}, {PERIODO[g]}):</b> {html.escape(CONTEXTO[g])}<br/>' for g in sel)
-    st.markdown(
-        f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
-        '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
-        'estoques viram variação no mandato). "Sem dado*" = não há série comparável; número com * = dado de outra metodologia; † = ano parcial. '
-        'Partes da aba que só existem para Bolsonaro x Lula 3 (políticas, notícias, detalhamentos) aparecem ao voltar ao padrão.</span></div>',
         unsafe_allow_html=True)
     return True

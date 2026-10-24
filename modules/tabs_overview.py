@@ -178,7 +178,7 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
     fig.update_yaxes(autorange="reversed")
     st.plotly_chart(fig, width="stretch")
     st.caption(
-        "Cada indicador vale 1 ponto, e o gráfico só conta quem está melhor em cada um — já considerando que em alguns indicadores menor é melhor "
+        "Cada indicador vale 1 ponto, e o gráfico só conta quem está melhor em cada um, já considerando que em alguns indicadores menor é melhor "
         "(desemprego, inflação, juros, dívida, mortes) e em outros maior é melhor (PIB, renda, safra, empregos). "
         "Não mede o tamanho da diferença nem o peso de cada tema, então o placar não diz quem governa melhor. "
         "\"Depende de contexto\" marca o indicador em que os números favorecem um lado, mas o contexto relativiza (ou em que não há lado melhor, como o câmbio). "
@@ -442,6 +442,27 @@ def _radar(ctx, categories, values_a, values_b, txt_a, txt_b, legenda):
     st.caption(legenda)
 
 
+def _tabela_cartoes(ctx, df_filtered):
+    """Tabela comparativa no celular: um cartão por indicador, com os dois valores lado a lado e o contexto embaixo."""
+    saida, categoria_atual = [], None
+    for _, row in df_filtered.iterrows():
+        if row["categoria"] != categoria_atual:
+            categoria_atual = row["categoria"]
+            saida.append(f'<div class="hist-eixo-m">{html.escape(categoria_atual)}</div>')
+        neutro = row["melhor"] == "empate"
+        maior_melhor = bool(row.get("maior_melhor", True))
+        fonte = (f' <a href="{html.escape(row["fonte_url"], quote=True)}" target="_blank">{html.escape(row["fonte"])}</a>' if row.get("fonte_url") else "")
+        lados = "".join(
+            _celula_valor(row[chave], row["melhor"] == chave, chave, neutro, ctx).replace("<td", f'<div class="lado-m" data-gov="{html.escape(nome)}"', 1).replace("</td>", "</div>")
+            for chave, nome in (("bolsonaro", ctx["a"]), ("lula", ctx["b"])))
+        saida.append(
+            f'<div class="ind-card"><div class="ind-card-t"><b>{html.escape(row["indicador"])}</b>'
+            f'<div class="dir-tag {"dir-up" if maior_melhor else "dir-down"}">{DIRECAO_TXT[maior_melhor]}</div></div>'
+            f'<div class="lados-m"><div class="lado-nome">{html.escape(ctx["a"])}</div><div class="lado-nome">{html.escape(ctx["b"])}</div>{lados}</div>'
+            f'<div class="ind-card-obs">{gl(html.escape(row["observacao"]))}{fonte}</div></div>')
+    st.markdown("".join(saida), unsafe_allow_html=True)
+
+
 def _tabela(ctx, indicators):
     df_score = pd.DataFrame(indicators)
     df_score["eixo"] = df_score["categoria"].map(EIXO_DE).fillna("Outros")
@@ -475,6 +496,11 @@ def _tabela(ctx, indicators):
     st.caption(f"{len(df_filtered)} de {len(df_score)} indicadores. **Comparabilidade:** ✔ mesma série e metodologia · ≈ períodos de tamanhos ou datas diferentes, com ajuste · "
                "⚠ metodologia, cobertura ou natureza do número diferem entre os dois lados (leia a ressalva na tabela)."
                + ("" if ctx["padrao"] else " **Sem dado*** = não há série comparável para esse governo; número com * = dado de outra metodologia; † = ano parcial."))
+
+    from modules.ui_components import eh_celular
+    if eh_celular():
+        _tabela_cartoes(ctx, df_filtered)
+        return
 
     table_rows = []
     for _, row in df_filtered.iterrows():

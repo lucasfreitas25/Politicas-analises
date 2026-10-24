@@ -11,6 +11,58 @@ COLOR_ACCENT = "#10B981"      # Verde Esmeralda
 COLOR_NEUTRAL = "#94A3B8"     # Slate Claro
 COLOR_GOLD = "#F59E0B"        # Âmbar Dourado
 
+_RE_CELULAR = re.compile(r"Mobi|Android|iPhone|iPad|iPod|Windows Phone", re.I)
+
+
+def celular_pelo_navegador():
+    """Palpite pelo User-Agent do navegador (o Streamlit não sabe a largura da tela no servidor)."""
+    try:
+        return bool(_RE_CELULAR.search(st.context.headers.get("User-Agent", "") or ""))
+    except Exception:
+        return False
+
+
+def eh_celular():
+    """Modo celular: o que está marcado no botão da barra lateral, ou o palpite pelo navegador enquanto ele não existir."""
+    if "modo_celular" in st.session_state:
+        return bool(st.session_state["modo_celular"])
+    return celular_pelo_navegador()
+
+
+def quebrar(texto, largura=30):
+    """Quebra um texto em linhas de até `largura` caracteres com <br>, para títulos e rótulos longos caberem na tela do celular."""
+    linhas, atual = [], ""
+    for palavra in str(texto).split(" "):
+        if atual and len(atual) + 1 + len(palavra) > largura:
+            linhas.append(atual)
+            atual = palavra
+        else:
+            atual = (atual + " " + palavra).strip()
+    if atual:
+        linhas.append(atual)
+    return "<br>".join(linhas)
+
+
+def _ajuste_celular(fig, title, height):
+    """Título menor e quebrado em linhas, legenda embaixo (sem cobrir o título), margens enxutas e eixos legíveis."""
+    titulo = quebrar(title, 34)
+    n_titulo = titulo.count("<br>") + 1
+    n_leg = sum(1 for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None))
+    linhas_leg = max(1, -(-n_leg // 2)) if n_leg > 1 else 0
+    alt = max(330, min(int(height), 520)) if height <= 520 else int(height)
+    fig.update_layout(
+        title={"text": f"<b>{titulo}</b>", "font": {"size": 13}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"},
+        margin={"l": 8, "r": 12, "t": 36 + 17 * n_titulo + 20 * linhas_leg + 14, "b": 36},
+        plot_bgcolor="#111827",
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""}},
+        height=alt,
+    )
+    fig.update_xaxes(automargin=True, tickfont={"size": 10}, title_font={"size": 11}, nticks=6)
+    fig.update_yaxes(automargin=True, tickfont={"size": 10}, title_font={"size": 11})
+    for a in fig.layout.annotations or []:
+        a.font = dict(color="#ffffff", size=9)
+
+
 def apply_plotly_theme(fig, title="", height=420):
     fig.update_layout(
         title={
@@ -60,6 +112,8 @@ def apply_plotly_theme(fig, title="", height=420):
     )
     if st.session_state.get("modo_daltonico"):
         _aplicar_daltonismo(fig)
+    if eh_celular():
+        _ajuste_celular(fig, title, height)
     return fig
 
 

@@ -182,3 +182,8 @@ Politicas analises/
   - PIM-PF por seções (extrativa e transformação, desde 2002), emissões de gases de efeito estufa (Our World in Data) e destinos e pauta das exportações (ComexStat, desde 1997).
 - Cada aba temática segue um molde fixo (`MOLDE` em `modules/historico_ui.py`) com as mesmas seções numeradas para qualquer par de governos; onde não há série, a seção mostra "Sem dado".
 - O par escolhido fica guardado em `gov_a`/`gov_b`/`gov_todos`, separado das chaves dos campos, para não voltar a "FHC 1 x FHC 1" ao trocar de página.
+
+## Modo celular e filtro de governos
+
+- O painel liga o **modo celular** sozinho quando o navegador é de celular (User-Agent); o botão "Modo celular" na barra lateral força ligado ou desligado em qualquer tela. Nesse modo as tabelas largas viram cartões empilhados, os títulos de gráfico quebram em linhas, a legenda fica acima do gráfico e os gráficos de itens de preço ganham altura.
+- Com "Todos os governos" ligado há o filtro **"Governos mostrados"** para tirar ou pôr cada mandato; a escolha vale para todas as abas e fica em `gov_lista`.

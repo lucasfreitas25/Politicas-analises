@@ -71,8 +71,17 @@ def render_tab_food_basket():
                              marker_color=COLOR_LULA, text=d["variacao_lula_pct"].apply(lambda v: f"{v:+.1f}%".replace(".", ",")),
                              textposition="outside", hovertemplate="%{y}: %{x:+.1f}%<extra>Lula</extra>"))
         fig.update_layout(barmode="group", bargap=0.3, bargroupgap=0.06)
-        apply_plotly_theme(fig, title="Variação acumulada de preços no mandato (%)", height=max(420, 78 * len(d) + 130))
+        from modules.ui_components import eh_celular, quebrar
+        cel = eh_celular()
+        if cel:
+            for tr in fig.data:
+                tr.y = [quebrar(v, 15) for v in tr.y]
+                tr.cliponaxis = False
+                tr.textfont = dict(size=11, color="#ffffff")
+        apply_plotly_theme(fig, title="Variação acumulada de preços no mandato (%)", height=max(420, (96 if cel else 78) * len(d) + 130))
         fig.update_layout(hovermode="closest")
+        if cel:
+            fig.update_layout(margin=dict(l=8, r=36, t=90, b=70))
         # Faixas alternadas e linhas entre os itens, para separar cada alimento
         for i in range(len(d)):
             if i % 2 == 0:
@@ -81,8 +90,8 @@ def render_tab_food_basket():
                 fig.add_hline(y=i - 0.5, line_width=1, line_color="rgba(148,163,184,0.35)", layer="below")
         topo = max(d["variacao_bolsonaro_pct"].max(), d["variacao_lula_pct"].max())
         fundo = min(0, d["variacao_bolsonaro_pct"].min(), d["variacao_lula_pct"].min())
-        fig.update_xaxes(range=[fundo * 1.6 - (8 if fundo < 0 else 0), topo * 1.18], zeroline=True, zerolinecolor="#94a3b8", zerolinewidth=1.5, showgrid=True)
-        fig.update_yaxes(showgrid=False, tickfont=dict(size=13, color="#f8fafc"))
+        fig.update_xaxes(range=[fundo * (2.6 if cel else 1.6) - (14 if cel and fundo < 0 else 8 if fundo < 0 else 0), topo * (1.3 if cel else 1.18)], zeroline=True, zerolinecolor="#94a3b8", zerolinewidth=1.5, showgrid=True)
+        fig.update_yaxes(showgrid=False, tickfont=dict(size=11 if cel else 13, color="#f8fafc"))
         st.plotly_chart(fig, width="stretch")
         render_source(f"{fonte_itens}. Último mês: {df_itens['ultimo_mes'].max()[4:]}/{df_itens['ultimo_mes'].max()[:4]}",
                       "https://sidra.ibge.gov.br/tabela/7060")

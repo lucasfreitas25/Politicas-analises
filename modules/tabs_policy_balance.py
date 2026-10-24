@@ -287,7 +287,8 @@ def render_tab_policy_balance():
         subtitulo = ("As principais políticas dos governos Bolsonaro e Lula em todas as áreas: o que cada uma trouxe de bom e de ruim, o que ainda está em vigor, "
                      "como foi recebida pela população, quais leis foram sancionadas e quais impostos cada governo criou, reduziu ou extinguiu.")
     else:
-        govs = list(nomes_governos()) if todos else [a, b]
+        from modules.historico_ui import governos_ativos
+        govs = governos_ativos(todos, a, b)
         df, leis = politicas_unificadas(govs), leis_unificadas()
         subtitulo = ("As principais políticas, leis e impostos de " + ("todos os governos, de FHC a Lula 3" if todos else f"{a} e {b}") +
                      ": o que cada uma trouxe de bom e de ruim, o que ainda está em vigor e quais leis foram sancionadas. "
