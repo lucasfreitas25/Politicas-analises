@@ -9,7 +9,7 @@
       "Mentira": "Falso.",
       "Sem comprovação": "Insustentável / não há evidência pública que sustente a fala."
     },
-    "debate_globo": "Debate da TV Globo de 23/10: entram as 25 checagens da Lupa (página ao vivo, última atualização registrada às 23h45) e 1 do Aos Fatos com veredito explícito. O Aos Fatos publicou outras checagens do debate que, na hora da coleta, ainda estavam sem selo (página em atualização), e o Fato ou Fake do g1, escolhido pela Globo, ainda não tinha publicado; elas não entram na contagem enquanto não houver veredito.",
+    "debate_globo": "Debate da TV Globo de 23/10: entram as 29 checagens da Lupa (página ao vivo, última atualização registrada em 24/10 às 00h27) e 3 do Aos Fatos em que o texto confirma a fala (\"de fato\" ou \"é verdade\"). As outras checagens do Aos Fatos não trazem selo na página (em atualização), e o Estadão Verifica e o Fato ou Fake do g1 anunciaram cobertura mas não tinham checagem publicada quando consultamos; nada disso entra na contagem enquanto não houver veredito explícito.",
     "aviso": "Cada linha é uma checagem de uma agência. Agências escolhem quais falas checar e usam escalas diferentes; a mesma fala pode aparecer mais de uma vez com vereditos distintos. Contagens não medem 'quem mente mais' de forma absoluta.",
     "placares_oficiais": [
       {
@@ -4927,7 +4927,109 @@
       "afirmacao": "Flávio chamou o Bolsa Família de \"bolsa farelo\".",
       "veredito_original": "Verdadeiro",
       "categoria": "Verdade",
-      "explicacao": "O Aos Fatos diz que é verdade que Flávio usou a expressão em críticas a programas de transferência de renda.",
+      "explicacao": "O Aos Fatos escreve \"de fato\": Flávio usou a expressão em críticas a programas de transferência de renda.",
+      "fonte_url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/"
+    },
+    {
+      "id": 288,
+      "chave": "u288",
+      "titulo_fala": "\"Nosso superávit comercial foi para quase R$ 85 bilhões.\"",
+      "candidato": "Lula",
+      "evento": "Debate TV Globo — 2º turno",
+      "emissora": "Globo",
+      "turno": "2º turno",
+      "data": "2026-10-23",
+      "agencia": "Agência Lupa",
+      "tema": "Economia",
+      "afirmacao": "\"Nosso superávit comercial foi para quase R$ 85 bilhões.\"",
+      "veredito_original": "Subestimado",
+      "categoria": "Meia-verdade",
+      "explicacao": "Lula confundiu a moeda e apresentou projeção como resultado: os quase 85 bilhões são a estimativa de US$ 84,4 bi para o superávit de 2026 inteiro (MDIC, 6/10/2026). De janeiro a setembro o superávit foi de US$ 62,4 bi.",
+      "fonte_url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/"
+    },
+    {
+      "id": 289,
+      "chave": "L-simples",
+      "titulo_fala": "Criou o Simples",
+      "candidato": "Lula",
+      "evento": "Debate TV Globo — 2º turno",
+      "emissora": "Globo",
+      "turno": "2º turno",
+      "data": "2026-10-23",
+      "agencia": "Agência Lupa",
+      "tema": "Economia",
+      "afirmacao": "\"Nós fizemos a lei da pequena e média empresa porque nós queremos que o empreendedorismo vença nesse país.\"",
+      "veredito_original": "Verdadeiro",
+      "categoria": "Verdade",
+      "explicacao": "Lula sancionou a Lei Complementar 123/2006, a Lei Geral da Micro e Pequena Empresa, há 20 anos; ela simplificou o recolhimento de impostos federais, estaduais e municipais e instituiu o Simples Nacional.",
+      "fonte_url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/"
+    },
+    {
+      "id": 290,
+      "chave": "u290",
+      "titulo_fala": "No governo de Jair Bolsonaro se dizia que quem tomasse vacina \"ia virar gay\" e \"ia virar jacaré\".",
+      "candidato": "Lula",
+      "evento": "Debate TV Globo — 2º turno",
+      "emissora": "Globo",
+      "turno": "2º turno",
+      "data": "2026-10-23",
+      "agencia": "Agência Lupa",
+      "tema": "Saúde",
+      "afirmacao": "No governo de Jair Bolsonaro se dizia que quem tomasse vacina \"ia virar gay\" e \"ia virar jacaré\".",
+      "veredito_original": "Verdadeiro",
+      "categoria": "Verdade",
+      "explicacao": "Em 17/12/2020, na Bahia, Bolsonaro questionou a segurança das vacinas e citou, em tom irônico, efeitos como \"virar um jacaré\". O Brasil começou a vacinar em 17/1/2021, cerca de um mês depois de Reino Unido, EUA e Canadá.",
+      "fonte_url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/"
+    },
+    {
+      "id": 291,
+      "chave": "F-vorcaro-lula",
+      "titulo_fala": "Vorcaro pagou R$ 30 milhões a documentário/Instituto Lula",
+      "candidato": "Flávio Bolsonaro",
+      "evento": "Debate TV Globo — 2º turno",
+      "emissora": "Globo",
+      "turno": "2º turno",
+      "data": "2026-10-23",
+      "agencia": "Agência Lupa",
+      "tema": "Corrupção & Escândalos",
+      "afirmacao": "\"Lula explica esses R$ 30 milhões, onde foram parar?\"",
+      "veredito_original": "Insustentável",
+      "categoria": "Sem comprovação",
+      "explicacao": "A Veja publicou em 9/10/2026 relatos atribuídos a Daniel Vorcaro sobre repassar R$ 30 milhões ao Instituto Lula, mas não há comprovante de pagamento nem prova de encontro entre os dois. O UOL informou que o suposto anexo não consta das três propostas de delação da defesa, e a PGR e a PF negaram que o depoimento exista.",
+      "fonte_url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/"
+    },
+    {
+      "id": 292,
+      "chave": "u292",
+      "titulo_fala": "\"Nunca se exportou tanto neste país.\"",
+      "candidato": "Lula",
+      "evento": "Debate TV Globo — 2º turno",
+      "emissora": "Globo",
+      "turno": "2º turno",
+      "data": "2026-10-23",
+      "agencia": "Aos Fatos",
+      "tema": "Economia",
+      "afirmacao": "\"Nunca se exportou tanto neste país.\"",
+      "veredito_original": "Verdadeiro",
+      "categoria": "Verdade",
+      "explicacao": "O Aos Fatos escreve \"de fato\": o volume de exportações foi recorde em 2025, segundo a série histórica do MDIC.",
+      "fonte_url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/"
+    },
+    {
+      "id": 293,
+      "chave": "u293",
+      "titulo_fala": "Flávio foi o único deputado a votar contra o auxílio-maternidade para servidoras estaduais (Alerj).",
+      "candidato": "Lula",
+      "evento": "Debate TV Globo — 2º turno",
+      "emissora": "Globo",
+      "turno": "2º turno",
+      "data": "2026-10-23",
+      "agencia": "Aos Fatos",
+      "tema": "Trajetória dos candidatos",
+      "afirmacao": "Flávio foi o único deputado a votar contra o auxílio-maternidade para servidoras estaduais (Alerj).",
+      "veredito_original": "Verdadeiro",
+      "categoria": "Verdade",
+      "explicacao": "O Aos Fatos escreve que é verdade que Flávio foi o único deputado a votar contra o benefício para servidoras estaduais, em votação na Alerj.",
       "fonte_url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/"
     }
   ],
@@ -7030,14 +7132,15 @@
       "candidato": "Flávio Bolsonaro",
       "fala": "Vorcaro pagou R$ 30 milhões a documentário/Instituto Lula",
       "tema": "Corrupção & Escândalos",
-      "categoria": "Meia-verdade",
+      "categoria": "Sem comprovação",
       "divergencia": true,
-      "n_checagens": 3,
+      "n_checagens": 4,
       "eventos": [
         "Debate Band — 2º turno (18/10)",
+        "Debate TV Globo — 2º turno (23/10)",
         "Entrevista TV Globo — 2º turno (16/10)"
       ],
-      "repetida_em_eventos": 2,
+      "repetida_em_eventos": 3,
       "primeira_data": "2026-10-16",
       "vereditos": [
         {
@@ -7069,6 +7172,16 @@
           "explicacao": "A Veja citou áudios, mas a PF afirmou que Vorcaro não prestou depoimento com esse teor nem entregou documentos.",
           "url": "https://www.estadao.com.br/estadao-verifica/checamos-o-debate-entre-lula-e-flavio-na-band/",
           "afirmacao": "O filme de Lula recebeu R$ 30 milhões \"por fora\" de Vorcaro no Instituto Lula"
+        },
+        {
+          "agencia": "Agência Lupa",
+          "veredito": "Insustentável",
+          "categoria": "Sem comprovação",
+          "evento": "Debate TV Globo — 2º turno",
+          "data": "2026-10-23",
+          "explicacao": "A Veja publicou em 9/10/2026 relatos atribuídos a Daniel Vorcaro sobre repassar R$ 30 milhões ao Instituto Lula, mas não há comprovante de pagamento nem prova de encontro entre os dois. O UOL informou que o suposto anexo não consta das três propostas de delação da defesa, e a PGR e a PF negaram que o depoimento exista.",
+          "url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/",
+          "afirmacao": "\"Lula explica esses R$ 30 milhões, onde foram parar?\""
         }
       ],
       "contrapontos": []
@@ -9716,12 +9829,13 @@
       "fala": "Criou o Simples",
       "tema": "Economia",
       "categoria": "Meia-verdade",
-      "divergencia": false,
-      "n_checagens": 2,
+      "divergencia": true,
+      "n_checagens": 3,
       "eventos": [
-        "Debate Band — 2º turno (18/10)"
+        "Debate Band — 2º turno (18/10)",
+        "Debate TV Globo — 2º turno (23/10)"
       ],
-      "repetida_em_eventos": 1,
+      "repetida_em_eventos": 2,
       "primeira_data": "2026-10-18",
       "vereditos": [
         {
@@ -9743,6 +9857,16 @@
           "explicacao": "O Simples federal original é de 1996 (FHC).",
           "url": "https://ranking.org.br/en/articles/checagem-debate-lula-flavio-bolsonaro-band-2-turno-2026",
           "afirmacao": "Criou Lei Geral da Microempresa, Simples, MEI e Super Simples"
+        },
+        {
+          "agencia": "Agência Lupa",
+          "veredito": "Verdadeiro",
+          "categoria": "Verdade",
+          "evento": "Debate TV Globo — 2º turno",
+          "data": "2026-10-23",
+          "explicacao": "Lula sancionou a Lei Complementar 123/2006, a Lei Geral da Micro e Pequena Empresa, há 20 anos; ela simplificou o recolhimento de impostos federais, estaduais e municipais e instituiu o Simples Nacional.",
+          "url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/",
+          "afirmacao": "\"Nós fizemos a lei da pequena e média empresa porque nós queremos que o empreendedorismo vença nesse país.\""
         }
       ],
       "contrapontos": [
@@ -11321,7 +11445,7 @@
           "categoria": "Verdade",
           "evento": "Debate TV Globo — 2º turno",
           "data": "2026-10-23",
-          "explicacao": "O Aos Fatos diz que é verdade que Flávio usou a expressão em críticas a programas de transferência de renda.",
+          "explicacao": "O Aos Fatos escreve \"de fato\": Flávio usou a expressão em críticas a programas de transferência de renda.",
           "url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/",
           "afirmacao": "Flávio chamou o Bolsa Família de \"bolsa farelo\"."
         }
@@ -11405,6 +11529,114 @@
           "explicacao": "Dados do Indec mostram 52,4% no primeiro semestre de 2024, 38% no segundo e 31% no primeiro de 2025; em 2026 voltou a subir, para 32,3% no primeiro semestre. A Lupa não achou um dado de 40% que corresponda exatamente à fala.",
           "url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/",
           "afirmacao": "\"Na Argentina, a pobreza chegou a 40%\" durante o governo Milei."
+        }
+      ],
+      "contrapontos": []
+    },
+    {
+      "chave": "u288",
+      "candidato": "Lula",
+      "fala": "\"Nosso superávit comercial foi para quase R$ 85 bilhões.\"",
+      "tema": "Economia",
+      "categoria": "Meia-verdade",
+      "divergencia": false,
+      "n_checagens": 1,
+      "eventos": [
+        "Debate TV Globo — 2º turno (23/10)"
+      ],
+      "repetida_em_eventos": 1,
+      "primeira_data": "2026-10-23",
+      "vereditos": [
+        {
+          "agencia": "Agência Lupa",
+          "veredito": "Subestimado",
+          "categoria": "Meia-verdade",
+          "evento": "Debate TV Globo — 2º turno",
+          "data": "2026-10-23",
+          "explicacao": "Lula confundiu a moeda e apresentou projeção como resultado: os quase 85 bilhões são a estimativa de US$ 84,4 bi para o superávit de 2026 inteiro (MDIC, 6/10/2026). De janeiro a setembro o superávit foi de US$ 62,4 bi.",
+          "url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/",
+          "afirmacao": "\"Nosso superávit comercial foi para quase R$ 85 bilhões.\""
+        }
+      ],
+      "contrapontos": []
+    },
+    {
+      "chave": "u290",
+      "candidato": "Lula",
+      "fala": "No governo de Jair Bolsonaro se dizia que quem tomasse vacina \"ia virar gay\" e \"ia virar jacaré\".",
+      "tema": "Saúde",
+      "categoria": "Verdade",
+      "divergencia": false,
+      "n_checagens": 1,
+      "eventos": [
+        "Debate TV Globo — 2º turno (23/10)"
+      ],
+      "repetida_em_eventos": 1,
+      "primeira_data": "2026-10-23",
+      "vereditos": [
+        {
+          "agencia": "Agência Lupa",
+          "veredito": "Verdadeiro",
+          "categoria": "Verdade",
+          "evento": "Debate TV Globo — 2º turno",
+          "data": "2026-10-23",
+          "explicacao": "Em 17/12/2020, na Bahia, Bolsonaro questionou a segurança das vacinas e citou, em tom irônico, efeitos como \"virar um jacaré\". O Brasil começou a vacinar em 17/1/2021, cerca de um mês depois de Reino Unido, EUA e Canadá.",
+          "url": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/",
+          "afirmacao": "No governo de Jair Bolsonaro se dizia que quem tomasse vacina \"ia virar gay\" e \"ia virar jacaré\"."
+        }
+      ],
+      "contrapontos": []
+    },
+    {
+      "chave": "u292",
+      "candidato": "Lula",
+      "fala": "\"Nunca se exportou tanto neste país.\"",
+      "tema": "Economia",
+      "categoria": "Verdade",
+      "divergencia": false,
+      "n_checagens": 1,
+      "eventos": [
+        "Debate TV Globo — 2º turno (23/10)"
+      ],
+      "repetida_em_eventos": 1,
+      "primeira_data": "2026-10-23",
+      "vereditos": [
+        {
+          "agencia": "Aos Fatos",
+          "veredito": "Verdadeiro",
+          "categoria": "Verdade",
+          "evento": "Debate TV Globo — 2º turno",
+          "data": "2026-10-23",
+          "explicacao": "O Aos Fatos escreve \"de fato\": o volume de exportações foi recorde em 2025, segundo a série histórica do MDIC.",
+          "url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/",
+          "afirmacao": "\"Nunca se exportou tanto neste país.\""
+        }
+      ],
+      "contrapontos": []
+    },
+    {
+      "chave": "u293",
+      "candidato": "Lula",
+      "fala": "Flávio foi o único deputado a votar contra o auxílio-maternidade para servidoras estaduais (Alerj).",
+      "tema": "Trajetória dos candidatos",
+      "categoria": "Verdade",
+      "divergencia": false,
+      "n_checagens": 1,
+      "eventos": [
+        "Debate TV Globo — 2º turno (23/10)"
+      ],
+      "repetida_em_eventos": 1,
+      "primeira_data": "2026-10-23",
+      "vereditos": [
+        {
+          "agencia": "Aos Fatos",
+          "veredito": "Verdadeiro",
+          "categoria": "Verdade",
+          "evento": "Debate TV Globo — 2º turno",
+          "data": "2026-10-23",
+          "explicacao": "O Aos Fatos escreve que é verdade que Flávio foi o único deputado a votar contra o benefício para servidoras estaduais, em votação na Alerj.",
+          "url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/",
+          "afirmacao": "Flávio foi o único deputado a votar contra o auxílio-maternidade para servidoras estaduais (Alerj)."
         }
       ],
       "contrapontos": []

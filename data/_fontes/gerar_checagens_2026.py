@@ -376,7 +376,7 @@ for cand, tema, fala, ver, expl in [
 
 
 
-# ---------------------------------------------------------------- Lupa — debate da TV Globo, 23/10 (última atualização da página: 23h45)
+# ---------------------------------------------------------------- Lupa — debate da TV Globo, 23/10 (última atualização da página: 24/10, 00h27, 29 itens)
 u = URL["lupa_globo"]
 add(L, "globo_deb", "lupa", u, "Fiscal & Contas Públicas", "\"Nós herdamos 6.000 obras paradas.\"", "Subestimado", "Painel do TCU: 8,6 mil obras paradas e 22,5 mil ativas em agosto de 2022 (26% acima do citado). Em abril de 2026 eram 4,2 mil paradas.")
 add(F, "globo_deb", "lupa", u, "Fiscal & Contas Públicas", "O TCU mostra \"mais de 11.500 obras paralisadas do atual governo\".", "Falta contexto", "A Lista de Alto Risco do TCU indica 11.944 obras paradas em 2024, mas o dado inclui obras com recursos federais de vários governos. O levantamento de abril de 2026 aponta 4.215.")
@@ -403,7 +403,13 @@ add(F, "globo_deb", "lupa", u, "Economia", "Lula \"é o pai do Tigrinho\".", "Fa
 add(L, "globo_deb", "lupa", u, "Economia", "\"O tigrinho foi criado por vocês em 2022.\"", "Falso", "As apostas online foram legalizadas em 2018, sob Temer. Durante o governo Bolsonaro o setor operou sem regras e sem recolhimento de impostos.")
 add(F, "globo_deb", "lupa", u, "Segurança Pública", "O atual governo \"fala que o ladrão de celular não tem que ser preso porque é só roubar uma cervejinha\".", "Falso", "Lula não defendeu o roubo de celulares nem a impunidade. A fala foi editada de um trecho de 2017, em que ele associava a violência à falta de perspectiva econômica; a Lupa já desmentiu a alegação em 2020.")
 add(L, "globo_deb", "lupa", u, "Relações Exteriores", "\"Na Argentina, a pobreza chegou a 40%\" durante o governo Milei.", "Falta contexto", "Dados do Indec mostram 52,4% no primeiro semestre de 2024, 38% no segundo e 31% no primeiro de 2025; em 2026 voltou a subir, para 32,3% no primeiro semestre. A Lupa não achou um dado de 40% que corresponda exatamente à fala.")
-add(L, "globo_deb", "af", URL["af_globo"], "Trajetória dos candidatos", "Flávio chamou o Bolsa Família de \"bolsa farelo\".", "Verdadeiro", "O Aos Fatos diz que é verdade que Flávio usou a expressão em críticas a programas de transferência de renda.")
+add(L, "globo_deb", "af", URL["af_globo"], "Trajetória dos candidatos", "Flávio chamou o Bolsa Família de \"bolsa farelo\".", "Verdadeiro", "O Aos Fatos escreve \"de fato\": Flávio usou a expressão em críticas a programas de transferência de renda.")
+add(L, "globo_deb", "lupa", u, "Economia", "\"Nosso superávit comercial foi para quase R$ 85 bilhões.\"", "Subestimado", "Lula confundiu a moeda e apresentou projeção como resultado: os quase 85 bilhões são a estimativa de US$ 84,4 bi para o superávit de 2026 inteiro (MDIC, 6/10/2026). De janeiro a setembro o superávit foi de US$ 62,4 bi.")
+add(L, "globo_deb", "lupa", u, "Economia", "\"Nós fizemos a lei da pequena e média empresa porque nós queremos que o empreendedorismo vença nesse país.\"", "Verdadeiro", "Lula sancionou a Lei Complementar 123/2006, a Lei Geral da Micro e Pequena Empresa, há 20 anos; ela simplificou o recolhimento de impostos federais, estaduais e municipais e instituiu o Simples Nacional.")
+add(L, "globo_deb", "lupa", u, "Saúde", "No governo de Jair Bolsonaro se dizia que quem tomasse vacina \"ia virar gay\" e \"ia virar jacaré\".", "Verdadeiro", "Em 17/12/2020, na Bahia, Bolsonaro questionou a segurança das vacinas e citou, em tom irônico, efeitos como \"virar um jacaré\". O Brasil começou a vacinar em 17/1/2021, cerca de um mês depois de Reino Unido, EUA e Canadá.")
+add(F, "globo_deb", "lupa", u, "Corrupção & Escândalos", "\"Lula explica esses R$ 30 milhões, onde foram parar?\"", "Insustentável", "A Veja publicou em 9/10/2026 relatos atribuídos a Daniel Vorcaro sobre repassar R$ 30 milhões ao Instituto Lula, mas não há comprovante de pagamento nem prova de encontro entre os dois. O UOL informou que o suposto anexo não consta das três propostas de delação da defesa, e a PGR e a PF negaram que o depoimento exista.")
+add(L, "globo_deb", "af", URL["af_globo"], "Economia", "\"Nunca se exportou tanto neste país.\"", "Verdadeiro", "O Aos Fatos escreve \"de fato\": o volume de exportações foi recorde em 2025, segundo a série histórica do MDIC.")
+add(L, "globo_deb", "af", URL["af_globo"], "Trajetória dos candidatos", "Flávio foi o único deputado a votar contra o auxílio-maternidade para servidoras estaduais (Alerj).", "Verdadeiro", "O Aos Fatos escreve que é verdade que Flávio foi o único deputado a votar contra o benefício para servidoras estaduais, em votação na Alerj.")
 
 
 # ---------------------------------------------------------------- Agrupamento de falas repetidas
@@ -436,7 +442,7 @@ GRUPOS = [
     (L, ["hediondo", "Estuprador"], "L-saidinha", "Condenados por crimes hediondos não têm saidinha"),
     (L, ["cesta"], "L-cestas", "Salário mínimo comprava 1,8 cesta; hoje compra 2,2"),
     (L, ["56"], "L-alimentos", "Inflação de alimentos: 56% com Bolsonaro, 13% com Lula"),
-    (L, ["Simples"], "L-simples", "Criou o Simples"),
+    (L, ["pequena e média empresa", "Simples"], "L-simples", "Criou o Simples"),
     (L, ["PIB industrial"], "L-pib-industrial", "O PIB industrial cresceu 3,4%"),
     (L, ["milhão de armas", "1 bilhão e 100 milhões"], "L-armas", "Governo Bolsonaro liberou 1 milhão de armas e 1,1 bilhão de balas"),
     (L, ["licença-maternidade"], "L-licenca", "Flávio foi o único a votar contra a licença-maternidade de 6 meses"),
@@ -447,7 +453,7 @@ GRUPOS = [
     (L, ["salário mínimo pela inflação", "aumento real ao salário mínimo", "salário mínimo acima da inflação"], "L-minimo", "Bolsonaro nunca deu aumento real ao salário mínimo"),
     (F, ["11 tri", "R$ 11 tri"], "F-divida", "A dívida pública está em R$ 11 trilhões, recorde negativo"),
     (F, ["80 anos"], "F-antifaccao", "Com a Lei Antifacção, líderes ficam até 80 anos presos"),
-    (F, ["documentário", "R$ 30 milhões para o Instituto Lula", "por fora"], "F-vorcaro-lula", "Vorcaro pagou R$ 30 milhões a documentário/Instituto Lula"),
+    (F, ["documentário", "R$ 30 milhões para o Instituto Lula", "por fora", "esses R$ 30 milhões"], "F-vorcaro-lula", "Vorcaro pagou R$ 30 milhões a documentário/Instituto Lula"),
     (F, ["triplicou", "no mínimo R$ 600", "no mínimo, R$ 600"], "F-bolsa", "Bolsonaro triplicou o Bolsa Família para R$ 600"),
     (F, ["R$ 7 bi", "R$ 7 bilhões"], "F-viagens", "Lula e Janja gastaram R$ 7 bilhões em viagens"),
     (F, ["criminalidade"], "F-crime", "A criminalidade explodiu / governo é recordista em criminalidade"),
@@ -638,7 +644,7 @@ def main():
                 "Mentira": "Falso.",
                 "Sem comprovação": "Insustentável / não há evidência pública que sustente a fala.",
             },
-            "debate_globo": "Debate da TV Globo de 23/10: entram as 25 checagens da Lupa (página ao vivo, última atualização registrada às 23h45) e 1 do Aos Fatos com veredito explícito. O Aos Fatos publicou outras checagens do debate que, na hora da coleta, ainda estavam sem selo (página em atualização), e o Fato ou Fake do g1, escolhido pela Globo, ainda não tinha publicado; elas não entram na contagem enquanto não houver veredito.",
+            "debate_globo": "Debate da TV Globo de 23/10: entram as 29 checagens da Lupa (página ao vivo, última atualização registrada em 24/10 às 00h27) e 3 do Aos Fatos em que o texto confirma a fala (\"de fato\" ou \"é verdade\"). As outras checagens do Aos Fatos não trazem selo na página (em atualização), e o Estadão Verifica e o Fato ou Fake do g1 anunciaram cobertura mas não tinham checagem publicada quando consultamos; nada disso entra na contagem enquanto não houver veredito explícito.",
             "aviso": "Cada linha é uma checagem de uma agência. Agências escolhem quais falas checar e usam escalas diferentes; a mesma fala pode aparecer mais de uma vez com vereditos distintos. Contagens não medem 'quem mente mais' de forma absoluta.",
             "placares_oficiais": [
                 {"agencia": "Ranking dos Políticos", "evento": "Debate Band (18/10)", "candidato": "Lula", "verdadeiro": 15, "impreciso": 23, "falso": 9, "url": URL["rank_band"]},
