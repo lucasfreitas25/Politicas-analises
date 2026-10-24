@@ -192,7 +192,7 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
             sub = df[df["grupo"] == g][["categoria", "indicador", "direcao", "valor_b", "valor_l"]].rename(columns={
                 "categoria": "Categoria", "indicador": "Indicador", "direcao": "Como ler", "valor_b": ctx["a_tab"], "valor_l": ctx["b_tab"]})
             from modules.ui_components import mostrar_tabela
-            mostrar_tabela(sub, titulo_col="Indicador", width="stretch", hide_index=True, height=min(80 + 36 * len(sub), 620),
+            mostrar_tabela(sub, titulo_col="Indicador", colunas_celular=[ctx["a_tab"], ctx["b_tab"]], width="stretch", hide_index=True, height=min(80 + 36 * len(sub), 620),
                            column_config={"Indicador": st.column_config.TextColumn(width="large")})
 
 
@@ -444,7 +444,7 @@ def _radar(ctx, categories, values_a, values_b, txt_a, txt_b, legenda):
 
 
 def _tabela_cartoes(ctx, df_filtered):
-    """Tabela comparativa no celular: um cartão por indicador, com os dois valores lado a lado e o contexto embaixo."""
+    """Tabela comparativa no celular: um cartão enxuto por indicador (os dois valores lado a lado, o melhor marcado); o contexto fica recolhido."""
     saida, categoria_atual = [], None
     for _, row in df_filtered.iterrows():
         if row["categoria"] != categoria_atual:
@@ -456,11 +456,12 @@ def _tabela_cartoes(ctx, df_filtered):
         lados = "".join(
             _celula_valor(row[chave], row["melhor"] == chave, chave, neutro, ctx).replace("<td", f'<div class="lado-m" data-gov="{html.escape(nome)}"', 1).replace("</td>", "</div>")
             for chave, nome in (("bolsonaro", ctx["a"]), ("lula", ctx["b"])))
+        contexto = f'{gl(html.escape(row["observacao"]))}{fonte}'
         saida.append(
             f'<div class="ind-card"><div class="ind-card-t"><b>{html.escape(row["indicador"])}</b>'
             f'<div class="dir-tag {"dir-up" if maior_melhor else "dir-down"}">{DIRECAO_TXT[maior_melhor]}</div></div>'
             f'<div class="lados-m"><div class="lado-nome">{html.escape(ctx["a"])}</div><div class="lado-nome">{html.escape(ctx["b"])}</div>{lados}</div>'
-            f'<div class="ind-card-obs">{gl(html.escape(row["observacao"]))}{fonte}</div></div>')
+            f'<details class="ind-ctx"><summary>Contexto e fonte</summary><div>{contexto}</div></details></div>')
     st.markdown("".join(saida), unsafe_allow_html=True)
 
 

@@ -25,65 +25,15 @@ def render_tab_forestry():
         st.warning("Dados da PEVS não encontrados.")
         return
 
-    # 1. Silvicultura (Florestas Plantadas)
-    st.subheader("1. Valor da Produção da Silvicultura (R$ Milhões)")
-    st.caption("Florestas cultivadas (eucalipto e pinus) para papel, celulose, carvão vegetal e madeira industrial.")
-
-    if not df_silv.empty:
-        produtos_silv = sorted(list(df_silv["produto"].unique()))
-        silv_sel = st.selectbox("Selecione o Produto da Silvicultura:", produtos_silv, index=0)
-
-        df_s_filt = df_silv[df_silv["produto"] == silv_sel].sort_values("ano")
-
-        if not df_s_filt.empty:
-            colors_s = [
-                COLOR_BOLSONARO if g == "Bolsonaro (2019-2022)" else (COLOR_LULA if g == "Lula (2023-atual)" else "#64748b")
-                for g in df_s_filt["governo"]
-            ]
-
-            fig_s = go.Figure()
-            fig_s.add_trace(go.Bar(
-                x=df_s_filt["ano"].astype(str),
-                y=df_s_filt["valor_producao_mil_reais"] / 1000.0,
-                marker_color=colors_s,
-                text=(df_s_filt["valor_producao_mil_reais"] / 1000.0).apply(lambda v: f"R$ {v:,.0f} mi"),
-                textposition="outside",
-                textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif"),
-                hovertemplate="<b>Ano:</b> %{x}<br><b>Valor:</b> R$ %{y:,.1f} milhões<extra></extra>"
-            ))
-            apply_plotly_theme(fig_s, title=f"Silvicultura: {silv_sel} (R$ Milhões)")
-            st.plotly_chart(fig_s, width="stretch")
+    from modules.historico_ui import filtro_tipo_padrao
+    st.subheader("1. Silvicultura (florestas plantadas)")
+    st.caption("Florestas cultivadas (eucalipto e pinus) para papel, celulose, carvão vegetal e madeira industrial. Escolha o produto e a medida.")
+    filtro_tipo_padrao("pevs_silvicultura")
 
     st.markdown("---")
-
-    # 2. Extração Vegetal (Produtos Florestais Nativos)
-    st.subheader("2. Valor da Produção na Extração Vegetal Nativa (R$ Milhões)")
-    st.caption("Coleta extrativista sustentável e nativa (Açaí, Castanha-do-Pará, Erva-Mate e outros).")
-
-    if not df_extr.empty:
-        produtos_extr = sorted(list(df_extr["produto"].unique()))
-        extr_sel = st.selectbox("Selecione o Produto Extrativo:", produtos_extr, index=0)
-
-        df_e_filt = df_extr[df_extr["produto"] == extr_sel].sort_values("ano")
-
-        if not df_e_filt.empty:
-            colors_e = [
-                COLOR_BOLSONARO if g == "Bolsonaro (2019-2022)" else (COLOR_LULA if g == "Lula (2023-atual)" else "#64748b")
-                for g in df_e_filt["governo"]
-            ]
-
-            fig_e = go.Figure()
-            fig_e.add_trace(go.Bar(
-                x=df_e_filt["ano"].astype(str),
-                y=df_e_filt["valor_producao_mil_reais"] / 1000.0,
-                marker_color=colors_e,
-                text=(df_e_filt["valor_producao_mil_reais"] / 1000.0).apply(lambda v: f"R$ {v:,.0f} mi"),
-                textposition="outside",
-                textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif"),
-                hovertemplate="<b>Ano:</b> %{x}<br><b>Valor:</b> R$ %{y:,.1f} milhões<extra></extra>"
-            ))
-            apply_plotly_theme(fig_e, title=f"Extração Vegetal: {extr_sel} (R$ Milhões)")
-            st.plotly_chart(fig_e, width="stretch")
+    st.subheader("2. Extração vegetal nativa")
+    st.caption("Produtos da floresta nativa, como açaí, castanha, babaçu, erva-mate e madeira em tora.")
+    filtro_tipo_padrao("pevs_extracao")
 
     # Box Explicativo da PEVS
     def _total(df, ano):

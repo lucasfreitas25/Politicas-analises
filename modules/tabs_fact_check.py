@@ -155,9 +155,7 @@ def _chart_by_event(f):
     total = tab.sum(axis=1)
     from modules.ui_components import eh_celular, quebrar
     cel = eh_celular()
-    if cel:
-        return _evento_cartoes_html(ordem, tab, pct, total)
-    rotulos = [(quebrar(f"{g} ({int(total[g])})", 20) if cel else f"{g} ({int(total[g])})") for g in ordem]
+    rotulos = [f"{g} ({int(total[g])})" for g in ordem]
     fig = go.Figure()
     for cat in VERDICT_ORDER:
         if cat not in tab.columns:
@@ -169,24 +167,15 @@ def _chart_by_event(f):
             hovertemplate="%{y}<br>" + cat + ": %{customdata} (%{x:.0f}%)<extra></extra>",
         ))
     fig.update_layout(barmode="stack")
-    apply_plotly_theme(fig, title="Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)", height=max(380, (56 if cel else 40) * len(ordem) + 190))
+    apply_plotly_theme(fig, title="Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)", height=max(380, (74 if cel else 40) * len(ordem) + 190))
     fig.update_layout(hovermode="closest", xaxis=dict(range=[0, 100], ticksuffix="%", tickfont=dict(size=11 if cel else 12), tickangle=0, **({"tickvals": [0, 50, 100]} if cel else {})),
-                      yaxis=dict(autorange="reversed", tickfont=dict(size=11 if cel else 13, color="#f8fafc"), automargin=True),
-                      bargap=0.25)
+                      yaxis=dict(autorange="reversed", tickfont=dict(size=11 if cel else 13, color="#f8fafc"), automargin=True, showticklabels=not cel),
+                      bargap=0.55 if cel else 0.25)
+    if cel:  # nome do evento logo acima de cada barra, que ocupa a largura toda
+        for r in rotulos:
+            fig.add_annotation(x=0, xref="x", y=r, yref="y", text=r, showarrow=False, xanchor="left", yanchor="bottom", yshift=19,
+                               font=dict(color="#f8fafc", size=11))
     return fig
-
-
-def _evento_cartoes_html(ordem, tab, pct, total):
-    """Celular: um bloco por candidato e evento (nome inteiro em cima, barra empilhada embaixo), sem rótulos espremidos no eixo."""
-    chips = "".join(f'<span class="ev-chip"><i style="background:{VERDICT_COLORS[c]}"></i>{c}</span>' for c in VERDICT_ORDER if c in tab.columns)
-    linhas = []
-    for g in ordem:
-        segs = "".join(
-            f'<div style="width:{pct.loc[g, c]:.2f}%;background:{VERDICT_COLORS[c]}" title="{c}: {int(tab.loc[g, c])}">{pct.loc[g, c]:.0f}%</div>'
-            for c in VERDICT_ORDER if c in tab.columns and tab.loc[g, c] > 0)
-        linhas.append(f'<div class="ev-row"><div class="ev-nome">{html.escape(g)} <span>({int(total[g])} checagens)</span></div><div class="ev-bar">{segs}</div></div>')
-    return (f'<div class="ev-bloco"><div class="ev-tit">Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)</div>'
-            f'<div class="ev-leg">{chips}</div>{"".join(linhas)}</div>')
 
 
 def _chart_by_theme(u):
@@ -221,11 +210,7 @@ def _conteudo(f, contrapontos, unico, cands, chave):
 
     g1, g2 = st.columns([1.25, 1])
     with g1:
-        fig_ev = _chart_by_event(f)
-        if isinstance(fig_ev, str):
-            st.markdown(fig_ev, unsafe_allow_html=True)
-        else:
-            st.plotly_chart(fig_ev, width="stretch", key=f"{chave}_ev")
+        st.plotly_chart(_chart_by_event(f), width="stretch", key=f"{chave}_ev")
     with g2:
         st.plotly_chart(_chart_by_theme(u), width="stretch", key=f"{chave}_tema")
     render_source("Agência Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica; contrapontos de Poder360, Metrópoles, Revista Oeste, "

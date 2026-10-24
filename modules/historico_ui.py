@@ -623,6 +623,14 @@ def _grafico_filtro(bloco, sel, chave):
     return True
 
 
+def filtro_tipo_padrao(chave_bloco):
+    """Filtro de tipo (rebanho, lavoura, produto) e de medida para a versão padrão das abas, com os governos escolhidos na página."""
+    bloco = filtros().get(chave_bloco)
+    if not bloco:
+        return False
+    return _grafico_filtro(bloco, governos_da_pagina(), f"{chave_bloco}::padrao")
+
+
 def cards_padrao(aba, a=PADRAO[0], b=PADRAO[1]):
     """Cartões 'A ➔ B' no topo da versão padrão de uma aba, com o mesmo visual dos outros pares."""
     from modules.ui_components import css_governos

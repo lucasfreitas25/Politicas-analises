@@ -82,41 +82,9 @@ def render_tab_agro_conab():
     st.subheader("2. PAM: Produção Agrícola Municipal (IBGE)")
     st.caption("Evolução das principais culturas agrícolas temporárias e permanentes do Brasil.")
 
-    if not df_pam.empty:
-        col_f1, col_f2 = st.columns(2)
-        with col_f1:
-            culturas = sorted(list(df_pam["cultura"].unique()))
-            default_idx = 0
-            for i, c in enumerate(culturas):
-                if "soja" in c.lower():
-                    default_idx = i
-                    break
-            cultura_sel = st.selectbox("Selecione a Cultura Agrícola:", culturas, index=default_idx)
-        with col_f2:
-            variaveis = sorted(list(df_pam["variavel"].unique()))
-            var_sel = st.selectbox("Selecione a Variável:", variaveis, index=0)
-
-        df_pam_filtered = df_pam[(df_pam["cultura"] == cultura_sel) & (df_pam["variavel"] == var_sel)].sort_values("ano")
-
-        if not df_pam_filtered.empty:
-            colors_pam = [
-                COLOR_BOLSONARO if g == "Bolsonaro (2019-2022)" else (COLOR_LULA if g == "Lula (2023-atual)" else "#64748b")
-                for g in df_pam_filtered["governo"]
-            ]
-            unit = df_pam_filtered["unidade"].iloc[0] if "unidade" in df_pam_filtered.columns else ""
-
-            fig_pam = go.Figure()
-            fig_pam.add_trace(go.Bar(
-                x=df_pam_filtered["ano"].astype(str),
-                y=df_pam_filtered["valor"],
-                marker_color=colors_pam,
-                text=df_pam_filtered["valor"].apply(lambda v: f"{v:,.0f}"),
-                textposition="outside",
-                textfont=dict(color="#ffffff", size=11, family="Plus Jakarta Sans, sans-serif"),
-                hovertemplate=f"<b>Ano:</b> %{{x}}<br><b>{var_sel}:</b> %{{y:,.1f}} {unit}<extra></extra>"
-            ))
-            apply_plotly_theme(fig_pam, title=f"{cultura_sel} — {var_sel} ({unit})")
-            st.plotly_chart(fig_pam, width="stretch")
+    from modules.historico_ui import filtro_tipo_padrao
+    st.caption("Escolha a lavoura (67 culturas) e a medida: quantidade produzida, área plantada, rendimento médio ou valor da produção.")
+    filtro_tipo_padrao("pam_lavouras")
 
     # Box Explicativo do Agro
     st.markdown("""

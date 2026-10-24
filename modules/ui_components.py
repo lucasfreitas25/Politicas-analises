@@ -245,7 +245,7 @@ def ativar_modo_celular():
     st._celular_ativo = True
 
 
-def mostrar_tabela(df, titulo_col=None, max_linhas_celular=40, **kwargs):
+def mostrar_tabela(df, titulo_col=None, max_linhas_celular=40, colunas_celular=None, **kwargs):
     """No computador, a tabela de sempre (st.dataframe). No celular, um cartão por linha, para não precisar rolar de lado;
     tabelas longas mostram `max_linhas_celular` cartões por vez, com botão para ver mais (nada de tabela larga no celular)."""
     if not eh_celular():
@@ -264,12 +264,13 @@ def mostrar_tabela(df, titulo_col=None, max_linhas_celular=40, **kwargs):
             return x["label"]
         return str(c)
 
+    outras = [c for c in colunas if c != titulo_col]
+    # no celular só as primeiras colunas ficam à vista; o resto vai para "Mais detalhes" (menos texto por cartão)
+    visiveis = [c for c in (colunas_celular or outras[:2]) if c in outras]
     cartoes = []
     for _, linha in df.head(mostrar).iterrows():
-        itens = []
-        for c in colunas:
-            if c == titulo_col:
-                continue
+        itens, extras = [], []
+        for c in outras:
             v = linha[c]
             if v is None or (isinstance(v, float) and v != v) or str(v).strip() == "":
                 continue
@@ -278,8 +279,9 @@ def mostrar_tabela(df, titulo_col=None, max_linhas_celular=40, **kwargs):
             txt = html_mod.escape(str(v))
             if str(v).startswith("http"):
                 txt = f'<a href="{html_mod.escape(str(v), quote=True)}" target="_blank">abrir ↗</a>'
-            itens.append(f'<div class="tab-item"><span>{html_mod.escape(rotulo(c))}</span><b>{txt}</b></div>')
-        cartoes.append(f'<div class="ind-card"><div class="ind-card-t"><b>{html_mod.escape(str(linha[titulo_col]))}</b></div>{"".join(itens)}</div>')
+            (itens if c in visiveis else extras).append(f'<div class="tab-item"><span>{html_mod.escape(rotulo(c))}</span><b>{txt}</b></div>')
+        mais = f'<details class="ind-ctx"><summary>Mais detalhes</summary>{"".join(extras)}</details>' if extras else ""
+        cartoes.append(f'<div class="ind-card"><div class="ind-card-t"><b>{html_mod.escape(str(linha[titulo_col]))}</b></div>{"".join(itens)}{mais}</div>')
     st.markdown("".join(cartoes), unsafe_allow_html=True)
     if len(df) > mostrar:
         st.caption(f"Mostrando {mostrar} de {len(df)}.")

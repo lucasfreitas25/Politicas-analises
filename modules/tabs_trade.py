@@ -82,11 +82,18 @@ def render_tab_trade():
         apply_plotly_theme(fig, title="Saldo por ano e governo (US$ bi)", height=380)
         st.plotly_chart(fig, width="stretch")
     with colunas[1]:
-        st.markdown("**Média anual por governo (anos fechados)**")
-        resumo = anual[anual["ano"] >= 2019].groupby("governo")[["exportacoes_bi_usd", "importacoes_bi_usd", "saldo_bi_usd"]].mean().round(1)
-        resumo.columns = ["Exportações", "Importações", "Saldo"]
-        resumo["Anos"] = anual[anual["ano"] >= 2019].groupby("governo")["ano"].count()
-        mostrar_tabela(resumo.reset_index().rename(columns={"governo": "Governo"}), width="stretch", hide_index=True)
+        fechados = anual[anual["ano"] >= 2019]
+        resumo = fechados.groupby("governo")[["exportacoes_bi_usd", "importacoes_bi_usd", "saldo_bi_usd"]].mean().round(1)
+        anos_gov = fechados.groupby("governo")["ano"].count()
+        fig = go.Figure()
+        for gov in resumo.index:
+            fig.add_trace(go.Bar(
+                x=["Exportações", "Importações", "Saldo"], y=resumo.loc[gov].tolist(), name=f"{gov} ({anos_gov[gov]} anos)", marker_color=gov_color(gov),
+                text=[fmt_br(v) for v in resumo.loc[gov]], textposition="outside",
+                hovertemplate="%{x}: US$ %{y:.1f} bi por ano<extra>" + gov + "</extra>"))
+        fig.update_layout(barmode="group")
+        apply_plotly_theme(fig, title="Média anual por governo, anos fechados (US$ bi)", height=380)
+        st.plotly_chart(fig, width="stretch")
         st.caption("Bolsonaro: 2019–2022 (4 anos). Lula: 2023–2025 (3 anos fechados). Médias de períodos de tamanhos diferentes.")
 
     if parcial:

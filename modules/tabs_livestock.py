@@ -19,79 +19,17 @@ def render_tab_livestock():
     from modules.historico_ui import cards_padrao
     cards_padrao("pecuaria")
 
-    df_efetivos, df_produtos = get_ppm_data()
-
-    if df_efetivos.empty:
+    from modules.historico_ui import filtro_tipo_padrao
+    st.subheader("1. Efetivo dos Rebanhos Brasileiros (Cabeças)")
+    st.caption("Escolha o tipo de rebanho (bovino, suíno, galináceos, ovinos, caprinos, equinos, bubalinos e outros); o período pode ser recortado no deslizante.")
+    if not filtro_tipo_padrao("ppm_rebanhos"):
         st.warning("Dados da PPM não encontrados.")
         return
 
-    # 1. Efetivo dos Rebanhos
-    st.subheader("1. Efetivo dos Rebanhos Brasileiros (Cabeças)")
-    st.caption("Evolução dos rebanhos bovino, suíno e galináceo segundo o IBGE.")
-
-    tipos_rebanho = sorted(list(df_efetivos["tipo_rebanho"].unique()))
-    rebanho_sel = st.selectbox("Selecione o Tipo de Rebanho:", tipos_rebanho, index=0)
-
-    df_reb_filtered = df_efetivos[df_efetivos["tipo_rebanho"] == rebanho_sel].sort_values("ano")
-
-    if not df_reb_filtered.empty:
-        colors_reb = [
-            COLOR_BOLSONARO if g == "Bolsonaro (2019-2022)" else (COLOR_LULA if g == "Lula (2023-atual)" else "#64748b")
-            for g in df_reb_filtered["governo"]
-        ]
-        
-        div = 1e6
-        unit_str = "Milhões de Cabeças"
-
-        fig_reb = go.Figure()
-        fig_reb.add_trace(go.Bar(
-            x=df_reb_filtered["ano"].astype(str),
-            y=df_reb_filtered["cabecas"] / div,
-            marker_color=colors_reb,
-            text=(df_reb_filtered["cabecas"] / div).apply(lambda v: f"{v:.1f} mi"),
-            textposition="outside",
-            textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif"),
-            hovertemplate=f"<b>Ano:</b> %{{x}}<br><b>Efetivo:</b> %{{y:.2f}} {unit_str}<extra></extra>"
-        ))
-        apply_plotly_theme(fig_reb, title=f"Efetivo de {rebanho_sel} ({unit_str})")
-        st.plotly_chart(fig_reb, width="stretch")
-
     st.markdown("---")
-
-    # 2. Produtos de Origem Animal
-    st.subheader("2. Produção de Origem Animal (Leite, Ovos, Mel)")
-    st.caption("Volumes e valores apurados anualmente pelo IBGE.")
-
-    if not df_produtos.empty:
-        col_p1, col_p2 = st.columns(2)
-        with col_p1:
-            prods = sorted(list(df_produtos["produto"].unique()))
-            prod_sel = st.selectbox("Selecione o Produto:", prods, index=0)
-        with col_p2:
-            vars_prod = sorted(list(df_produtos["variavel"].unique()))
-            var_prod_sel = st.selectbox("Selecione a Métrica:", vars_prod, index=0)
-
-        df_prod_filt = df_produtos[(df_produtos["produto"] == prod_sel) & (df_produtos["variavel"] == var_prod_sel)].sort_values("ano")
-
-        if not df_prod_filt.empty:
-            colors_prod = [
-                COLOR_BOLSONARO if g == "Bolsonaro (2019-2022)" else (COLOR_LULA if g == "Lula (2023-atual)" else "#64748b")
-                for g in df_prod_filt["governo"]
-            ]
-            unit_p = df_prod_filt["unidade"].iloc[0]
-
-            fig_p = go.Figure()
-            fig_p.add_trace(go.Bar(
-                x=df_prod_filt["ano"].astype(str),
-                y=df_prod_filt["valor"],
-                marker_color=colors_prod,
-                text=df_prod_filt["valor"].apply(lambda v: f"{v:,.0f}"),
-                textposition="outside",
-                textfont=dict(color="#ffffff", size=11, family="Plus Jakarta Sans, sans-serif"),
-                hovertemplate=f"<b>Ano:</b> %{{x}}<br><b>Valor:</b> %{{y:,.1f}} {unit_p}<extra></extra>"
-            ))
-            apply_plotly_theme(fig_p, title=f"{prod_sel} — {var_prod_sel} ({unit_p})")
-            st.plotly_chart(fig_p, width="stretch")
+    st.subheader("2. Produção de Origem Animal (Leite, Ovos, Mel e outros)")
+    st.caption("Quantidade e valor da produção, apurados anualmente pelo IBGE.")
+    filtro_tipo_padrao("ppm_origem")
 
     # Box Explicativo da Pecuária
     st.markdown("""
