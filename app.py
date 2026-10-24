@@ -104,7 +104,7 @@ with st.sidebar:
     <div style="display: flex; align-items: center; gap: 12px; padding: 8px 0 12px 0; border-bottom: 1px solid #1e293b; margin-bottom: 12px;">
       <div>
         <div style="font-weight: 800; font-size: 1.1rem; color: #ffffff; letter-spacing: -0.02em;">Observatório Oficial</div>
-        <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">BOLSONARO vs. LULA · 2019–2026</div>
+        <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">GOVERNOS DE FHC A LULA 3 · 1995–2026</div>
       </div>
     </div>
     """, unsafe_allow_html=True)
@@ -148,6 +148,12 @@ else:
 # Rodapé Global
 st.markdown("---")
 st.markdown("""
+<div class="info-box" style="font-size: 0.82rem;">
+  <b>Aviso:</b> este painel é informativo e apartidário. Reúne dados públicos oficiais e, quando indicado, estudos e checagens de terceiros, sempre com link da fonte.
+  A escolha de leis e programas é uma <b>seleção</b> das mais conhecidas, não o conjunto completo, e a cobertura varia de governo para governo (veja o quadro no topo de cada página).
+  Resultados de indicadores não provam, sozinhos, que um governo causou a mudança: economia, clima, pandemia e cenário internacional também pesam.
+  Encontrou um erro? Aponte pela <a href="https://github.com/lucasfreitas25/Politicas-analises/issues" target="_blank">página do projeto</a>.
+</div>
 <div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 14px 0;">
   <b style="color: #cbd5e1;">Observatório Estatístico</b> • Desenvolvido em Python & Streamlit •
   Dados oficiais (IBGE, BCB, MTE, MDIC, CONAB, Inpe, FBSP, DIEESE, CNC) e checagens de agências independentes • Revisado em outubro de 2026
