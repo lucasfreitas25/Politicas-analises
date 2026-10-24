@@ -46,17 +46,17 @@ def quebrar(texto, largura=30):
 
 def _ajuste_celular(fig, title, height):
     """Título menor e quebrado em linhas, legenda embaixo (sem cobrir o título), margens enxutas e eixos legíveis."""
-    titulo = quebrar(title, 34)
+    titulo = quebrar(title, 40)
     n_titulo = titulo.count("<br>") + 1
     n_leg = sum(1 for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None))
     linhas_leg = max(1, -(-n_leg // 4)) if n_leg > 1 else 0
     alt = max(330, min(int(height), 520)) if height <= 520 else int(height)
     fig.update_layout(
-        title={"text": f"<b>{titulo}</b>", "font": {"size": 13}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"},
+        title={"text": f"<b>{titulo}</b>", "font": {"size": 12}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"},
         margin={"l": 8, "r": 12, "t": 36 + 17 * n_titulo + 20 * linhas_leg + 14, "b": 36},
         plot_bgcolor="#111827",
-        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""},
-                "entrywidthmode": "pixels", "entrywidth": 80, "itemwidth": 30, "tracegroupgap": 0},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": -0.12, "font": {"size": 9}, "title": {"text": ""},
+                "entrywidthmode": "pixels", "entrywidth": 34, "itemwidth": 30, "tracegroupgap": 0},
         height=alt,
     )
     fig.update_xaxes(automargin=True, tickfont={"size": 10}, title_font={"size": 11}, nticks=6)
@@ -69,18 +69,18 @@ def finalizar_celular(fig):
     """Última passagem antes de desenhar: vale mesmo quando a página mexeu na legenda ou nas margens depois do tema.
     Garante legenda acima do gráfico (sem cobrir o título), título inteiro e rótulos do radar dentro da tela."""
     titulo = re.sub(r"<[^>]+>", " ", (fig.layout.title.text or "")).replace("  ", " ").strip()
-    n_titulo = quebrar(titulo, 34).count("<br>") + 1 if titulo else 0
+    n_titulo = quebrar(titulo, 40).count("<br>") + 1 if titulo else 0
     n_leg = sum(1 for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None))
     linhas_leg = max(1, -(-n_leg // 4)) if n_leg > 1 else 0
     alt = int(fig.layout.height or 420)
     m = fig.layout.margin
     polar = any(t.type == "scatterpolar" for t in fig.data)
     fig.update_layout(
-        title={"text": f"<b>{quebrar(titulo, 34)}</b>", "font": {"size": 13}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"} if titulo else {},
+        title={"text": f"<b>{quebrar(titulo, 40)}</b>", "font": {"size": 12}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"} if titulo else {},
         margin={"l": max(min(int(m.l or 8), 60), 44 if polar else 8), "r": max(min(int(m.r or 12), 60), 44 if polar else 12),
                 "t": (36 + 17 * n_titulo + 20 * linhas_leg + 14) if titulo else 30, "b": max(int(m.b or 36), 36)},
-        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""},
-                "entrywidthmode": "pixels", "entrywidth": 80, "itemwidth": 30, "tracegroupgap": 0},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": -0.12, "font": {"size": 9}, "title": {"text": ""},
+                "entrywidthmode": "pixels", "entrywidth": 34, "itemwidth": 30, "tracegroupgap": 0},
     )
     if polar:
         fig.update_layout(height=min(alt, 400))
@@ -323,7 +323,7 @@ def _legenda_junto_do_titulo(fig):
     largura = sum(len(n) * 7 + 46 for n in nomes)
     linhas = max(1, -(-largura // 760))
     fig.update_layout(margin=dict(t=34 + 22 * linhas + 12),
-                      legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0, entrywidthmode="pixels", entrywidth=max(60, min(120, largura // len(nomes) - 20)), itemwidth=30))
+                      legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0, entrywidthmode="pixels", entrywidth=54 if len(nomes) >= 7 else max(60, min(120, largura // len(nomes) - 20)), itemwidth=30))
 
 
 def apply_plotly_theme(fig, title="", height=420):

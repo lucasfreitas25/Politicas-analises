@@ -185,16 +185,6 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
         + nota_periodos
     )
 
-    # (c) Quais são: lista por grupo, com a direção de cada indicador
-    abas = st.tabs([f"{B} está melhor ({n[B]})", f"{A} está melhor ({n[A]})", f"Depende de contexto ({n['Depende de contexto']})"])
-    for aba, g in zip(abas, (B, A, "Depende de contexto")):
-        with aba:
-            sub = df[df["grupo"] == g][["categoria", "indicador", "direcao", "valor_b", "valor_l"]].rename(columns={
-                "categoria": "Categoria", "indicador": "Indicador", "direcao": "Como ler", "valor_b": ctx["a_tab"], "valor_l": ctx["b_tab"]})
-            from modules.ui_components import mostrar_tabela
-            mostrar_tabela(sub, titulo_col="Indicador", colunas_celular=[ctx["a_tab"], ctx["b_tab"]], width="stretch", hide_index=True, height=min(80 + 36 * len(sub), 620),
-                           column_config={"Indicador": st.column_config.TextColumn(width="large")})
-
 
 RESUMO = [
     ("Crescimento médio do PIB", "Crescimento médio anual do PIB"),
@@ -460,8 +450,10 @@ def _tabela_cartoes(ctx, df_filtered):
             principal, detalhe = (texto.split(" (", 1) + [""])[:2] if " (" in texto else (texto, "")
             detalhe = f" ({detalhe}" if detalhe else ""
             estilo = f"border-color:{cor};background:{cor}22;" if vence else ""
-            return (f'<div class="cmp-c" style="{estilo}"><span class="cmp-n" style="color:{clara};">{html.escape(nome)}{" ✓" if vence else ""}</span>'
-                    f'<b>{principal}</b><i>{detalhe}</i></div>')
+            selo = (f'<em class="cmp-sel" style="background:{cor};">✓ MELHOR</em>' if vence else
+                    ('<em class="cmp-sel cmp-emp">≈ DEPENDE</em>' if neutro else '<em class="cmp-sel cmp-vz"></em>'))
+            return (f'<div class="cmp-c" style="{estilo}"><span class="cmp-n" style="color:{clara};">{html.escape(nome)}</span>'
+                    f'<b>{principal}</b><i>{detalhe}</i>{selo}</div>')
         contexto = f'{gl(html.escape(row["observacao"]))}{fonte}'
         saida.append(
             f'<div class="ind-card cmp-card"><div class="ind-card-t"><b>{html.escape(row["indicador"])}</b> '

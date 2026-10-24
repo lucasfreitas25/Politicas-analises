@@ -193,3 +193,6 @@ Politicas analises/
 ## Filtros dos gráficos
 - Todo gráfico com tempo no eixo x passa por `filtrar_periodo` (`modules/ui_components.py`): mostra só os anos dos governos escolhidos na página e, com 4 anos ou mais, um deslizante "📅 Período" para recortar o gráfico. Gráficos sem tempo no eixo seguem como estão.
 - No celular, tabelas viram cartões (40 por vez, com "Ver mais") e os vereditos por evento da checagem viram blocos com barra empilhada.
+
+## Vercel
+O painel é um app Streamlit, que precisa de um servidor sempre ligado com WebSocket, e a Vercel só roda funções curtas e arquivos estáticos; por isso o app em si não roda lá. O `vercel.json` da raiz faz da Vercel o endereço público: ele redireciona tudo para o app hospedado no Streamlit Community Cloud (ou Render/Railway, usando `streamlit run app.py`). Troque `SEU-APP.streamlit.app` pelo endereço real do app antes de publicar.

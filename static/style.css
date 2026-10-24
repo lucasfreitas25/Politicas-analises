@@ -637,3 +637,6 @@ abbr[title] { text-decoration: underline dotted #64748b !important; text-underli
 .chip-gov span { font-size: 0.66rem !important; }
 .chip-gov b { font-size: 0.8rem !important; }
 .chip-grid { gap: 3px !important; }
+.cmp-sel { display: block !important; font-style: normal !important; font-size: 0.6rem !important; font-weight: 800 !important; color: #fff !important; border-radius: 4px !important; padding: 1px 4px !important; margin: 2px auto 0 !important; width: fit-content !important; letter-spacing: 0.03em !important; }
+.cmp-sel.cmp-emp { background: #64748b !important; }
+.cmp-sel.cmp-vz { background: transparent !important; visibility: hidden !important; }
