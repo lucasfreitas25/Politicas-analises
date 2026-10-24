@@ -3,7 +3,7 @@ import os
 
 # Configuração da página Streamlit (deve ser a primeira chamada do Streamlit)
 st.set_page_config(
-    page_title="Observatório: Governo Bolsonaro vs Governo Lula | Dados Oficiais & Checagens 2026",
+    page_title="Observatório de Governos: dados oficiais de FHC a Lula 3 | Checagens 2026",
     page_icon="🇧🇷",
     layout="wide",
     initial_sidebar_state="expanded"

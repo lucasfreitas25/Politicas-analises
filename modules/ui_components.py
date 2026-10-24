@@ -91,9 +91,9 @@ def _aplicar_daltonismo(fig):
 def render_hero_banner():
     banner_html = (
         '<div class="hero-container">'
-        '<div class="hero-title">Observatório Macroeconômico: Entre Governos</div>'
+        '<div class="hero-title">Observatório de Governos: Brasil, de FHC a Lula 3</div>'
         '<div class="hero-subtitle">'
-        'Comparação independente, ancorada principalmente em dados públicos oficiais do '
+        'Dados e políticas de cada governo, lado a lado e sem tomar partido. Escolha os governos que quiser comparar (o padrão é Bolsonaro x Lula 3), com base principalmente em dados públicos oficiais do '
         '<b>IBGE</b>, <b>Banco Central</b>, <b>Ministério do Trabalho</b>, <b>CONAB</b> e <b>Inpe</b>, complementada por estudos de entidades, checagens e reportagens. '
         'Cada página indica os tipos de fonte usados.'
         '</div>'

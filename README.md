@@ -1,8 +1,8 @@
-# 📊 Observatório Macroeconômico: Governo Bolsonaro vs. Governo Lula
+# 📊 Observatório de Governos: Brasil, de FHC a Lula 3
 
-Aplicação interativa desenvolvida em **Python** e **Streamlit** para análise comparativa rigorosa e aprofundada entre os governos de **Jair Bolsonaro (2019–2022)** e o atual governo de **Luiz Inácio Lula da Silva (2023–atual)**.
+Aplicação interativa em **Python** e **Streamlit** que reúne dados oficiais, políticas, leis e impostos de cada governo brasileiro desde **Fernando Henrique Cardoso (1995)** até o atual governo de **Lula (2023–atual)**. Em todas as páginas dá para escolher quais governos comparar; **o padrão é Bolsonaro x Lula 3**.
 
-A plataforma é alimentada estritamente por bases públicas oficiais do **IBGE (SIDRA)**, **CONAB**, **Banco Central do Brasil (SGS)**, **Ministério do Trabalho e Emprego (CAGED)** e **MDIC (ComexStat)**.
+A plataforma é alimentada por bases públicas oficiais do **IBGE (SIDRA)**, **CONAB**, **Banco Central do Brasil (SGS)**, **Ministério do Trabalho e Emprego (CAGED)**, **MDIC (ComexStat)**, **Ipea**, **Inpe** e pelo texto das normas no **Planalto**, com checagens e estudos de terceiros sempre sinalizados.
 
 ---
 

@@ -518,8 +518,8 @@ def render_tab_overview():
     ctx = _ctx_padrao()
     render_section_header(
         "Painel Executivo & Scorecard Geral",
-        "Síntese dos principais indicadores dos mandatos de Jair Bolsonaro (2019–2022) e Luiz Inácio Lula da Silva (2023–2026), "
-        "com dados conferidos contra as fontes em 21/10/2026. Use o seletor acima para comparar outros governos desde FHC.",
+        "Síntese dos principais indicadores dos governos escolhidos no seletor acima. Por padrão aparecem Bolsonaro (2019–2022) e Lula 3 (2023–2026), "
+        "com dados conferidos contra as fontes em 21/10/2026; troque os governos para comparar qualquer mandato desde FHC.",
     )
     st.markdown('<div class="info-box"><b>Qual página usar?</b> Esta página é o <b>panorama</b>: todos os indicadores de uma vez, com placar e tabela. '
                 'Para olhar <b>um indicador em detalhe</b> (valores, método e fonte), use o <b>Comparador Direto</b>.</div>', unsafe_allow_html=True)

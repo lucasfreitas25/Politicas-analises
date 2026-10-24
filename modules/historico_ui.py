@@ -140,6 +140,7 @@ def render_seletor():
     st.session_state.setdefault("gov_a", PADRAO[0])
     st.session_state.setdefault("gov_b", PADRAO[1])
     with st.container(border=True):
+        st.caption("Escolha os governos que quer comparar, de FHC a Lula 3. O padrão é Bolsonaro x Lula 3.")
         c1, c2, c3, c4 = st.columns([2.2, 0.35, 2.2, 1.9], vertical_alignment="bottom")
         a = c1.selectbox("Governo A", governos, key="gov_a")
         c2.markdown("<div style='text-align:center;font-weight:800;color:#94a3b8;padding-bottom:8px;'>x</div>", unsafe_allow_html=True)
