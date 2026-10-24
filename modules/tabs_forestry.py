@@ -16,6 +16,8 @@ def render_tab_forestry():
         '<div class="section-subtitle">Dados oficiais da Produção da Extração Vegetal e da Silvicultura (PEVS - IBGE), destacando celulose, papel, carvão e produtos nativos.</div>',
         unsafe_allow_html=True
     )
+    from modules.historico_ui import cards_padrao
+    cards_padrao("silvicultura")
 
     df_silv, df_extr = get_pevs_data()
 

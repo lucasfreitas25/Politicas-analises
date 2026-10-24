@@ -16,6 +16,8 @@ def render_tab_livestock():
         '<div class="section-subtitle">Análise dos rebanhos brasileiros e produção de produtos de origem animal da Pesquisa da Pecuária Municipal (PPM - IBGE).</div>',
         unsafe_allow_html=True
     )
+    from modules.historico_ui import cards_padrao
+    cards_padrao("pecuaria")
 
     df_efetivos, df_produtos = get_ppm_data()
 

@@ -77,6 +77,7 @@ def _comparador_historico(a, b, todos):
 
 
 def render_tab_head_to_head():
+    a, b, todos = render_seletor()
     st.markdown('<div class="section-title">Comparador Direto Frente a Frente (Head-to-Head)</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Escolha dois governos e qualquer indicador oficial para confrontá-los diretamente em valores absolutos e com contexto. '
@@ -85,7 +86,6 @@ def render_tab_head_to_head():
     )
     st.markdown('<div class="info-box"><b>Qual página usar?</b> Aqui você escolhe <b>um indicador por vez</b> e vê o confronto em detalhe. '
                 'Para o panorama de todos os indicadores juntos, use a <b>Visão Geral & Scorecard</b>.</div>', unsafe_allow_html=True)
-    a, b, todos = render_seletor()
     if (a, b) != PADRAO or todos:
         _comparador_historico(a, b, todos)
         return

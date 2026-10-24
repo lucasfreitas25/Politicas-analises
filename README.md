@@ -172,3 +172,13 @@ Politicas analises/
 - **Verificar links:** `python data/_fontes/verificar_links.py` testa todos os links do painel. Respostas 401/403/429 são só avisos (sites que bloqueiam robôs); 404 e erro de rede são listados como quebrados. Falhas isoladas de rede podem ser passageiras; rode de novo antes de concluir.
 - **Programas de FHC a Temer:** `data/_fontes/programas_outras_areas.py` guarda 18 programas (Educação, Economia, Energia, Proteção Social, Segurança, Direitos, Meio Ambiente, Trabalho), cada um com benefícios, críticas e links. Rodar `gerar_programas_governo.py` regenera `programas_governo.json`.
 - **Cobertura desigual:** Bolsonaro e Lula 3 têm dezenas de políticas com repercussão em pesquisas; os governos anteriores têm de 1 a 8 programas cada (Dilma 2 só 1) e não têm repercussão. A página de Políticas mostra a contagem de cada governo.
+
+## Séries longas extras e padronização das abas (outubro/2026)
+
+- `python data/_fontes/coletar_historico_extra.py` gera `data/historico_extra.json`, que o painel junta a `historico.json`:
+  - IPCA por item e por grupo de consumo (IBGE/SIDRA 58, 655, 2938, 1419 e 7060, desde 1991): "Quanto cada item subiu" e "Decomposição do IPCA" para todos os governos;
+  - cesta básica do Dieese em São Paulo (custo real e horas de trabalho, desde 1994);
+  - Conab (área e produtividade dos grãos), PAM (lavouras, área e valor), PPM (rebanhos, leite, ovos e mel), PEVS (silvicultura e extração vegetal);
+  - PIM-PF por seções (extrativa e transformação, desde 2002), emissões de gases de efeito estufa (Our World in Data) e destinos e pauta das exportações (ComexStat, desde 1997).
+- Cada aba temática segue um molde fixo (`MOLDE` em `modules/historico_ui.py`) com as mesmas seções numeradas para qualquer par de governos; onde não há série, a seção mostra "Sem dado".
+- O par escolhido fica guardado em `gov_a`/`gov_b`/`gov_todos`, separado das chaves dos campos, para não voltar a "FHC 1 x FHC 1" ao trocar de página.

@@ -18,6 +18,8 @@ def render_tab_macro():
         '<div class="section-subtitle">Produto Interno Bruto (IBGE Contas Nacionais), Balança Comercial (MDIC), Taxa Selic, Câmbio PTAX e Dívida Bruta (Banco Central).</div>',
         unsafe_allow_html=True
     )
+    from modules.historico_ui import cards_padrao
+    cards_padrao("macroeconomia")
 
     df_trim, df_anual, df_ind = get_macro_data()
 

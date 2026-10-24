@@ -16,6 +16,8 @@ def render_tab_industry():
         '<div class="section-subtitle">Desempenho da Produção Física Industrial brasileira segundo a Pesquisa Industrial Mensal (PIM-PF - IBGE).</div>',
         unsafe_allow_html=True
     )
+    from modules.historico_ui import cards_padrao
+    cards_padrao("industria")
 
     df_pim = get_pim_data()
 

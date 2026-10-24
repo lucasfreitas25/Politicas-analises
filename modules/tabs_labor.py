@@ -19,6 +19,8 @@ def render_tab_labor():
         '<div class="section-subtitle">Evolução detalhada da taxa de desocupação, rendimento médio real, massa salarial e saldo de empregos formais gerados.</div>',
         unsafe_allow_html=True
     )
+    from modules.historico_ui import cards_padrao
+    cards_padrao("trabalho")
 
     df_series, df_caged = get_pnadc_data()
 

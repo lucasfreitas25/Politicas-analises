@@ -24,46 +24,26 @@ def render_tab_inflation():
         st.warning("Dados do IPCA não encontrados.")
         return
 
-    # 1. Cards de Resumo da Inflação
+    # 1. Cartões "antes ➔ depois", no mesmo visual das outras abas
     b_res = resumo.get("Bolsonaro", {})
     l_res = resumo.get("Lula", {})
-    
-    col_c1, col_c2, col_c3, col_c4 = st.columns(4)
-    with col_c1:
-        st.markdown(f"""
-        <div class="kpi-card" style="text-align: center;">
-          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">IPCA Total Bolsonaro (4 anos)</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #93c5fd; font-family: monospace; margin: 8px 0;">{b_res.get('acumulado_total_pct')}%</div>
-          <div style="font-size: 0.75rem; color: #94a3b8;">Janeiro 2019 a Dezembro 2022</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col_c2:
-        st.markdown(f"""
-        <div class="kpi-card" style="text-align: center;">
-          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">IPCA Total Lula (Acumulado)</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #fca5a5; font-family: monospace; margin: 8px 0;">{l_res.get('acumulado_total_pct')}%</div>
-          <div style="font-size: 0.75rem; color: #94a3b8;">Jan/2023 a {l_res.get('anos', [{}])[-1].get('ano', '')} · {l_res.get('meses', '')} meses</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col_c3:
-        st.markdown(f"""
-        <div class="kpi-card" style="text-align: center;">
-          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Média Anualizada Bolsonaro</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #60a5fa; font-family: monospace; margin: 8px 0;">{b_res.get('media_anual_pct')}%</div>
-          <div style="font-size: 0.75rem; color: #94a3b8;">Pico em 12 meses: {b_res.get('maior_12m_pct')}% ({b_res.get('maior_12m_mes')})</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col_c4:
-        st.markdown(f"""
-        <div class="kpi-card" style="text-align: center;">
-          <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Média Anualizada Lula</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #f87171; font-family: monospace; margin: 8px 0;">{l_res.get('media_anual_pct')}%</div>
-          <div style="font-size: 0.75rem; color: #94a3b8;">Pico em 12 meses: {l_res.get('maior_12m_pct')}% ({l_res.get('maior_12m_mes')})</div>
-        </div>
-        """, unsafe_allow_html=True)
+    from modules.ui_components import render_compare_stat, fmt_br
+    def _num(v):
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+    c1, c2, c3 = st.columns(3)
+    pares = (
+        (c1, "IPCA acumulado no mandato", "acumulado_total_pct", f"Bolsonaro: 48 meses · Lula: {l_res.get('meses', '')} meses"),
+        (c2, "Média anualizada do IPCA", "media_anual_pct", "Inflação média por ano de mandato · menor é melhor"),
+        (c3, "Pico da inflação em 12 meses", "maior_12m_pct", f"Bolsonaro: {b_res.get('maior_12m_mes', '')} · Lula: {l_res.get('maior_12m_mes', '')}"),
+    )
+    for col, titulo, campo, nota in pares:
+        vb, vl = _num(b_res.get(campo)), _num(l_res.get(campo))
+        melhor = None if vb is None or vl is None or vb == vl else ("bolsonaro" if vb < vl else "lula")
+        with col:
+            render_compare_stat(titulo, f"{fmt_br(vb, 2)}%" if vb is not None else "Sem dado", f"{fmt_br(vl, 2)}%" if vl is not None else "Sem dado", nota, better=melhor)
 
     st.markdown("---")
 

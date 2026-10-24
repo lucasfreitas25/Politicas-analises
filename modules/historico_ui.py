@@ -16,7 +16,17 @@ VARIACAO = ("pontos percentuais", "pontos do PIB", "pontos (0–100)")
 
 
 def base():
-    return load_json("historico.json")
+    """historico.json com as séries extras (historico_extra.json) já juntas."""
+    d = load_json("historico.json")
+    extra = load_json("historico_extra.json").get("indicadores", {})
+    if extra:
+        d = {**d, "indicadores": {**d.get("indicadores", {}), **extra}}
+    return d
+
+
+def categorias():
+    """Blocos 'um valor por categoria e por governo' (ex.: quanto cada item do IPCA subiu em cada mandato)."""
+    return load_json("historico_extra.json").get("categorias", {})
 
 
 def nomes_governos(d=None):
@@ -144,13 +154,15 @@ MOLDE = {
     "inflacao": [
         ("Inflação Acumulada no Mandato (Mês a Mês) e Série Anual do IPCA", ["ipca"], None),
         ("Inflação dos Alimentos (IPCA)", ["ipca_alimentos"], None),
-        ("Decomposição Setorial do IPCA (Grupos de Consumo)", [], None),
+        ("Decomposição Setorial do IPCA (Grupos de Consumo)", ["@ipca_grupos"], None),
+        ("Quanto cada item subiu em cada mandato", ["@ipca_itens"], None),
     ],
     "cesta-basica": [
-        ("Quanto cada item subiu em cada mandato (IPCA oficial)", ["ipca_alimentos"], None),
+        ("Quanto cada item subiu em cada mandato (IPCA oficial)", ["@ipca_itens"], None),
+        ("Custo da cesta básica (São Paulo, R$ de hoje)", ["cesta_real"], None),
+        ("Horas de trabalho para comprar a cesta", ["cesta_horas"], None),
         ("Poder de compra do salário mínimo", ["salario_minimo"], None),
-        ("Custo da cesta básica (R$ nominais, SP)", [], None),
-        ("Horas de trabalho para comprar a cesta", [], None),
+        ("Inflação dos alimentos (IPCA)", ["ipca_alimentos"], None),
     ],
     "inadimplencia": [
         ("Inadimplência da carteira de crédito (% com atraso superior a 90 dias)", ["inadimplencia_pf"], None),
@@ -182,26 +194,26 @@ MOLDE = {
     ],
     "agro": [
         ("Safras Brasileiras de Grãos (CONAB)", ["safra"], None),
-        ("Área plantada e produtividade média", [], None),
-        ("PAM: Produção Agrícola Municipal (IBGE)", [], None),
+        ("Área plantada e produtividade média dos grãos", ["area_graos", "produtividade_graos"], None),
+        ("PAM: Produção Agrícola Municipal (IBGE)", ["@pam_lavouras", "pam_area", "pam_valor"], None),
     ],
     "comercio-exterior": [
         ("Exportações, importações e saldo por ano", ["exportacoes", "importacoes", "saldo_comercial"], None),
-        ("Para onde o Brasil exporta", [], None),
-        ("O que o Brasil exporta", [], None),
+        ("Para onde o Brasil exporta", ["@comex_destinos"], None),
+        ("O que o Brasil exporta", ["@comex_pauta"], None),
     ],
     "industria": [
         ("Evolução Temporal da Produção Física Industrial", ["industria"], None),
-        ("Indústrias Extrativas vs. Indústrias de Transformação", [], None),
+        ("Indústrias Extrativas vs. Indústrias de Transformação", ["pim_extrativa", "pim_transformacao"], None),
     ],
     "pecuaria": [
-        ("Efetivo dos Rebanhos Brasileiros (Cabeças)", [], None),
+        ("Efetivo dos Rebanhos Brasileiros", ["@ppm_rebanhos", "rebanho_bovino"], None),
         ("Abate de bovinos", ["abate_bovinos"], None),
-        ("Produção de Origem Animal (Leite, Ovos, Mel)", [], None),
+        ("Produção de Origem Animal (Leite, Ovos, Mel)", ["leite", "ovos", "mel"], None),
     ],
     "silvicultura": [
-        ("Valor da Produção da Silvicultura (R$ Milhões)", [], None),
-        ("Valor da Produção na Extração Vegetal Nativa (R$ Milhões)", [], None),
+        ("Valor da Produção da Silvicultura", ["silvicultura_valor"], None),
+        ("Valor da Produção na Extração Vegetal Nativa", ["extracao_valor"], None),
     ],
     "educacao": [
         ("Evolução do IDEB por Etapa de Ensino (Inep / MEC)", ["ideb_iniciais", "ideb_finais", "ideb_medio"], None),
@@ -236,7 +248,7 @@ MOLDE = {
     "meio-ambiente": [
         ("Desmatamento (PRODES, Amazônia)", ["desmatamento"], None),
         ("Focos de queimada no Brasil", [], None),
-        ("Emissões de gases de efeito estufa", [], None),
+        ("Emissões de gases de efeito estufa", ["emissoes"], None),
         ("Políticas ambientais de cada governo", [], "Meio Ambiente & Clima"),
     ],
 }
@@ -247,21 +259,38 @@ def render_seletor():
     governos = nomes_governos()
     if not governos:
         return PADRAO[0], PADRAO[1], False
+    # A escolha fica em chaves próprias (gov_a, gov_b, gov_todos), separadas das chaves dos campos (_w_...).
+    # O Streamlit apaga o estado de um campo quando a página seguinte não o desenha; sem essa separação,
+    # ao trocar de página o seletor caía no primeiro item da lista (FHC 1 x FHC 1).
     if st.session_state.pop("gov_reset_pedido", False):
         st.session_state["gov_a"], st.session_state["gov_b"], st.session_state["gov_todos"] = PADRAO[0], PADRAO[1], False
-    st.session_state.setdefault("gov_a", PADRAO[0])
-    st.session_state.setdefault("gov_b", PADRAO[1])
-    with st.container(border=True):
+        for k in ("_w_gov_a", "_w_gov_b", "_w_gov_todos"):
+            st.session_state.pop(k, None)
+    for k, v in (("gov_a", PADRAO[0]), ("gov_b", PADRAO[1]), ("gov_todos", False)):
+        st.session_state.setdefault(k, v)
+    if st.session_state["gov_a"] not in governos:
+        st.session_state["gov_a"] = PADRAO[0]
+    if st.session_state["gov_b"] not in governos:
+        st.session_state["gov_b"] = PADRAO[1]
+
+    def _guardar(campo, chave):
+        st.session_state[chave] = st.session_state[campo]
+
+    with st.container(border=True, key="seletor_gov"):
         st.caption("Escolha os governos que quer comparar, de FHC a Lula 3. O padrão é Bolsonaro x Lula 3.")
         c1, c2, c3, c4 = st.columns([2.2, 0.35, 2.2, 1.9], vertical_alignment="bottom")
-        a = c1.selectbox("Governo A", governos, key="gov_a")
-        c2.markdown("<div style='text-align:center;font-weight:800;color:#94a3b8;padding-bottom:8px;'>x</div>", unsafe_allow_html=True)
-        b = c3.selectbox("Governo B", governos, key="gov_b")
-        todos = c4.toggle(TODOS, key="gov_todos", help="Mostra os 9 mandatos de FHC a Lula 3 lado a lado.")
+        for campo, chave in (("_w_gov_a", "gov_a"), ("_w_gov_b", "gov_b"), ("_w_gov_todos", "gov_todos")):
+            st.session_state[campo] = st.session_state[chave]
+        a = c1.selectbox("Governo A", governos, key="_w_gov_a", on_change=_guardar, args=("_w_gov_a", "gov_a"))
+        c2.markdown("<div class='sel-x'>x</div>", unsafe_allow_html=True)
+        b = c3.selectbox("Governo B", governos, key="_w_gov_b", on_change=_guardar, args=("_w_gov_b", "gov_b"))
+        todos = c4.toggle(TODOS, key="_w_gov_todos", on_change=_guardar, args=("_w_gov_todos", "gov_todos"),
+                          help="Mostra os 9 mandatos de FHC a Lula 3 lado a lado.")
         if (a, b) != PADRAO or todos:
             if c4.button("↺ Voltar para Bolsonaro x Lula 3", key="gov_reset", width="stretch"):
                 st.session_state["gov_reset_pedido"] = True
                 st.rerun()
+    st.session_state["gov_a"], st.session_state["gov_b"], st.session_state["gov_todos"] = a, b, todos
     return a, b, todos
 
 
@@ -365,6 +394,72 @@ def _fonte(ind):
     render_source(html.escape(ind["fonte"]) + f". Comparabilidade: {simbolo} {html.escape(desc)}" + extra, ind["url"])
 
 
+def _grafico_categorias(bloco, sel, chave):
+    """Barras agrupadas (até 3 governos) ou mapa de calor (mais governos): um valor por categoria e por governo."""
+    cats = bloco["categorias"]
+    unidade = bloco.get("unidade", "")
+    c1, c2 = st.columns([1, 1.6])
+    if bloco.get("categorias_ao_ano"):
+        with c1:
+            modo = st.segmented_control("Mostrar", ["Acumulado no mandato", "Média ao ano"], default="Acumulado no mandato", key=f"cat_modo_{chave}") or "Acumulado no mandato"
+        if modo == "Média ao ano":
+            cats, unidade = bloco["categorias_ao_ano"], "% ao ano"
+    nomes = list(cats)
+    grupos = bloco.get("grupos_de_itens")
+    if grupos:
+        with c2:
+            g = st.segmented_control("Itens", list(grupos) + ["Todos"], default=list(grupos)[0], key=f"cat_grp_{chave}") or list(grupos)[0]
+        if g != "Todos":
+            nomes = [n for n in nomes if n in grupos[g]]
+    ref = next((x for x in reversed(sel) if any(cats[n].get(x) is not None for n in nomes)), sel[-1])
+    nomes = sorted(nomes, key=lambda n: -(cats[n].get(ref) if cats[n].get(ref) is not None else -1e9))
+    if len(sel) <= 3:
+        fig = go.Figure()
+        for gov in sel:
+            vals = [cats[n].get(gov) for n in nomes]
+            fig.add_trace(go.Bar(
+                y=nomes, x=[v if v is not None else 0 for v in vals], orientation="h", name=gov, marker_color=COR_MANDATO.get(gov),
+                text=[fmt_br(v) if v is not None else "Sem dado" for v in vals], textposition="outside", cliponaxis=False,
+                hovertemplate="%{y}: %{text}<extra>" + gov + "</extra>"))
+        fig.update_layout(barmode="group", bargap=0.25)
+        apply_plotly_theme(fig, title=f"{bloco['nome'].split(' (')[0]} ({unidade})", height=max(380, len(nomes) * (16 * len(sel) + 16) + 140))
+        fig.update_yaxes(autorange="reversed")
+        fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.08, x=0.5, xanchor="center", yanchor="top"))
+    else:
+        z = [[cats[n].get(gov) for gov in sel] for n in nomes]
+        fig = go.Figure(go.Heatmap(z=z, x=sel, y=nomes, colorscale="RdYlGn" + ("_r" if bloco.get("maior_melhor") is False else ""),
+                                   text=[[fmt_br(v) if v is not None else "Sem dado" for v in linha] for linha in z], texttemplate="%{text}",
+                                   hovertemplate="%{y} · %{x}: %{text}<extra></extra>", showscale=False, xgap=2, ygap=2))
+        apply_plotly_theme(fig, title=f"{bloco['nome'].split(' (')[0]} ({unidade})", height=max(380, 30 * len(nomes) + 140))
+        fig.update_yaxes(autorange="reversed")
+    st.plotly_chart(fig, width="stretch", key=f"cat_{chave}")
+    faltas = {gov: [n for n in nomes if cats[n].get(gov) is None] for gov in sel}
+    faltas = {gov: l for gov, l in faltas.items() if l}
+    if faltas:
+        st.caption("Sem dado: " + "; ".join(f"{gov} ({', '.join(l) if len(l) <= 4 else f'{len(l)} itens'})" for gov, l in faltas.items()) + ".")
+    parcial = {n: p for n, p in bloco.get("parcial", {}).items() if n in nomes}
+    if parcial:
+        trechos = sorted({f"{gov}: {t}" for p in parcial.values() for gov, t in p.items() if gov in sel})
+        if trechos:
+            st.caption("Período parcial: " + "; ".join(trechos) + ".")
+    st.caption(bloco.get("metodo", "") + " " + bloco.get("nota", ""))
+    render_source(html.escape(bloco["fonte"]), bloco["url"])
+
+
+def cards_padrao(aba, a=PADRAO[0], b=PADRAO[1]):
+    """Cartões 'A ➔ B' no topo da versão padrão de uma aba, com o mesmo visual dos outros pares."""
+    from modules.ui_components import css_governos
+    d = base()
+    ks = list(dict.fromkeys(k for _, lista, _ in MOLDE.get(aba, []) for k in lista if not k.startswith("@") and k in d["indicadores"]))
+    if not ks:
+        return
+    st.markdown(css_governos(), unsafe_allow_html=True)
+    cols = st.columns(3)
+    for i, k in enumerate(ks[:6]):
+        with cols[i % 3]:
+            _stat_par({**d["indicadores"][k], "chave": k}, a, b)
+
+
 def _sem_dado(titulo_secao, sel, motivo=None):
     """Seção sem série longa: mesmo lugar e mesmo título da versão padrão, com 'Sem dado' para cada governo escolhido."""
     chips = "".join(f'<span style="display:inline-block;margin:2px 6px 2px 0;padding:1px 9px;border-radius:999px;border:1px solid #64748b;font-size:0.78rem;">{html.escape(g)}: <b>Sem dado</b></span>' for g in sel)
@@ -396,7 +491,8 @@ def render_aba_comparada(aba, a, b, todos):
     extras = [k for k in chaves if k not in usados]
     if extras:
         molde = molde + [("Outros indicadores desta aba", extras, None)]
-    todas_chaves = list(dict.fromkeys(k for _, ks, _ in molde for k in ks if k in d["indicadores"]))
+    todas_chaves = list(dict.fromkeys(k for _, ks, _ in molde for k in ks if not k.startswith("@") and k in d["indicadores"]))
+    blocos = categorias()
     inds = [{**d["indicadores"][k], "chave": k} for k in todas_chaves]
 
     # 1. Cartões (ou o quadro com todos os mandatos)
@@ -418,12 +514,20 @@ def render_aba_comparada(aba, a, b, todos):
         if area_prog:
             render_programas(area_prog, sel, titulo=None, chave=f"cmp_{aba}_{n}")
             continue
-        series = [{**d["indicadores"][k], "chave": k} for k in ks if k in d["indicadores"]]
-        if not series:
+        itens = [("cat", blocos[k[1:]]) if k.startswith("@") and k[1:] in blocos else ("ind", {**d["indicadores"][k], "chave": k})
+                 for k in ks if (k.startswith("@") and k[1:] in blocos) or k in d["indicadores"]]
+        if not itens:
             _sem_dado(titulo_secao, sel)
             continue
-        for ind in series:
-            if len(series) > 1:
+        series = [x for t, x in itens if t == "ind"]
+        for tipo, x in itens:
+            if tipo == "cat":
+                if len(itens) > 1:
+                    st.markdown(f"**{x['nome'].split(' (')[0]}**")
+                _grafico_categorias(x, sel, f"{aba}_{n}_{x['nome'][:20]}")
+                continue
+            ind = x
+            if len(itens) > 1:
                 st.markdown(f"**{ind['nome'].split(' (')[0]}**")
             st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
             if _cobertura_mensal(d, ind, sel):

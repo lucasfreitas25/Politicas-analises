@@ -16,6 +16,8 @@ def render_tab_agro_conab():
         '<div class="section-subtitle">Comparativo oficial da produção nacional de grãos pela Companhia Nacional de Abastecimento (CONAB) e da Produção Agrícola Municipal (PAM - IBGE).</div>',
         unsafe_allow_html=True
     )
+    from modules.historico_ui import cards_padrao
+    cards_padrao("agro")
 
     df_conab = get_conab_data()
     df_pam = get_pam_data()
