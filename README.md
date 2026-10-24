@@ -60,7 +60,7 @@ A plataforma é alimentada por bases públicas oficiais do **IBGE (SIDRA)**, **C
 
    **📜 Políticas: Impactos + e −:** 53 políticas dos dois governos em 12 áreas, cada uma com impactos positivos, negativos, status e fonte (`data/_fontes/gerar_politicas.py`).
 
-   **🤝 Mulheres, Raça & Minorias:** desemprego e renda por sexo e cor/raça (API do IBGE), homicídios de negros, feminicídios, assassinatos de pessoas trans e terras indígenas.
+   **🤝 Igualdade: Mulheres, Raça e Minorias:** desemprego e renda por sexo e cor/raça (API do IBGE), homicídios de negros, feminicídios, assassinatos de pessoas trans e terras indígenas.
 
    **🌳 Meio Ambiente & Clima:** desmatamento na Amazônia e no Cerrado, queimadas, emissões (SEEG) e políticas ambientais.
 

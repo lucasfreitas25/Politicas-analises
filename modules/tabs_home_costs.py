@@ -110,9 +110,12 @@ def render_tab_home_costs():
     with col_a:
         st.subheader("2. Variação real por mandato")
         st.caption("Quanto cada item subiu acima (+) ou abaixo (−) da inflação geral do mesmo período.")
-        rotulos = [n for _, n, _ in ITENS]
-        reais_b = [((1 + acc[c][0] / 100) / (1 + acc["ipca_geral"][0] / 100) - 1) * 100 for c, _, _ in ITENS]
-        reais_l = [((1 + acc[c][1] / 100) / (1 + acc["ipca_geral"][1] / 100) - 1) * 100 for c, _, _ in ITENS]
+        escolhidos = st.pills("Produtos", [n for _, n, _ in ITENS], selection_mode="multi", default=[n for _, n, _ in ITENS], key="casa_produtos",
+                              help="Toque para tirar ou pôr energia, água e esgoto, gás de botijão e gás encanado.") or [n for _, n, _ in ITENS]
+        itens_sel = [(c, n, k) for c, n, k in ITENS if n in escolhidos]
+        rotulos = [n for _, n, _ in itens_sel]
+        reais_b = [((1 + acc[c][0] / 100) / (1 + acc["ipca_geral"][0] / 100) - 1) * 100 for c, _, _ in itens_sel]
+        reais_l = [((1 + acc[c][1] / 100) / (1 + acc["ipca_geral"][1] / 100) - 1) * 100 for c, _, _ in itens_sel]
         fig = go.Figure()
         fig.add_trace(go.Bar(x=rotulos, y=reais_b, name="Bolsonaro", marker_color=COLOR_BOLSONARO, text=[f"{v:+.1f}%".replace(".", ",") for v in reais_b], textposition="outside"))
         fig.add_trace(go.Bar(x=rotulos, y=reais_l, name="Lula", marker_color=COLOR_LULA, text=[f"{v:+.1f}%".replace(".", ",") for v in reais_l], textposition="outside"))

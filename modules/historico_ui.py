@@ -195,7 +195,7 @@ TITULOS = {
     "educacao": ("Educação & Capital Humano", "Avaliação do IDEB (Inep), PISA (OCDE) e taxa de analfabetismo (IBGE)."),
     "saude": ("Saúde", "Mortalidade infantil e esperança de vida ao nascer (IBGE)."),
     "seguranca": ("Segurança Pública & Criminalidade", "Taxa de homicídios (Atlas da Violência, com dados do Ministério da Saúde)."),
-    "inclusao": ("Mulheres, Raça & Minorias", "Desemprego de pretos e pardos, pobreza e desigualdade de renda."),
+    "inclusao": ("Igualdade: Mulheres, Raça e Minorias", "Desemprego de pretos e pardos, pobreza e desigualdade de renda."),
     "meio-ambiente": ("Meio Ambiente & Clima", "Desmatamento na Amazônia (Inpe/PRODES)."),
     "silvicultura": ("Silvicultura & Extrativismo: PEVS (IBGE)", "Valor da produção da silvicultura e da extração vegetal nativa (IBGE)."),
 }

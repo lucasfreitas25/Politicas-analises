@@ -33,9 +33,9 @@ def _faixas_governo(fig, periodos):
 
 def render_tab_social_inclusion():
     render_section_header(
-        "Mulheres, Raça & Minorias",
-        "Desemprego e renda por sexo e cor/raça (IBGE, série trimestral oficial), violência contra negros, mulheres e pessoas trans, "
-        "terras indígenas e as políticas de cada governo para esses grupos.",
+        "Igualdade: Mulheres, Raça e Minorias",
+        "Como mulheres, pessoas negras, indígenas e pessoas trans estão em cada governo: desemprego e renda por sexo e cor/raça (IBGE), "
+        "violência (homicídios de negros, feminicídios, assassinatos de pessoas trans), terras indígenas e as políticas de cada governo para esses grupos.",
     )
 
     df, curado = get_minorias_data()

@@ -83,7 +83,7 @@ navegacao = st.navigation({
         pagina(render_tab_education, "Educação", "🎓", "educacao"),
         pagina(render_tab_health, "Saúde", "🏥", "saude"),
         pagina(render_tab_security, "Segurança Pública", "🛡️", "seguranca"),
-        pagina(render_tab_social_inclusion, "Mulheres, Raça & Minorias", "🤝", "inclusao"),
+        pagina(render_tab_social_inclusion, "Igualdade: Mulheres, Raça e Minorias", "🤝", "inclusao"),
         pagina(render_tab_environment, "Meio Ambiente & Clima", "🌳", "meio-ambiente"),
     ],
     "Políticas & Transparência": [
