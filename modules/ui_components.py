@@ -63,6 +63,70 @@ def _ajuste_celular(fig, title, height):
         a.font = dict(color="#ffffff", size=9)
 
 
+def finalizar_celular(fig):
+    """Última passagem antes de desenhar: vale mesmo quando a página mexeu na legenda ou nas margens depois do tema.
+    Garante legenda acima do gráfico (sem cobrir o título), título inteiro e rótulos do radar dentro da tela."""
+    titulo = re.sub(r"<[^>]+>", " ", (fig.layout.title.text or "")).replace("  ", " ").strip()
+    n_titulo = quebrar(titulo, 34).count("<br>") + 1 if titulo else 0
+    n_leg = sum(1 for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None))
+    linhas_leg = max(1, -(-n_leg // 2)) if n_leg > 1 else 0
+    alt = int(fig.layout.height or 420)
+    m = fig.layout.margin
+    polar = any(t.type == "scatterpolar" for t in fig.data)
+    fig.update_layout(
+        title={"text": f"<b>{quebrar(titulo, 34)}</b>", "font": {"size": 13}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"} if titulo else {},
+        margin={"l": max(min(int(m.l or 8), 60), 44 if polar else 8), "r": max(min(int(m.r or 12), 60), 44 if polar else 12),
+                "t": (36 + 17 * n_titulo + 20 * linhas_leg + 14) if titulo else 30, "b": max(int(m.b or 36), 36)},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""}},
+    )
+    if polar:
+        fig.update_layout(height=min(alt, 400))
+        fig.update_polars(domain=dict(x=[0.2, 0.8], y=[0.06, 0.92]), angularaxis=dict(tickfont=dict(size=10)), radialaxis=dict(tickfont=dict(size=9)))
+    return fig
+
+
+def ativar_modo_celular():
+    """Faz todo st.plotly_chart passar por finalizar_celular quando o modo celular está ligado."""
+    if getattr(st, "_celular_ativo", False):
+        return
+    original = st.plotly_chart
+
+    def plotly_chart(figure_or_data, *args, **kwargs):
+        if eh_celular():
+            try:
+                finalizar_celular(figure_or_data)
+            except Exception:
+                pass
+        return original(figure_or_data, *args, **kwargs)
+
+    st.plotly_chart = plotly_chart
+    st._celular_ativo = True
+
+
+def mostrar_tabela(df, titulo_col=None, max_linhas_celular=80, **kwargs):
+    """No computador, a tabela de sempre (st.dataframe). No celular, um cartão por linha, para não precisar rolar de lado.
+    Tabelas com mais de `max_linhas_celular` linhas continuam como tabela (cartões ficariam longos demais)."""
+    if not eh_celular() or len(df) > max_linhas_celular:
+        return st.dataframe(df, **kwargs)
+    colunas = list(df.columns)
+    titulo_col = titulo_col or next((c for c in colunas if str(c).lower() in ("indicador", "política", "politica", "norma", "tributo")), colunas[0])
+    cartoes = []
+    for _, linha in df.iterrows():
+        itens = []
+        for c in colunas:
+            if c == titulo_col:
+                continue
+            v = linha[c]
+            if v is None or (isinstance(v, float) and v != v) or str(v).strip() == "":
+                continue
+            txt = html_mod.escape(str(v))
+            if str(v).startswith("http"):
+                txt = f'<a href="{html_mod.escape(str(v), quote=True)}" target="_blank">abrir ↗</a>'
+            itens.append(f'<div class="tab-item"><span>{html_mod.escape(str(c))}</span><b>{txt}</b></div>')
+        cartoes.append(f'<div class="ind-card"><div class="ind-card-t"><b>{html_mod.escape(str(linha[titulo_col]))}</b></div>{"".join(itens)}</div>')
+    st.markdown("".join(cartoes), unsafe_allow_html=True)
+
+
 def apply_plotly_theme(fig, title="", height=420):
     fig.update_layout(
         title={

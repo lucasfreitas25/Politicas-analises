@@ -68,7 +68,8 @@ def render_comparacao_alinhada():
         "Indicador": n, "Como ler": d, f"Bolsonaro ({b['meses_ipca']} meses de IPCA)": vb, f"Lula ({l['meses_ipca']} meses de IPCA)": vl,
         "Melhor": "Lula" if lula else "Bolsonaro",
     } for n, vb, vl, lula, d in linhas])
-    st.dataframe(tabela, width="stretch", hide_index=True)
+    from modules.ui_components import mostrar_tabela
+    mostrar_tabela(tabela, titulo_col="Indicador", width="stretch", hide_index=True)
 
     render_source("IBGE — PNAD Contínua (tabelas 6381 e 6405) e IPCA (tabela 1419); cálculo do painel",
                   "https://sidra.ibge.gov.br/tabela/6381")

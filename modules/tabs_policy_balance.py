@@ -142,7 +142,8 @@ def _aba_deixou_de_valer(df, leis, govs, todas):
     cols[2].metric("Ainda em vigor (todas as políticas)", int((todas["status_categoria"] == "Em vigor").sum()))
     tabela = f[["governo", "ano", "area", "politica", "status_categoria", "status"]].rename(columns={
         "governo": "Governo", "ano": "Período", "area": "Área", "politica": "Política", "status_categoria": "Faixa", "status": "O que aconteceu"})
-    st.dataframe(tabela, width="stretch", hide_index=True, height=min(80 + 36 * len(tabela), 640),
+    from modules.ui_components import mostrar_tabela
+    mostrar_tabela(tabela, titulo_col="Política", width="stretch", hide_index=True, height=min(80 + 36 * len(tabela), 640),
                  column_config={"Política": st.column_config.TextColumn(width="large"), "O que aconteceu": st.column_config.TextColumn(width="medium")})
 
     if not leis.empty:
@@ -150,7 +151,7 @@ def _aba_deixou_de_valer(df, leis, govs, todas):
         if not fim.empty:
             st.subheader("Normas sancionadas que perderam efeito ou foram alteradas")
             t = fim[["data", "governo", "norma", "resumo", "situacao"]].rename(columns={"data": "Data", "governo": "Governo", "norma": "Norma", "resumo": "O que fazia", "situacao": "Situação"})
-            st.dataframe(t, width="stretch", hide_index=True,
+            mostrar_tabela(t, titulo_col="Norma", width="stretch", hide_index=True,
                          column_config={"Data": st.column_config.DateColumn(format="DD/MM/YYYY"), "O que fazia": st.column_config.TextColumn(width="large")})
     st.subheader("Detalhe das políticas que deixaram de valer")
 

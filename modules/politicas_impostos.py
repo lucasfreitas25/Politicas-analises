@@ -77,7 +77,8 @@ def render_impostos(govs, chave="imp"):
     apply_plotly_theme(cat, title="Situação das medidas de cada governo (criações, aumentos, reduções e extinções)", height=360)
     cat.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.2, x=0.5, xanchor="center", yanchor="top"))
     st.plotly_chart(cat, width="stretch")
-    st.dataframe(resumo, width="stretch", hide_index=True)
+    from modules.ui_components import mostrar_tabela
+    mostrar_tabela(resumo, titulo_col="Governo", width="stretch", hide_index=True)
 
     # reduções impedidas
     barradas = df[df["reducao_impedida"]]

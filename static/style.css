@@ -603,3 +603,12 @@ abbr[title] { text-decoration: underline dotted #64748b !important; text-underli
   [data-testid="stPlotlyChart"] { margin-left: -4px !important; margin-right: -4px !important; }
   .stPlotlyChart, .js-plotly-plot, .plot-container { max-width: 100% !important; }
 }
+
+/* Tabelas em cartões e contexto recolhível (celular) */
+.tab-item { display: flex !important; justify-content: space-between !important; gap: 12px !important; padding: 3px 0 !important; border-top: 1px solid rgba(148, 163, 184, 0.12) !important; font-size: 0.8rem !important; line-height: 1.4 !important; }
+.tab-item span { color: #94a3b8 !important; flex: 0 0 38% !important; }
+.tab-item b { color: #e2e8f0 !important; font-weight: 600 !important; text-align: right !important; flex: 1 1 auto !important; }
+.tab-item a { color: #38bdf8 !important; }
+.ind-ctx { margin-top: 8px !important; }
+.ind-ctx summary { cursor: pointer !important; color: #38bdf8 !important; font-size: 0.76rem !important; font-weight: 700 !important; }
+.ind-ctx div { color: #94a3b8 !important; font-size: 0.76rem !important; line-height: 1.45 !important; margin-top: 4px !important; }

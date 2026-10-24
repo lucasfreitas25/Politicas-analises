@@ -19,7 +19,7 @@ def load_css():
 load_css()
 
 # Importar módulos de visualização
-from modules.ui_components import render_hero_banner, celular_pelo_navegador
+from modules.ui_components import render_hero_banner, celular_pelo_navegador, ativar_modo_celular
 from modules.ux import render_tipos_fonte, render_print_button, render_acessibilidade, ativar_dicas_automaticas
 from modules.tabs_overview import render_tab_overview
 from modules.tabs_labor import render_tab_labor
@@ -94,6 +94,7 @@ navegacao = st.navigation({
 
 # Dica ao passar o mouse sobre siglas e termos técnicos em todas as páginas
 ativar_dicas_automaticas()
+ativar_modo_celular()
 
 # Banner Superior
 render_hero_banner()

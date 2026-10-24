@@ -152,6 +152,7 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
     fig.update_layout(barmode="stack")
     apply_plotly_theme(fig, title="Placar geral: em quantos indicadores cada governo está melhor", height=200)
     fig.update_layout(hovermode="closest", margin=dict(l=20, r=20, t=75, b=30), legend=dict(orientation="h", y=1.18, x=0.5, xanchor="center"))
+    fig.update_layout(height=230)
     fig.update_xaxes(range=[0, total], showgrid=False, zeroline=False, showticklabels=False)
     fig.update_yaxes(showticklabels=False)
     st.plotly_chart(fig, width="stretch")
@@ -191,8 +192,9 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
         with aba:
             sub = df[df["grupo"] == g][["categoria", "indicador", "direcao", "valor_b", "valor_l"]].rename(columns={
                 "categoria": "Categoria", "indicador": "Indicador", "direcao": "Como ler", "valor_b": ctx["a_tab"], "valor_l": ctx["b_tab"]})
-            st.dataframe(sub, width="stretch", hide_index=True, height=min(80 + 36 * len(sub), 620),
-                         column_config={"Indicador": st.column_config.TextColumn(width="large")})
+            from modules.ui_components import mostrar_tabela
+            mostrar_tabela(sub, titulo_col="Indicador", width="stretch", hide_index=True, height=min(80 + 36 * len(sub), 620),
+                           column_config={"Indicador": st.column_config.TextColumn(width="large")})
 
 
 RESUMO = [

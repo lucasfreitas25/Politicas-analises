@@ -100,11 +100,13 @@ def quadro_cartoes_html(indicadores, governos):
             chips.append(f'<div class="chip-gov {classe}" style="border-left-color:{cor};"><span>{html.escape(g)}</span>'
                          f'<b>{fmt(vals[g], ind["unidade"])}{marca}{top}</b></div>')
         simbolo = CMP[ind["comparabilidade"]][0]
+        contexto = html.escape((ind.get("metodo", "") + " " + ind.get("nota", "")).strip())
         saida.append(
             f'<div class="ind-card"><div class="ind-card-t"><b>{html.escape(ind["nome"])}</b>'
             f'<div class="hist-sub">{html.escape(ind["unidade"])} · {seta_txt(ind)} · {simbolo} · '
             f'<a href="{html.escape(ind["url"], quote=True)}" target="_blank">dados ↗</a></div></div>'
-            f'<div class="chip-grid">{"".join(chips)}</div></div>')
+            f'<div class="chip-grid">{"".join(chips)}</div>'
+            f'<details class="ind-ctx"><summary>Como foi calculado e o que considerar</summary><div>{contexto}</div></details></div>')
     return "".join(saida)
 
 
@@ -557,7 +559,7 @@ def _visao_geral_todos(d, sel, titulo):
     nomes = {i["nome"]: i["chave"] for i in inds}
     k = nomes[st.selectbox("Ver ano a ano:", list(nomes), key="vg_hist_sel")]
     ind = {**d["indicadores"][k], "chave": k}
-    st.subheader(ind["nome"].split(" (")[0])
+    st.subheader(f"1. {ind['nome'].split(' (')[0]}")
     st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
     if _cobertura_mensal(d, ind, sel):
         _grafico_mensal(d, ind, k, sel)
@@ -570,7 +572,12 @@ def _visao_geral_todos(d, sel, titulo):
         st.caption("Sem dado para: " + ", ".join(faltam) + ".")
     _fonte(ind)
     linhas = "".join(f'• <b>Governo {html.escape(g)} ({PARTIDO[g]}, {PERIODO[g]}):</b> {html.escape(CONTEXTO[g])}<br/>' for g in sel)
-    st.markdown(f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}</div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
+        '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
+        'estoques viram variação no mandato). "Sem dado*" = não há série comparável; número com * = dado de outra metodologia; † = ano parcial. '
+        'Partes da aba que só existem para Bolsonaro x Lula 3 (políticas, notícias, detalhamentos) aparecem ao voltar ao padrão.</span></div>',
+        unsafe_allow_html=True)
 
 
 def render_aba_comparada(aba, a, b, todos):
