@@ -24,6 +24,11 @@ def base():
     return d
 
 
+def filtros():
+    """Blocos com escolha de tipo (rebanho, lavoura, produto): séries por ano de cada item."""
+    return load_json("historico_extra.json").get("filtros", {})
+
+
 def categorias():
     """Blocos 'um valor por categoria e por governo' (ex.: quanto cada item do IPCA subiu em cada mandato)."""
     return load_json("historico_extra.json").get("categorias", {})
@@ -251,7 +256,7 @@ MOLDE = {
     "agro": [
         ("Safras Brasileiras de Grãos (CONAB)", ["safra"], None),
         ("Área plantada e produtividade média dos grãos", ["area_graos", "produtividade_graos"], None),
-        ("PAM: Produção Agrícola Municipal (IBGE)", ["@pam_lavouras", "pam_area", "pam_valor"], None),
+        ("PAM: Produção Agrícola Municipal (IBGE)", ["&pam_lavouras", "@pam_lavouras", "pam_area", "pam_valor"], None),
     ],
     "comercio-exterior": [
         ("Exportações, importações e saldo por ano", ["exportacoes", "importacoes", "saldo_comercial"], None),
@@ -263,13 +268,13 @@ MOLDE = {
         ("Indústrias Extrativas vs. Indústrias de Transformação", ["pim_extrativa", "pim_transformacao"], None),
     ],
     "pecuaria": [
-        ("Efetivo dos Rebanhos Brasileiros", ["@ppm_rebanhos", "rebanho_bovino"], None),
+        ("Efetivo dos Rebanhos Brasileiros", ["&ppm_rebanhos", "@ppm_rebanhos", "!rebanho_bovino"], None),
         ("Abate de bovinos", ["abate_bovinos"], None),
-        ("Produção de Origem Animal (Leite, Ovos, Mel)", ["leite", "ovos", "mel"], None),
+        ("Produção de Origem Animal (Leite, Ovos, Mel)", ["&ppm_origem", "!leite", "!ovos", "!mel"], None),
     ],
     "silvicultura": [
-        ("Valor da Produção da Silvicultura", ["silvicultura_valor"], None),
-        ("Valor da Produção na Extração Vegetal Nativa", ["extracao_valor"], None),
+        ("Valor da Produção da Silvicultura", ["&pevs_silvicultura", "!silvicultura_valor"], None),
+        ("Valor da Produção na Extração Vegetal Nativa", ["&pevs_extracao", "!extracao_valor"], None),
     ],
     "educacao": [
         ("Evolução do IDEB por Etapa de Ensino (Inep / MEC)", ["ideb_iniciais", "ideb_finais", "ideb_medio"], None),
@@ -437,14 +442,27 @@ def _grafico_mensal(d, ind, chave, governos_sel):
     st.plotly_chart(fig, width="stretch", key=f"par_mensal_{chave}")
 
 
-def _cobertura_mensal(d, ind, governos_sel):
+def _govs_com_mensal(d, ind, governos_sel):
+    """Governos da lista com pelo menos 6 meses da série mensal dentro do mandato."""
     if "mensal" not in ind:
-        return False
+        return []
+    saida = []
     for g in governos_sel:
         ini, fim = _janela(d, g)
-        if sum(1 for ym in ind["mensal"] if ini <= ym <= fim) < 6:
-            return False
-    return True
+        if sum(1 for ym in ind["mensal"] if ini <= ym <= fim) >= 6:
+            saida.append(g)
+    return saida
+
+
+def _graficos_do_indicador(d, ind, chave, governos_sel):
+    """Sempre o mesmo conjunto de gráficos para o mesmo indicador, qualquer que seja o par de governos:
+    o mês a mês desde a posse (quando a série mensal existe, só com os governos que a têm) e as barras por ano."""
+    govs_m = _govs_com_mensal(d, ind, governos_sel)
+    if govs_m:
+        _grafico_mensal(d, ind, chave, govs_m)
+        if len(govs_m) < len(governos_sel):
+            st.caption("O mês a mês mostra só os governos com série mensal (" + ", ".join(govs_m) + "); as barras por ano abaixo trazem todos os escolhidos.")
+    _grafico_anual_par(ind, chave, governos_sel)
 
 
 def _grafico_anual_par(ind, chave, governos_sel):
@@ -568,11 +586,48 @@ def _grafico_categorias(bloco, sel, chave):
     return True
 
 
+PADRAO_ITEM = {"ppm_rebanhos": "Bovino", "ppm_origem": "Leite", "pam_lavouras": "Soja (em grão)", "pevs_silvicultura": "Total", "pevs_extracao": "Total"}
+
+
+def _filtro_disponivel(bloco, sel):
+    """Itens (e variáveis) com dado de pelo menos dois dos governos escolhidos."""
+    minimo = min(2, len(sel))
+    saida = {}
+    for item, vars_ in bloco["itens"].items():
+        ok = {v: d for v, d in vars_.items() if sum(1 for g in sel if g in d["mandato"]) >= minimo}
+        if ok:
+            saida[item] = ok
+    return saida
+
+
+def _grafico_filtro(bloco, sel, chave):
+    """Escolha do tipo (rebanho, lavoura, produto) e da medida; gráfico por ano com a cor do partido de cada governo."""
+    itens = _filtro_disponivel(bloco, sel)
+    if not itens:
+        return False
+    nomes = list(itens)
+    padrao = PADRAO_ITEM.get(chave.split("::")[0], nomes[0])
+    c1, c2 = st.columns([1.5, 1])
+    with c1:
+        item = st.selectbox(bloco["rotulo_item"], nomes, index=nomes.index(padrao) if padrao in nomes else 0, key=f"flt_item_{chave}")
+    variaveis = list(itens[item])
+    with c2:
+        var = st.selectbox("O que mostrar", variaveis, key=f"flt_var_{chave}_{item}") if len(variaveis) > 1 else variaveis[0]
+    dado = itens[item][var]
+    sel_ind = [g for g in sel if g in dado["mandato"]]
+    ind = {"nome": f"{item} — {var}", "unidade": dado["unidade"], "anual": dado["anual"], "mandato": dado["mandato"]}
+    _grafico_anual_par(ind, f"flt_{chave}_{item}_{var}", sel_ind)
+    st.caption("Média anual em cada governo: " + " · ".join(f"{g}: {fmt(dado['mandato'][g], dado['unidade'])}" for g in sel_ind) + f" ({dado['unidade']}).")
+    st.caption(bloco["metodo"] + " " + bloco["nota"])
+    render_source(html.escape(bloco["fonte"]), bloco["url"])
+    return True
+
+
 def cards_padrao(aba, a=PADRAO[0], b=PADRAO[1]):
     """Cartões 'A ➔ B' no topo da versão padrão de uma aba, com o mesmo visual dos outros pares."""
     from modules.ui_components import css_governos
     d = base()
-    ks = list(dict.fromkeys(k for _, lista, _ in MOLDE.get(aba, []) for k in lista if not k.startswith("@") and k in d["indicadores"]))
+    ks = list(dict.fromkeys(k.lstrip("!") for _, lista, _ in MOLDE.get(aba, []) for k in lista if not k.startswith(("@", "&")) and k.lstrip("!") in d["indicadores"]))
     if not ks:
         return
     st.markdown(css_governos(), unsafe_allow_html=True)
@@ -599,12 +654,7 @@ def _visao_geral_todos(d, sel, titulo):
     st.subheader(f"1. {ind['nome'].split(' (')[0]}")
     st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
     sel_ind = com_dado(ind, sel)
-    if _cobertura_mensal(d, ind, sel_ind):
-        _grafico_mensal(d, ind, k, sel_ind)
-        if ind.get("mensal_tipo") == "acumulado":
-            _grafico_anual_par(ind, k, sel_ind)
-    else:
-        _grafico_anual_par(ind, k, sel_ind)
+    _graficos_do_indicador(d, ind, k, sel_ind)
     _fonte(ind)
     linhas = "".join(f'• <b>Governo {html.escape(g)} ({PARTIDO[g]}, {PERIODO[g]}):</b> {html.escape(CONTEXTO[g])}<br/>' for g in sel)
     st.markdown(
@@ -634,12 +684,13 @@ def render_aba_comparada(aba, a, b, todos):
         return True
     molde = MOLDE.get(aba, [])
     chaves = [k for k, v in d.get("indicadores", {}).items() if aba in v.get("abas", [])]
-    usados = [k for _, ks, _ in molde for k in ks]
+    usados = [k.lstrip("!") for _, ks, _ in molde for k in ks]
     # indicadores da aba que o molde não citou entram no fim, para nada sumir
     extras = [k for k in chaves if k not in usados]
     if extras:
         molde = molde + [("Outros indicadores desta aba", extras, None)]
     blocos = categorias()
+    filtrados = filtros()
     from modules.programas_ui import render_programas, programas_unificados
     programas, _ = programas_unificados()
 
@@ -658,15 +709,21 @@ def render_aba_comparada(aba, a, b, todos):
             if k.startswith("@"):
                 if k[1:] in blocos and _cat_disponivel(blocos[k[1:]], sel)[0]:
                     itens.append(("cat", blocos[k[1:]]))
+            elif k.startswith("&"):
+                if k[1:] in filtrados and _filtro_disponivel(filtrados[k[1:]], sel):
+                    itens.append(("flt", (k[1:], filtrados[k[1:]])))
+            elif k.startswith("!"):
+                if k[1:] in d["indicadores"] and comparavel(d["indicadores"][k[1:]], sel):
+                    itens.append(("card", {**d["indicadores"][k[1:]], "chave": k[1:]}))
             elif k in d["indicadores"] and comparavel(d["indicadores"][k], sel):
                 itens.append(("ind", {**d["indicadores"][k], "chave": k}))
-        if itens:
+        if any(t != "card" for t, _ in itens):
             secoes.append((titulo_secao, itens, None, sel))
         else:
             ocultas.append(titulo_secao)
 
     # 1. Cartões (ou o quadro com todos os mandatos): só indicadores que têm dado dos dois lados
-    inds = list({x["chave"]: x for _, itens, _, _ in secoes for t, x in itens if t == "ind"}.values())
+    inds = list({x["chave"]: x for _, itens, _, _ in secoes for t, x in itens if t in ("ind", "card")}.values())
     if inds:
         if todos:
             st.markdown(quadro_html(inds, governos), unsafe_allow_html=True)
@@ -684,23 +741,24 @@ def render_aba_comparada(aba, a, b, todos):
         if area_prog:
             render_programas(area_prog, govs_secao, titulo=None, chave=f"cmp_{aba}_{n}")
             continue
+        itens = [it for it in itens if it[0] != "card"]
         for tipo, x in itens:
             if tipo == "cat":
                 if len(itens) > 1:
                     st.markdown(f"**{x['nome'].split(' (')[0]}**")
                 _grafico_categorias(x, sel, f"{aba}_{n}_{x['nome'][:20]}")
                 continue
+            if tipo == "flt":
+                if len(itens) > 1:
+                    st.markdown(f"**{x[1]['nome']}**")
+                _grafico_filtro(x[1], sel, f"{x[0]}::{aba}")
+                continue
             ind = x
             sel_ind = com_dado(ind, sel)
             if len(itens) > 1:
                 st.markdown(f"**{ind['nome'].split(' (')[0]}**")
             st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
-            if _cobertura_mensal(d, ind, sel_ind):
-                _grafico_mensal(d, ind, ind["chave"], sel_ind)
-                if ind.get("mensal_tipo") == "acumulado":
-                    _grafico_anual_par(ind, ind["chave"], sel_ind)
-            else:
-                _grafico_anual_par(ind, ind["chave"], sel_ind)
+            _graficos_do_indicador(d, ind, ind["chave"], sel_ind)
             _fonte(ind)
     if not secoes:
         st.info("Não há dado comparável para os governos escolhidos nesta aba. Troque um dos governos para ver mais.")
