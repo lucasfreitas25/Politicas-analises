@@ -1,9 +1,18 @@
 {
   "metadados": {
     "atualizado_em": "2026-10-23",
-    "aviso": "A lista é uma seleção dos programas mais conhecidos, não o conjunto completo, e governos sem item (por exemplo Dilma 2) ainda não foram mapeados nesta área.",
+    "aviso": "A lista é uma seleção dos programas mais conhecidos, não o conjunto completo. Os governos antigos têm poucos itens e alguns (como Dilma 2) quase nenhum; isso reflete o que foi mapeado até aqui, não o que cada governo fez.",
     "areas": [
-      "Saúde"
+      "Direitos & Minorias",
+      "Economia & Crédito",
+      "Educação",
+      "Fiscal & Tributária",
+      "Infraestrutura & Energia",
+      "Meio Ambiente & Clima",
+      "Proteção Social",
+      "Saúde",
+      "Segurança Pública",
+      "Trabalho & Renda"
     ]
   },
   "programas": [
@@ -681,6 +690,527 @@
           "texto": "Em 2023, menos de 20% da população vivia em municípios que atingiram a meta da pólio.",
           "fonte": "Anuário VacinaBR (IQC/Unicef)",
           "url": "https://www.unicef.org/brazil/comunicados-de-imprensa/brasil-vive-crise-prolongada-na-vacinacao-infantil-apesar-de-melhora-em-2023-mostra-anuario-vacinabr"
+        }
+      ]
+    },
+    {
+      "id": "outras-1",
+      "area": "Economia & Crédito",
+      "governo": "FHC 1",
+      "ano": "1994–95",
+      "programa": "Plano Real",
+      "em_uma_frase": "Plano que acabou com a hiperinflação criando uma nova moeda, o real, e reduzindo a indexação da economia.",
+      "base_legal": {
+        "nome": "Lei 9.069/1995",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9069.htm"
+      },
+      "situacao": "Moeda em vigor",
+      "beneficios": [
+        {
+          "texto": "Até textos críticos ao plano reconhecem o sucesso em derrubar a inflação e a redução da indexação da economia.",
+          "fonte": "Partido dos Trabalhadores (texto crítico ao plano)",
+          "url": "https://pt.org.br/plano-real-30-anos-depois-brasil-ainda-sofre-os-efeitos-colaterais/?amp=1"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Economistas ouvidos pela Agência Brasil dizem que os juros altos, somados à abertura financeira, dificultam a sobrevivência da indústria e deixam a economia mais vulnerável ao câmbio.",
+          "fonte": "Jornal Contábil (reproduz a Agência Brasil)",
+          "url": "https://jornalcontabil.com.br/noticia/plano-real-deixa-legado-de-juros-altos-e-cambio-volatil/"
+        },
+        {
+          "texto": "Um estudo da PUC-Rio sustenta que os juros podem ter ficado acima do necessário para rolar a dívida, e que a estabilização veio com rápido crescimento da dívida pública.",
+          "fonte": "PUC-Rio (estudo acadêmico)",
+          "url": "https://www.maxwell.vrac.puc-rio.br/7371/7371_5.PDF"
+        }
+      ]
+    },
+    {
+      "id": "outras-2",
+      "area": "Educação",
+      "governo": "FHC 1",
+      "ano": "1996",
+      "programa": "Fundef (fundo do ensino fundamental)",
+      "em_uma_frase": "Fundo que redistribuía parte dos impostos de estados e municípios para o ensino fundamental, ligado ao salário dos professores.",
+      "base_legal": {
+        "nome": "Lei 9.424/1996",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9424.htm"
+      },
+      "situacao": "Substituído pelo Fundeb (2007)",
+      "beneficios": [
+        {
+          "texto": "Estudo de 2004 em Economia Aplicada achou ganhos médios de salário para professores do ensino fundamental público, maiores em escolas municipais do Nordeste (de 26% a 51,6%); o fundo tendeu a favorecer regiões mais pobres e a reduzir a desigualdade salarial entre professores.",
+          "fonte": "Economia Aplicada, 2004",
+          "url": "https://doaj.org/article/cbd40133049f4c7aa6d38b341b947d0b"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Reportagem da Revista do TCU: em 59% dos municípios fiscalizados houve uso indevido de recursos destinados ao salário de professores, e em 36% o dinheiro de manutenção do ensino foi usado em outras finalidades. É dado antigo, sem data na página.",
+          "fonte": "Revista do TCU",
+          "url": "https://revista.tcu.gov.br/ojs/index.php/RTCU/article/download/571/633"
+        }
+      ]
+    },
+    {
+      "id": "outras-3",
+      "area": "Meio Ambiente & Clima",
+      "governo": "FHC 1",
+      "ano": "1998",
+      "programa": "Lei de Crimes Ambientais",
+      "em_uma_frase": "Reuniu em uma lei as penas e multas para quem agride o meio ambiente, incluindo penas alternativas que obrigam a reparar o dano.",
+      "base_legal": {
+        "nome": "Lei 9.605/1998",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Análise jurídica destaca como avanços as penas alternativas, voltadas à reparação do dano, e os crimes de perigo.",
+          "fonte": "Diritto.it (análise doutrinária)",
+          "url": "https://www.diritto.it/?p=44398"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Estudo do Imazon (2005) concluiu que a lei não vinha sendo eficaz para proteger as florestas da Amazônia, por falta de integração entre as instituições e porque as penas não eram ligadas à reparação do dano.",
+          "fonte": "Imazon, 2005",
+          "url": "https://acervo.socioambiental.org/sites/default/files/documents/m3d00145.pdf"
+        },
+        {
+          "texto": "Em 55 casos judiciais no Pará, só 2% dos infratores foram punidos criminalmente; o desmatamento médio anual de 2000–2005 foi 18% maior que o de 1994–1999. O TCU (1999) apontou que o Ibama arrecadou pouco do que era devido e que 80% dos autos de infração tinham erro de preenchimento.",
+          "fonte": "Imazon, 2006",
+          "url": "https://imazon.fly.storage.tigris.dev/uploads/2006/06/a-eficacia-da-aplicacao-da-lei-de-crimes.pdf"
+        }
+      ]
+    },
+    {
+      "id": "outras-4",
+      "area": "Fiscal & Tributária",
+      "governo": "FHC 2",
+      "ano": "2000",
+      "programa": "Lei de Responsabilidade Fiscal",
+      "em_uma_frase": "Impôs limites para gasto com pessoal e endividamento de União, estados e municípios, e exige planejamento e transparência das contas.",
+      "base_legal": {
+        "nome": "Lei Complementar 101/2000",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Segundo a Confederação Nacional de Municípios, a dívida dos municípios caiu de 8,04% da receita em 2002 para 0,81% em 2008. A CNM representa os municípios, que são os alvos da lei.",
+          "fonte": "Sedep (balanço dos 10 anos da lei)",
+          "url": "https://www.sedep.com.br/?p=39225"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Um dirigente da CNM afirmou que, em muitos municípios, projetos sociais são sacrificados para cumprir a lei. Há também a crítica de que a lei não foi totalmente regulamentada e seus limites não alcançam a União.",
+          "fonte": "Sedep (balanço dos 10 anos da lei)",
+          "url": "https://www.sedep.com.br/?p=39225"
+        }
+      ]
+    },
+    {
+      "id": "outras-5",
+      "area": "Proteção Social",
+      "governo": "FHC 2",
+      "ano": "2001",
+      "programa": "Bolsa Escola",
+      "em_uma_frase": "Dinheiro para famílias pobres que mantivessem os filhos na escola. Em 2004 foi unificado ao Bolsa Família.",
+      "base_legal": {
+        "nome": "Lei 10.219/2001",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10219.htm"
+      },
+      "situacao": "Incorporado ao Bolsa Família (2004)",
+      "beneficios": [
+        {
+          "texto": "Estudo de Ferro e Kassouf (Cepea/USP) estimou que crianças de famílias beneficiárias trabalham cerca de 3 horas a menos por semana do que as que não recebem o benefício.",
+          "fonte": "Cepea/Esalq-USP",
+          "url": "https://cepea.org.br/br/documentos/texto/release-6205.aspx"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O mesmo estudo aponta que o benefício pode ser um incentivo de curto prazo para trabalhar e estudar ao mesmo tempo. Um estudo em Blumenau (SC) concluiu que o controle de frequência do programa não era confiável, e portanto não dava para saber se as crianças frequentavam a escola.",
+          "fonte": "Cepea e Atos de Pesquisa em Educação (FURB)",
+          "url": "https://ojsrevista.furb.br/ojs/index.php/atosdepesquisa/article/download/46/22/134"
+        }
+      ]
+    },
+    {
+      "id": "outras-6",
+      "area": "Meio Ambiente & Clima",
+      "governo": "FHC 2",
+      "ano": "2000",
+      "programa": "Sistema Nacional de Unidades de Conservação (SNUC)",
+      "em_uma_frase": "Criou as regras para parques, reservas e outras áreas protegidas no país.",
+      "base_legal": {
+        "nome": "Lei 9.985/2000",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Balanço de 10 anos do ((o))eco aponta o SNUC como um dos pilares que levou o Brasil ao topo do ranking de criação de áreas protegidas.",
+          "fonte": "((o))eco",
+          "url": "https://oeco.org.br/wp-content/uploads/wp-post-to-pdf-enhanced-cache/1/24188-apos-10-anos-uma-avaliacao-positiva.pdf"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O mesmo balanço aponta falta de recursos financeiros e de pessoal para implementar as áreas, o que faz com que a criação no papel nem sempre vire proteção efetiva.",
+          "fonte": "((o))eco",
+          "url": "https://oeco.org.br/wp-content/uploads/wp-post-to-pdf-enhanced-cache/1/24188-apos-10-anos-uma-avaliacao-positiva.pdf"
+        }
+      ]
+    },
+    {
+      "id": "outras-7",
+      "area": "Proteção Social",
+      "governo": "Lula 1",
+      "ano": "2004",
+      "programa": "Bolsa Família",
+      "em_uma_frase": "Transferência de renda para famílias pobres, com condições como vacinação e frequência escolar dos filhos.",
+      "base_legal": {
+        "nome": "Lei 10.836/2004",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.836.htm"
+      },
+      "situacao": "Revogado em 2021 e recriado em 2023",
+      "beneficios": [
+        {
+          "texto": "Estudo do Ipea (2019) estima que o programa respondeu por cerca de 10% da queda da desigualdade entre 2001 e 2015, a um custo de cerca de 0,5% do PIB, e o descreve como a transferência federal mais progressiva já criada.",
+          "fonte": "Ipea, Os efeitos do Bolsa Família sobre a pobreza e a desigualdade",
+          "url": "https://ipcig.org/sites/default/files/pub/pt-br/OP429PT_Os_efeitos_do_programa_Bolsa_Familia_sobre_a_pobreza_e_a_desigualdade.pdf"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O mesmo estudo informa que 64% dos beneficiários continuavam em extrema pobreza, o que o Ipea liga ao valor médio baixo (cerca de R$ 180 por família em 2017).",
+          "fonte": "Ipea, Os efeitos do Bolsa Família sobre a pobreza e a desigualdade",
+          "url": "https://ipcig.org/sites/default/files/pub/pt-br/OP429PT_Os_efeitos_do_programa_Bolsa_Familia_sobre_a_pobreza_e_a_desigualdade.pdf"
+        }
+      ]
+    },
+    {
+      "id": "outras-8",
+      "area": "Educação",
+      "governo": "Lula 1",
+      "ano": "2005",
+      "programa": "ProUni (bolsas em faculdades particulares)",
+      "em_uma_frase": "Bolsas integrais e parciais em faculdades particulares para estudantes de baixa renda, em troca de isenção de tributos federais para as instituições.",
+      "base_legal": {
+        "nome": "Lei 11.096/2005",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11096.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Estudo do Insper (2020) concluiu que os bolsistas têm melhor desempenho no Enade, embora o ambiente familiar e educacional explique grande parte da nota.",
+          "fonte": "Insper (monografia, 2020)",
+          "url": "https://repositorio-api.insper.edu.br/server/api/core/bitstreams/91fcdc45-5f9e-45a1-9ba0-ed2039c69994/content"
+        },
+        {
+          "texto": "Artigo da Unicamp, que avaliou os 15 anos do programa, concluiu que ele teve êxito no acesso e na permanência do público-alvo.",
+          "fonte": "Unicamp",
+          "url": "https://econtents.bc.unicamp.br/eventos/index.php/leg/article/download/4251/4419/11755"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Em 2007, a pesquisadora Eunice Durham criticou a falta de avaliação rigorosa das instituições que recebem a isenção. O MEC respondeu que os cursos eram avaliados, mas a lei ainda não permitia excluir os piores.",
+          "fonte": "Agência Senado, 2007",
+          "url": "https://www2.senado.leg.br/jspui/bitstream/id/477987/1/noticia.htm"
+        }
+      ]
+    },
+    {
+      "id": "outras-9",
+      "area": "Infraestrutura & Energia",
+      "governo": "Lula 1",
+      "ano": "2003",
+      "programa": "Luz para Todos",
+      "em_uma_frase": "Levar energia elétrica de graça a quem vive no campo e ainda não tinha.",
+      "base_legal": {
+        "nome": "Decreto 4.873/2003",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto/2003/d4873.htm"
+      },
+      "situacao": "Prorrogado após 2008",
+      "beneficios": [
+        {
+          "texto": "Estudo de 2020 na Revista Brasileira de Gestão e Desenvolvimento Regional concluiu que a maior parte dos estados havia superado a meta de eletrificação até 2014, com exceções concentradas no Norte.",
+          "fonte": "Rev. Bras. de Gestão e Desenvolvimento Regional",
+          "url": "https://rbgdr.net/revista/index.php/rbgdr/article/download/5883/988"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O Idec, analisando dados de 2024, apontou desempenho desigual na Amazônia Legal (Rondônia alcançou 67% do esperado) e falta de informação atualizada ao Ministério de Minas e Energia, o que dificulta a fiscalização.",
+          "fonte": "Cenário Energia (análise do Idec)",
+          "url": "https://cenarioenergia.com.br/2025/03/20/programa-luz-para-todos-falha-em-2024-energia-nao-chega-a-milhares-de-brasileiros-na-amazonia-legal/"
+        }
+      ]
+    },
+    {
+      "id": "outras-10",
+      "area": "Segurança Pública",
+      "governo": "Lula 1",
+      "ano": "2003",
+      "programa": "Estatuto do Desarmamento",
+      "em_uma_frase": "Endureceu as regras para comprar, ter e portar arma de fogo no Brasil.",
+      "base_legal": {
+        "nome": "Lei 10.826/2003",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.826.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Segundo o Atlas da Violência (Ipea/FBSP), o crescimento médio anual da taxa de homicídios por arma de fogo caiu de 5,44% (1990–2003) para 0,85% (2003–2017). O estudo argumenta que causas gerais afetariam todos os homicídios, não só os de arma de fogo.",
+          "fonte": "Atlas da Violência (via Folha Vitória)",
+          "url": "https://www.folhavitoria.com.br/policia/estatuto-de-desarmamento-ajudou-a-frear-alta-de-homicidios-por-arma-de-fogo-no-brasil-diz-pesquisa/"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O próprio estudo reconhece que a desaceleração poderia ter outras causas além do Estatuto; o argumento é que, nesse caso, elas deveriam afetar a violência em geral, e não só as mortes por arma de fogo. Ou seja, o efeito é uma estimativa, não uma medição direta.",
+          "fonte": "Atlas da Violência (via Folha Vitória)",
+          "url": "https://www.folhavitoria.com.br/policia/estatuto-de-desarmamento-ajudou-a-frear-alta-de-homicidios-por-arma-de-fogo-no-brasil-diz-pesquisa/"
+        }
+      ]
+    },
+    {
+      "id": "outras-11",
+      "area": "Direitos & Minorias",
+      "governo": "Lula 1",
+      "ano": "2006",
+      "programa": "Lei Maria da Penha",
+      "em_uma_frase": "Criou mecanismos para coibir a violência doméstica contra a mulher, como medidas protetivas e juizados especializados.",
+      "base_legal": {
+        "nome": "Lei 11.340/2006",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Estudo do Ipea (2015, dados de 2000–2011) concluiu que a lei reduziu em cerca de 10% a taxa de homicídio de mulheres dentro de casa em relação à tendência anterior.",
+          "fonte": "Ipea, Texto para Discussão 2048",
+          "url": "https://ideas.repec.org/p/ipe/ipetds/2048.html"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O próprio estudo ressalva que o efeito não foi uniforme no país, porque depende de serviços de proteção que foram instalados de forma desigual, e que não há dados para medir o efeito sobre violência não letal.",
+          "fonte": "Ipea, Texto para Discussão 2048",
+          "url": "https://ideas.repec.org/p/ipe/ipetds/2048.html"
+        }
+      ]
+    },
+    {
+      "id": "outras-12",
+      "area": "Proteção Social",
+      "governo": "Lula 2",
+      "ano": "2009",
+      "programa": "Minha Casa Minha Vida",
+      "em_uma_frase": "Financiamento subsidiado para famílias de baixa renda comprarem a casa própria.",
+      "base_legal": {
+        "nome": "Lei 11.977/2009",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11977.htm"
+      },
+      "situacao": "Recriado em 2023",
+      "beneficios": [
+        {
+          "texto": "Segundo uma consultora do Senado, o objetivo real do programa era atenuar os efeitos da crise financeira internacional sobre a economia, mais do que reduzir o déficit de moradias.",
+          "fonte": "Agência Senado (nota técnica)",
+          "url": "https://www12.senado.leg.br/orcamento/documentos/estudos/tipos-de-estudos/notas-tecnicas-e-informativos/avaliacao-de-politicas-publicas-programa-minha-casa-minha-vida-feff"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Estudo com base na Fundação João Pinheiro apontou que o déficit habitacional quantitativo ficou praticamente igual entre 2009 (6 milhões) e 2014 (6,1 milhões).",
+          "fonte": "Monitor Mercantil",
+          "url": "https://monitormercantil.com.br/minha-casa-minha-vida-n-o-reduziu-deficit-habitacional-afirma-estudo/"
+        },
+        {
+          "texto": "Levantamento citado pelo Rio on Watch aponta que as casas foram construídas sobretudo nas periferias metropolitanas, onde o terreno é mais barato; um artigo sobre Florianópolis encontrou empreendimentos longe de infraestrutura e transporte público.",
+          "fonte": "Rio on Watch e revista Metrópole",
+          "url": "https://revistas.pucsp.br/index.php/metropole/article/view/2236-9996.2018-4104"
+        }
+      ]
+    },
+    {
+      "id": "outras-13",
+      "area": "Educação",
+      "governo": "Dilma 1",
+      "ano": "2012",
+      "programa": "Lei de Cotas nas universidades federais",
+      "em_uma_frase": "Reserva vagas nas universidades e institutos federais para quem estudou em escola pública, com recortes de renda e de cor.",
+      "base_legal": {
+        "nome": "Lei 12.711/2012",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12711.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Estudo do Ipea com dados do Enade 2017 concluiu que a política amplia o acesso sem prejudicar os cursos.",
+          "fonte": "Alma Preta (sobre estudo do Ipea)",
+          "url": "https://almapreta.com.br/sessao/cotidiano/cotas-ampliam-acesso-as-universidades-e-nao-prejudicam-cursos-diz-estudo-do-ipea/"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "No mesmo estudo, em cursos como letras, matemática e engenharias o efeito sobre o desempenho não foi significativo. A revisão prevista para os dez anos da lei gerou dezenas de projetos no Congresso, sem consenso.",
+          "fonte": "Alma Preta e Insper",
+          "url": "https://www.insper.edu.br/pt/noticias/2022/1/lei-de-cotas-completa-10-anos-em-2022-e-deve-passar-por-revisao"
+        }
+      ]
+    },
+    {
+      "id": "outras-14",
+      "area": "Infraestrutura & Energia",
+      "governo": "Dilma 1",
+      "ano": "2013",
+      "programa": "MP 579: renovação antecipada das hidrelétricas e redução da conta de luz",
+      "em_uma_frase": "O governo antecipou a renovação das concessões de energia em troca de tarifas mais baixas, para baixar a conta de luz.",
+      "base_legal": {
+        "nome": "Lei 12.783/2013",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12783.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Objetivo declarado pelo governo: reduzir a conta de luz em cerca de 20% (a presidente prometeu 18%). Os números de redução são promessa, não resultado medido.",
+          "fonte": "ENAP (dissertação de Franco)",
+          "url": "https://bibliotecadigital.enap.gov.br/bitstream/1/4155/1/Cristiane%20Bordini%20Franco.pdf"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O TCU, em 2015, classificou a implementação como atabalhoada. Em 2015 o Tesouro deixou de bancar a conta (CDE) e os custos foram para a tarifa dos consumidores.",
+          "fonte": "Instituto Acende Brasil (apresentação do TCU) e ENAP",
+          "url": "https://acendebrasil.com.br/wp-content/uploads/2020/04/20151202_PortalFatoOnline.pdf"
+        },
+        {
+          "texto": "Dissertação da FGV (2014) apontou que a MP criou incerteza para novos investimentos por mudar regras sem debate suficiente com o setor privado.",
+          "fonte": "FGV (via BDTD)",
+          "url": "https://bdtd.ibict.br/vufind/Record/FGV_a737dcc78ecedca5f78d6ee5e48ef0e8"
+        }
+      ]
+    },
+    {
+      "id": "outras-15",
+      "area": "Meio Ambiente & Clima",
+      "governo": "Dilma 1",
+      "ano": "2012",
+      "programa": "Novo Código Florestal",
+      "em_uma_frase": "Mudou as regras de quanto de mata o proprietário rural precisa preservar e criou o cadastro ambiental de todos os imóveis rurais (CAR).",
+      "base_legal": {
+        "nome": "Lei 12.651/2012",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "O então ministro do Meio Ambiente Sarney Filho (2017) apontou a criação do Cadastro Ambiental Rural como o lado positivo do código.",
+          "fonte": "Agência Câmara",
+          "url": "https://www.camara.leg.br/noticias/518080-NOVO-CODIGO-FLORESTAL-CONTRIBUIU-PARA-AUMENTO-DO-DESMATAMENTO,-DIZ-MINISTRO"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "O mesmo ministro disse que a anistia de multas por desmatamento ilegal contribuiu para o aumento do desmatamento nos dois anos anteriores.",
+          "fonte": "Agência Câmara",
+          "url": "https://www.camara.leg.br/noticias/518080-NOVO-CODIGO-FLORESTAL-CONTRIBUIU-PARA-AUMENTO-DO-DESMATAMENTO,-DIZ-MINISTRO"
+        },
+        {
+          "texto": "Em 2022, o CAR tinha mais de 6,5 milhões de imóveis, com sobreposições entre imóveis, unidades de conservação e florestas públicas ainda a corrigir.",
+          "fonte": "Congresso em Foco (coluna)",
+          "url": "https://congressoemfoco.com.br/coluna/11764/dez-anos-do-codigo-florestal-o-que-comemorar"
+        }
+      ]
+    },
+    {
+      "id": "outras-16",
+      "area": "Direitos & Minorias",
+      "governo": "Dilma 2",
+      "ano": "2015",
+      "programa": "Lei do Feminicídio",
+      "em_uma_frase": "Tornou o assassinato de mulher por ser mulher (em violência doméstica ou por desprezo ao gênero) um homicídio qualificado e crime hediondo.",
+      "base_legal": {
+        "nome": "Lei 13.104/2015",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm"
+      },
+      "situacao": "Em vigor",
+      "beneficios": [
+        {
+          "texto": "Balanço dos dez anos da lei registra que ela trouxe avanços, mas conclui que não basta para parar os assassinatos de mulheres.",
+          "fonte": "NSC Total",
+          "url": "https://www.nsctotal.com.br/?p=7458038"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "Reportagem do Senado (3 anos depois) argumenta que punir não basta e é preciso ampliar a rede de proteção às mulheres. A revista Pesquisa Fapesp destaca que o texto usa \"sexo\" e não \"gênero\", o que pode complicar a classificação dos casos.",
+          "fonte": "Agência Senado e Revista Pesquisa Fapesp",
+          "url": "https://revistapesquisa.fapesp.br/lei-do-feminicidio-completa-10-anos/"
+        }
+      ]
+    },
+    {
+      "id": "outras-17",
+      "area": "Educação",
+      "governo": "Temer",
+      "ano": "2017",
+      "programa": "Reforma do Ensino Médio",
+      "em_uma_frase": "Flexibilizou o currículo do ensino médio com itinerários formativos (áreas de escolha do aluno), incluindo o ensino técnico.",
+      "base_legal": {
+        "nome": "Lei 13.415/2017",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13415.htm"
+      },
+      "situacao": "Em vigor, com alterações",
+      "beneficios": [
+        {
+          "texto": "Defensores, em seminário na Câmara (2023), dizem que a reforma amplia as opções dos estudantes, inclusive a formação profissional, e a educação integral.",
+          "fonte": "Agência Câmara",
+          "url": "https://www.camara.leg.br/noticias/962737-novo-ensino-medio-divide-opinioes-de-deputados-e"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "No mesmo seminário, críticos afirmaram que a escolha é ilusória, porque as redes não são obrigadas a oferecer os cinco itinerários.",
+          "fonte": "Agência Câmara",
+          "url": "https://www.camara.leg.br/noticias/962737-novo-ensino-medio-divide-opinioes-de-deputados-e"
+        },
+        {
+          "texto": "Estudo na Praxis Pedagógica (2020) critica a aprovação por medida provisória, sem amplo debate público.",
+          "fonte": "Praxis Pedagógica (UNIR)",
+          "url": "https://periodicos.unir.br/index.php/praxis/article/download/4942/pdf/29822"
+        }
+      ]
+    },
+    {
+      "id": "outras-18",
+      "area": "Trabalho & Renda",
+      "governo": "Temer",
+      "ano": "2017",
+      "programa": "Reforma Trabalhista",
+      "em_uma_frase": "Mudou a CLT: permitiu que acordos entre empresa e trabalhador prevaleçam sobre a lei em vários pontos e criou novas formas de contrato.",
+      "base_legal": {
+        "nome": "Lei 13.467/2017",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13467.htm"
+      },
+      "situacao": "Em vigor",
+      "beneficios": [
+        {
+          "texto": "Reportagem do Senado diz que a reforma formalizou mais empregos, embora continue contestada e especialistas divirjam sobre o saldo.",
+          "fonte": "Agência Senado",
+          "url": "https://www12.senado.leg.br/noticias/especiais/especial-cidadania/reforma-trabalhista-formalizou-mais-empregos-mas-continua-contestada"
+        }
+      ],
+      "criticas": [
+        {
+          "texto": "A CUT (central sindical, parte interessada) afirma que a reforma não gerou os empregos prometidos e cita desempregados passando de 12,6 milhões (nov/2017) para 13,8 milhões (ago/2020), pela PNAD Contínua. Esses números também refletem a pandemia.",
+          "fonte": "CUT",
+          "url": "https://www.cut.org.br/noticias/reforma-trabalhista-completa-3-anos-com-legado-de-quase-14-milhoes-de-desemprega-9508/amp"
         }
       ]
     }

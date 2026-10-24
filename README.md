@@ -165,3 +165,10 @@ Politicas analises/
 - Aba Saúde: médicos, leitos, hospitais, gasto federal, vacinação, dengue, Covid e programas de cada governo. Séries em `data/saude_series.json`
   (`python data/_fontes/coletar_saude.py`: Ipeadata/CNES, Tesouro/SICONFI e API da OMS); textos em `data/saude.json` (`gerar_saude.py`).
 - `data/programas_governo.json` (`gerar_programas_governo.py`): programas de FHC a Lula 3 com pontos positivos, críticas e fonte (hoje só Saúde).
+
+## Publicação, links e cobertura (outubro/2026)
+
+- **Instalar:** `pip install -r requirements.txt` roda o painel; `requirements-dados.txt` inclui o necessário para os coletores em `data/_fontes/`.
+- **Verificar links:** `python data/_fontes/verificar_links.py` testa todos os links do painel. Respostas 401/403/429 são só avisos (sites que bloqueiam robôs); 404 e erro de rede são listados como quebrados. Falhas isoladas de rede podem ser passageiras; rode de novo antes de concluir.
+- **Programas de FHC a Temer:** `data/_fontes/programas_outras_areas.py` guarda 18 programas (Educação, Economia, Energia, Proteção Social, Segurança, Direitos, Meio Ambiente, Trabalho), cada um com benefícios, críticas e links. Rodar `gerar_programas_governo.py` regenera `programas_governo.json`.
+- **Cobertura desigual:** Bolsonaro e Lula 3 têm dezenas de políticas com repercussão em pesquisas; os governos anteriores têm de 1 a 8 programas cada (Dilma 2 só 1) e não têm repercussão. A página de Políticas mostra a contagem de cada governo.

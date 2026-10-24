@@ -6,12 +6,16 @@ Regras do painel:
 - quando só há dado de quem fez a política (governo ou setor interessado), isso está dito no próprio texto;
 - quando não achamos avaliação independente, o painel diz isso em vez de preencher.
 
-Hoje cobre a área Saúde. A estrutura (campo "area") já aceita as demais áreas.
+Saúde fica aqui; as demais áreas (FHC a Temer) estão em programas_outras_areas.py. Bolsonaro e Lula 3 vêm de politicas.json.
 
 Execute:  python data/_fontes/gerar_programas_governo.py
 """
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from programas_outras_areas import OUTRAS
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "programas_governo.json")
 PL = "https://www.planalto.gov.br/ccivil_03/"
@@ -167,11 +171,16 @@ def main():
             "id": f"saude-{i}", "area": "Saúde", "governo": x["governo"], "ano": x["ano"], "programa": x["programa"], "em_uma_frase": x["frase"],
             "base_legal": {"nome": x["base"][0], "url": x["base"][1]}, "situacao": x["situacao"], "beneficios": x["bom"], "criticas": x["ruim"],
         })
+    for i, x in enumerate(OUTRAS, start=1):
+        itens.append({
+            "id": f"outras-{i}", "area": x["area"], "governo": x["governo"], "ano": x["ano"], "programa": x["programa"], "em_uma_frase": x["frase"],
+            "base_legal": {"nome": x["base"][0], "url": x["base"][1]}, "situacao": x["situacao"], "beneficios": x["bom"], "criticas": x["ruim"],
+        })
     payload = {
         "metadados": {
             "atualizado_em": "2026-10-23",
-            "aviso": "A lista é uma seleção dos programas mais conhecidos, não o conjunto completo, e governos sem item (por exemplo Dilma 2) ainda não foram mapeados nesta área.",
-            "areas": ["Saúde"],
+            "aviso": "A lista é uma seleção dos programas mais conhecidos, não o conjunto completo. Os governos antigos têm poucos itens e alguns (como Dilma 2) quase nenhum; isso reflete o que foi mapeado até aqui, não o que cada governo fez.",
+            "areas": sorted({i["area"] for i in itens}),
         },
         "programas": itens,
     }

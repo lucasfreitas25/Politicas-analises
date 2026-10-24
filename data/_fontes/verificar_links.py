@@ -10,6 +10,9 @@ import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 import requests
+import urllib3
+
+urllib3.disable_warnings()
 
 RAIZ = __file__.replace("\\", "/").rsplit("/data/_fontes/", 1)[0]
 PADRAO = re.compile(r"https?://[^\s\"'<>\)\]}]+")
@@ -25,7 +28,7 @@ def coletar():
             continue
         for u in PADRAO.findall(texto):
             u = u.rstrip(".,;")
-            if "{" in u or "localhost" in u or "%s" in u:
+            if "{" in u or "localhost" in u or "%s" in u or u.endswith("/tabela/"):
                 continue
             achados.setdefault(u, set()).add(caminho.replace(RAIZ + "/", ""))
     return achados
@@ -37,6 +40,14 @@ def testar(url):
         codigo = r.status_code
         r.close()
         return url, codigo
+    except requests.exceptions.SSLError:
+        try:  # alguns sites do governo têm cadeia de certificados incompleta, mas abrem no navegador
+            r = requests.get(url, headers=UA, timeout=25, stream=True, verify=False)
+            codigo = r.status_code
+            r.close()
+            return url, codigo
+        except requests.RequestException as e:
+            return url, f"erro: {type(e).__name__}"
     except requests.RequestException as e:
         return url, f"erro: {type(e).__name__}"
 
