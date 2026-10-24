@@ -1,0 +1,672 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-23",
+    "aviso": "Levantamento do painel, não é lista oficial: reúne os tributos federais mais conhecidos de cada governo, cada um com a norma conferida no Planalto. Mudança de alíquota de um tributo que já existia aparece como Aumento ou Redução e não conta como imposto criado. O número de criados soma os tributos e regimes novos de cada linha. Resumos de terceiros estão sinalizados."
+  },
+  "tributos": [
+    {
+      "governo": "FHC 1",
+      "ano": "1996",
+      "tributo": "CPMF (imposto do cheque)",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Extinto ou revogado",
+      "resumo": "Cobrança sobre cada movimentação bancária, criada para financiar a saúde.",
+      "situacao": "Extinta em 31/12/2007: o Senado rejeitou a prorrogação (PEC 89/2007) por 45 votos a 34, faltando 4 para os 49 necessários.",
+      "norma": {
+        "nome": "Lei 9.311/1996 e EC 12/1996",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9311.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Senado rejeita a prorrogação da CPMF.",
+          "fonte": "Agência Senado, dez/2007",
+          "url": "https://www12.senado.leg.br/noticias/materias/2007/12/13/senado-rejeita-prorrogacao-da-cpmf"
+        }
+      ],
+      "qtd": 1,
+      "id": "trib-1",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "FHC 1",
+      "ano": "1996",
+      "tributo": "Taxa de Fiscalização de Serviços de Energia Elétrica",
+      "tipo": "Taxa",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Taxa anual paga pelas empresas de energia para financiar a fiscalização da Aneel.",
+      "situacao": "Prevista no art. 12 da lei, que segue com texto vigente no Planalto.",
+      "norma": {
+        "nome": "Lei 9.427/1996, art. 12",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9427cons.htm"
+      },
+      "fontes": [],
+      "qtd": 1,
+      "id": "trib-2",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "FHC 1",
+      "ano": "1996",
+      "tributo": "Lei Kandir (ICMS sobre exportações)",
+      "tipo": "Imposto estadual",
+      "acao": "Redução",
+      "categoria": "Em vigor",
+      "resumo": "Desonerou de ICMS as exportações de produtos primários e semielaborados.",
+      "situacao": "Em vigor, com alterações.",
+      "norma": {
+        "nome": "Lei Complementar 87/1996",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp87.htm"
+      },
+      "fontes": [],
+      "qtd": 0,
+      "id": "trib-3",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "FHC 2",
+      "ano": "2000",
+      "tributo": "Contribuição do FUST (1% da receita de telecomunicações)",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Contribuição de 1% sobre a receita das operadoras de telecomunicações para financiar a universalização dos serviços.",
+      "situacao": "O texto da lei segue vigente no Planalto.",
+      "norma": {
+        "nome": "Lei 9.998/2000, art. 6º",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9998.htm"
+      },
+      "fontes": [],
+      "qtd": 1,
+      "id": "trib-4",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "FHC 2",
+      "ano": "2000",
+      "tributo": "Contribuição universidade-empresa (CIDE-Royalties)",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Contribuição paga por quem paga royalties ou compra tecnologia do exterior, para financiar a interação universidade-empresa.",
+      "situacao": "O texto da lei segue vigente no Planalto.",
+      "norma": {
+        "nome": "Lei 10.168/2000, art. 2º",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l10168.htm"
+      },
+      "fontes": [],
+      "qtd": 1,
+      "id": "trib-5",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "FHC 2",
+      "ano": "2001",
+      "tributo": "Contribuição de 10% sobre o FGTS na demissão sem justa causa",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Extinto ou revogado",
+      "resumo": "Adicional de 10% pago pelo empregador, sobre o FGTS, quando demite sem justa causa.",
+      "situacao": "Extinta a partir de 1º/1/2020 (Lei 13.932/2019, art. 12), já no governo Bolsonaro.",
+      "norma": {
+        "nome": "Lei Complementar 110/2001, art. 1º",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp110.htm"
+      },
+      "fontes": [
+        {
+          "texto": "A partir de 1º de janeiro de 2020 fica extinta a contribuição social instituída pelo art. 1º da LC 110/2001.",
+          "fonte": "Lei 13.932/2019, art. 12 (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13932.htm"
+        }
+      ],
+      "qtd": 1,
+      "id": "trib-6",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "FHC 2",
+      "ano": "2001",
+      "tributo": "CIDE-Combustíveis",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Contribuição sobre a importação e a venda de petróleo, gás e derivados e álcool combustível.",
+      "situacao": "Em vigor, mas com alíquotas reduzidas a zero ou quase zero para vários produtos por decretos a partir de 2003–2004.",
+      "norma": {
+        "nome": "Lei 10.336/2001 e EC 33/2001",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10336.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Decreto reduziu as alíquotas da Cide sobre petróleo e derivados.",
+          "fonte": "Decreto 5.060/2004 (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/decreto/d5060.htm"
+        }
+      ],
+      "qtd": 1,
+      "id": "trib-7",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 1",
+      "ano": "2003",
+      "tributo": "Contribuição previdenciária de servidores aposentados e pensionistas",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Passou a cobrar contribuição previdenciária também de servidores públicos aposentados e pensionistas.",
+      "situacao": "Em vigor, com mudanças da reforma de 2019 (EC 103).",
+      "norma": {
+        "nome": "Emenda Constitucional 41/2003",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc41.htm"
+      },
+      "fontes": [],
+      "qtd": 1,
+      "id": "trib-8",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 1",
+      "ano": "2004",
+      "tributo": "PIS/Cofins-Importação",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Contribuições que passaram a incidir sobre produtos e serviços importados.",
+      "situacao": "Em vigor, com alterações.",
+      "norma": {
+        "nome": "Lei 10.865/2004",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.865.htm"
+      },
+      "fontes": [],
+      "qtd": 1,
+      "id": "trib-9",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 2",
+      "ano": "2007",
+      "tributo": "Fim da CPMF",
+      "tipo": "Contribuição",
+      "acao": "Extinção",
+      "categoria": "Extinto ou revogado",
+      "resumo": "O governo tentou prorrogar a CPMF até 2011 e perdeu a votação no Senado por 4 votos.",
+      "situacao": "A cobrança acabou em 31/12/2007. Foi uma das principais derrotas do governo Lula.",
+      "norma": {
+        "nome": "PEC 89/2007 (rejeitada)",
+        "url": "https://www12.senado.leg.br/noticias/materias/2007/12/13/senado-rejeita-prorrogacao-da-cpmf"
+      },
+      "fontes": [
+        {
+          "texto": "Senado rejeita a prorrogação da CPMF.",
+          "fonte": "Agência Senado, dez/2007",
+          "url": "https://www12.senado.leg.br/noticias/materias/2007/12/13/senado-rejeita-prorrogacao-da-cpmf"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-10",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 2",
+      "ano": "2008",
+      "tributo": "Alta do IOF sobre crédito",
+      "tipo": "Imposto",
+      "acao": "Aumento",
+      "categoria": "Em vigor",
+      "resumo": "Em 3/1/2008, logo após o fim da CPMF, o IOF diário para pessoa física dobrou (de 0,0041% para 0,0082%) e foi criado um adicional de 0,38% sobre operações de crédito.",
+      "situacao": "O IOF segue em vigor; suas alíquotas foram alteradas várias vezes depois. A ligação com o fim da CPMF é a leitura de fontes acadêmicas, não declaração oficial.",
+      "norma": {
+        "nome": "Decreto 6.339/2008",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6339.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Decreto dobrou o IOF diário da pessoa física e criou o adicional de 0,38%; houve pedido de sustação no Senado (PDS 10/2008).",
+          "fonte": "Migalhas e monografia do IDP",
+          "url": "https://www.migalhas.com.br/depeso/52007/a-extincao-da-cpmf-causa-bombardeio-tributario"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-11",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Dilma 1",
+      "ano": "2011",
+      "tributo": "Desoneração da folha de pagamento (CPRB)",
+      "tipo": "Contribuição",
+      "acao": "Redução",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Setores trocaram a contribuição sobre a folha por um percentual do faturamento, o que reduziu o imposto para muitas empresas.",
+      "situacao": "Prorrogada até 2027 pela Lei 14.784/2023 e, depois da disputa de 2023–2024, em fim gradual até 2027 (Lei 14.973/2024).",
+      "norma": {
+        "nome": "Lei 12.546/2011, arts. 7º e 8º",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12546.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Prorroga até 31/12/2027 os prazos dos arts. 7º e 8º da Lei 12.546.",
+          "fonte": "Lei 14.784/2023 (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/L14784.htm"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-12",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Dilma 1",
+      "ano": "2012",
+      "tributo": "Redução temporária do IPI de automóveis",
+      "tipo": "Imposto",
+      "acao": "Redução",
+      "categoria": "Extinto ou revogado",
+      "resumo": "O IPI sobre carros foi reduzido para estimular as vendas, com volta gradual às alíquotas anteriores.",
+      "situacao": "Temporária: a recomposição gradual foi até 31/12/2013.",
+      "norma": {
+        "nome": "Decreto 7.971/2013 (prorrogação)",
+        "url": "https://www12.senado.leg.br/orcamento/documentos/ldo/2015/elaboracao/projeto-de-lei/proposta-do-poder-executivo/anexo-iv.11-2013-compensacao-da-renuncia-de-receitas"
+      },
+      "fontes": [
+        {
+          "texto": "Decreto de 28/3/2013 prorrogou a redução do IPI de automóveis com recomposição gradual.",
+          "fonte": "Senado, anexo da LDO 2015",
+          "url": "https://www12.senado.leg.br/orcamento/documentos/ldo/2015/elaboracao/projeto-de-lei/proposta-do-poder-executivo/anexo-iv.11-2013-compensacao-da-renuncia-de-receitas"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-13",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Dilma 1",
+      "ano": "2013",
+      "tributo": "PIS/Cofins zero na cesta básica",
+      "tipo": "Contribuição",
+      "acao": "Redução",
+      "categoria": "Em vigor",
+      "resumo": "Zerou PIS/Cofins sobre carnes, café, açúcar, óleo de soja, manteiga, margarina, sabão, pasta de dente e papel higiênico, entre outros.",
+      "situacao": "Em vigor. A lista de produtos é a do anexo de renúncias do Senado.",
+      "norma": {
+        "nome": "Lei 12.839/2013",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12839.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Lista de produtos da desoneração da cesta básica.",
+          "fonte": "Senado, anexo da LDO 2015",
+          "url": "https://www12.senado.leg.br/orcamento/documentos/ldo/2015/elaboracao/projeto-de-lei/proposta-do-poder-executivo/anexo-iv.11-2013-compensacao-da-renuncia-de-receitas"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-14",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Dilma 2",
+      "ano": "2015",
+      "tributo": "Tentativa de recriar a CPMF",
+      "tipo": "Contribuição",
+      "acao": "Criação",
+      "categoria": "Barrado ou revertido",
+      "resumo": "O governo estudou recriar a CPMF para cobrir um rombo de cerca de R$ 80 bilhões no orçamento do ano seguinte.",
+      "situacao": "Não saiu do papel: o governo desistiu depois da reação de empresários, governadores, parlamentares e do vice-presidente Michel Temer. Não chegou a ser votada.",
+      "norma": {
+        "nome": "Proposta (não virou norma)",
+        "url": "https://congressoemfoco.com.br/noticias/apos-resistencias-governo-desiste-de-recriar-cpmf"
+      },
+      "fontes": [
+        {
+          "texto": "Após resistências, governo desiste de recriar a CPMF.",
+          "fonte": "Congresso em Foco",
+          "url": "https://congressoemfoco.com.br/noticias/apos-resistencias-governo-desiste-de-recriar-cpmf"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-15",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Temer",
+      "ano": "2017",
+      "tributo": "Aumento do PIS/Cofins sobre combustíveis",
+      "tipo": "Contribuição",
+      "acao": "Aumento",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Decreto de 20/7/2017 elevou as alíquotas de PIS/Cofins sobre gasolina, diesel e etanol.",
+      "situacao": "Quatro liminares chegaram a barrar o decreto, por violar a legalidade tributária e a anterioridade nonagesimal, mas foram derrubadas em segunda instância (relato de out/2017). Não encontramos a decisão final de mérito.",
+      "norma": {
+        "nome": "Decreto 9.101/2017",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/decreto/D9101.htm"
+      },
+      "fontes": [
+        {
+          "texto": "As liminares contra o Decreto 9.101/2017 foram concedidas em série em julho e agosto de 2017 e derrubadas em instâncias superiores.",
+          "fonte": "Jornal Contábil e Congresso em Foco",
+          "url": "https://jornalcontabil.com.br/noticia/justica-barra-aumento-de-impostos-sobre-combustiveis-outra-vez/"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-16",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Bolsonaro",
+      "ano": "2022",
+      "tributo": "Corte do IPI (25% e depois 35%)",
+      "tipo": "Imposto",
+      "acao": "Redução",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Decretos de 2022 reduziram o IPI da maioria dos produtos industrializados.",
+      "situacao": "O STF (ministro Moraes) suspendeu os decretos em maio de 2022 e parte do decreto de 29/7/2022 em agosto, a pedido do Amazonas, por afetar a Zona Franca de Manaus. Em setembro ele revogou as liminares, depois que novo decreto restabeleceu as alíquotas de 170 produtos feitos na Zona Franca, e depois encerrou as ações por perda de objeto.",
+      "norma": {
+        "nome": "Decreto 10.979/2022 e Decreto 11.158/2022",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11158.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Moraes revoga liminar que suspendeu corte de IPI.",
+          "fonte": "Poder360",
+          "url": "https://www.poder360.com.br/justica/moraes-revoga-liminar-que-suspendeu-corte-de-ipi/"
+        },
+        {
+          "texto": "Moraes suspende redução de IPI na Zona Franca de Manaus.",
+          "fonte": "Correio Braziliense",
+          "url": "https://www.correiobraziliense.com.br/economia/2022/08/5028017-moraes-concede-nova-vitoria-a-zona-franca-de-manaus-e-suspende-reducao-de-ipi.html"
+        }
+      ],
+      "qtd": 0,
+      "reducao_impedida": true,
+      "id": "trib-17"
+    },
+    {
+      "governo": "Bolsonaro",
+      "ano": "2022",
+      "tributo": "PIS/Cofins e Cide zerados sobre combustíveis",
+      "tipo": "Contribuição",
+      "acao": "Redução",
+      "categoria": "Barrado ou revertido",
+      "resumo": "As alíquotas de PIS/Cofins e Cide sobre combustíveis ficaram zeradas até dezembro de 2022.",
+      "situacao": "Revertida pelo governo seguinte: a MP 1.157/2023 manteve a isenção da gasolina e do etanol só até 28/2/2023 (gasolina voltou a pagar R$ 0,47 por litro em 1º/3/2023) e a do diesel até 31/12/2023.",
+      "norma": {
+        "nome": "Decretos de 2021–2022 e MP 1.157/2023",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/mpv/mpv1157.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Governo Lula cobrará R$ 0,47 de imposto sobre o litro da gasolina.",
+          "fonte": "Poder360",
+          "url": "https://www.poder360.com.br/economia/gasolina-sera-reonerada-em-r-047-a-partir-de-4a-feira/"
+        }
+      ],
+      "qtd": 0,
+      "reducao_impedida": true,
+      "id": "trib-18"
+    },
+    {
+      "governo": "Bolsonaro",
+      "ano": "2022",
+      "tributo": "Teto do ICMS sobre combustíveis, energia, comunicações e transporte",
+      "tipo": "Imposto estadual",
+      "acao": "Redução",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Considerou esses itens essenciais, o que limita a alíquota de ICMS, e definiu que o ICMS dos combustíveis incide uma só vez.",
+      "situacao": "Em vigor, mas com ações no STF (ADI 7191, ADIN 7181) citadas no próprio Planalto.",
+      "norma": {
+        "nome": "Leis Complementares 192/2022 e 194/2022",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp194.htm"
+      },
+      "fontes": [],
+      "qtd": 0,
+      "id": "trib-19",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2023",
+      "tributo": "Tributação de fundos exclusivos e de investimentos no exterior",
+      "tipo": "Regime de tributação",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Fundos exclusivos passaram a ter cobrança periódica (come-cotas) e rendimentos no exterior passaram a ser taxados em 15% ao ano.",
+      "situacao": "Em vigor desde 1º/1/2024.",
+      "norma": {
+        "nome": "Lei 14.754/2023",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/L14754.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Resumo da lei: tributação anual de 15% de aplicações no exterior e come-cotas semestral.",
+          "fonte": "Renova Invest (resumo)",
+          "url": "https://renovainvest.com.br/blog/lei-14754-2023-tributacao-offshore-fundos-exclusivos/"
+        }
+      ],
+      "qtd": 1,
+      "id": "trib-20",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2023",
+      "tributo": "Tributação das apostas (bets)",
+      "tipo": "Regime de tributação",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Operadoras pagam 12% sobre a receita das apostas (o que sobra depois dos prêmios) e os apostadores pagam 15% de Imposto de Renda sobre o prêmio líquido.",
+      "situacao": "Em vigor. Segundo uma fonte, a LC 224/2025 elevou gradualmente o percentual das operadoras.",
+      "norma": {
+        "nome": "Lei 14.790/2023",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/L14790.htm"
+      },
+      "fontes": [
+        {
+          "texto": "A alíquota de 12% incide sobre o GGR das operadoras; os apostadores pagam IRPF de 15% sobre o prêmio líquido.",
+          "fonte": "Mattos Filho e Estratégia Concursos",
+          "url": "https://www.mattosfilho.com.br/unico/tributacao-apostas-quota-fixa/"
+        }
+      ],
+      "qtd": 1,
+      "id": "trib-21",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2023",
+      "tributo": "Reforma tributária: IBS, CBS e Imposto Seletivo",
+      "tipo": "Imposto",
+      "acao": "Criação",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Cria o IBS e a CBS (que juntos substituem PIS, Cofins, ICMS e ISS) e o Imposto Seletivo, sobre bens e serviços prejudiciais à saúde ou ao meio ambiente.",
+      "situacao": "Em transição de 2026 a 2033: a CBS substitui PIS e Cofins em 2027 e o ICMS e o ISS acabam em 2033. A alíquota de referência estimada é de cerca de 26,5%, ainda não fixada em lei.",
+      "norma": {
+        "nome": "EC 132/2023 e LC 214/2025",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Cronograma da reforma tributária de 2026 a 2033.",
+          "fonte": "Jettax (resumo do cronograma)",
+          "url": "https://www.jettax.com.br/blog/cronograma-e-fases-da-reforma-tributaria-de-2026-a-2033/"
+        }
+      ],
+      "qtd": 3,
+      "id": "trib-22",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2023",
+      "tributo": "Reoneração dos combustíveis",
+      "tipo": "Contribuição",
+      "acao": "Aumento",
+      "categoria": "Em vigor",
+      "resumo": "A cobrança de PIS/Cofins sobre gasolina e etanol voltou em 1º/3/2023; a isenção do diesel estava prevista até 31/12/2023.",
+      "situacao": "Em vigor. O Ministério da Fazenda estimou ganho de R$ 28,9 bilhões de março a dezembro de 2023 (estimativa do governo).",
+      "norma": {
+        "nome": "MP 1.157/2023",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/mpv/mpv1157.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Governo Lula cobrará R$ 0,47 de imposto sobre o litro da gasolina.",
+          "fonte": "Poder360",
+          "url": "https://www.poder360.com.br/economia/gasolina-sera-reonerada-em-r-047-a-partir-de-4a-feira/"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-23",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2023",
+      "tributo": "Desoneração da folha: prorrogação até 2027",
+      "tipo": "Contribuição",
+      "acao": "Redução",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Lula vetou a prorrogação da desoneração da folha, o Congresso derrubou o veto (Lei 14.784/2023) e o ministro Zanin (STF) a suspendeu em abril de 2024.",
+      "situacao": "Governo e Congresso fecharam acordo: a Lei 14.973/2024 acaba com a desoneração aos poucos até 2027. O STF ainda julgava o caso em 2026 (ADI 7633), segundo as fontes.",
+      "norma": {
+        "nome": "Leis 14.784/2023 e 14.973/2024",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L14973.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Zanin votou pela inconstitucionalidade da lei de 2023, mas manteve a de 2024.",
+          "fonte": "Teletime e Monitor Mercantil",
+          "url": "https://teletime.com.br/17/10/2025/zanin-vota-contra-desoneracao-mas-mantem-acordo-para-compensacao/"
+        }
+      ],
+      "qtd": 0,
+      "reducao_impedida": true,
+      "id": "trib-24"
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2024",
+      "tributo": "Imposto de importação de 20% em compras de até US$ 50 (\"taxa das blusinhas\")",
+      "tipo": "Imposto",
+      "acao": "Aumento",
+      "categoria": "Barrado ou revertido",
+      "resumo": "Desde 1º/8/2024, compras internacionais de até US$ 50 passaram a pagar 20% de imposto de importação, além do ICMS estadual.",
+      "situacao": "Em maio de 2026 uma medida provisória zerou o imposto federal nessa faixa; o ICMS continua e a MP ainda precisa ser analisada pelo Congresso.",
+      "norma": {
+        "nome": "Lei 14.902/2024 (Mover), que revogou a isenção do Decreto-Lei 1.804/1980",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L14902.htm"
+      },
+      "fontes": [
+        {
+          "texto": "'Taxa das blusinhas' começa a valer.",
+          "fonte": "Jornal Opção",
+          "url": "https://www.jornalopcao.com.br/ultimas-noticias/taxa-blusinhas-comeca-a-valer-nesta-quinta-feira-625672/"
+        },
+        {
+          "texto": "Lula assina MP que zera imposto federal da taxa das blusinhas.",
+          "fonte": "O Povo",
+          "url": "https://mais.opovo.com.br/jornal/economia/2026/05/12/lula-assina-mp-que-zera-imposto-federal-da-taxa-das-blusinhas.html"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-25",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2025",
+      "tributo": "Alta do IOF por decreto",
+      "tipo": "Imposto",
+      "acao": "Aumento",
+      "categoria": "Contestado ou em transição",
+      "resumo": "Decreto de 22/5/2025 elevou o IOF sobre crédito, câmbio e seguros para reforçar a arrecadação.",
+      "situacao": "O Congresso derrubou o decreto (PDL 176/2025); o ministro Moraes suspendeu os dois atos, e em 16/7/2025 restabeleceu o decreto, exceto uma regra sobre risco sacado.",
+      "norma": {
+        "nome": "Decreto 12.466/2025",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12466.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Moraes mantém o decreto do IOF, menos a regra do risco sacado.",
+          "fonte": "Poder360",
+          "url": "https://www.poder360.com.br/poder-congresso/decisao-sobre-o-iof-indica-perda-para-o-congresso-e-o-planalto/"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-26",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2025",
+      "tributo": "Imposto de importação zero em 11 alimentos",
+      "tipo": "Imposto",
+      "acao": "Redução",
+      "categoria": "Em vigor",
+      "resumo": "Zerou o imposto de importação de itens como carne bovina desossada (era 10,8%), café torrado (9%), azeite (9%), açúcar, milho, sardinha e massas, para conter o preço dos alimentos.",
+      "situacao": "Em vigor desde 14/3/2025, sem prazo para voltar. Vale só para carne bovina desossada; sardinha dentro de cota.",
+      "norma": {
+        "nome": "Resolução do Gecex/Camex (mar/2025)",
+        "url": "https://www.cnnbrasil.com.br/economia/macroeconomia/veja-lista-de-alimentos-que-terao-impostos-zerados-pelo-governo/"
+      },
+      "fontes": [
+        {
+          "texto": "Governo zera imposto de importação de 11 alimentos.",
+          "fonte": "Correio da Manhã",
+          "url": "https://www.correiodamanha.com.br/politica/2025/03/amp/188598-governo-zera-imposto-de-importacao-de-11-alimentos.html"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-27",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2025",
+      "tributo": "Isenção de Imposto de Renda até R$ 5 mil por mês",
+      "tipo": "Imposto",
+      "acao": "Redução",
+      "categoria": "Em vigor",
+      "resumo": "Quem ganha até R$ 5 mil por mês deixa de pagar Imposto de Renda, com desconto decrescente até R$ 7.350.",
+      "situacao": "Em vigor desde janeiro de 2026.",
+      "norma": {
+        "nome": "Lei 15.270/2025",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Resumo da lei: isenção até R$ 5 mil e desconto até R$ 7.350.",
+          "fonte": "Hondatar (resumo)",
+          "url": "https://www.hondatar.com.br/publicada-a-lei-15-270-2025-sancao-do-pl-1087-2025-que-amplia-a-isencao-do-irpf-e-tributa-lucros-e-dividendos-a-partir-de-2026/"
+        }
+      ],
+      "qtd": 0,
+      "id": "trib-28",
+      "reducao_impedida": false
+    },
+    {
+      "governo": "Lula 3",
+      "ano": "2025",
+      "tributo": "Tributação mínima de altas rendas e de dividendos",
+      "tipo": "Imposto",
+      "acao": "Criação",
+      "categoria": "Em vigor",
+      "resumo": "Quem recebe mais de R$ 600 mil por ano passa a pagar um imposto mínimo de até 10%, e dividendos acima de R$ 50 mil por mês têm retenção de 10%.",
+      "situacao": "Em vigor desde janeiro de 2026.",
+      "norma": {
+        "nome": "Lei 15.270/2025",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15270.htm"
+      },
+      "fontes": [
+        {
+          "texto": "Resumo da lei: tributação mínima de até 10% e retenção de 10% sobre dividendos.",
+          "fonte": "Hondatar (resumo)",
+          "url": "https://www.hondatar.com.br/publicada-a-lei-15-270-2025-sancao-do-pl-1087-2025-que-amplia-a-isencao-do-irpf-e-tributa-lucros-e-dividendos-a-partir-de-2026/"
+        }
+      ],
+      "qtd": 2,
+      "id": "trib-29",
+      "reducao_impedida": false
+    }
+  ]
+}
