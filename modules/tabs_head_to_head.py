@@ -83,6 +83,8 @@ def render_tab_head_to_head():
         'O padrão é Bolsonaro x Lula 3; dá para comparar quaisquer mandatos desde FHC.</div>',
         unsafe_allow_html=True
     )
+    st.markdown('<div class="info-box"><b>Qual página usar?</b> Aqui você escolhe <b>um indicador por vez</b> e vê o confronto em detalhe. '
+                'Para o panorama de todos os indicadores juntos, use a <b>Visão Geral & Scorecard</b>.</div>', unsafe_allow_html=True)
     a, b, todos = render_seletor()
     if (a, b) != PADRAO or todos:
         _comparador_historico(a, b, todos)
