@@ -469,6 +469,11 @@ abbr[title] { text-decoration: underline dotted #64748b !important; text-underli
   .fonte-tipos .ft-hint { display: none !important; }
   [data-testid="stHorizontalBlock"] { flex-wrap: wrap !important; }
   [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] { min-width: 100% !important; flex: 1 1 100% !important; }
+  [data-baseweb="tab-list"] { overflow-x: auto !important; flex-wrap: nowrap !important; }
+  [data-baseweb="tab"] { white-space: nowrap !important; }
+  .prog-card, .policy-card, .prop-card { padding: 10px 12px !important; }
+  .js-plotly-plot .main-svg { max-width: 100% !important; }
+  .info-box { font-size: 0.84rem !important; }
 }
 
 /* Impressão / PDF */
