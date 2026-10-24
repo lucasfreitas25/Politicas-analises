@@ -490,6 +490,76 @@
     "valor": 57317.0
   },
   {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Soja (em grão)",
+    "cultura_cod": "2713",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 47636956.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Milho (em grão)",
+    "cultura_cod": "2711",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 22503020.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Feijão (em grão)",
+    "cultura_cod": "2702",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 2650448.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Arroz (em casca)",
+    "cultura_cod": "2692",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 1764992.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Cana-de-açúcar",
+    "cultura_cod": "2696",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 10240378.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Cebola",
+    "cultura_cod": "2697",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 50103.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Abacaxi*",
+    "cultura_cod": "2688",
+    "variavel": "Área plantada",
+    "variavel_cod": "109",
+    "unidade": "Hectares",
+    "valor": 61040.0
+  },
+  {
     "ano": 2018,
     "governo": "Base 2018",
     "cultura": "Soja (em grão)",
@@ -980,6 +1050,76 @@
     "valor": 1482037.0
   },
   {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Soja (em grão)",
+    "cultura_cod": "2713",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 165259014.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Milho (em grão)",
+    "cultura_cod": "2711",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 141209998.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Feijão (em grão)",
+    "cultura_cod": "2702",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 2939827.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Arroz (em casca)",
+    "cultura_cod": "2692",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 12659670.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Cana-de-açúcar",
+    "cultura_cod": "2696",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 766116665.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Cebola",
+    "cultura_cod": "2697",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 1868653.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Abacaxi*",
+    "cultura_cod": "2688",
+    "variavel": "Quantidade produzida",
+    "variavel_cod": "214",
+    "unidade": "Toneladas",
+    "valor": 1596703.0
+  },
+  {
     "ano": 2018,
     "governo": "Base 2018",
     "cultura": "Soja (em grão)",
@@ -1468,5 +1608,75 @@
     "variavel_cod": "215",
     "unidade": "Mil Reais",
     "valor": 4379296.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Soja (em grão)",
+    "cultura_cod": "2713",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 315194904.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Milho (em grão)",
+    "cultura_cod": "2711",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 122109852.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Feijão (em grão)",
+    "cultura_cod": "2702",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 9867214.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Arroz (em casca)",
+    "cultura_cod": "2692",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 19633153.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Cana-de-açúcar",
+    "cultura_cod": "2696",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 108937538.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Cebola",
+    "cultura_cod": "2697",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 2853725.0
+  },
+  {
+    "ano": 2025,
+    "governo": "Lula (2023-atual)",
+    "cultura": "Abacaxi*",
+    "cultura_cod": "2688",
+    "variavel": "Valor da produção",
+    "variavel_cod": "215",
+    "unidade": "Mil Reais",
+    "valor": 4898765.0
   }
 ]

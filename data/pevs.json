@@ -244,6 +244,41 @@
       "produto": "1.3.1 - Madeira em tora para papel e celulose",
       "tipo": "Silvicultura",
       "valor_producao_mil_reais": 15141641.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Total",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 41030179.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.1 - Carvão vegetal",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 8351840.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.2 - Lenha",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 5148174.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.3 - Madeira em tora",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 26753523.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.3.1 - Madeira em tora para papel e celulose",
+      "tipo": "Silvicultura",
+      "valor_producao_mil_reais": 17610119.0
     }
   ],
   "extracao": [
@@ -442,6 +477,34 @@
       "produto": "1.14 - Pinhão",
       "tipo": "Extração Vegetal",
       "valor_producao_mil_reais": 76780.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Total",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 6899710.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.1 - Açaí (fruto)",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 1105411.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.8 - Erva-mate",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 562343.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "1.14 - Pinhão",
+      "tipo": "Extração Vegetal",
+      "valor_producao_mil_reais": 93897.0
     }
   ]
 }

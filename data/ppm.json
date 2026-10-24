@@ -146,6 +146,27 @@
       "tipo_rebanho": "Ovino",
       "tipo_rebanho_cod": "2677",
       "cabecas": 21967689.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Bovino",
+      "tipo_rebanho_cod": "2670",
+      "cabecas": 234251041.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Suíno - total",
+      "tipo_rebanho_cod": "32794",
+      "cabecas": 43993601.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "tipo_rebanho": "Ovino",
+      "tipo_rebanho_cod": "2677",
+      "cabecas": 22308942.0
     }
   ],
   "produtos": [
@@ -318,6 +339,30 @@
       "valor": 68235733.0
     },
     {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Leite",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil litros",
+      "valor": 36684276.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Ovos de galinha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Mil dúzias",
+      "valor": 5735701.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Mel de abelha",
+      "variavel": "Produção de origem animal",
+      "unidade": "Quilogramas",
+      "valor": 71329020.0
+    },
+    {
       "ano": 2018,
       "governo": "Base 2018",
       "produto": "Leite",
@@ -484,6 +529,30 @@
       "variavel": "Valor da produção",
       "unidade": "Mil Reais",
       "valor": 1026739.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Leite",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 89486889.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Ovos de galinha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 36390062.0
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula (2023-atual)",
+      "produto": "Mel de abelha",
+      "variavel": "Valor da produção",
+      "unidade": "Mil Reais",
+      "valor": 1216769.0
     }
   ]
 }

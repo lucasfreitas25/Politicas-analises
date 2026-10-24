@@ -530,7 +530,7 @@ def build_data():
 
     # 3. PAM (Produção Agrícola Municipal - IBGE)
     print("Coletando PAM (SIDRA 1612)...")
-    pam_url = "https://apisidra.ibge.gov.br/values/t/1612/n1/all/v/109,214,215/p/2018,2019,2020,2021,2022,2023,2024/c81/2713,2711,2702,2692,2696,2697,2688/d/v109%201,v214%201,v215%201"
+    pam_url = "https://apisidra.ibge.gov.br/values/t/1612/n1/all/v/109,214,215/p/2018-2030/c81/2713,2711,2702,2692,2696,2697,2688/d/v109%201,v214%201,v215%201"
     raw_pam = fetch_sidra_json(pam_url)
     pam_records = []
     if raw_pam and len(raw_pam) > 1:
@@ -561,7 +561,7 @@ def build_data():
 
     # 5. PPM (Pesquisa da Pecuária Municipal - IBGE)
     print("Coletando PPM Efetivos e Produtos...")
-    ppm_efetivos_url = "https://apisidra.ibge.gov.br/values/t/3939/n1/all/v/105/p/2018,2019,2020,2021,2022,2023,2024/c79/2670,32794,2677/d/v105%201"
+    ppm_efetivos_url = "https://apisidra.ibge.gov.br/values/t/3939/n1/all/v/105/p/2018-2030/c79/2670,32794,2677/d/v105%201"
     raw_ppm_efet = fetch_sidra_json(ppm_efetivos_url)
     ppm_efet_list = []
     if raw_ppm_efet and len(raw_ppm_efet) > 1:
@@ -581,7 +581,7 @@ def build_data():
                 except ValueError:
                     pass
 
-    ppm_prod_url = "https://apisidra.ibge.gov.br/values/t/74/n1/all/v/106,215/p/2018,2019,2020,2021,2022,2023,2024/c80/2682,2685,2687/d/v106%201,v215%201"
+    ppm_prod_url = "https://apisidra.ibge.gov.br/values/t/74/n1/all/v/106,215/p/2018-2030/c80/2682,2685,2687/d/v106%201,v215%201"
     raw_ppm_prod = fetch_sidra_json(ppm_prod_url)
     ppm_prod_list = []
     if raw_ppm_prod and len(raw_ppm_prod) > 1:
@@ -607,7 +607,7 @@ def build_data():
 
     # 6. PEVS (Produção da Extração Vegetal e da Silvicultura - IBGE)
     print("Coletando PEVS Silvicultura e Extração...")
-    pevs_silv_url = "https://apisidra.ibge.gov.br/values/t/291/n1/all/v/143/p/2018,2019,2020,2021,2022,2023,2024/c194/0,3455,3456,3457,3458/d/v143%201"
+    pevs_silv_url = "https://apisidra.ibge.gov.br/values/t/291/n1/all/v/143/p/2018-2030/c194/0,3455,3456,3457,3458/d/v143%201"
     raw_pevs_silv = fetch_sidra_json(pevs_silv_url)
     silv_list = []
     if raw_pevs_silv and len(raw_pevs_silv) > 1:
@@ -627,7 +627,7 @@ def build_data():
                 except ValueError:
                     pass
 
-    pevs_extr_url = "https://apisidra.ibge.gov.br/values/t/289/n1/all/v/145/p/2018,2019,2020,2021,2022,2023,2024/c193/0,3403,3406,3409/d/v145%201"
+    pevs_extr_url = "https://apisidra.ibge.gov.br/values/t/289/n1/all/v/145/p/2018-2030/c193/0,3403,3406,3409/d/v145%201"
     raw_pevs_extr = fetch_sidra_json(pevs_extr_url)
     extr_list = []
     if raw_pevs_extr and len(raw_pevs_extr) > 1:
