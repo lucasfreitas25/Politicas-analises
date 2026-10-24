@@ -11,7 +11,7 @@ from modules.ui_components import (
 )
 
 def render_tab_forestry():
-    st.markdown('<div class="section-title">🌲 Silvicultura & Extrativismo: PEVS (IBGE)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Silvicultura & Extrativismo: PEVS (IBGE)</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Dados oficiais da Produção da Extração Vegetal e da Silvicultura (PEVS - IBGE), destacando celulose, papel, carvão e produtos nativos.</div>',
         unsafe_allow_html=True
@@ -50,7 +50,7 @@ def render_tab_forestry():
                 hovertemplate="<b>Ano:</b> %{x}<br><b>Valor:</b> R$ %{y:,.1f} milhões<extra></extra>"
             ))
             apply_plotly_theme(fig_s, title=f"Silvicultura: {silv_sel} (R$ Milhões)")
-            st.plotly_chart(fig_s, use_container_width=True)
+            st.plotly_chart(fig_s, width="stretch")
 
     st.markdown("---")
 
@@ -81,13 +81,20 @@ def render_tab_forestry():
                 hovertemplate="<b>Ano:</b> %{x}<br><b>Valor:</b> R$ %{y:,.1f} milhões<extra></extra>"
             ))
             apply_plotly_theme(fig_e, title=f"Extração Vegetal: {extr_sel} (R$ Milhões)")
-            st.plotly_chart(fig_e, use_container_width=True)
+            st.plotly_chart(fig_e, width="stretch")
 
     # Box Explicativo da PEVS
-    st.markdown("""
+    def _total(df, ano):
+        return float(df[(df["ano"] == ano) & (df["produto"] == "Total")]["valor_producao_mil_reais"].sum())
+    s24, e24, s18, e18 = _total(df_silv, 2024), _total(df_extr, 2024), _total(df_silv, 2018), _total(df_extr, 2018)
+    share_silv = f"{100 * s24 / (s24 + e24):.0f}".replace(".", ",") if s24 + e24 else "—"
+    share_silv_18 = f"{100 * s18 / (s18 + e18):.0f}".replace(".", ",") if s18 + e18 else "—"
+    silv_bi = f"{s24 / 1e6:.1f}".replace(".", ",")
+    extr_bi = f"{e24 / 1e6:.1f}".replace(".", ",")
+    st.markdown(f"""
     <div class="info-box">
-      <b>🌲 A Força da Silvicultura Nacional:</b><br/>
-      • <b>Boom da Celulose:</b> O setor de árvores cultivadas (especialmente eucalipto e pinus em estados como Mato Grosso do Sul, Minas Gerais, Paraná e Bahia) representou mais de 80% do valor total da produção florestal do país, impulsionado por megafábricas de celulose voltadas à exportação.<br/>
-      • <b>Sociobiodiversidade e Extrativismo:</b> A extração vegetal no Norte e Nordeste (açaí, castanha-do-pará, carnaúba) e Sul (erva-mate) manteve crescimento consistente de valor agregado, sustentando comunidades locais e exportações de superalimentos.
+      <b>Silvicultura e extrativismo:</b><br/>
+      • <b>Silvicultura em alta:</b> as florestas plantadas responderam por {share_silv}% do valor da produção florestal em 2024 (R$ {silv_bi} bi), contra {share_silv_18}% em 2018 (PEVS/IBGE).<br/>
+      • <b>Extrativismo:</b> a extração vegetal nativa somou R$ {extr_bi} bi em 2024 (PEVS/IBGE).
     </div>
     """, unsafe_allow_html=True)

@@ -1,7 +1,7 @@
 {
   "metadados": {
-    "atualizado_em": "2026-10-20",
-    "aviso": "São promessas de campanha, não fatos. Os planos oficiais registrados no TSE prevalecem sobre qualquer resumo. As propostas foram extraídas de reportagens que resumem os planos; o plano de Flávio Bolsonaro tem também um resumo de terceiro com apoio de IA (sinalizado). \"Não consta nas fontes consultadas\" não prova que o plano seja omisso.",
+    "atualizado_em": "2026-10-21",
+    "aviso": "São promessas de campanha, não fatos. Os planos oficiais registrados no TSE prevalecem sobre qualquer resumo. As propostas vêm de reportagens que resumem os planos; os trechos marcados \"No plano\" foram conferidos nos PDFs dos dois planos, com a página citada. O plano de Flávio Bolsonaro tem também um resumo de terceiro com apoio de IA (sinalizado). \"Não consta nas fontes consultadas\" não prova que o plano seja omisso.",
     "planos": {
       "Lula": "Plano de governo da coligação de Lula (84 páginas, 13 eixos)",
       "Flávio Bolsonaro": "\"Para o Brasil Vencer o Atraso\" (2027–2030, divulgado em 13/08/2026)"
@@ -40,6 +40,14 @@
       "nome": "Aos Fatos — entrevista de Flávio na Globo (16/10/2026)",
       "url": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-globo-segundo-turno/"
     },
+    "plula": {
+      "nome": "Programa de governo de Lula, PDF (84 págs.)",
+      "url": "https://static.congressoemfoco.com.br/2026/08/08/attachment/2026/08/08/32ce89_programa_governo_lula_2026.pdf"
+    },
+    "pflavio": {
+      "nome": "Plano de governo de Flávio Bolsonaro, PDF (76 págs.)",
+      "url": "https://static.poder360.com.br/uploads/2026/08/plano-flavio.pdf"
+    },
     "p360": {
       "nome": "Poder360 — íntegra do plano",
       "url": "https://www.poder360.com.br/poder-flash/leia-a-integra-do-plano-de-governo-de-flavio-bolsonaro/"
@@ -77,7 +85,37 @@
         }
       ],
       "contexto": "Hoje: dívida bruta em 82,9% do PIB (ago/2026) e Selic em 13,75% (out/2026), segundo o Banco Central.",
-      "verificacao": "Lula: \"orçamento com superávit é inédito\" foi classificado como falso pelo Ranking dos Políticos."
+      "verificacao": "Lula: \"orçamento com superávit é inédito\" foi classificado como falso pelo Ranking dos Políticos.",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Manter o arcabouço fiscal, com juros menores e inflação controlada",
+            "pagina": 49
+          },
+          {
+            "texto": "Novo PAC com obras e concessões",
+            "pagina": 53
+          },
+          {
+            "texto": "Continuar a Nova Indústria Brasil",
+            "pagina": 50
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Meta de crescimento de 4% ao ano",
+            "pagina": 49
+          },
+          {
+            "texto": "Cortar ao menos dez ministérios e cargos comissionados",
+            "pagina": 69
+          },
+          {
+            "texto": "Novas regras fiscais com superávit primário",
+            "pagina": 71
+          }
+        ]
+      }
     },
     {
       "tema": "Impostos",
@@ -110,7 +148,29 @@
         }
       ],
       "contexto": "A isenção do IR até R$ 5 mil já está em vigor (Lei 15.270/2025). A reforma tributária do consumo tem transição até 2033.",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Regulamentar o Imposto Seletivo",
+            "pagina": 59
+          },
+          {
+            "texto": "Regulamentar o Fundo de Desenvolvimento Regional",
+            "pagina": 56
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Rever a reforma do consumo e reduzir o IVA",
+            "pagina": 30
+          },
+          {
+            "texto": "Reingressar na OCDE",
+            "pagina": 63
+          }
+        ]
+      }
     },
     {
       "tema": "Estatais e privatizações",
@@ -139,7 +199,21 @@
         }
       ],
       "contexto": "Em fev/2026, Flávio disse planejar \"privatizar 95%\" das estatais; em set/2026 a equipe disse que o BB estava em estudo, e depois a campanha negou os planos.",
-      "verificacao": "Aos Fatos (16/10): ao chamar de \"terrorismo\" a acusação de privatização, Flávio omitiu falas anteriores suas."
+      "verificacao": "Aos Fatos (16/10): ao chamar de \"terrorismo\" a acusação de privatização, Flávio omitiu falas anteriores suas.",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Petrobras de volta à distribuição de combustíveis e à ampliação do refino",
+            "pagina": 67
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Retomar privatizações caso a caso e blindar estatais de indicações políticas",
+            "pagina": 70
+          }
+        ]
+      }
     },
     {
       "tema": "Trabalho e renda",
@@ -172,7 +246,33 @@
         }
       ],
       "contexto": "A PEC do 6x1 foi aprovada no Senado por 75 votos a 1 em 14/10/2026 (apoio de governo e oposição).",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Fim da escala 6x1 e jornada de 40 horas sem corte de salário",
+            "pagina": 75
+          },
+          {
+            "texto": "Manter a política de valorização do salário mínimo",
+            "pagina": 74
+          },
+          {
+            "texto": "Regular o trabalho por aplicativo",
+            "pagina": 75
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Contratos de entrada para jovens de 18 a 24 anos e para quem tem 50+ anos e está fora do mercado",
+            "pagina": 43
+          },
+          {
+            "texto": "Negociado sobre o legislado",
+            "pagina": 44
+          }
+        ]
+      }
     },
     {
       "tema": "Programas sociais",
@@ -197,7 +297,11 @@
         }
       ],
       "contexto": "O piso do Bolsa Família sobe de R$ 600 para R$ 691 em out/2026 (reajuste de 15,04%).",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [],
+        "flavio": []
+      }
     },
     {
       "tema": "Saúde",
@@ -230,7 +334,29 @@
         }
       ],
       "contexto": "O prontuário eletrônico já existe como Rede Nacional de Dados em Saúde (criada em 2020, com mais de 5 bilhões de registros).",
-      "verificacao": "Aos Fatos: a promessa de Flávio de criar um prontuário único é de algo que \"já existe\"."
+      "verificacao": "Aos Fatos: a promessa de Flávio de criar um prontuário único é de algo que \"já existe\".",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Farmácia Popular gratuita e exames de doenças crônicas",
+            "pagina": 36
+          },
+          {
+            "texto": "Agora Tem Especialistas com unidades móveis e mutirões",
+            "pagina": 37
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Corrigir a tabela de pagamento do SUS a hospitais",
+            "pagina": 37
+          },
+          {
+            "texto": "Prontuário eletrônico único ligado ao CPF",
+            "pagina": 26
+          }
+        ]
+      }
     },
     {
       "tema": "Educação",
@@ -259,7 +385,33 @@
         }
       ],
       "contexto": "O programa federal de escolas cívico-militares foi encerrado em 2023; estados mantêm modelos próprios.",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Chegar a 80% das crianças alfabetizadas na idade certa",
+            "pagina": 31
+          },
+          {
+            "texto": "Manter o Pé-de-Meia",
+            "pagina": 32
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Alfabetização por método fônico",
+            "pagina": 35
+          },
+          {
+            "texto": "Vouchers onde faltam vagas públicas",
+            "pagina": 36
+          },
+          {
+            "texto": "Trocar o Fies por financiamento contingente à renda",
+            "pagina": 37
+          }
+        ]
+      }
     },
     {
       "tema": "Segurança pública",
@@ -296,7 +448,37 @@
         }
       ],
       "contexto": "Mortes violentas caíram para 19,1 por 100 mil em 2025 (menor taxa desde 2012), mas 19% da população vive em bairros com facções e milícias (Datafolha/FBSP, jun/2026).",
-      "verificacao": "Flávio: \"com Lula a criminalidade explodiu\" foi classificado como falso por Lupa e Aos Fatos."
+      "verificacao": "Flávio: \"com Lula a criminalidade explodiu\" foi classificado como falso por Lupa e Aos Fatos.",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Criar o Ministério da Segurança Pública depois da aprovação da PEC",
+            "pagina": 30
+          },
+          {
+            "texto": "Manter o cerco financeiro às facções",
+            "pagina": 27
+          },
+          {
+            "texto": "Manter controles e ampliar rastreabilidade de armas e munições",
+            "pagina": 28
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Classificar PCC, CV e milícias como organizações narcoterroristas",
+            "pagina": 13
+          },
+          {
+            "texto": "Reduzir a maioridade penal para 16 anos",
+            "pagina": 13
+          },
+          {
+            "texto": "Novos presídios federais e 500 mil vagas com os estados",
+            "pagina": 14
+          }
+        ]
+      }
     },
     {
       "tema": "Armas",
@@ -317,7 +499,11 @@
         }
       ],
       "contexto": "O acervo de CACs passou de ~350 mil para mais de 1 milhão de armas em 2019–2022; o decreto de 2023 reverteu a flexibilização.",
-      "verificacao": "Aos Fatos: a legítima defesa está no Código Penal, não na Constituição."
+      "verificacao": "Aos Fatos: a legítima defesa está no Código Penal, não na Constituição.",
+      "plano": {
+        "lula": [],
+        "flavio": []
+      }
     },
     {
       "tema": "Meio ambiente e clima",
@@ -349,8 +535,26 @@
           "fonte": "pg"
         }
       ],
-      "contexto": "Desmatamento na Amazônia: 5.796 km² em 2025 (menor em 11 anos); no Cerrado, 7.235 km². A Lei 15.190/2025 já flexibilizou o licenciamento.",
-      "verificacao": ""
+      "contexto": "Desmatamento na Amazônia: 5.731 km² em 2025 e 3.335 km² na estimativa de 2026 (menor da série); no Cerrado, 7.235 km² em 2025 e 5.517 km² estimados em 2026. A Lei 15.190/2025 já flexibilizou o licenciamento.",
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Desmatamento líquido zero até 2030",
+            "pagina": 70
+          },
+          {
+            "texto": "Operacionalizar o fundo Florestas Tropicais para Sempre",
+            "pagina": 70
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Acabar com o desmatamento ilegal até 2029",
+            "pagina": 58
+          }
+        ]
+      }
     },
     {
       "tema": "Energia e combustíveis",
@@ -375,7 +579,29 @@
         }
       ],
       "contexto": "O IPCA de energia elétrica residencial subiu 30,5% de jan/2023 a set/2026, contra 12,5% de 2019 a 2022.",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Ampliar exploração de petróleo e gás",
+            "pagina": 67
+          },
+          {
+            "texto": "Repotenciar hidrelétricas e acelerar a redução do carvão",
+            "pagina": 65
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Reduzir gradualmente encargos da CDE mantendo a tarifa social",
+            "pagina": 53
+          },
+          {
+            "texto": "Permitir gás de xisto dentro da lei",
+            "pagina": 52
+          }
+        ]
+      }
     },
     {
       "tema": "Infraestrutura, saneamento e moradia",
@@ -404,7 +630,25 @@
         }
       ],
       "contexto": "Cobertura de esgoto adequado: 71,4% dos domicílios em 2025 (IBGE). O Trata Brasil estima que a meta legal de 2033 não será cumprida no ritmo atual.",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Manter o Minha Casa Minha Vida em todas as faixas de renda",
+            "pagina": 45
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "R$ 900 bilhões em quatro anos, sobretudo com capital privado",
+            "pagina": 51
+          },
+          {
+            "texto": "Retomar o Casa Verde e Amarela",
+            "pagina": 47
+          }
+        ]
+      }
     },
     {
       "tema": "Agro e indústria",
@@ -425,7 +669,21 @@
         }
       ],
       "contexto": "Safra de grãos de 2025/26: 361,7 milhões de toneladas (Conab, set/2026).",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Ampliar o Plano Safra e a compra de 45% da alimentação escolar da agricultura familiar",
+            "pagina": 59
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Ampliar seguro rural e simplificar outorgas de irrigação",
+            "pagina": 54
+          }
+        ]
+      }
     },
     {
       "tema": "Política externa e soberania",
@@ -454,7 +712,21 @@
         }
       ],
       "contexto": "Os EUA impuseram tarifa de 50% em 2025 e nova tarifa em jul/2026, sem acordo fechado.",
-      "verificacao": "Flávio: \"o governo não fez nada contra o tarifaço\" foi classificado como falso por Lupa e Aos Fatos."
+      "verificacao": "Flávio: \"o governo não fez nada contra o tarifaço\" foi classificado como falso por Lupa e Aos Fatos.",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Aproximação com BRICS e Sul Global",
+            "pagina": 81
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Reaproximar de EUA, Argentina e Israel",
+            "pagina": 62
+          }
+        ]
+      }
     },
     {
       "tema": "Tecnologia e inteligência artificial",
@@ -479,7 +751,16 @@
         }
       ],
       "contexto": "",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Infraestrutura soberana de computação com supercomputadores nacionais",
+            "pagina": 54
+          }
+        ],
+        "flavio": []
+      }
     },
     {
       "tema": "Mulheres e minorias",
@@ -508,7 +789,25 @@
         }
       ],
       "contexto": "Foram homologadas 20 terras indígenas de 2023 a mar/2026, e 240+ aguardam definição. Feminicídios bateram recorde em 2025 (1.571).",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Concluir 30 Casas da Mulher Brasileira",
+            "pagina": 21
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Programa Brasil por Elas",
+            "pagina": 17
+          },
+          {
+            "texto": "Tornozeleira para agressores com medida protetiva",
+            "pagina": 19
+          }
+        ]
+      }
     },
     {
       "tema": "Instituições e Estado",
@@ -541,7 +840,25 @@
         }
       ],
       "contexto": "",
-      "verificacao": ""
+      "verificacao": "",
+      "plano": {
+        "lula": [
+          {
+            "texto": "Regular redes sociais e plataformas digitais",
+            "pagina": 16
+          }
+        ],
+        "flavio": [
+          {
+            "texto": "Limitar decisões individuais de ministros do STF",
+            "pagina": 65
+          },
+          {
+            "texto": "Acabar com a reeleição presidencial",
+            "pagina": 66
+          }
+        ]
+      }
     }
   ]
 }

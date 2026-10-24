@@ -11,10 +11,10 @@ def _ausente(item):
 
 
 def _situacao(itens):
-    """'✅ Propõe' (todos os itens são propostas), '◐ Parcial' (mistura de proposta e lacuna) ou '— Não consta'."""
+    """'✔ Propõe' (todos os itens são propostas), '◐ Parcial' (mistura de proposta e lacuna) ou '— Não consta'."""
     aus = sum(_ausente(i) for i in itens)
     if aus == 0:
-        return "✅ Propõe"
+        return "✔ Propõe"
     return "— Não consta" if aus == len(itens) else "◐ Parcial"
 
 
@@ -26,12 +26,86 @@ def _item_html(item, fontes):
     return f'<div class="prop-item"><span class="{classe}">{html.escape(item["texto"])}</span> <span class="src">· {link}</span></div>'
 
 
+def _plano_html(itens, url):
+    if not itens:
+        return ""
+    linhas = "".join(
+        f'<div class="prop-item"><span>{html.escape(i["texto"])}</span> <span class="src">· <a href="{url}#page={i["pagina"]}" target="_blank">p. {i["pagina"]} ↗</a></span></div>'
+        for i in itens)
+    return f'<div class="prop-card plano"><div class="src">No plano oficial (conferido no PDF)</div>{linhas}</div>'
+
+
 def render_tab_campaign():
     render_section_header(
-        "🗳️ Propostas de Campanha: Lula x Flávio Bolsonaro",
-        "O que cada candidato promete nos principais temas do 2º turno de 2026, lado a lado, com a fonte de cada ponto e o contexto de dados e checagens.",
+        "Propostas de Campanha",
+        "O que os candidatos de 2026 prometem e o que cada presidente eleito desde 1994 propôs no plano com que venceu a eleição, "
+        "lado a lado, com a fonte e a página de cada ponto.",
     )
+    aba_2026, aba_planos = st.tabs(["Eleição 2026: Lula x Flávio", "Planos dos presidentes eleitos (1994–2022)"])
+    with aba_2026:
+        _render_2026()
+    with aba_planos:
+        _render_planos()
 
+
+def _item_plano(item, url):
+    return (f'<div class="prop-item"><span class="mini-badge mb-tie">{html.escape(item["tema"])}</span> {html.escape(item["texto"])} '
+            f'<span class="src">· <a href="{html.escape(url, quote=True)}#page={item["pagina"]}" target="_blank">p. {item["pagina"]} ↗</a></span></div>')
+
+
+def _cartao_plano(plano, temas_sel):
+    from modules.ui_components import classe_gov, PERIODO
+    c = classe_gov(plano["governo"])
+    itens = [i for i in plano["propostas"] if not temas_sel or i["tema"] in temas_sel]
+    corpo = "".join(_item_plano(i, plano["url"]) for i in itens) or '<div class="prop-item prop-gap">Nenhuma proposta destes temas no resumo do plano.</div>'
+    st.markdown(
+        f'<div class="prop-card borda-{c}">'
+        f'<div class="gov-name {c}" style="font-weight:800;font-size:1rem;">{html.escape(plano["governo"])} · {html.escape(PERIODO.get(plano["governo"], ""))}</div>'
+        f'<div style="color:#f8fafc;font-weight:700;margin:2px 0 2px;">{html.escape(plano["titulo"])} ({plano["ano"]})</div>'
+        f'<div class="src" style="color:#94a3b8;font-size:0.78rem;margin-bottom:6px;">{html.escape(plano["partido"])} · '
+        f'<a href="{html.escape(plano["url"], quote=True)}" target="_blank">íntegra em PDF ↗</a></div>'
+        f'{corpo}<div class="src" style="color:#64748b;font-size:0.72rem;margin-top:6px;">{html.escape(plano["nota"])}</div></div>',
+        unsafe_allow_html=True)
+
+
+def _render_planos():
+    from modules.data_loader import load_json
+    from modules.ui_components import css_governos
+    dados = load_json("planos_governo.json")
+    if not dados:
+        st.warning("Base de planos não encontrada (data/planos_governo.json).")
+        return
+    st.markdown(css_governos(), unsafe_allow_html=True)
+    planos = {p["governo"]: p for p in dados["planos"]}
+    nomes = list(planos)
+    st.markdown(f'<div class="info-box">{html.escape(dados["metadados"]["aviso"])} '
+                'Temer não foi eleito como cabeça de chapa; aparece o programa "Uma Ponte para o Futuro" (PMDB, 2015), que o governo adotou como base.</div>',
+                unsafe_allow_html=True)
+    padrao_a = st.session_state.get("gov_a", "Bolsonaro")
+    padrao_b = st.session_state.get("gov_b", "Lula 3")
+    with st.container(border=True):
+        c1, c2, c3 = st.columns([2, 2, 1.6], vertical_alignment="bottom")
+        a = c1.selectbox("Governo A", nomes, index=nomes.index(padrao_a) if padrao_a in nomes else nomes.index("Bolsonaro"), key="plano_a")
+        b = c2.selectbox("Governo B", nomes, index=nomes.index(padrao_b) if padrao_b in nomes else nomes.index("Lula 3"), key="plano_b")
+        todos = c3.toggle("Todos os governos", key="plano_todos")
+        temas = sorted({i["tema"] for p in dados["planos"] for i in p["propostas"]})
+        temas_sel = st.pills("Temas", temas, selection_mode="multi", key="plano_temas") or []
+    if todos:
+        for i in range(0, len(nomes), 2):
+            cols = st.columns(2)
+            for col, g in zip(cols, nomes[i:i + 2]):
+                with col:
+                    _cartao_plano(planos[g], temas_sel)
+    else:
+        col_a, col_b = st.columns(2)
+        with col_a:
+            _cartao_plano(planos[a], temas_sel)
+        with col_b:
+            _cartao_plano(planos[b], temas_sel)
+    st.caption("Cada item é um resumo do painel; o número da página abre o PDF no trecho citado. As páginas são as do arquivo PDF, que podem diferir da numeração impressa.")
+
+
+def _render_2026():
     dados = get_propostas_data()
     if not dados:
         st.warning("Base de propostas não encontrada (data/propostas_campanha.json).")
@@ -39,9 +113,10 @@ def render_tab_campaign():
     meta, fontes, temas = dados["metadados"], dados["fontes"], dados["temas"]
 
     st.markdown(
-        f'<div class="info-box"><b>⚠️ São promessas, não fatos.</b> {html.escape(meta["aviso"])}<br/>'
+        f'<div class="info-box"><b>⚠ São promessas, não fatos.</b> {html.escape(meta["aviso"])}<br/>'
         f'<b>Planos:</b> Lula — {html.escape(meta["planos"]["Lula"])}; Flávio Bolsonaro — {html.escape(meta["planos"]["Flávio Bolsonaro"])}. '
-        f'Íntegra do plano de Flávio: <a href="{fontes["p360"]["url"]}" target="_blank">Poder360 ↗</a>.</div>',
+        f'Íntegras em PDF: <a href="{fontes["plula"]["url"]}" target="_blank">Lula ↗</a> · <a href="{fontes["pflavio"]["url"]}" target="_blank">Flávio ↗</a> '
+        '(cópias de Congresso em Foco e Poder360; o arquivo oficial está no portal do TSE).</div>',
         unsafe_allow_html=True,
     )
 
@@ -54,7 +129,7 @@ def render_tab_campaign():
         "Itens (Lula)": [len(t["lula"]) for t in temas],
         "Itens (Flávio)": [len(t["flavio"]) for t in temas],
     })
-    st.dataframe(quadro, use_container_width=True, hide_index=True, height=38 * (len(quadro) + 1))
+    st.dataframe(quadro, width="stretch", hide_index=True, height=38 * (len(quadro) + 1))
     st.caption("\"Parcial\" = o plano cobre parte do tema, e as fontes consultadas não citam o resto. \"Não consta\" significa que as fontes não citam o tema — não prova que o plano completo seja omisso.")
 
     # ---------------- Filtros
@@ -82,13 +157,15 @@ def render_tab_campaign():
             with col_l:
                 st.markdown("**Lula (PT)**")
                 st.markdown('<div class="prop-card lula">' + "".join(_item_html(i, fontes) for i in t["lula"]) + "</div>", unsafe_allow_html=True)
+                st.markdown(_plano_html(t.get("plano", {}).get("lula"), fontes["plula"]["url"]), unsafe_allow_html=True)
             with col_f:
                 st.markdown("**Flávio Bolsonaro (PL)**")
                 st.markdown('<div class="prop-card flavio">' + "".join(_item_html(i, fontes) for i in t["flavio"]) + "</div>", unsafe_allow_html=True)
+                st.markdown(_plano_html(t.get("plano", {}).get("flavio"), fontes["pflavio"]["url"]), unsafe_allow_html=True)
             if ctx and t["contexto"]:
-                st.markdown(f'<div class="info-box"><b>📊 Contexto hoje:</b> {html.escape(t["contexto"])}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="info-box"><b>Contexto hoje:</b> {html.escape(t["contexto"])}</div>', unsafe_allow_html=True)
             if ver and t["verificacao"]:
-                st.markdown(f'<div class="info-box"><b>🔎 Checagem relacionada:</b> {html.escape(t["verificacao"])} '
+                st.markdown(f'<div class="info-box"><b>Checagem relacionada:</b> {html.escape(t["verificacao"])} '
                             'Veja todas na página \"Checagem: Lula x Flávio\".</div>', unsafe_allow_html=True)
     if mostrados == 0:
         st.info("Nenhum tema com esses filtros.")

@@ -19,9 +19,9 @@
   --bolsonaro-bg: rgba(59, 130, 246, 0.15);
   --bolsonaro-border: #2563eb;
   
-  --lula-red: #f43f5e;
-  --lula-bg: rgba(244, 63, 94, 0.15);
-  --lula-border: #e11d48;
+  --lula-red: #ef2b2d;
+  --lula-bg: rgba(239, 43, 45, 0.15);
+  --lula-border: #dc2626;
   
   --accent-green: #10b981;
   --accent-gold: #f59e0b;
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6 0%, #10b981 50%, #f43f5e 100%);
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 50%, #ef2b2d 100%);
 }
 
 .hero-title {
@@ -187,11 +187,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gov-row.lula {
-  background: rgba(225, 29, 72, 0.14) !important;
-  border-left: 4px solid #f43f5e !important;
-  border-top: 1px solid rgba(244, 63, 94, 0.2) !important;
-  border-bottom: 1px solid rgba(244, 63, 94, 0.2) !important;
-  border-right: 1px solid rgba(244, 63, 94, 0.2) !important;
+  background: rgba(220, 38, 38, 0.14) !important;
+  border-left: 4px solid #ef2b2d !important;
+  border-top: 1px solid rgba(239, 43, 45, 0.2) !important;
+  border-bottom: 1px solid rgba(239, 43, 45, 0.2) !important;
+  border-right: 1px solid rgba(239, 43, 45, 0.2) !important;
 }
 
 .gov-name {
@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gov-val.lula {
-  color: #fda4af !important;
+  color: #fca5a5 !important;
 }
 
 .kpi-foot {
@@ -282,9 +282,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .badge-winner-lula {
-  background: rgba(225, 29, 72, 0.25) !important;
-  color: #fda4af !important;
-  border: 1px solid #f43f5e !important;
+  background: rgba(220, 38, 38, 0.25) !important;
+  color: #fca5a5 !important;
+  border: 1px solid #ef2b2d !important;
   padding: 2px 8px !important;
   border-radius: 6px !important;
   font-size: 0.75rem !important;
@@ -340,7 +340,7 @@ div[role="radiogroup"] label {
   padding: 2px 10px !important; border-radius: 8px !important; border: 1px solid transparent !important;
 }
 .compare-val.bolsonaro { color: #93c5fd !important; }
-.compare-val.lula { color: #fda4af !important; }
+.compare-val.lula { color: #fca5a5 !important; }
 .compare-val.is-better { border-color: rgba(16, 185, 129, 0.55) !important; background: rgba(16, 185, 129, 0.10) !important; }
 .compare-arrow { color: #64748b !important; font-size: 1.1rem !important; }
 .compare-foot { font-size: 0.74rem !important; color: #94a3b8 !important; line-height: 1.4 !important; }
@@ -366,7 +366,7 @@ div[role="radiogroup"] label {
 .check-expl { color: #cbd5e1 !important; font-size: 0.85rem !important; line-height: 1.5 !important; }
 .check-expl a { color: #38bdf8 !important; }
 .cand-tag { font-weight: 800 !important; }
-.cand-tag.lula { color: #fda4af !important; }
+.cand-tag.lula { color: #fca5a5 !important; }
 .cand-tag.flavio { color: #93c5fd !important; }
 
 .score-tile {
@@ -408,7 +408,7 @@ div[role="radiogroup"] label {
 /* Cartões de políticas */
 .policy-card { background: #111827 !important; border: 1px solid #1e293b !important; border-radius: 10px !important; padding: 14px 16px !important; margin-bottom: 12px !important; }
 .policy-card.bolsonaro { border-top: 3px solid #3b82f6 !important; }
-.policy-card.lula { border-top: 3px solid #f43f5e !important; }
+.policy-card.lula { border-top: 3px solid #ef2b2d !important; }
 .policy-title { color: #f8fafc !important; font-weight: 800 !important; font-size: 1rem !important; margin: 4px 0 6px !important; }
 .policy-desc { color: #cbd5e1 !important; font-size: 0.85rem !important; line-height: 1.5 !important; margin-bottom: 8px !important; }
 .policy-pos, .policy-neg { font-size: 0.83rem !important; line-height: 1.5 !important; color: #e2e8f0 !important; padding: 8px 10px !important; border-radius: 6px !important; margin-top: 6px !important; }
@@ -420,7 +420,7 @@ div[role="radiogroup"] label {
 .policy-rep { background: rgba(148, 163, 184, 0.07) !important; border-left: 3px solid #64748b !important; padding: 8px 10px !important; border-radius: 6px !important; margin-top: 6px !important; font-size: 0.82rem !important; line-height: 1.5 !important; color: #e2e8f0 !important; }
 .policy-rep a { color: #38bdf8 !important; }
 .prop-card { background: #111827 !important; border: 1px solid #1e293b !important; border-radius: 10px !important; padding: 12px 14px !important; margin-bottom: 8px !important; }
-.prop-card.lula { border-top: 3px solid #f43f5e !important; }
+.prop-card.lula { border-top: 3px solid #ef2b2d !important; }
 .prop-card.flavio { border-top: 3px solid #3b82f6 !important; }
 .prop-item { color: #e2e8f0 !important; font-size: 0.86rem !important; line-height: 1.5 !important; margin: 6px 0 !important; }
 .prop-item .src { color: #94a3b8 !important; font-size: 0.72rem !important; }
@@ -430,17 +430,17 @@ div[role="radiogroup"] label {
 /* Tabela comparativa: valores, selos e vantagem */
 .score-table td { vertical-align: middle !important; }
 .score-table .val-cell { min-width: 150px !important; border-left: 3px solid transparent !important; }
-.score-table .val-cell.win-l { background: rgba(244, 63, 94, 0.10) !important; border-left-color: #f43f5e !important; }
+.score-table .val-cell.win-l { background: rgba(239, 43, 45, 0.10) !important; border-left-color: #ef2b2d !important; }
 .score-table .val-cell.win-b { background: rgba(59, 130, 246, 0.12) !important; border-left-color: #3b82f6 !important; }
 .score-table .val-top { min-height: 18px !important; margin-bottom: 4px !important; }
 .score-table .val-main { font-family: var(--font-mono) !important; font-size: 1.02rem !important; font-weight: 800 !important; line-height: 1.25 !important; }
 .score-table .val-detail { color: #94a3b8 !important; font-size: 0.74rem !important; margin-top: 2px !important; line-height: 1.3 !important; }
 .mini-badge { display: inline-block !important; padding: 1px 8px !important; border-radius: 999px !important; font-size: 0.62rem !important; font-weight: 800 !important; letter-spacing: 0.05em !important; white-space: nowrap !important; }
-.mb-lula { background: #f43f5e !important; color: #0b0f19 !important; }
+.mb-lula { background: #ef2b2d !important; color: #0b0f19 !important; }
 .mb-bols { background: #3b82f6 !important; color: #0b0f19 !important; }
 .mb-tie { background: rgba(148, 163, 184, 0.25) !important; color: #e2e8f0 !important; border: 1px solid #64748b !important; }
 .score-table .adv-cell { min-width: 96px !important; text-align: center !important; font-size: 0.8rem !important; line-height: 1.3 !important; }
-.adv-l { color: #fda4af !important; } .adv-b { color: #93c5fd !important; }
+.adv-l { color: #fca5a5 !important; } .adv-b { color: #93c5fd !important; }
 .adv-l b, .adv-b b { font-family: var(--font-mono) !important; font-size: 1.05rem !important; }
 .adv-tie { color: #94a3b8 !important; font-size: 0.72rem !important; } .adv-none { color: #64748b !important; }
 
@@ -448,3 +448,91 @@ div[role="radiogroup"] label {
 .dir-tag { display: block !important; width: fit-content !important; margin-top: 4px !important; padding: 1px 7px !important; border-radius: 6px !important; font-size: 0.68rem !important; font-weight: 700 !important; letter-spacing: 0.02em !important; }
 .dir-up { background: rgba(16, 185, 129, 0.14) !important; color: #6ee7b7 !important; border: 1px solid rgba(16, 185, 129, 0.4) !important; }
 .dir-down { background: rgba(245, 158, 11, 0.14) !important; color: #fcd34d !important; border: 1px solid rgba(245, 158, 11, 0.4) !important; }
+
+/* Tipos de fonte por página */
+.fonte-tipos { display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 6px !important; margin: -4px 0 14px !important; }
+.fonte-tipos .ft-label { color: #94a3b8 !important; font-size: 0.74rem !important; font-weight: 700 !important; }
+.fonte-tipos .ft-pill { display: inline-block !important; padding: 2px 10px !important; border-radius: 999px !important; font-size: 0.72rem !important; font-weight: 700 !important; color: #f1f5f9 !important; border: 1px solid var(--c) !important; background: rgba(148, 163, 184, 0.08) !important; cursor: help !important; }
+.fonte-tipos .ft-hint { color: #64748b !important; font-size: 0.68rem !important; margin-left: 4px !important; }
+abbr[title] { text-decoration: underline dotted #64748b !important; text-underline-offset: 3px !important; cursor: help !important; }
+
+/* Celular */
+@media (max-width: 640px) {
+  .block-container { padding-left: 0.8rem !important; padding-right: 0.8rem !important; }
+  .hero-container { padding: 16px 14px !important; }
+  .hero-title { font-size: 1.25rem !important; line-height: 1.25 !important; }
+  .hero-subtitle { font-size: 0.82rem !important; }
+  .section-title { font-size: 1.3rem !important; }
+  .kpi-card, .compare-stat { padding: 12px !important; }
+  .compare-val, .val-main { font-size: 1.05rem !important; }
+  .custom-table, .score-table { display: block !important; overflow-x: auto !important; white-space: nowrap !important; }
+  .fonte-tipos .ft-hint { display: none !important; }
+  [data-testid="stHorizontalBlock"] { flex-wrap: wrap !important; }
+  [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] { min-width: 100% !important; flex: 1 1 100% !important; }
+}
+
+/* Impressão / PDF */
+@media print {
+  [data-testid="stSidebar"], [data-testid="stHeader"], [data-testid="stToolbar"], .stDownloadButton, iframe { display: none !important; }
+  .stApp, body { background: #fff !important; }
+  .block-container { max-width: 100% !important; padding: 0 !important; }
+  * { color: #111 !important; box-shadow: none !important; }
+  .kpi-card, .policy-card, .prop-card, .check-card { break-inside: avoid; background: #fff !important; border: 1px solid #999 !important; }
+}
+.prop-card.plano { border-top: 1px dashed #475569 !important; background: rgba(148,163,184,0.05) !important; }
+
+/* Comparabilidade */
+.cmp-tag { display: block !important; width: fit-content !important; margin-top: 4px !important; padding: 1px 7px !important; border-radius: 6px !important; font-size: 0.68rem !important; font-weight: 700 !important; cursor: help !important; }
+.cmp-ok { background: rgba(16, 185, 129, 0.14) !important; color: #6ee7b7 !important; border: 1px solid rgba(16, 185, 129, 0.4) !important; }
+.cmp-aj { background: rgba(56, 189, 248, 0.12) !important; color: #7dd3fc !important; border: 1px solid rgba(56, 189, 248, 0.4) !important; }
+.cmp-res { background: rgba(239, 68, 68, 0.14) !important; color: #fca5a5 !important; border: 1px solid rgba(239, 68, 68, 0.45) !important; }
+
+/* Série histórica */
+.hist-wrap { overflow-x: auto !important; }
+.hist-table th { white-space: nowrap !important; text-align: center !important; font-size: 0.8rem !important; }
+.hist-table .hist-ind { min-width: 170px !important; max-width: 220px !important; font-size: 0.8rem !important; }
+.hist-table td, .hist-table th { padding: 6px 6px !important; }
+.hist-table .hist-sub { color: #94a3b8 !important; font-size: 0.7rem !important; margin-top: 2px !important; }
+.hist-table .hist-val { text-align: center !important; font-family: var(--font-mono) !important; font-weight: 700 !important; font-size: 0.8rem !important; white-space: nowrap !important; color: #f8fafc !important; }
+.hist-table .hist-vazio { color: #475569 !important; font-weight: 400 !important; }
+.hist-table .hist-eixo { background: #0b1220 !important; color: #38bdf8 !important; font-weight: 800 !important; text-transform: uppercase !important; font-size: 0.72rem !important; letter-spacing: 0.06em !important; }
+.hist-top { display: block !important; font-size: 0.6rem !important; color: #6ee7b7 !important; font-family: sans-serif !important; }
+
+.hist-table td.hist-c0 { background: rgba(148,163,184,0.10) !important; }
+.hist-table td.hist-c1 { background: rgba(16,185,129,0.42) !important; }
+.hist-table td.hist-c2 { background: rgba(16,185,129,0.20) !important; }
+.hist-table td.hist-c3 { background: rgba(148,163,184,0.10) !important; }
+.hist-table td.hist-c4 { background: rgba(239,68,68,0.20) !important; }
+.hist-table td.hist-c5 { background: rgba(239,68,68,0.42) !important; }
+
+/* Comparação entre dois governos quaisquer */
+.par-lado { flex: 1; border-radius: 8px; padding: 6px 8px; border: 1px solid transparent; opacity: 0.75; }
+.par-lado.par-vence { border-color: var(--c); background: rgba(148,163,184,0.10); opacity: 1; }
+.par-lado .par-nome { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c) !important; }
+.par-lado .compare-val { color: var(--c) !important; }
+.hist-table th.hist-sel { background: rgba(56,189,248,0.12) !important; }
+.hist-table .hist-sub a { color: #38bdf8 !important; text-decoration: none !important; }
+
+/* Programas de cada governo (benefícios e críticas) */
+.prog-card { background: #111827 !important; border: 1px solid #1e293b !important; border-radius: 12px !important; padding: 14px 16px !important; margin-bottom: 12px !important; }
+.prog-meta { display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 8px !important; color: #94a3b8 !important; font-size: 0.78rem !important; }
+.prog-gov { color: #0b0f19 !important; font-weight: 800 !important; padding: 1px 9px !important; border-radius: 999px !important; font-size: 0.72rem !important; }
+.prog-sit { border: 1px solid #475569 !important; border-radius: 999px !important; padding: 0 8px !important; }
+.prog-titulo { color: #f8fafc !important; font-weight: 800 !important; font-size: 1.05rem !important; margin: 6px 0 4px !important; }
+.prog-frase { color: #cbd5e1 !important; font-size: 0.88rem !important; line-height: 1.5 !important; margin-bottom: 8px !important; }
+.prog-bom, .prog-ruim { font-size: 0.83rem !important; line-height: 1.5 !important; color: #e2e8f0 !important; padding: 8px 10px !important; border-radius: 6px !important; margin-top: 6px !important; }
+.prog-bom { background: rgba(16, 185, 129, 0.08) !important; border-left: 3px solid #10b981 !important; }
+.prog-ruim { background: rgba(245, 158, 11, 0.08) !important; border-left: 3px solid #f59e0b !important; }
+.prog-bom ul, .prog-ruim ul { margin: 4px 0 0 0 !important; padding-left: 18px !important; }
+.prog-bom li, .prog-ruim li { margin-bottom: 4px !important; }
+.prog-bom a, .prog-ruim a, .prog-foot a { color: #38bdf8 !important; text-decoration: none !important; }
+.prog-foot { color: #64748b !important; font-size: 0.72rem !important; margin-top: 8px !important; }
+.prog-gov-cab { padding: 6px 10px !important; margin: 4px 0 10px !important; background: rgba(148, 163, 184, 0.08) !important; border-radius: 6px !important; color: #f1f5f9 !important; font-size: 0.9rem !important; }
+.prog-vazio { color: #94a3b8 !important; font-style: italic !important; font-size: 0.84rem !important; padding: 10px !important; border: 1px dashed #334155 !important; border-radius: 8px !important; }
+.simples-box { background: rgba(56, 189, 248, 0.07) !important; border-left: 4px solid #38bdf8 !important; border-radius: 8px !important; padding: 10px 14px !important; color: #e2e8f0 !important; font-size: 0.9rem !important; line-height: 1.55 !important; margin: 6px 0 10px !important; }
+.simples-box b.rot { color: #38bdf8 !important; }
+.pressa-box { background: #0f172a !important; border: 1px solid #1e293b !important; border-radius: 12px !important; padding: 12px 18px !important; margin: 0 0 14px !important; }
+.pressa-box ul { margin: 6px 0 0 0 !important; padding-left: 20px !important; color: #e2e8f0 !important; line-height: 1.7 !important; }
+.prog-rep { background: rgba(148,163,184,0.07) !important; padding: 8px 10px !important; border-radius: 6px !important; margin-top: 6px !important; font-size: 0.82rem !important; color: #e2e8f0 !important; line-height: 1.5 !important; }
+.prog-rep a { color: #38bdf8 !important; text-decoration: none !important; }
+.prog-bom .src, .prog-ruim .src { color: #94a3b8 !important; font-size: 0.78rem !important; }

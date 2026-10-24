@@ -26,10 +26,10 @@ def render_policy_card(row):
     bloco_rep = ""
     if rep["nivel"] != "Sem dado":
         link = f' <a href="{rep["url"]}" target="_blank">{html.escape(rep["fonte"])} ↗</a>' if rep.get("url") else ""
-        bloco_rep = (f'<div class="policy-rep" style="border-left-color:{REPERC_COR[rep["nivel"]]};">📣 <b>{REPERC_ROTULO[rep["nivel"]]}:</b> '
+        bloco_rep = (f'<div class="policy-rep" style="border-left-color:{REPERC_COR[rep["nivel"]]};"><b>{REPERC_ROTULO[rep["nivel"]]}:</b> '
                      f'{html.escape(rep["evidencia"])}{link}</div>')
     else:
-        bloco_rep = '<div class="policy-rep" style="border-left-color:#64748B;">📣 <b>Repercussão:</b> sem pesquisa de opinião encontrada.</div>'
+        bloco_rep = '<div class="policy-rep" style="border-left-color:#64748B;"><b>Repercussão:</b> sem pesquisa de opinião encontrada.</div>'
     st.markdown(
         f'<div class="policy-card {gov.lower()}">'
         f'<div class="check-meta"><span class="cand-tag {"flavio" if gov == "Bolsonaro" else "lula"}">{gov}</span>'
@@ -37,10 +37,10 @@ def render_policy_card(row):
         f'{_chip(cat, STATUS_COR.get(cat, "#94A3B8"))}</div>'
         f'<div class="policy-title">{html.escape(row["politica"])}</div>'
         f'<div class="policy-desc">{html.escape(row["descricao"])}</div>'
-        f'<div class="policy-pos">✅ <b>Impactos positivos:</b> {html.escape(row["impactos_positivos"])}</div>'
-        f'<div class="policy-neg">⚠️ <b>Impactos negativos e críticas:</b> {html.escape(row["impactos_negativos"])}</div>'
+        f'<div class="policy-pos">✔ <b>Impactos positivos:</b> {html.escape(row["impactos_positivos"])}</div>'
+        f'<div class="policy-neg">⚠ <b>Impactos negativos e críticas:</b> {html.escape(row["impactos_negativos"])}</div>'
         f'{bloco_rep}'
-        f'<div class="policy-foot">Situação: {html.escape(row["status"])} · 📎 Fonte: {html.escape(row["fonte"])}</div>'
+        f'<div class="policy-foot">Situação: {html.escape(row["status"])} · Fonte: {html.escape(row["fonte"])}</div>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -69,7 +69,7 @@ def _aba_por_area(f, areas, layout, area_sel, busca):
     apply_plotly_theme(fig, title=f"Políticas mapeadas por área ({len(f)} no filtro atual)", height=max(320, 30 * len(contagem) + 140))
     fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.15, x=0.5, xanchor="center", yanchor="top"))
     fig.update_yaxes(autorange="reversed")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     if layout == "Lista":
         for _, row in f.iterrows():
@@ -102,7 +102,7 @@ def _aba_deixou_de_valer(df, leis):
     cols[2].metric("Ainda em vigor (todas as políticas)", int((df["status_categoria"] == "Em vigor").sum()))
     tabela = f[["governo", "ano", "area", "politica", "status_categoria", "status"]].rename(columns={
         "governo": "Governo", "ano": "Período", "area": "Área", "politica": "Política", "status_categoria": "Faixa", "status": "O que aconteceu"})
-    st.dataframe(tabela, use_container_width=True, hide_index=True, height=min(80 + 36 * len(tabela), 640),
+    st.dataframe(tabela, width="stretch", hide_index=True, height=min(80 + 36 * len(tabela), 640),
                  column_config={"Política": st.column_config.TextColumn(width="large"), "O que aconteceu": st.column_config.TextColumn(width="medium")})
 
     if not leis.empty:
@@ -110,7 +110,7 @@ def _aba_deixou_de_valer(df, leis):
         if not fim.empty:
             st.subheader("Normas sancionadas que perderam efeito ou foram alteradas")
             t = fim[["data", "governo", "norma", "resumo", "situacao"]].rename(columns={"data": "Data", "governo": "Governo", "norma": "Norma", "resumo": "O que fazia", "situacao": "Situação"})
-            st.dataframe(t, use_container_width=True, hide_index=True,
+            st.dataframe(t, width="stretch", hide_index=True,
                          column_config={"Data": st.column_config.DateColumn(format="DD/MM/YYYY"), "O que fazia": st.column_config.TextColumn(width="large")})
     st.subheader("Detalhe das políticas que deixaram de valer")
     col_b, col_l = st.columns(2)
@@ -146,7 +146,7 @@ def _aba_repercussao(f):
         fig.update_layout(barmode="stack")
         apply_plotly_theme(fig, title="Políticas com repercussão medida em pesquisa", height=340)
         fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.2, x=0.5, xanchor="center", yanchor="top"))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         for nivel in ("Boa", "Dividida", "Baixa"):
             sub = medidas[medidas["nivel"] == nivel]
             if sub.empty:
@@ -210,11 +210,11 @@ def _aba_leis(leis):
                                  hovertemplate="<b>%{text}</b><br>%{x|%d/%m/%Y}<br>%{customdata}<extra></extra>"))
     apply_plotly_theme(fig, title=f"Linha do tempo das normas ({len(f)})", height=max(360, 26 * f["area"].nunique() + 150))
     fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.15, x=0.5, xanchor="center", yanchor="top"))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     tabela = f.sort_values("data")[["data", "governo", "norma", "area", "resumo", "situacao", "texto_oficial", "manchete", "url_imprensa"]]
     st.dataframe(
-        tabela, use_container_width=True, hide_index=True, height=560,
+        tabela, width="stretch", hide_index=True, height=560,
         column_config={
             "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY"), "governo": "Governo", "norma": "Norma", "area": "Área",
             "resumo": st.column_config.TextColumn("O que faz", width="large"), "situacao": st.column_config.TextColumn("Situação", width="medium"),
@@ -223,12 +223,18 @@ def _aba_leis(leis):
             "url_imprensa": st.column_config.LinkColumn("Link", display_text="ler ↗"),
         },
     )
-    st.download_button("📥 Baixar normas (CSV)", tabela.to_csv(index=False).encode("utf-8-sig"), file_name="normas_sancionadas_bolsonaro_lula.csv", mime="text/csv")
+    st.download_button("Baixar normas (CSV)", tabela.to_csv(index=False).encode("utf-8-sig"), file_name="normas_sancionadas_bolsonaro_lula.csv", mime="text/csv")
 
 
 def render_tab_policy_balance():
+    from modules.historico_ui import render_seletor, PADRAO
+    from modules.politicas_comparadas import render_politicas_comparadas
+    a, b, todos = render_seletor()
+    if (a, b) != PADRAO or todos:
+        render_politicas_comparadas(a, b, todos)
+        return
     render_section_header(
-        "📜 Políticas de Governo: Impactos Positivos e Negativos",
+        "Políticas de Governo: Impactos Positivos e Negativos",
         "As principais políticas dos governos Bolsonaro e Lula em todas as áreas — o que cada uma trouxe de bom e de ruim, o que ainda está em vigor, "
         "como foi recebida pela população e quais leis foram sancionadas.",
     )
@@ -260,13 +266,13 @@ def render_tab_policy_balance():
     k3.metric("Deixaram de valer", int((df["status_categoria"] == "Deixou de valer").sum()))
     k4.metric("Com repercussão medida", n_rep)
 
-    abas = st.tabs(["🗂️ Por área", "🚫 O que deixou de valer", "📣 Repercussão", "🏛️ Leis sancionadas"])
+    abas = st.tabs(["Por área", "O que deixou de valer", "Repercussão", "Leis sancionadas"])
     with abas[0]:
         if f.empty:
             st.info("Nenhuma política com esses filtros.")
         else:
             _aba_por_area(f, areas, layout, area_sel, busca)
-            st.download_button("📥 Baixar políticas (CSV)", f.drop(columns=["repercussao"]).to_csv(index=False).encode("utf-8-sig"),
+            st.download_button("Baixar políticas (CSV)", f.drop(columns=["repercussao"]).to_csv(index=False).encode("utf-8-sig"),
                                file_name="politicas_bolsonaro_lula.csv", mime="text/csv")
     with abas[1]:
         _aba_deixou_de_valer(f if not f.empty else df.iloc[0:0], leis)

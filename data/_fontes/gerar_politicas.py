@@ -202,7 +202,7 @@ P = [
      "Revertido em 2023", "Inpe — PRODES"),
     ("Meio Ambiente & Clima", L, "2023", "Retomada do PPCDAm e do Fundo Amazônia",
      "Volta das operações de fiscalização, reativação do Fundo Amazônia e meta de desmatamento zero até 2030.",
-     "Desmatamento na Amazônia caiu para 5.796 km² em 2025 (menor em 11 anos); emissões do país caíram 16,7% em 2024.",
+     "Desmatamento na Amazônia caiu para 5.731 km² em 2025 (consolidado) e para 3.335 km² na estimativa de 2026, a menor da série desde 1988; emissões do país caíram 16,7% em 2024.",
      "Cerrado teve alta até 2023 (11.012 km²); 2024 teve recorde de queimadas desde 2010 na seca extrema.",
      "Em vigor", "Inpe; SEEG"),
     ("Meio Ambiente & Clima", L, "2025", "Lei Geral do Licenciamento Ambiental (Lei 15.190/2025)",

@@ -23,6 +23,8 @@ FONTES = {
     "abf": ("Agência Brasil (18/09/2026)", "https://agenciabrasil.ebc.com.br/politica/noticia/2026-09/flavio-bolsonaro-propoe-enxugar-estado-e-endurecer-acoes-de-seguranca"),
     "pg": ("planodegoverno2026.com.br — resumo de terceiro com apoio de IA, citando páginas do plano", "https://planodegoverno2026.com.br/candidatos/presidente/flavio-bolsonaro/"),
     "afl": ("Aos Fatos — entrevista de Flávio na Globo (16/10/2026)", "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-globo-segundo-turno/"),
+    "plula": ("Programa de governo de Lula, PDF (84 págs.)", "https://static.congressoemfoco.com.br/2026/08/08/attachment/2026/08/08/32ce89_programa_governo_lula_2026.pdf"),
+    "pflavio": ("Plano de governo de Flávio Bolsonaro, PDF (76 págs.)", "https://static.poder360.com.br/uploads/2026/08/plano-flavio.pdf"),
     "p360": ("Poder360 — íntegra do plano", "https://www.poder360.com.br/poder-flash/leia-a-integra-do-plano-de-governo-de-flavio-bolsonaro/"),
 }
 
@@ -112,7 +114,7 @@ TEMAS = [
       ("Flexibilizar o licenciamento, inclusive com autolicenciamento quando o órgão não decide no prazo; acabar com sobreposições entre Ibama e Funai.", "abf"),
       ("Ampliar a produção de petróleo e gás, inclusive com fraturamento hidráulico (fracking).", "abf"),
       ("Exigir transparência de ONGs financiadas do exterior.", "pg")],
-     "Desmatamento na Amazônia: 5.796 km² em 2025 (menor em 11 anos); no Cerrado, 7.235 km². A Lei 15.190/2025 já flexibilizou o licenciamento.",
+     "Desmatamento na Amazônia: 5.731 km² em 2025 e 3.335 km² na estimativa de 2026 (menor da série); no Cerrado, 7.235 km² em 2025 e 5.517 km² estimados em 2026. A Lei 15.190/2025 já flexibilizou o licenciamento.",
      ""),
     ("Energia e combustíveis",
      [("Ampliar a exploração de petróleo e gás junto com a transição; leilões de transmissão, baterias, modernização de hidrelétricas, hidrogênio de baixo carbono e biocombustíveis.", "cef"),
@@ -170,6 +172,56 @@ TEMAS = [
 ]
 
 
+# Páginas conferidas nos PDFs dos planos (palavra-chave do trecho localizada na página citada). Texto é paráfrase do painel.
+PLANO = {
+    "Economia e contas públicas": (
+        [("Manter o arcabouço fiscal, com juros menores e inflação controlada", 49), ("Novo PAC com obras e concessões", 53), ("Continuar a Nova Indústria Brasil", 50)],
+        [("Meta de crescimento de 4% ao ano", 49), ("Cortar ao menos dez ministérios e cargos comissionados", 69), ("Novas regras fiscais com superávit primário", 71)]),
+    "Impostos": (
+        [("Regulamentar o Imposto Seletivo", 59), ("Regulamentar o Fundo de Desenvolvimento Regional", 56)],
+        [("Rever a reforma do consumo e reduzir o IVA", 30), ("Reingressar na OCDE", 63)]),
+    "Estatais e privatizações": (
+        [("Petrobras de volta à distribuição de combustíveis e à ampliação do refino", 67)],
+        [("Retomar privatizações caso a caso e blindar estatais de indicações políticas", 70)]),
+    "Trabalho e renda": (
+        [("Fim da escala 6x1 e jornada de 40 horas sem corte de salário", 75), ("Manter a política de valorização do salário mínimo", 74), ("Regular o trabalho por aplicativo", 75)],
+        [("Contratos de entrada para jovens de 18 a 24 anos e para quem tem 50+ anos e está fora do mercado", 43), ("Negociado sobre o legislado", 44)]),
+    "Saúde": (
+        [("Farmácia Popular gratuita e exames de doenças crônicas", 36), ("Agora Tem Especialistas com unidades móveis e mutirões", 37)],
+        [("Corrigir a tabela de pagamento do SUS a hospitais", 37), ("Prontuário eletrônico único ligado ao CPF", 26)]),
+    "Educação": (
+        [("Chegar a 80% das crianças alfabetizadas na idade certa", 31), ("Manter o Pé-de-Meia", 32)],
+        [("Alfabetização por método fônico", 35), ("Vouchers onde faltam vagas públicas", 36), ("Trocar o Fies por financiamento contingente à renda", 37)]),
+    "Segurança pública": (
+        [("Criar o Ministério da Segurança Pública depois da aprovação da PEC", 30), ("Manter o cerco financeiro às facções", 27), ("Manter controles e ampliar rastreabilidade de armas e munições", 28)],
+        [("Classificar PCC, CV e milícias como organizações narcoterroristas", 13), ("Reduzir a maioridade penal para 16 anos", 13), ("Novos presídios federais e 500 mil vagas com os estados", 14)]),
+    "Meio ambiente e clima": (
+        [("Desmatamento líquido zero até 2030", 70), ("Operacionalizar o fundo Florestas Tropicais para Sempre", 70)],
+        [("Acabar com o desmatamento ilegal até 2029", 58)]),
+    "Energia e combustíveis": (
+        [("Ampliar exploração de petróleo e gás", 67), ("Repotenciar hidrelétricas e acelerar a redução do carvão", 65)],
+        [("Reduzir gradualmente encargos da CDE mantendo a tarifa social", 53), ("Permitir gás de xisto dentro da lei", 52)]),
+    "Infraestrutura, saneamento e moradia": (
+        [("Manter o Minha Casa Minha Vida em todas as faixas de renda", 45)],
+        [("R$ 900 bilhões em quatro anos, sobretudo com capital privado", 51), ("Retomar o Casa Verde e Amarela", 47)]),
+    "Agro e indústria": (
+        [("Ampliar o Plano Safra e a compra de 45% da alimentação escolar da agricultura familiar", 59)],
+        [("Ampliar seguro rural e simplificar outorgas de irrigação", 54)]),
+    "Política externa e soberania": (
+        [("Aproximação com BRICS e Sul Global", 81)],
+        [("Reaproximar de EUA, Argentina e Israel", 62)]),
+    "Tecnologia e inteligência artificial": (
+        [("Infraestrutura soberana de computação com supercomputadores nacionais", 54)],
+        []),
+    "Mulheres e minorias": (
+        [("Concluir 30 Casas da Mulher Brasileira", 21)],
+        [("Programa Brasil por Elas", 17), ("Tornozeleira para agressores com medida protetiva", 19)]),
+    "Instituições e Estado": (
+        [("Regular redes sociais e plataformas digitais", 16)],
+        [("Limitar decisões individuais de ministros do STF", 65), ("Acabar com a reeleição presidencial", 66)]),
+}
+
+
 def main():
     temas = []
     for tema, lula, flavio, contexto, verificacao in TEMAS:
@@ -179,12 +231,16 @@ def main():
             "flavio": [{"texto": t, "fonte": f} for t, f in flavio],
             "contexto": contexto,
             "verificacao": verificacao,
+            "plano": {
+                "lula": [{"texto": t, "pagina": pg} for t, pg in PLANO.get(tema, ([], []))[0]],
+                "flavio": [{"texto": t, "pagina": pg} for t, pg in PLANO.get(tema, ([], []))[1]],
+            },
         })
     payload = {
         "metadados": {
-            "atualizado_em": "2026-10-20",
+            "atualizado_em": "2026-10-21",
             "aviso": "São promessas de campanha, não fatos. Os planos oficiais registrados no TSE prevalecem sobre qualquer resumo. "
-                     "As propostas foram extraídas de reportagens que resumem os planos; o plano de Flávio Bolsonaro tem também um resumo de terceiro "
+                     "As propostas vêm de reportagens que resumem os planos; os trechos marcados \"No plano\" foram conferidos nos PDFs dos dois planos, com a página citada. O plano de Flávio Bolsonaro tem também um resumo de terceiro "
                      "com apoio de IA (sinalizado). \"Não consta nas fontes consultadas\" não prova que o plano seja omisso.",
             "planos": {"Lula": "Plano de governo da coligação de Lula (84 páginas, 13 eixos)",
                        "Flávio Bolsonaro": "\"Para o Brasil Vencer o Atraso\" (2027–2030, divulgado em 13/08/2026)"},

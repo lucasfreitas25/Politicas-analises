@@ -11,7 +11,7 @@ from modules.ui_components import (
 )
 
 def render_tab_livestock():
-    st.markdown('<div class="section-title">🐄 Pecuária Municipal: PPM (IBGE)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Pecuária Municipal: PPM (IBGE)</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Análise dos rebanhos brasileiros e produção de produtos de origem animal da Pesquisa da Pecuária Municipal (PPM - IBGE).</div>',
         unsafe_allow_html=True
@@ -52,7 +52,7 @@ def render_tab_livestock():
             hovertemplate=f"<b>Ano:</b> %{{x}}<br><b>Efetivo:</b> %{{y:.2f}} {unit_str}<extra></extra>"
         ))
         apply_plotly_theme(fig_reb, title=f"Efetivo de {rebanho_sel} ({unit_str})")
-        st.plotly_chart(fig_reb, use_container_width=True)
+        st.plotly_chart(fig_reb, width="stretch")
 
     st.markdown("---")
 
@@ -89,12 +89,12 @@ def render_tab_livestock():
                 hovertemplate=f"<b>Ano:</b> %{{x}}<br><b>Valor:</b> %{{y:,.1f}} {unit_p}<extra></extra>"
             ))
             apply_plotly_theme(fig_p, title=f"{prod_sel} — {var_prod_sel} ({unit_p})")
-            st.plotly_chart(fig_p, use_container_width=True)
+            st.plotly_chart(fig_p, width="stretch")
 
     # Box Explicativo da Pecuária
     st.markdown("""
     <div class="info-box">
-      <b>🐄 Dinâmica da Pecuária Brasileira:</b><br/>
+      <b>Dinâmica da Pecuária Brasileira:</b><br/>
       • <b>Rebanho Bovino Recorde:</b> O rebanho bovino nacional superou 234 milhões de cabeças (mais de 1 boi por habitante), impulsionado pelo ciclo do gado e investimentos em confinamento e genética.<br/>
       • <b>Ciclo da Pecuária:</b> Em 2021/2022, os altos preços da arroba incentivaram a retenção de fêmeas; em 2023/2024, a fase de descarte de fêmeas aumentou a oferta de carne bovina, barateando os cortes ao consumidor no IPCA.<br/>
       • <b>Avicultura e Suinocultura:</b> O Brasil ampliou a liderança global como maior exportador de carne de frango do planeta e 4º maior em carne suína.

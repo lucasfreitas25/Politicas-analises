@@ -3,102 +3,114 @@ import pandas as pd
 import json
 import os
 from modules.data_loader import DATA_DIR
+from modules.ux import TIPOS_FONTE, GLOSSARIO
+
+
+def _botao_arquivo(col, arquivo, rotulo, nome):
+    caminho = os.path.join(DATA_DIR, arquivo)
+    if os.path.exists(caminho):
+        with open(caminho, "r", encoding="utf-8") as f:
+            col.download_button(label=rotulo, data=f.read(), file_name=nome, mime="application/json", width="stretch")
+
 
 def render_tab_methodology():
-    st.markdown('<div class="section-title">📚 Metodologia, Fontes Oficiais & Glossário</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Metodologia, Fontes & Glossário</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="section-subtitle">Transparência metodológica completa, fontes primárias de dados, glossário de siglas do IBGE/Governo Federal e download dos microdados.</div>',
+        '<div class="section-subtitle">Como os números são escolhidos e calculados, o que o painel não consegue medir, quais tipos de fonte aparecem em cada página e como reproduzir tudo.</div>',
         unsafe_allow_html=True
     )
 
-    # 1. Glossário de Siglas
-    st.subheader("1. Glossário Completo das Siglas e Pesquisas")
-    
-    glossario = [
-        {"Sigla": "IBGE", "Nome Completo": "Instituto Brasileiro de Geografia e Estatística", "Órgão / Descrição": "Principal provedor de dados geográficos e estatísticos oficiais do Brasil."},
-        {"Sigla": "IPCA", "Nome Completo": "Índice Nacional de Preços ao Consumidor Amplo", "Órgão / Descrição": "Indicador oficial de inflação do Brasil, calculado mensalmente pelo IBGE com base no consumo de famílias com renda de 1 a 40 salários mínimos."},
-        {"Sigla": "PAM", "Nome Completo": "Produção Agrícola Municipal", "Órgão / Descrição": "Pesquisa anual do IBGE que levanta área plantada, área colhida, quantidade produzida e valor da produção de 64 culturas temporárias e permanentes em todos os municípios do país."},
-        {"Sigla": "CONAB", "Nome Completo": "Companhia Nacional de Abastecimento", "Órgão / Descrição": "Empresa pública vinculada ao Governo Federal que monitora as safras de grãos, estoques reguladores e abastecimento alimentar do país."},
-        {"Sigla": "PEVS", "Nome Completo": "Produção da Extração Vegetal e da Silvicultura", "Órgão / Descrição": "Pesquisa anual do IBGE que quantifica a produção de florestas cultivadas (silvicultura: eucalipto, pinus, carvão, celulose) e a extração vegetal de espécies nativas (açaí, castanha, borracha)."},
-        {"Sigla": "PPM", "Nome Completo": "Pesquisa da Pecuária Municipal", "Órgão / Descrição": "Pesquisa anual do IBGE sobre os efetivos da pecuária (bovinos, suínos, galináceos, ovinos) e a produção de leite, ovos de galinha, mel e lã."},
-        {"Sigla": "PIM-PF", "Nome Completo": "Pesquisa Industrial Mensal - Produção Física", "Órgão / Descrição": "Pesquisa mensal do IBGE de acompanhamento do volume de produção física da indústria brasileira (extrativa e de transformação)."},
-        {"Sigla": "PNADC", "Nome Completo": "Pesquisa Nacional por Amostra de Domicílios Contínua", "Órgão / Descrição": "Pesquisa contínua do IBGE que mede a taxa de desocupação, rendimento médio real habitual e massa de rendimento dos trabalhadores."},
-        {"Sigla": "CAGED", "Nome Completo": "Cadastro Geral de Empregados e Desempregados (Novo CAGED)", "Órgão / Descrição": "Registro administrativo mensal do Ministério do Trabalho e Emprego (MTE) que apura admissões, desligamentos e saldo líquido de empregos com carteira assinada (CLT)."},
-        {"Sigla": "BCB / SGS", "Nome Completo": "Banco Central do Brasil / Sistema Gerenciador de Séries Temporais", "Órgão / Descrição": "Autoridade monetária responsável pela taxa Selic, câmbio oficial PTAX, contas externas e dívida pública federal."},
-        {"Sigla": "MDIC", "Nome Completo": "Ministério do Desenvolvimento, Indústria, Comércio e Serviços", "Órgão / Descrição": "Responsável pelos dados de exportação, importação e superávit da balança comercial via sistema ComexStat."}
-    ]
-
-    df_glossario = pd.DataFrame(glossario)
-    st.dataframe(df_glossario, use_container_width=True, hide_index=True)
+    # 1. Tipos de fonte
+    st.subheader("1. Tipos de fonte")
+    st.caption("Cada página mostra, no topo, quais destes tipos usa. Dado oficial e opinião não têm o mesmo peso, e o painel não os mistura sem avisar.")
+    for chave, (rotulo, cor, desc) in TIPOS_FONTE.items():
+        st.markdown(
+            f'<div class="kpi-card" style="border-left:4px solid {cor};padding:10px 14px;margin-bottom:6px;"><b>{rotulo}</b><br/>'
+            f'<span style="color:#cbd5e1;font-size:0.88rem;">{desc}</span></div>', unsafe_allow_html=True)
 
     st.markdown("---")
 
-    # 2. Critérios Metodológicos Imparciais
-    st.subheader("2. Critérios Metodológicos de Comparação")
+    # 2. Critérios
+    st.subheader("2. Critérios de comparação")
     st.markdown("""
     <div class="kpi-card">
-      <h4 style="color: #38bdf8; margin-bottom: 12px;">Diretrizes de Integridade e Rigor Estatístico:</h4>
       <ol style="color: #e2e8f0; line-height: 1.8; margin-bottom: 0;">
-        <li><b>Delimitação Temporal Rigorosa:</b><br/>
-          • <b>Governo Jair Bolsonaro:</b> 1º de janeiro de 2019 a 31 de dezembro de 2022 (48 meses completos).<br/>
-          • <b>Governo Luiz Inácio Lula da Silva:</b> 1º de janeiro de 2023 ao presente (acompanhamento contínuo).
-        </li>
-        <li><b>Valores Reais Deflacionados:</b><br/>
-          Séries de rendimento médio e massa salarial são expressas em valores reais (a preços constantes), corrigidas pelo IPCA acumulado, expurgando o efeito ilusório da inflação.
-        </li>
-        <li><b>Sem Viés Seletivo (Cherry-Picking):</b><br/>
-          Todos os indicadores solicitados foram incorporados na íntegra a partir das tabelas públicas do SIDRA/IBGE e BCB SGS.
-        </li>
-        <li><b>Consideração de Choques Exógenos:</b><br/>
-          Ambos os governos operaram sob choques globais e climáticos relevantes: a crise sanitária mundial de COVID-19 (2020-2021), a Guerra na Ucrânia e o choque de commodities/energia (2022), o fenômeno climático severo El Niño (2023-2024) e ciclos globais divergentes de juros e demanda internacional.
-        </li>
+        <li><b>Períodos.</b> Bolsonaro: 1/1/2019 a 31/12/2022 (48 meses). Lula: 1/1/2023 até o dado mais recente de cada série, então o segundo período é mais curto e muda a cada atualização.
+          Por isso a Visão Geral tem o modo <b>"mesmo período"</b> (primeiros meses de cada governo, lado a lado) e a opção de ver o governo Bolsonaro sem 2020.</li>
+        <li><b>Placar de indicadores.</b> Cada indicador vale um ponto para quem teve o melhor resultado, respeitando a direção (em alguns, <i>menor é melhor</i>, como desemprego e inflação). Não há pesos: um indicador de nicho vale o mesmo que o PIB. O recorte por eixo existe para isso ficar visível.</li>
+        <li><b>Valores reais.</b> Rendimentos e valores em reais são deflacionados pelo IPCA quando a fonte permite; onde não, o texto avisa que o valor é nominal.</li>
+        <li><b>Seleção de indicadores.</b> Entram os que têm série oficial acessível e comparável nos dois períodos. Isso <b>não é uma amostra neutra do que importa</b>: o que não tem série pública aberta (por exemplo, parte das contas de saúde e de segurança) fica de fora, e a escolha dos eixos é do painel.</li>
+        <li><b>Dado ausente.</b> Quando não foi possível verificar um número na fonte primária, o painel mostra "Sem dado" em vez de estimar. As correções feitas estão na página <i>Auditoria dos Dados</i>.</li>
+        <li><b>Checagens.</b> As faixas (Verdade, Meia-verdade, Mentira, entre outras) são das agências de checagem; o painel só agrupa falas repetidas, mostra contrapontos e resume. Agências escolhem o que checar, então a contagem não mede quem mente mais.</li>
+        <li><b>Políticas e leis.</b> A classificação "positivo/negativo" aponta efeitos citados em fontes; a repercussão e o status ("em vigor", "revogada", "perdeu efeito") são classificações do painel com link da fonte.</li>
+        <li><b>Propostas de campanha.</b> São promessas dos planos e entrevistas, não resultados. Onde só há resumo de imprensa, a fonte indicada é a reportagem, e o texto do plano registrado no TSE prevalece.</li>
       </ol>
     </div>
     """, unsafe_allow_html=True)
 
     st.markdown("---")
 
-    # 3. Download dos Dados Consolidados
-    st.subheader("3. Baixar Microdados Consolidados (Exportação)")
-    st.caption("Faça o download dos conjuntos de dados utilizados para auditoria ou uso em outras ferramentas analíticas (Python, Excel, R).")
+    # 3. Limites
+    st.subheader("3. O que o painel não consegue medir")
+    st.markdown("""
+    <div class="info-box">
+      <ul style="margin-bottom:0;">
+        <li><b>Causalidade.</b> Os números mostram o que aconteceu durante cada governo, não o que cada governo causou. Pandemia (2020-21), guerra na Ucrânia (2022), El Niño e seca (2023-24), ciclo global de juros e heranças de gestões anteriores pesam nos dois lados.</li>
+        <li><b>Defasagem e revisão.</b> Séries do IBGE, MTE e Banco Central são revisadas depois da divulgação; dados de segurança e educação saem com atraso de meses a anos.</li>
+        <li><b>Mudanças de metodologia.</b> CAGED (antigo para Novo, em 2020), PNAD em modo telefone (2020-21) e SNIS para SINISA limitam comparações diretas.</li>
+        <li><b>Escalas diferentes.</b> Itens como armas apreendidas e queimadas dependem de como cada órgão conta; comparar anos só vale dentro da mesma fonte.</li>
+        <li><b>Eleição em andamento.</b> Checagens e propostas mudam diariamente até o 2º turno. O debate da Globo de 23/10 ainda não está refletido.</li>
+      </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
-    col_d1, col_d2, col_d3 = st.columns(3)
-    
-    with col_d1:
-        scorecard_path = os.path.join(DATA_DIR, "scorecard.json")
-        if os.path.exists(scorecard_path):
-            with open(scorecard_path, "r", encoding="utf-8") as f:
-                st.download_button(
-                    label="📥 Baixar Scorecard Geral (JSON)",
-                    data=f.read(),
-                    file_name="scorecard_bolsonaro_vs_lula.json",
-                    mime="application/json"
-                )
+    st.markdown("---")
 
-    with col_d2:
-        pnadc_path = os.path.join(DATA_DIR, "pnadc.json")
-        if os.path.exists(pnadc_path):
-            with open(pnadc_path, "r", encoding="utf-8") as f:
-                d = json.load(f)
-                df_exp = pd.DataFrame(d.get("series_mensal", []))
-                csv_data = df_exp.to_csv(index=False).encode("utf-8-sig")
-                st.download_button(
-                    label="📥 Baixar PNAD Contínua (CSV)",
-                    data=csv_data,
-                    file_name="ibge_pnadc_trabalho.csv",
-                    mime="text/csv"
-                )
+    # 4. Glossário (central)
+    st.subheader("4. Glossário")
+    busca = st.text_input("Buscar sigla ou termo", key="glos_busca", placeholder="ex.: CAGED, PRODES, Gini")
+    linhas = [{"Sigla": k, "Significado": v} for k, v in sorted(GLOSSARIO.items())]
+    df_glos = pd.DataFrame(linhas)
+    if busca:
+        mask = df_glos.apply(lambda r: busca.lower() in (r["Sigla"] + " " + r["Significado"]).lower(), axis=1)
+        df_glos = df_glos[mask]
+    st.dataframe(df_glos, width="stretch", hide_index=True)
+    st.caption("As siglas também aparecem com explicação ao passar o mouse (sublinhado pontilhado) nos textos principais.")
 
-    with col_d3:
-        conab_path = os.path.join(DATA_DIR, "conab.json")
-        if os.path.exists(conab_path):
-            with open(conab_path, "r", encoding="utf-8") as f:
-                d = json.load(f)
-                df_con = pd.DataFrame(d)
-                csv_con = df_con.to_csv(index=False).encode("utf-8-sig")
-                st.download_button(
-                    label="📥 Baixar CONAB Safras (CSV)",
-                    data=csv_con,
-                    file_name="conab_safras_graos.csv",
-                    mime="text/csv"
-                )
+    st.markdown("---")
+
+    # 5. Reprodutibilidade
+    st.subheader("5. Como reproduzir")
+    st.markdown("""
+    1. As séries oficiais vêm das APIs públicas do IBGE (SIDRA) e do Banco Central (SGS) e são coletadas por `build_database.py` (botão "Sincronizar" na barra lateral).
+    2. Bases curadas (scorecard, políticas, leis, propostas, checagens, auditoria) são geradas pelos scripts em `data/_fontes/`, cada valor com a URL de origem no próprio arquivo.
+    3. Os arquivos abaixo são exatamente os que alimentam as páginas.
+    """)
+
+    st.subheader("6. Baixar os dados")
+    st.caption("Para auditoria ou uso em Python, Excel e R.")
+    arquivos = [
+        ("scorecard.json", "Scorecard (JSON)", "scorecard.json"),
+        ("auditoria.json", "Auditoria dos dados (JSON)", "auditoria.json"),
+        ("politicas.json", "Políticas (JSON)", "politicas.json"),
+        ("leis_sancionadas.json", "Leis e normas (JSON)", "leis_sancionadas.json"),
+        ("propostas_campanha.json", "Propostas de campanha (JSON)", "propostas_campanha.json"),
+        ("checagens_2026.json", "Checagens 2026 (JSON)", "checagens_2026.json"),
+    ]
+    for i in range(0, len(arquivos), 3):
+        cols = st.columns(3)
+        for col, (arq, rot, nome) in zip(cols, arquivos[i:i + 3]):
+            _botao_arquivo(col, arq, rot, nome)
+
+    cols = st.columns(2)
+    pnadc_path = os.path.join(DATA_DIR, "pnadc.json")
+    if os.path.exists(pnadc_path):
+        with open(pnadc_path, "r", encoding="utf-8") as f:
+            d = json.load(f)
+        csv_data = pd.DataFrame(d.get("series_mensal", [])).to_csv(index=False).encode("utf-8-sig")
+        cols[0].download_button("PNAD Contínua (CSV)", data=csv_data, file_name="ibge_pnadc_trabalho.csv", mime="text/csv", width="stretch")
+    conab_path = os.path.join(DATA_DIR, "conab.json")
+    if os.path.exists(conab_path):
+        with open(conab_path, "r", encoding="utf-8") as f:
+            csv_con = pd.DataFrame(json.load(f)).to_csv(index=False).encode("utf-8-sig")
+        cols[1].download_button("CONAB Safras (CSV)", data=csv_con, file_name="conab_safras_graos.csv", mime="text/csv", width="stretch")

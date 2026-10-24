@@ -11,7 +11,7 @@ from modules.ui_components import (
 )
 
 def render_tab_agro_conab():
-    st.markdown('<div class="section-title">🌾 Agropecuária & Grãos: CONAB & PAM (IBGE)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Agropecuária & Grãos: CONAB & PAM (IBGE)</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Comparativo oficial da produção nacional de grãos pela Companhia Nacional de Abastecimento (CONAB) e da Produção Agrícola Municipal (PAM - IBGE).</div>',
         unsafe_allow_html=True
@@ -42,7 +42,7 @@ def render_tab_agro_conab():
         customdata=df_conab["governo"]
     ))
     apply_plotly_theme(fig_conab, title="Evolução da Safra Brasileira de Grãos (Milhões de Toneladas - CONAB)")
-    st.plotly_chart(fig_conab, use_container_width=True)
+    st.plotly_chart(fig_conab, width="stretch")
 
     # Detalhamento CONAB: Área e Produtividade
     col_cnb1, col_cnb2 = st.columns(2)
@@ -58,7 +58,7 @@ def render_tab_agro_conab():
             hovertemplate="<b>Safra:</b> %{x}<br><b>Área:</b> %{y:.1f} Mha<extra></extra>"
         ))
         apply_plotly_theme(fig_area, title="Área Plantada Total (Mha)")
-        st.plotly_chart(fig_area, use_container_width=True)
+        st.plotly_chart(fig_area, width="stretch")
 
     with col_cnb2:
         st.subheader("Produtividade Média (kg/ha)")
@@ -72,7 +72,7 @@ def render_tab_agro_conab():
             hovertemplate="<b>Safra:</b> %{x}<br><b>Produtividade:</b> %{y:,.0f} kg/ha<extra></extra>"
         ))
         apply_plotly_theme(fig_prod, title="Produtividade Média de Grãos (kg/ha)")
-        st.plotly_chart(fig_prod, use_container_width=True)
+        st.plotly_chart(fig_prod, width="stretch")
 
     st.markdown("---")
 
@@ -114,12 +114,12 @@ def render_tab_agro_conab():
                 hovertemplate=f"<b>Ano:</b> %{{x}}<br><b>{var_sel}:</b> %{{y:,.1f}} {unit}<extra></extra>"
             ))
             apply_plotly_theme(fig_pam, title=f"{cultura_sel} — {var_sel} ({unit})")
-            st.plotly_chart(fig_pam, use_container_width=True)
+            st.plotly_chart(fig_pam, width="stretch")
 
     # Box Explicativo do Agro
     st.markdown("""
     <div class="info-box">
-      <b>🌾 Destaques do Agronegócio Brasileiro:</b><br/>
+      <b>Destaques do Agronegócio Brasileiro:</b><br/>
       • <b>Marco das 300 Milhões de Toneladas:</b> O Brasil superou a barreira inédita de 300 milhões de toneladas de grãos na safra 2022/2023 (324,4 Mt, valor revisado), consolidando o país como o maior produtor e exportador mundial de soja, além de grande líder em milho e carnes.<br/>
       • <b>Choques Climáticos (El Niño 2023/24):</b> Na safra 2023/24, adversidades climáticas severas (estiagem prolongada no Centro-Oeste e excesso de chuvas/enchentes históricas no Rio Grande do Sul) provocaram uma quebra conjuntural pontual para 298,4 Mt.<br/>
       • <b>Novos recordes (2024/25 e 2025/26):</b> a CONAB fechou a safra 2024/25 em 350,2 Mt (12º levantamento, set/2025) e a 2025/26 em 361,7 Mt (set/2026), com recordes de soja e milho. Clima, tecnologia e preços internacionais explicam a maior parte do resultado.

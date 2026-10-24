@@ -19,7 +19,7 @@ SIDRA_7060 = "https://sidra.ibge.gov.br/tabela/7060"
 ITENS = [
     ("energia_eletrica", "Energia elétrica residencial", "#F59E0B"),
     ("agua_esgoto", "Taxa de água e esgoto", "#38BDF8"),
-    ("gas_botijao", "Gás de botijão", "#F43F5E"),
+    ("gas_botijao", "Gás de botijão", "#EF2B2D"),
     ("gas_encanado", "Gás encanado", "#A78BFA"),
 ]
 
@@ -37,12 +37,12 @@ def _faixas(fig, periodos):
     if b:
         fig.add_vrect(x0=b[0], x1=b[-1], fillcolor="#3B82F6", opacity=0.07, line_width=0, annotation_text="Bolsonaro", annotation_position="top left")
     if l:
-        fig.add_vrect(x0=l[0], x1=l[-1], fillcolor="#F43F5E", opacity=0.07, line_width=0, annotation_text="Lula", annotation_position="top left")
+        fig.add_vrect(x0=l[0], x1=l[-1], fillcolor="#EF2B2D", opacity=0.07, line_width=0, annotation_text="Lula", annotation_position="top left")
 
 
 def render_tab_home_costs():
     render_section_header(
-        "🚰 Energia, Água & Esgoto: custos e cobertura",
+        "Energia, Água & Esgoto: custos e cobertura",
         "Quanto subiram a conta de luz, a taxa de água e esgoto e o gás em cada mandato (IPCA/IBGE), e quantos domicílios têm água e esgoto adequados (PNAD/IBGE).",
     )
 
@@ -102,7 +102,7 @@ def render_tab_home_costs():
     _faixas(fig, periodos)
     apply_plotly_theme(fig, title="Energia elétrica, água e esgoto e IPCA geral (jan/2019 = 100)", height=430)
     fig.update_xaxes(nticks=10, tickangle=-30)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     render_source("IBGE — IPCA, SIDRA 1419 (2019) e 7060 (2020 em diante), variação mensal. Último mês: " + ref_ult, SIDRA_7060)
 
     # ---------------- Variação real por mandato
@@ -119,7 +119,7 @@ def render_tab_home_costs():
         fig.update_layout(barmode="group")
         fig.add_hline(y=0, line_color="#64748b", line_width=1)
         apply_plotly_theme(fig, title="Variação acima da inflação (%)", height=420)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source("Cálculo do painel: (1 + variação do item) / (1 + IPCA geral) − 1, em cada mandato.", SIDRA_7060)
     with col_b:
         st.subheader("3. Variação ano a ano")
@@ -131,7 +131,7 @@ def render_tab_home_costs():
         fig = go.Figure(go.Bar(x=rot, y=vals, marker_color=[gov_color("Bolsonaro" if a <= 2022 else "Lula") for a in anos],
                                text=[f"{v:+.1f}%".replace(".", ",") for v in vals], textposition="outside"))
         apply_plotly_theme(fig, title=f"{item}: variação em cada ano (%)", height=420)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source("IBGE — IPCA. * = ano em curso (parcial, até " + ref_ult + ").", SIDRA_7060)
 
     # ---------------- Contexto de energia
@@ -147,7 +147,7 @@ def render_tab_home_costs():
                 '<div class="kpi-card"><h4 style="color:#fbbf24;margin-bottom:8px;">Bandeiras tarifárias em 2025</h4>'
                 f'<table class="custom-table"><thead><tr><th>Período</th><th>Bandeira</th><th>Acréscimo</th></tr></thead><tbody>{linhas}</tbody></table>'
                 f'<div style="color:#cbd5e1;font-size:0.84rem;">{html.escape(band["motivo"])}</div>'
-                f'<div class="policy-foot">📎 <a href="{band["url"]}" target="_blank">{html.escape(band["fonte"])}</a></div></div>',
+                f'<div class="policy-foot"><a href="{band["url"]}" target="_blank">{html.escape(band["fonte"])}</a></div></div>',
                 unsafe_allow_html=True,
             )
     with coly:
@@ -155,7 +155,7 @@ def render_tab_home_costs():
             st.markdown(
                 '<div class="kpi-card"><h4 style="color:#34d399;margin-bottom:8px;">Tarifa social ampliada (Luz do Povo)</h4>'
                 f'<div style="color:#e2e8f0;font-size:0.88rem;line-height:1.55;">{html.escape(soc["resumo"])}</div>'
-                f'<div class="policy-foot">📎 <a href="{soc["url"]}" target="_blank">{html.escape(soc["fonte"])}</a></div></div>',
+                f'<div class="policy-foot"><a href="{soc["url"]}" target="_blank">{html.escape(soc["fonte"])}</a></div></div>',
                 unsafe_allow_html=True,
             )
     st.markdown(
@@ -180,7 +180,7 @@ def render_tab_home_costs():
         fig.add_hline(y=90, line_dash="dot", line_color="#10B981", annotation_text="Meta legal de esgoto: 90% (2033)", annotation_position="top left")
         fig.update_yaxes(range=[55, 100])
         apply_plotly_theme(fig, title="Domicílios com água da rede e esgoto adequado (%)", height=430)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source("IBGE — PNAD Contínua, SIDRA 6731 (água) e 7192 (esgoto adequado = rede geral/pluvial + fossa séptica ligada à rede).", "https://sidra.ibge.gov.br/tabela/7192")
 
     marco = ctx.get("saneamento_marco_legal", {})

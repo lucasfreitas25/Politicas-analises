@@ -14,7 +14,7 @@ from modules.ui_components import (
 )
 
 def render_tab_labor():
-    st.markdown('<div class="section-title">👥 Mercado de Trabalho: PNAD Contínua & CAGED</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Mercado de Trabalho: PNAD Contínua & CAGED</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Evolução detalhada da taxa de desocupação, rendimento médio real, massa salarial e saldo de empregos formais gerados.</div>',
         unsafe_allow_html=True
@@ -96,7 +96,7 @@ def render_tab_labor():
 
     fig_desoc.update_xaxes(nticks=12, tickangle=-25)
     apply_plotly_theme(fig_desoc, title="Taxa de Desocupação no Brasil (%) - Série Mensal PNAD Contínua")
-    st.plotly_chart(fig_desoc, use_container_width=True)
+    st.plotly_chart(fig_desoc, width="stretch")
 
     # Gráficos 2 & 3 em duas colunas: Rendimento Médio Real e Massa Salarial
     col_g1, col_g2 = st.columns(2)
@@ -126,7 +126,7 @@ def render_tab_labor():
             ))
         fig_rend.update_xaxes(nticks=8, tickangle=-25)
         apply_plotly_theme(fig_rend, title="Rendimento Médio Real Habitual (R$)")
-        st.plotly_chart(fig_rend, use_container_width=True)
+        st.plotly_chart(fig_rend, width="stretch")
 
     with col_g2:
         st.subheader("3. Massa de Rendimento Real (R$ bi)")
@@ -153,7 +153,7 @@ def render_tab_labor():
             ))
         fig_massa.update_xaxes(nticks=8, tickangle=-25)
         apply_plotly_theme(fig_massa, title="Massa de Rendimento Real (R$ Bilhões)")
-        st.plotly_chart(fig_massa, use_container_width=True)
+        st.plotly_chart(fig_massa, width="stretch")
 
     st.markdown("---")
 
@@ -175,17 +175,17 @@ def render_tab_labor():
     ))
 
     apply_plotly_theme(fig_caged, title="Saldo Líquido Anual de Empregos Formais (Novo CAGED)")
-    st.plotly_chart(fig_caged, use_container_width=True)
+    st.plotly_chart(fig_caged, width="stretch")
 
     render_source("MTE — Novo CAGED, série com ajustes (inclui declarações fora do prazo; divulgação de dez/2025). 2019 pelo CAGED antigo, de metodologia diferente. 2026 = acumulado de janeiro a agosto.",
                   "https://static.poder360.com.br/2026/01/Caged-apresentacao-dez-2025-1.pdf")
 
     # Tabela de Métricas Resumo do Trabalho (calculada a partir das séries)
-    st.subheader("📊 Síntese Numérica do Mercado de Trabalho")
+    st.subheader("Síntese Numérica do Mercado de Trabalho")
     col_t1, col_t2 = st.columns(2)
     for col, df_gov, nome, cor, caged_gov in (
         (col_t1, df_bols, "Governo Bolsonaro (2019-2022)", "#93c5fd", "Bolsonaro"),
-        (col_t2, df_lula, "Governo Lula (2023-atual)", "#fda4af", "Lula"),
+        (col_t2, df_lula, "Governo Lula (2023-atual)", "#fca5a5", "Lula"),
     ):
         if df_gov.empty:
             continue

@@ -60,21 +60,19 @@
   "armas_e_drogas": [
     {
       "governo": "Bolsonaro (2019-2022)",
-      "registro_cacs": 783385,
-      "apreensao_cocaina_ton": 398.5,
-      "apreensao_maconha_ton": 1850.0
+      "periodo": "2019–2022",
+      "armas_apreendidas_pf": 8812
     },
     {
-      "governo": "Lula (2023-2024)",
-      "registro_cacs": 142000,
-      "apreensao_cocaina_ton": 215.2,
-      "apreensao_maconha_ton": 1120.0
+      "governo": "Lula (2023-out/2026)",
+      "periodo": "2023–out/2026",
+      "armas_apreendidas_pf": 9373
     }
   ],
   "destaques": {
     "bolsonaro": {
-      "queda_homicidios": "Queda contínua de mortes violentas em relação aos picos históricos de 2016-2017 (que passavam de 60 mil mortes/ano), impulsionada por criação do SUSP, isolamento de chefes de facções em presídios federais e políticas estaduais.",
-      "politica_armas": "Flexibilização ampla do acesso a armas e munições via decretos para Caçadores, Atiradores e Colecionadores (CACs), com aumento de mais de 300% no acervo civil particular.",
+      "queda_homicidios": "Queda contínua de mortes violentas desde os picos de 2016–2017. O Atlas da Violência atribui a queda de 2019 ao envelhecimento da população, a programas estaduais e municipais e ao Estatuto do Desarmamento, e não ao aumento de CACs (Aos Fatos, 16/10/2026).",
+      "politica_armas": "Flexibilização do acesso a armas e munições por decretos para Caçadores, Atiradores e Colecionadores (CACs); o acervo de CACs passou de cerca de 350 mil para mais de 1 milhão de armas (Instituto Sou da Paz).",
       "desafio_feminicidio": "Aumento dos casos registrados de feminicídio (1.447 em 2022) e violência doméstica durante o período da pandemia."
     },
     "lula": {
@@ -84,5 +82,6 @@
       "desafio_feminicidio": "Feminicídios bateram recorde em 2025 (1.571, +4%), assim como mortes por intervenção policial (6.602, +5,4%)."
     }
   },
-  "nota_metodologica": "Fonte: Anuários Brasileiros de Segurança Pública (FBSP). Mortes violentas: 2019–2020 das edições 2020–2021, 2021–2022 da edição 2023 (taxas com população do Censo 2022), 2023–2025 das edições 2024–2026. Feminicídios: 2021–2025 da edição 2026, que revisa os anos anteriores; 2019–2020 das edições da época. Como as taxas usam bases populacionais diferentes, compare preferencialmente os números absolutos."
+  "nota_metodologica": "Fonte: Anuários Brasileiros de Segurança Pública (FBSP). Mortes violentas: 2019–2020 das edições 2020–2021, 2021–2022 da edição 2023 (taxas com população do Censo 2022), 2023–2025 das edições 2024–2026. Feminicídios: 2021–2025 da edição 2026, que revisa os anos anteriores; 2019–2020 das edições da época. Como as taxas usam bases populacionais diferentes, compare preferencialmente os números absolutos.",
+  "nota_armas": "Armas de fogo apreendidas pela Polícia Federal (Agência Lupa, 18/10/2026). O período de Lula é mais curto que o de Bolsonaro até out/2026 (46 meses contra 48) e inclui todo o ano de 2026 até outubro. Já o acervo de armas de CACs passou de cerca de 350 mil para mais de 1 milhão no governo Bolsonaro (Instituto Sou da Paz, via Ranking dos Políticos). Os dados de apreensão de drogas que estavam aqui saíram do painel por não terem sido confirmados."
 }

@@ -1,0 +1,433 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-22",
+    "aviso": "Promessas de campanha, não resultados. Cada item é uma paráfrase do painel, com a página do PDF em que o trecho aparece; o texto original do plano prevalece. Os planos de 1994 e 1998 estão na edição do Centro Edelstein; os demais são cópias hospedadas por terceiros dos documentos divulgados pelas campanhas."
+  },
+  "planos": [
+    {
+      "governo": "FHC 1",
+      "titulo": "Mãos à Obra, Brasil: proposta de governo",
+      "ano": 1994,
+      "partido": "PSDB (coligação com PFL e PTB)",
+      "url": "https://static.scielo.org/scielobooks/b27wf/pdf/cardoso-9788599662663.pdf",
+      "nota": "Edição de 2008 do Centro Edelstein (SciELO Livros); as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Prioridades",
+          "texto": "Cinco metas prioritárias: emprego, educação, saúde, agricultura e segurança.",
+          "pagina": 11
+        },
+        {
+          "tema": "Impostos",
+          "texto": "Mandar ao Congresso uma reforma tributária que simplifique os tributos e estimule o investimento.",
+          "pagina": 12
+        },
+        {
+          "tema": "Estatais e energia",
+          "texto": "Acelerar as privatizações, com estimativa de R$ 15 bilhões em quatro anos para infraestrutura.",
+          "pagina": 13
+        },
+        {
+          "tema": "Infraestrutura",
+          "texto": "Atrair o setor privado para obras por concessões e parcerias com empresas públicas.",
+          "pagina": 12
+        },
+        {
+          "tema": "Social",
+          "texto": "Criar o programa Comunidade Solidária, ampliando projetos de alimentação e combate à fome.",
+          "pagina": 11
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Política de salário mínimo com ganhos reais, compatível com as contas da Previdência.",
+          "pagina": 66
+        },
+        {
+          "tema": "Educação",
+          "texto": "Descentralizar a merenda escolar para os municípios e criar padrões de qualidade para o livro didático.",
+          "pagina": 55
+        },
+        {
+          "tema": "Agro e terra",
+          "texto": "Reforma agrária para democratizar o acesso à terra.",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "governo": "FHC 2",
+      "titulo": "Avança, Brasil: proposta de governo",
+      "ano": 1998,
+      "partido": "PSDB (coligação com PFL, PPB, PTB e PSD)",
+      "url": "https://static.scielo.org/scielobooks/62rp6/pdf/cardoso-9788599662687.pdf",
+      "nota": "Edição de 2008 do Centro Edelstein (SciELO Livros); as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Contas públicas",
+          "texto": "Combater os déficits nos três níveis de governo e garantir o equilíbrio das contas da Previdência.",
+          "pagina": 11
+        },
+        {
+          "tema": "Estatais e energia",
+          "texto": "Levar adiante o programa de privatização, com o Estado como regulador.",
+          "pagina": 11
+        },
+        {
+          "tema": "Impostos",
+          "texto": "Reforma tributária para tornar o sistema mais racional e simples.",
+          "pagina": 26
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Acelerar o crescimento para gerar os 7,8 milhões de postos de trabalho necessários até 2002.",
+          "pagina": 12
+        },
+        {
+          "tema": "Social",
+          "texto": "Apoiar programas de bolsa-escola de estados e municípios.",
+          "pagina": 15
+        },
+        {
+          "tema": "Saúde",
+          "texto": "Ampliar as equipes de Saúde da Família e o número de agentes comunitários.",
+          "pagina": 15
+        },
+        {
+          "tema": "Educação",
+          "texto": "Usar parte do Fundef na formação e qualificação de professores.",
+          "pagina": 75
+        },
+        {
+          "tema": "Agro e terra",
+          "texto": "Prosseguir com a reforma agrária por assentamentos e outras formas de acesso à terra.",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "governo": "Lula 1",
+      "titulo": "Programa de Governo 2002: Crescimento, Emprego e Inclusão Social",
+      "ano": 2002,
+      "partido": "PT (coligação Lula Presidente: PT, PL, PCdoB, PMN e PCB)",
+      "url": "https://files.cercomp.ufg.br/weby/up/16/o/pplgbt-148.pdf",
+      "nota": "Cópia hospedada pela UFG; as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Economia",
+          "texto": "Reduzir a fragilidade externa como primeiro passo para crescer.",
+          "pagina": 11
+        },
+        {
+          "tema": "Impostos",
+          "texto": "Reforma tributária já no primeiro ano, desonerando a produção e a exportação.",
+          "pagina": 14
+        },
+        {
+          "tema": "Previdência",
+          "texto": "Enfrentar a questão da Previdência com iniciativas de curto, médio e longo prazo.",
+          "pagina": 18
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Reajuste progressivo do poder de compra do salário mínimo.",
+          "pagina": 31
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Programa nacional de incentivo ao primeiro emprego para jovens.",
+          "pagina": 24
+        },
+        {
+          "tema": "Social",
+          "texto": "Programa de combate à fome e política de garantia de renda mínima.",
+          "pagina": 43
+        },
+        {
+          "tema": "Agro e terra",
+          "texto": "Reforma agrária como instrumento de inclusão social.",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "governo": "Lula 2",
+      "titulo": "Lula Presidente: Programa de Governo 2007/2010",
+      "ano": 2006,
+      "partido": "PT (coligação A Força do Povo: PT, PCdoB e PRB)",
+      "url": "https://files.cercomp.ufg.br/weby/up/16/o/pplgbt-91.pdf",
+      "nota": "Cópia hospedada pela UFG; as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Social",
+          "texto": "Aprimorar o Bolsa Família e oferecer trabalho e renda aos beneficiários.",
+          "pagina": 29
+        },
+        {
+          "tema": "Social",
+          "texto": "Continuar o Fome Zero, com alimentação escolar, compra de alimentos e restaurantes populares.",
+          "pagina": 30
+        },
+        {
+          "tema": "Educação",
+          "texto": "Aprovar o Fundeb e criar o piso salarial nacional dos professores.",
+          "pagina": 18
+        },
+        {
+          "tema": "Educação",
+          "texto": "Continuar o ProUni, criar novas universidades e abrir vagas nas federais.",
+          "pagina": 18
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Política de recuperação do salário mínimo, negociada entre governo, empresas, trabalhadores e aposentados.",
+          "pagina": 20
+        },
+        {
+          "tema": "Infraestrutura",
+          "texto": "Levar energia a todos (Luz para Todos) e ampliar saneamento e transporte público.",
+          "pagina": 11
+        },
+        {
+          "tema": "Instituições",
+          "texto": "Reforma política com fidelidade partidária e financiamento público de campanhas.",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "governo": "Dilma 1",
+      "titulo": "Os 13 compromissos programáticos de Dilma Rousseff",
+      "ano": 2010,
+      "partido": "PT (coligação Para o Brasil Seguir Mudando)",
+      "url": "https://siac.fpabramo.org.br/uploads/acervo/Programa-de-governo-presidencia_2010.pdf",
+      "nota": "Acervo da Fundação Perseu Abramo; as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Social",
+          "texto": "Erradicar a pobreza absoluta e seguir reduzindo as desigualdades.",
+          "pagina": 6
+        },
+        {
+          "tema": "Moradia",
+          "texto": "Minha Casa, Minha Vida com mais 2 milhões de moradias.",
+          "pagina": 8
+        },
+        {
+          "tema": "Educação",
+          "texto": "Construir 6 mil creches e pré-escolas e 10 mil quadras esportivas cobertas.",
+          "pagina": 7
+        },
+        {
+          "tema": "Estatais e energia",
+          "texto": "Usar a riqueza do pré-sal em um fundo de longo prazo para saúde, educação, ciência e cultura.",
+          "pagina": 2
+        },
+        {
+          "tema": "Economia",
+          "texto": "Política macroeconômica com equilíbrio fiscal e controle da inflação.",
+          "pagina": 5
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Ampliar programas de inserção de jovens no mercado de trabalho.",
+          "pagina": 7
+        },
+        {
+          "tema": "Segurança",
+          "texto": "Enfrentar o crime organizado, consolidando o Pronasci.",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "governo": "Dilma 2",
+      "titulo": "Mais Mudanças, Mais Futuro: programa de governo Dilma Rousseff",
+      "ano": 2014,
+      "partido": "PT (coligação Com a Força do Povo)",
+      "url": "https://www.conjur.com.br/wp-content/uploads/2023/09/programa-governo-dilma-2014.pdf",
+      "nota": "Cópia hospedada pelo Conjur; as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Instituições",
+          "texto": "Reforma política com participação popular por meio de plebiscito.",
+          "pagina": 30
+        },
+        {
+          "tema": "Instituições",
+          "texto": "Combate sem tréguas à corrupção.",
+          "pagina": 30
+        },
+        {
+          "tema": "Educação",
+          "texto": "Pronatec 2: mais 12 milhões de vagas em cursos técnicos até 2015.",
+          "pagina": 30
+        },
+        {
+          "tema": "Educação",
+          "texto": "Escola obrigatória a partir dos 4 anos de idade a partir de 2016.",
+          "pagina": 20
+        },
+        {
+          "tema": "Economia",
+          "texto": "Manter inflação baixa e estável, rigor fiscal e ampliar o investimento público.",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "governo": "Temer",
+      "titulo": "Uma Ponte para o Futuro",
+      "ano": 2015,
+      "partido": "PMDB (Fundação Ulysses Guimarães)",
+      "url": "https://www.epsjv.fiocruz.br/sites/default/files/files/ponteparaofuturo.pdf",
+      "nota": "Temer não disputou eleição como cabeça de chapa: este é o programa do PMDB de out/2015, que o governo adotou como base. Cópia hospedada pela Fiocruz.",
+      "propostas": [
+        {
+          "tema": "Contas públicas",
+          "texto": "Limite por lei para as despesas de custeio, abaixo do crescimento do PIB.",
+          "pagina": 18
+        },
+        {
+          "tema": "Contas públicas",
+          "texto": "Acabar com as vinculações constitucionais de gastos, como saúde e educação.",
+          "pagina": 9
+        },
+        {
+          "tema": "Previdência",
+          "texto": "Criar idade mínima para a aposentadoria.",
+          "pagina": 11
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Permitir que convenções coletivas prevaleçam sobre a lei, salvo direitos básicos.",
+          "pagina": 19
+        },
+        {
+          "tema": "Estatais e energia",
+          "texto": "Concessões amplas em logística e infraestrutura e volta do regime de concessão no petróleo.",
+          "pagina": 18
+        },
+        {
+          "tema": "Economia",
+          "texto": "Abertura comercial e acordos com EUA, União Europeia e Ásia, com ou sem o Mercosul.",
+          "pagina": 18
+        },
+        {
+          "tema": "Impostos",
+          "texto": "Simplificar impostos e unificar o ICMS, com cobrança no estado de destino.",
+          "pagina": 19
+        },
+        {
+          "tema": "Economia",
+          "texto": "Em até 3 anos, estabilizar a dívida/PIB e levar a inflação ao centro da meta de 4,5%.",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "governo": "Bolsonaro",
+      "titulo": "O Caminho da Prosperidade: proposta de plano de governo",
+      "ano": 2018,
+      "partido": "PSL (coligação Brasil Acima de Tudo, Deus Acima de Todos: PSL e PRTB)",
+      "url": "https://static.cdn.pleno.news/2018/08/Jair-Bolsonaro-proposta_PSC.pdf",
+      "nota": "Cópia do plano registrado no TSE, hospedada pelo Pleno News; as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Instituições",
+          "texto": "Reduzir o número de ministérios.",
+          "pagina": 17
+        },
+        {
+          "tema": "Economia",
+          "texto": "Ministério da Economia unindo Fazenda, Planejamento e Indústria; Banco Central independente.",
+          "pagina": 53
+        },
+        {
+          "tema": "Contas públicas",
+          "texto": "Reduzir a dívida em 20% com privatizações, concessões e venda de imóveis da União.",
+          "pagina": 56
+        },
+        {
+          "tema": "Previdência",
+          "texto": "Introduzir aos poucos um regime de capitalização com contas individuais.",
+          "pagina": 57
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Carteira de trabalho verde e amarela, voluntária, em que o contrato individual prevalece sobre a CLT.",
+          "pagina": 64
+        },
+        {
+          "tema": "Segurança",
+          "texto": "Reduzir a maioridade penal para 16 anos e acabar com progressão de penas e saídas temporárias.",
+          "pagina": 32
+        },
+        {
+          "tema": "Segurança",
+          "texto": "Reformular o Estatuto do Desarmamento e dar excludente de ilicitude a policiais.",
+          "pagina": 32
+        },
+        {
+          "tema": "Social",
+          "texto": "Renda mínima para todas as famílias, acima do valor do Bolsa Família.",
+          "pagina": 63
+        },
+        {
+          "tema": "Saúde",
+          "texto": "Mais Médicos: médicos cubanos poderiam ficar e receber o salário integral se aprovados no Revalida.",
+          "pagina": 40
+        },
+        {
+          "tema": "Educação",
+          "texto": "Ênfase na educação infantil, básica e técnica, \"sem doutrinar\".",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "governo": "Lula 3",
+      "titulo": "Diretrizes para o Programa de Reconstrução e Transformação do Brasil",
+      "ano": 2022,
+      "partido": "PT (coligação Brasil da Esperança)",
+      "url": "https://cdn-images.rtp.pt/icm/noticias/docs/a5/a5f5b3a8e137ccabb1c5c7adfe4248c5_d15611df61e0d84cc0751b513212d492.pdf",
+      "nota": "Versão registrada da coligação Brasil da Esperança (Lula-Alckmin), cópia hospedada pela RTP; as páginas são as do PDF.",
+      "propostas": [
+        {
+          "tema": "Contas públicas",
+          "texto": "Revogar o teto de gastos e criar um novo regime fiscal.",
+          "pagina": 10
+        },
+        {
+          "tema": "Social",
+          "texto": "Bolsa Família renovado e ampliado, com urgência.",
+          "pagina": 5
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Retomar a política de valorização do salário mínimo.",
+          "pagina": 4
+        },
+        {
+          "tema": "Trabalho e renda",
+          "texto": "Revogar os marcos regressivos da legislação trabalhista e restabelecer a justiça do trabalho gratuita.",
+          "pagina": 4
+        },
+        {
+          "tema": "Impostos",
+          "texto": "Reforma tributária em que os pobres paguem menos e os muito ricos paguem imposto de renda.",
+          "pagina": 11
+        },
+        {
+          "tema": "Estatais e energia",
+          "texto": "Opor-se à privatização da Petrobras e da Pré-Sal Petróleo (PPSA).",
+          "pagina": 14
+        },
+        {
+          "tema": "Meio ambiente",
+          "texto": "Combate ao desmatamento ilegal e desmatamento líquido zero.",
+          "pagina": 17
+        }
+      ]
+    }
+  ]
+}

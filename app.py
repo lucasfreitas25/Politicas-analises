@@ -20,6 +20,7 @@ load_css()
 
 # Importar módulos de visualização
 from modules.ui_components import render_hero_banner
+from modules.ux import render_tipos_fonte, render_print_button, render_acessibilidade
 from modules.tabs_overview import render_tab_overview
 from modules.tabs_labor import render_tab_labor
 from modules.tabs_inflation import render_tab_inflation
@@ -41,6 +42,9 @@ from modules.tabs_audit import render_tab_audit
 from modules.tabs_environment import render_tab_environment
 from modules.tabs_campaign import render_tab_campaign
 from modules.tabs_home_costs import render_tab_home_costs
+from modules.tabs_trade import render_tab_trade
+from modules.tabs_health import render_tab_health
+from modules.historico_ui import render_seletor, render_aba_comparada, ABAS_COMPARAVEIS, PADRAO
 from modules.tabs_methodology import render_tab_methodology
 
 
@@ -70,12 +74,14 @@ navegacao = st.navigation({
     ],
     "Setores Produtivos": [
         pagina(render_tab_agro_conab, "Agropecuária & Grãos", "🌾", "agro"),
+        pagina(render_tab_trade, "Comércio Exterior (ComexStat)", "🚢", "comercio-exterior"),
         pagina(render_tab_industry, "Indústria (PIM-PF)", "🏭", "industria"),
         pagina(render_tab_livestock, "Pecuária (PPM)", "🐄", "pecuaria"),
         pagina(render_tab_forestry, "Silvicultura & Extrativismo", "🌲", "silvicultura"),
     ],
     "Sociedade": [
         pagina(render_tab_education, "Educação", "🎓", "educacao"),
+        pagina(render_tab_health, "Saúde", "🏥", "saude"),
         pagina(render_tab_security, "Segurança Pública", "🛡️", "seguranca"),
         pagina(render_tab_social_inclusion, "Mulheres, Raça & Minorias", "🤝", "inclusao"),
         pagina(render_tab_environment, "Meio Ambiente & Clima", "🌳", "meio-ambiente"),
@@ -88,12 +94,14 @@ navegacao = st.navigation({
 
 # Banner Superior
 render_hero_banner()
+# A página padrão é servida na raiz, e aí url_path vem vazio
+pagina_atual = navegacao.url_path or "visao-geral"
+render_tipos_fonte(pagina_atual)
 
 # Barra Lateral (Sidebar)
 with st.sidebar:
     st.markdown("""
     <div style="display: flex; align-items: center; gap: 12px; padding: 8px 0 12px 0; border-bottom: 1px solid #1e293b; margin-bottom: 12px;">
-      <div style="font-size: 2.2rem; line-height: 1;">🇧🇷</div>
       <div>
         <div style="font-weight: 800; font-size: 1.1rem; color: #ffffff; letter-spacing: -0.02em;">Observatório Oficial</div>
         <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">BOLSONARO vs. LULA · 2019–2026</div>
@@ -101,36 +109,47 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-    st.caption("⚡ Ações rápidas")
-    if st.button("🔄 Sincronizar dados oficiais (API)", use_container_width=True,
+    st.caption("Ações rápidas")
+    if st.button("Sincronizar dados oficiais (API)", width="stretch",
                  help="Baixa de novo as séries do IBGE (SIDRA) e do Banco Central (SGS). Bases curadas (scorecard, checagens, CONAB) não são alteradas."):
         with st.spinner("Conectando às APIs do IBGE SIDRA e Banco Central..."):
             try:
                 import build_database
                 build_database.build_data()
                 st.cache_data.clear()
-                st.success("✅ Base de dados oficiais sincronizada com sucesso!")
+                st.success("✔ Base de dados oficiais sincronizada com sucesso!")
                 st.rerun()
             except Exception as e:
                 st.error(f"Erro na sincronização: {e}")
 
+    render_print_button()
+    render_acessibilidade()
+
     st.markdown("""
     <div style="font-size: 0.78rem; color: #94a3b8; line-height: 1.6; margin-top: 10px;">
       <b style="color: #cbd5e1;">Fontes primárias:</b><br/>
-      IBGE (SIDRA) · Banco Central (SGS) · MTE (CAGED) · MDIC · CONAB · Inpe · FBSP · DIEESE · CNC<br/>
+      IBGE (SIDRA) · Banco Central (SGS) · MTE (CAGED) · MDIC (ComexStat) · CONAB · Inpe · FBSP · DIEESE · CNC<br/>
       <b style="color: #cbd5e1;">Checagens:</b> Agência Lupa · Aos Fatos · Ranking dos Políticos · Estadão Verifica<br/><br/>
-      <i style="color: #64748b;">Dados auditados em 20/10/2026. Veja a página "Auditoria dos Dados".</i>
+      <i style="color: #64748b;">Dados auditados em 21/10/2026. Veja a página "Auditoria dos Dados".</i>
     </div>
     """, unsafe_allow_html=True)
 
-# Renderizar página selecionada
-navegacao.run()
+# Renderizar página selecionada. Nas abas com série longa, o seletor no topo troca os governos comparados na aba inteira;
+# o padrão (Bolsonaro x Lula 3) mostra a aba original, completa.
+if pagina_atual in ABAS_COMPARAVEIS:
+    gov_a, gov_b, gov_todos = render_seletor()
+    # Na Visão Geral, um par diferente usa o mesmo painel (cartões, radar, placar e tabela) com outros governos
+    padrao_ou_vg = ((gov_a, gov_b) == PADRAO or pagina_atual == "visao-geral") and not gov_todos
+    if padrao_ou_vg or not render_aba_comparada(pagina_atual, gov_a, gov_b, gov_todos):
+        navegacao.run()
+else:
+    navegacao.run()
 
 # Rodapé Global
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 14px 0;">
-  <b style="color: #cbd5e1;">Observatório Estatístico Bolsonaro vs. Lula</b> • Desenvolvido em Python & Streamlit •
+  <b style="color: #cbd5e1;">Observatório Estatístico</b> • Desenvolvido em Python & Streamlit •
   Dados oficiais (IBGE, BCB, MTE, MDIC, CONAB, Inpe, FBSP, DIEESE, CNC) e checagens de agências independentes • Revisado em outubro de 2026
 </div>
 """, unsafe_allow_html=True)

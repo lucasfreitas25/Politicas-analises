@@ -1,0 +1,201 @@
+{
+  "metadados": {
+    "atualizado_em": "2026-10-21"
+  },
+  "expectativa_vida": {
+    "fonte": "IBGE — Tábuas de Mortalidade (2022 e 2024)",
+    "url": "https://agenciadenoticias.ibge.gov.br/pt/agencia-sala-de-imprensa/38455-em-2022-expectativa-de-vida-era-de-75-5-anos.html?lang=pt-BR",
+    "url_2024": "https://www.oliberal.com/variedades/expectativa-de-vida-ao-nascer-do-brasileiro-subiu-2-5-meses-a-76-6-anos-em-2024-revela-ibge-1.1056197",
+    "nota": "O IBGE refez 2020–2022 com o Censo 2022, então os valores dessa fase são menores que os divulgados na época. 2023 é 76,4 (2024 subiu 2,5 meses). A queda de 2020 e 2021 reflete a Covid-19; 2024 é a maior marca da série do IBGE.",
+    "serie": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "anos": 76.2
+      },
+      {
+        "ano": 2020,
+        "governo": "Bolsonaro",
+        "anos": 74.8
+      },
+      {
+        "ano": 2021,
+        "governo": "Bolsonaro",
+        "anos": 72.8
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "anos": 75.5
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "anos": 76.4
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "anos": 76.6
+      }
+    ]
+  },
+  "mortalidade_infantil": {
+    "fonte": "IBGE — Tábuas de Mortalidade (óbitos de menores de 1 ano por mil nascidos vivos)",
+    "url": "https://www.infomoney.com.br/?p=3121745",
+    "nota": "Anos de 2019 a 2021 não foram confirmados em fonte aberta e ficaram de fora. A série do IBGE é revisada a cada edição; 2022 vem da tábua de 2022 e 2023–2024 da tábua de 2024 (28/11/2025).",
+    "serie": [
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "taxa": 12.9
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "taxa": 12.5
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "taxa": 12.3
+      }
+    ]
+  },
+  "dengue": {
+    "fonte": "Ministério da Saúde — Painel de Monitoramento das Arboviroses, via imprensa e boletins estaduais/municipais",
+    "url": "https://web.arapiraca.al.gov.br/wp-content/uploads/2025/12/INFORMESEMANALDENGUEARBOVIROSESSEMANA4930112025a06122025.pdf",
+    "nota": "Os números mudam conforme a data de corte do painel (óbitos em investigação são confirmados depois), por isso as reportagens divergem. 2019: 820 mortes; 2022: 987 até dezembro (cerca de 100 ainda em investigação); 2023: 1.179 confirmadas (outra reportagem cita 1.204); 2024: 6.103 no total do ano; 2025: dado parcial até a 39ª semana epidemiológica (1.660 confirmadas e 314 em investigação). A epidemia de 2024 bateu o recorde da série iniciada em 2000; infectologistas ouvidos pela imprensa apontam calor, chuvas intermitentes e El Niño, e o Ministério da Saúde destacou o retorno do sorotipo DENV-3, contra o qual a população tinha pouca proteção.",
+    "mortes": [
+      {
+        "ano": 2019,
+        "governo": "Bolsonaro",
+        "valor": 820,
+        "parcial": false
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "valor": 987,
+        "parcial": false
+      },
+      {
+        "ano": 2023,
+        "governo": "Lula",
+        "valor": 1179,
+        "parcial": false
+      },
+      {
+        "ano": 2024,
+        "governo": "Lula",
+        "valor": 6103,
+        "parcial": false
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "valor": 1660,
+        "parcial": true
+      }
+    ],
+    "casos_prov_se39": {
+      "2024": 6421864,
+      "2025": 1594216
+    },
+    "mortes_se39": {
+      "2024": 6213,
+      "2025": 1660
+    },
+    "fontes_extras": [
+      [
+        "CNN Brasil — 2024",
+        "https://www.cnnbrasil.com.br/nacional/brasil-ultrapassa-5-milhoes-de-casos-provaveis-de-dengue-em-2024/"
+      ],
+      [
+        "Bem Paraná — 2022",
+        "https://www.bemparana.com.br/noticias/com-987-mortes-por-dengue-em-2022-brasil-bate-recorde-em-letalidade-anual"
+      ],
+      [
+        "Poder360 — 2025",
+        "https://www.poder360.com.br/poder-saude/brasil-soma-16-milhao-de-casos-de-dengue-sp-tem-maior-no-de-mortes/"
+      ],
+      [
+        "O Povo — El Niño e calor",
+        "https://www.opovo.com.br/noticias/saude/2024/01/24/amp/el-nino-e-altas-temperaturas-favorecem-aumento-de-casos-de-dengue.html"
+      ],
+      [
+        "Brasil de Fato — DENV-3",
+        "https://www.brasildefato.com.br/2023/12/03/brasil-pode-enfrentar-surto-historico-de-dengue-em-2024"
+      ]
+    ]
+  },
+  "covid": {
+    "fonte": "Ministério da Saúde — boletins de óbitos acumulados, via imprensa",
+    "url": "https://www.jornalopcao.com.br/ultimas-noticias/covid-19-brasil-encerra-ano-com-7-675-973-casos-e-193-875-mortes-304598/",
+    "nota": "Óbitos acumulados desde 2020, em marcos de data (valores arredondados e reportados em dias diferentes; não é série anual fechada). A pandemia atingiu o mundo todo; as respostas de cada governo (isolamento, compra de vacinas, comunicação) estão avaliadas na página de políticas.",
+    "marcos": [
+      {
+        "data": "31/12/2020",
+        "obitos_mil": 195,
+        "governo": "Bolsonaro"
+      },
+      {
+        "data": "07/01/2022",
+        "obitos_mil": 620,
+        "governo": "Bolsonaro"
+      },
+      {
+        "data": "30/08/2022",
+        "obitos_mil": 684,
+        "governo": "Bolsonaro"
+      },
+      {
+        "data": "28/03/2023",
+        "obitos_mil": 700,
+        "governo": "Lula"
+      }
+    ],
+    "fontes_extras": [
+      [
+        "O Povo — 30/08/2022",
+        "https://www.opovo.com.br/noticias/saude/2022/08/30/amp/covid-19-brasil-registra-229-mortes-e-168-mil-casos-em-24-horas.html"
+      ]
+    ]
+  },
+  "vacinacao": {
+    "fonte": "Ministério da Saúde (balanço de jan/2025), via Brasil 61, e estudo da CNM (2010–2024)",
+    "url": "https://brasil61.com/n/cobertura-vacinal-supera-a-meta-de-95-em-varias-cidades-do-brasil-bras2513403",
+    "url_cnm": "https://cnm.org.br/biblioteca/download/16281",
+    "nota": "Número de municípios que atingiram a meta de 95% de cobertura. A cobertura nacional da pólio não bate a meta desde 2016 e, em 2024, só a BCG e a 1ª dose da tríplice viral atingiram 95% (CNM, 13 vacinas). Em novembro de 2024 a pólio oral foi trocada pela vacina injetável. Dados nacionais de 2019 a 2021 e de 2025 não foram confirmados.",
+    "municipios_meta": [
+      {
+        "vacina": "Tríplice viral (1ª dose)",
+        "2022": 2485,
+        "2024": 3870
+      },
+      {
+        "vacina": "Tríplice viral (2ª dose)",
+        "2022": 855,
+        "2024": 2408
+      },
+      {
+        "vacina": "Poliomielite",
+        "2022": 1466,
+        "2024": 2825
+      }
+    ]
+  },
+  "mais_medicos_especialistas": {
+    "fonte": "Ministério da Saúde, via Futuro da Saúde (26/08/2026) e Estratégia Med",
+    "url": "https://futurodasaude.com.br/mais-medicos-especialistas-vinculo-trabalhista/",
+    "nota": "O programa Mais Médicos Especialistas (parte do Agora Tem Especialistas) tem 583 médicos atuando, segundo a imprensa, e edital de 2026 com cerca de 1,2 mil vagas e bolsa de até R$ 20 mil; foi prorrogado até fevereiro de 2027 e o ministério estuda vínculo trabalhista. Os números variam entre reportagens (900 a 1.206 vagas) e a data do levantamento não foi informada."
+  },
+  "pendencias": [
+    "Cobertura da atenção primária (Saúde da Família) e número de agentes comunitários por ano: não encontrei série nacional completa em fonte aberta (o painel e-Gestor AB do Ministério da Saúde tem).",
+    "Cobertura vacinal oficial do Ministério (SI-PNI) por vacina e por ano: o painel usa a estimativa da OMS/Unicef, que difere um pouco; os números de 2024 do Ministério são parciais.",
+    "Filas e tempo de espera do SUS, e atendimentos da Farmácia Popular e do Mais Médicos (atenção básica) por ano.",
+    "Parcela da população que usa só o SUS e número de beneficiários de planos de saúde ao longo dos governos.",
+    "Gasto de estados e municípios com saúde: aqui só entra a despesa da União.",
+    "Dengue 2025 fechado e valores finais de 2022 e 2023 no painel oficial."
+  ]
+}

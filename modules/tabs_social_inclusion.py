@@ -27,13 +27,13 @@ def _faixas_governo(fig, periodos):
         fig.add_vrect(x0=idx_b[0] - 0.5, x1=idx_b[-1] + 0.5, fillcolor="#3B82F6", opacity=0.06, line_width=0,
                       annotation_text="Bolsonaro", annotation_position="top left")
     if idx_l:
-        fig.add_vrect(x0=idx_l[0] - 0.5, x1=idx_l[-1] + 0.5, fillcolor="#F43F5E", opacity=0.06, line_width=0,
+        fig.add_vrect(x0=idx_l[0] - 0.5, x1=idx_l[-1] + 0.5, fillcolor="#EF2B2D", opacity=0.06, line_width=0,
                       annotation_text="Lula", annotation_position="top left")
 
 
 def render_tab_social_inclusion():
     render_section_header(
-        "🤝 Mulheres, Raça & Minorias",
+        "Mulheres, Raça & Minorias",
         "Desemprego e renda por sexo e cor/raça (IBGE, série trimestral oficial), violência contra negros, mulheres e pessoas trans, "
         "terras indígenas e as políticas de cada governo para esses grupos.",
     )
@@ -92,7 +92,7 @@ def render_tab_social_inclusion():
         _faixas_governo(fig, periodos)
         apply_plotly_theme(fig, title="Desocupação por grupo (%)", height=430)
         fig.update_xaxes(nticks=10, tickangle=-30)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source("IBGE — PNAD Contínua, tabelas 4093 (sexo) e 6402 (cor ou raça)", SIDRA + "6402")
 
         # ---------------- Desigualdade de renda
@@ -108,7 +108,7 @@ def render_tab_social_inclusion():
         _faixas_governo(fig, periodos)
         apply_plotly_theme(fig, title="Razão de rendimentos entre grupos (%)", height=420)
         fig.update_xaxes(nticks=10, tickangle=-30)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source("IBGE — PNAD Contínua, tabelas 5436 (sexo) e 6405 (cor ou raça); cálculo do painel", SIDRA + "6405")
 
     st.markdown("---")
@@ -135,7 +135,7 @@ def render_tab_social_inclusion():
                                    marker_color=[gov_color(g) for g in df_mvi["governo"]],
                                    text=df_mvi["feminicidios"].apply(lambda v: fmt_br(v, 0)), textposition="outside"))
             apply_plotly_theme(fig, title="Feminicídios registrados por ano", height=380)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source("FBSP — Anuários Brasileiros de Segurança Pública")
     with col_t:
         trans = pd.DataFrame(curado.get("pessoas_trans", {}).get("serie", []))
@@ -144,7 +144,7 @@ def render_tab_social_inclusion():
                                    marker_color=[gov_color(g) for g in trans["governo"]],
                                    text=trans["assassinatos"].apply(lambda v: "s/ dado" if pd.isna(v) else fmt_br(v, 0)), textposition="outside"))
             apply_plotly_theme(fig, title="Assassinatos de pessoas trans e travestis", height=380)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source(curado["pessoas_trans"]["fonte"] + ". " + curado["pessoas_trans"]["nota"], curado["pessoas_trans"]["url"])
 
     ti_meta = extras.get("terras_indigenas", {})

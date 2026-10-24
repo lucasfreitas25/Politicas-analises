@@ -497,7 +497,7 @@ CONTRAPONTOS = {
         ("Contra a fala", "Agência Lupa", "O STF nunca confirmou as condenações: anulou-as em 2021, sem julgar o mérito, e os casos prescreveram.", URL["lupa_band"]),
     ],
     "F-divida": [
-        ("A favor de Flávio", "Banco Central (SGS 13762)", "A dívida bruta subiu de 71,7% do PIB (dez/2022) para 82,9% (ago/2026) — alta de 11 pontos em menos de quatro anos.", "https://www3.bcb.gov.br/sgspub/"),
+        ("A favor de Flávio", "Banco Central (SGS 13762)", "A dívida bruta subiu de 71,7% do PIB (dez/2022) para 82,9% (ago/2026) — alta de 11 pontos em menos de quatro anos.", "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13762/dados?formato=csv"),
         ("Contra a fala", "Ranking dos Políticos", "Em reais nominais é recorde, mas em % do PIB o pico da série foi 2020 (87%), no governo Bolsonaro.", URL["rank_band"]),
     ],
     "F-antifaccao": [

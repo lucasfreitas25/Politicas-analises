@@ -432,6 +432,206 @@
     "observacao": "O InfoMoney lista só parte das medidas."
   },
   {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "Cesta básica do DIEESE (São Paulo, dez/ano)",
+    "antes": "2018: 467,41 · 2023: 772,51 · 2024: 810,15 · 2025: 835,40; % do salário mínimo de 2022 = 65,3%",
+    "depois": "2018: 471,44 · 2023: 761,01 · 2024: 841,29 · 2025: 845,95; % do salário mínimo líquido de 2022 = 70,58%",
+    "fonte": "DIEESE — boletins de dezembro (2018 a 2025)",
+    "observacao": "Os valores de 2018, 2023, 2024 e 2025 estavam errados. O percentual agora é do salário mínimo líquido, como o DIEESE calcula."
+  },
+  {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "IDEB nacional",
+    "antes": "2017: 5,8/4,7/3,8 · série parava em 2023",
+    "depois": "2019, 2021, 2023 e 2025 (6,3 / 5,3 / 4,5 no último); 2017 removido por não ter sido confirmado",
+    "fonte": "Inep (divulgação de 05/08/2026) e Exame",
+    "observacao": "O IDEB 2025 saiu em 5/ago/2026."
+  },
+  {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "Orçamento do MEC",
+    "antes": "R$ 118,5 bi (2019) a R$ 169,5 bi (2025), sem fonte, com 2025 projetado",
+    "depois": "Despesa paga, em R$ bi de dez/2024: 164,6 · 152,3 · 151,9 · 156,4 · 172,6 · 174,9 (2019 a 2024)",
+    "fonte": "Todos Pela Educação, com Siafi",
+    "observacao": "Valores deflacionados pelo IPCA; 2025 ainda não disponível."
+  },
+  {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "Queimadas 2021 e 2022",
+    "antes": "Em branco",
+    "depois": "184.081 e 200.763 focos (também 2020 = 222.797 e 2025 = 136.393, ano completo)",
+    "fonte": "Inpe — CSVs anuais do Programa Queimadas",
+    "observacao": "Contagem direta das linhas dos arquivos abertos."
+  },
+  {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "Assassinatos de pessoas trans em 2021",
+    "antes": "Em branco",
+    "depois": "140 casos",
+    "fonte": "ANTRA, via CNN Brasil",
+    "observacao": ""
+  },
+  {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "Armas e drogas (segurança)",
+    "antes": "Registros de CACs 783.385 x 142.000; apreensão de cocaína 398,5 x 215,2 t; maconha 1.850 x 1.120 t",
+    "depois": "Armas apreendidas pela PF: 8.812 (2019–2022) x 9.373 (2023–out/2026); acervo de CACs de ~350 mil para mais de 1 milhão",
+    "fonte": "Agência Lupa e Instituto Sou da Paz",
+    "observacao": "Os números de drogas e de registros de CACs não foram confirmados e saíram do painel."
+  },
+  {
+    "area": "Auditoria de pendências (4ª revisão)",
+    "item": "Textos soltos (inflação e silvicultura)",
+    "antes": "\"Deflação de grãos no atacado\", \"estados como MS, MG, PR e BA\" e \"mais de 80%\" sem cálculo",
+    "depois": "Frases ligadas a dados: IPCA 4,62% / 4,83% / 4,26% (2023–25) e silvicultura = 84% do valor florestal em 2024",
+    "fonte": "IBGE (IPCA e PEVS)",
+    "observacao": "Afirmações sem fonte foram removidas."
+  },
+  {
+    "area": "Transparência e usabilidade (5ª revisão)",
+    "item": "Texto do painel e da Metodologia",
+    "antes": "\"Baseada estritamente em dados públicos oficiais\" e \"Sem viés seletivo… na íntegra\"",
+    "depois": "Texto passou a dizer que a base é principalmente oficial, com estudos de entidades, checagens e reportagens, e a Metodologia lista critérios, limites e o que o painel não mede",
+    "fonte": "Revisão do próprio painel",
+    "observacao": "As frases anteriores prometiam mais do que o painel entrega: há seleção de indicadores e fontes não oficiais."
+  },
+  {
+    "area": "Transparência e usabilidade (5ª revisão)",
+    "item": "Tipos de fonte por página",
+    "antes": "Não havia",
+    "depois": "Cada página mostra os tipos de fonte usados (dado oficial, estudo de entidade, checagem, pesquisa, reportagem, promessa, cálculo do painel)",
+    "fonte": "Painel",
+    "observacao": ""
+  },
+  {
+    "area": "Transparência e usabilidade (5ª revisão)",
+    "item": "Comparação de períodos de tamanhos diferentes",
+    "antes": "Só mandato completo (48 x 44–45 meses)",
+    "depois": "Modos \"mesmo período\", \"Bolsonaro sem 2020\" e mandatos completos para desemprego, renda real e IPCA; filtro de eixos no placar",
+    "fonte": "IBGE (PNAD, IPCA); cálculo do painel",
+    "observacao": "Indicadores anuais (PIB, CAGED, dívida, segurança) ficam fora do recorte alinhado por não terem série mensal fechada."
+  },
+  {
+    "area": "Transparência e usabilidade (5ª revisão)",
+    "item": "Propostas de campanha: texto dos planos",
+    "antes": "Só resumos de imprensa",
+    "depois": "53 propostas com página conferida nos PDFs dos planos de Lula (84 págs.) e Flávio (76 págs.)",
+    "fonte": "Programa de governo de Lula e plano de Flávio (PDFs); o arquivo do TSE bloqueou download automático, então foram usadas cópias de Congresso em Foco e Poder360",
+    "observacao": "Páginas confirmadas por busca de palavra-chave na página; textos são paráfrases do painel."
+  },
+  {
+    "area": "Transparência e usabilidade (5ª revisão)",
+    "item": "UOL Confere e Comprova",
+    "antes": "Não incluídos",
+    "depois": "Buscados; nenhum veredito explícito sobre falas dos candidatos foi encontrado, então não entram na contagem",
+    "fonte": "Buscas em 21/10/2026",
+    "observacao": "Debate da Globo (23/10) ainda não aconteceu."
+  },
+  {
+    "area": "Educação (6ª revisão)",
+    "item": "Dados recentes da aba de Educação",
+    "antes": "Só IDEB, analfabetismo e orçamento até 2024",
+    "depois": "Adicionados PISA 2025 (leitura 408, matemática 377, ciências 409; 2018 e 2022 para comparação), ICA 56% ➔ 59% ➔ 66%, Censo Escolar 2025 (tempo integral 15,1% ➔ 25,8%, internet nas escolas 82,8% ➔ 94,5%) e Pé-de-Meia com a ressalva de que são números do MEC",
+    "fonte": "OCDE/Inep (via Poder360), Inep (ICA), Agência Brasil/Censo Escolar, Gazeta SP",
+    "observacao": "Orçamento pago do MEC em 2025, notas do Enem 2025 e Saeb 2025 não foram localizados em fonte confirmável e estão listados como pendentes na aba."
+  },
+  {
+    "area": "Educação (6ª revisão)",
+    "item": "Orçamento do MEC 2025 e 2026",
+    "antes": "Série de valores pagos terminava em 2024",
+    "depois": "Incluído o orçamento atualizado (dotação) do Portal da Transparência: R$ 236,17 bi (2025) e R$ 269,60 bi (2026, em execução), em reais correntes, em cartão separado",
+    "fonte": "Portal da Transparência (valores informados pelo usuário; o site bloqueia acesso automatizado)",
+    "observacao": "Não é comparável com a série do Anuário (valores pagos deflacionados). O valor pago de 2025 e 2026 continua pendente."
+  },
+  {
+    "area": "Saúde (7ª revisão)",
+    "item": "Nova página de Saúde",
+    "antes": "Não havia",
+    "depois": "Expectativa de vida e mortalidade infantil (IBGE), dengue, Covid-19 (óbitos acumulados), vacinação (municípios na meta) e as políticas de saúde, todos com fonte",
+    "fonte": "IBGE, Ministério da Saúde via imprensa e boletins, CNM",
+    "observacao": "Gasto federal em saúde por ano, cobertura vacinal nacional, filas do SUS e dados de 2019–2021 de mortalidade infantil não foram confirmados e estão listados como pendentes na página. Os números de dengue e Covid vêm de painéis oficiais citados pela imprensa e variam conforme a data de corte."
+  },
+  {
+    "area": "Comércio exterior (7ª revisão)",
+    "item": "Nova página Comércio Exterior (ComexStat)",
+    "antes": "Superávit comercial só no scorecard, sem série própria",
+    "depois": "Exportações, importações e saldo de 2018 a 2025, 2026 parcial até setembro contra o mesmo período de 2025, destinos e pauta por seção, direto da API do ComexStat/MDIC",
+    "fonte": "MDIC/Secex — ComexStat (API pública)",
+    "observacao": "Os números de 2022 a 2024 conferem com o scorecard (61,5, 98,9 e 74,2). Para 2025 o MDIC já revisou: 68,1 de saldo e 348,3 de exportações, contra 68,3 e 348,7 nas versões anteriores; o scorecard foi atualizado."
+  },
+  {
+    "area": "Meio ambiente (8ª revisão)",
+    "item": "PRODES Amazônia 2025 e 2026",
+    "antes": "2025 = 5.796 km² (estimativa de out/2025)",
+    "depois": "2025 = 5.731 km² (consolidado) e 2026 = 3.335 km² (estimativa de 16/10/2026, menor da série); Cerrado 2026 = 5.517 km² (estimativa)",
+    "fonte": "Inpe — TerraBrasilis (arquivo de taxas do painel PRODES) e Poder360 (16/10/2026)",
+    "observacao": "Médias por governo continuam só com anos consolidados; a estimativa de 2026 aparece no gráfico, marcada."
+  },
+  {
+    "area": "Série histórica (8ª revisão)",
+    "item": "Página FHC a Lula 3",
+    "antes": "Só Bolsonaro x Lula 3",
+    "depois": "15 indicadores para 9 mandatos desde 1995 (PIB, IPCA, Selic, saldo comercial, desemprego, salário mínimo real, renda, Gini, pobreza, extrema pobreza, homicídios, dívida líquida e bruta, primário, desmatamento)",
+    "fonte": "Banco Central (SGS), Ipeadata (IBGE harmonizado pelo Ipea, Atlas da Violência) e Inpe (TerraBrasilis)",
+    "observacao": "Adaptações: desemprego antes de 2013 é a PNAD antiga reescalada pela razão PNADC/PNAD de 2013–2014 (estimativa do painel); dívida e primário só desde 2001–2006, sem preencher com outra metodologia; 2016 conta para Temer nos dados anuais. Valores por mandato podem diferir um pouco do scorecard Bolsonaro x Lula por usarem outra agregação (ex.: média geométrica do PIB)."
+  },
+  {
+    "area": "Série histórica (9ª revisão)",
+    "item": "Todos os governos em cada aba",
+    "antes": "Página separada só com 15 indicadores",
+    "depois": "Seletor no topo de 18 abas (padrão Bolsonaro x Lula 3, com opção de todos os governos): ao trocar o par, a aba inteira é refeita no mesmo formato para os governos escolhidos, com 35 indicadores (IDEB, PISA, analfabetismo, CAGED, inflação de alimentos, dólar, exportações, importações, safra, indústria, abate, tarifa de energia, inadimplência, saúde, desemprego de pretos e pardos e os 15 anteriores)",
+    "fonte": "Banco Central (SGS), Ipeadata, Inep (planilha oficial do Ideb e relatório PISA 2025), Inpe",
+    "observacao": "Onde não há série comparável o quadro mostra *; onde o valor vem de outra metodologia (PNAD antiga reescalada, Censo, projeção do IBGE, CAGED antigo) o número leva *. Cada linha tem link 'dados ↗' para a série exata; nos rodapés, códigos SGS e SIDRA viram links diretos."
+  },
+  {
+    "area": "Visão Geral (10ª revisão)",
+    "item": "Visão Geral para qualquer par de governos",
+    "antes": "Outros pares tinham um visual diferente do Bolsonaro x Lula",
+    "depois": "Mesmos cartões, resumo em 10 números, radar, placar com eixos e tabela consolidada para os 72 pares possíveis; cores pelo partido do presidente na época (PSDB, PT, MDB, PSL/PL), com tons diferentes para mandatos do mesmo partido",
+    "fonte": "Base histórica do painel (Banco Central, Ipeadata, Inep, Inpe)",
+    "observacao": "No radar de outros pares, cada eixo é a posição do governo entre os nove mandatos (0 = pior, 100 = melhor), porque vários indicadores podem ser negativos. Câmbio e importações entram como 'depende de contexto'. A comparação alinhada (mesmo período) só existe para Bolsonaro x Lula 3."
+  },
+  {
+    "area": "Fontes (11ª revisão)",
+    "item": "Links de fonte",
+    "antes": "Links do Ipeadata quebravam no meio (aspas e parênteses no endereço) e três páginas passaram a pedir login (Agência Gov e Inep)",
+    "depois": "Cada série aponta para a página oficial legível (SIDRA, Banco Central, CONAB, Atlas da Violência, IBGE); o dado bruto do Ipeadata virou link complementar com endereço codificado; substituídos os links fora do ar",
+    "fonte": "Varredura automática de 164 links em 22/10/2026",
+    "observacao": "Também corrigida a nota das terras indígenas: os ~2,5 milhões de hectares eram só das quatro homologações de 18/11/2025, não do total de 20."
+  },
+  {
+    "area": "Abas e propostas (12ª revisão)",
+    "item": "Outros governos em todas as abas e planos de governo",
+    "antes": "Ao trocar o par, as abas temáticas mudavam de layout; não havia os planos dos presidentes eleitos",
+    "depois": "Abas temáticas mantêm o formato do Bolsonaro x Lula (cartões A ➔ B, gráficos numerados com fonte, gráficos mês a mês desde a posse e contexto no fim) para qualquer par; aba Propostas ganhou 67 propostas dos planos de FHC (1994, 1998), Lula (2002, 2006, 2022), Dilma (2010, 2014), Temer (Ponte para o Futuro, 2015) e Bolsonaro (2018)",
+    "fonte": "PDFs dos planos (SciELO/Centro Edelstein, UFG, Fundação Perseu Abramo, Conjur, Fiocruz, Pleno News, RTP); séries mensais do Banco Central e Ipeadata",
+    "observacao": "Cada proposta foi conferida por palavra-chave na página citada do PDF (67 de 67). São paráfrases do painel; o texto original prevalece."
+  },
+  {
+    "area": "Saúde (13ª revisão)",
+    "item": "Médicos, leitos, hospitais, gasto federal e vacinação",
+    "antes": "A aba tinha só expectativa de vida, dengue, Covid e municípios na meta de vacinação",
+    "depois": "Médicos por 10 mil habitantes e leitos do SUS (CNES/DATASUS, 2010–2025), hospitais gerais, despesa da União na função Saúde (Tesouro/SICONFI, 2014–2025, em valores de 2025 e % do PIB) e cobertura vacinal 2000–2025 (OMS/Unicef)",
+    "fonte": "CNES/DATASUS via Ipeadata; Tesouro Nacional (SICONFI/DCA); OMS (API aberta); Banco Central (PIB e IPCA)",
+    "observacao": "A série de médicos do CNES conta cadastros e difere da Demografia Médica (597 mil médicos em 2024). A vacinação usa a estimativa da OMS, que difere um pouco do Ministério (ex.: pólio 2019: 72% na OMS e 84% no Ministério). Cobertura da atenção primária, filas e gasto de estados e municípios seguem pendentes."
+  },
+  {
+    "area": "Saúde (13ª revisão)",
+    "item": "Programas de saúde de cada governo",
+    "antes": "Só 2 políticas de saúde (Bolsonaro e Lula 3)",
+    "depois": "21 programas de FHC a Lula 3, em linguagem simples, cada um com pontos positivos, críticas e link da fonte; leis conferidas no Planalto",
+    "fonte": "Planalto, Ipea, Tesouro, TCU, CGU, CNS, Ciência & Saúde Coletiva, Fiocruz e imprensa",
+    "observacao": "Onde só há dado do governo ou do setor interessado, o texto avisa. Duas situações foram corrigidas na conferência: a EC 95 consta como substituída pela LC 200/2023, e o piso da enfermagem como em vigor com assistência da União (não verificamos a data exata do fim da suspensão do STF). Dilma 2 e vários programas menores ainda não foram mapeados."
+  },
+  {
+    "area": "Cores e comparações (13ª revisão)",
+    "item": "Cores dos governos e queda da pobreza/Gini",
+    "antes": "Lula em coral e Dilma em vermelho escuro; pobreza, Gini e dívida apareciam como variação negativa (\"-11 x -8\")",
+    "depois": "Lula em vermelho forte e Dilma em vermelho claro; pobreza, extrema pobreza e Gini passaram a \"queda no mandato\" (positivo = caiu, maior queda = melhor); dívida e tarifa indicam \"negativo = caiu\"",
+    "fonte": "Conferência por força bruta de todos os pares de mandatos (13 casos com dois valores negativos)",
+    "observacao": "A lógica de quem é \"melhor\" já estava correta (menor é melhor, então o mais negativo vence); o problema era de leitura, não de conta."
+  },
+  {
     "area": "Pipeline",
     "item": "build_database.py",
     "antes": "Sobrescrevia o scorecard com versão menor (12 de 17 itens) e gravava valores fixos",

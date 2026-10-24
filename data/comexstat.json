@@ -1,0 +1,244 @@
+{
+  "fonte": "MDIC/Secex — ComexStat (valores FOB em US$, API pública)",
+  "url": "https://comexstat.mdic.gov.br/pt/home",
+  "nota": "Anos de 2018 a 2025 fechados. 2026 só com os meses divulgados; compare com o mesmo intervalo de 2025. Valores em dólares correntes, sem correção pela inflação americana.",
+  "anual": [
+    {
+      "ano": 2018,
+      "exportacoes_bi_usd": 231.9,
+      "importacoes_bi_usd": 185.3,
+      "saldo_bi_usd": 46.6,
+      "parcial": false
+    },
+    {
+      "ano": 2019,
+      "exportacoes_bi_usd": 221.1,
+      "importacoes_bi_usd": 185.9,
+      "saldo_bi_usd": 35.2,
+      "parcial": false
+    },
+    {
+      "ano": 2020,
+      "exportacoes_bi_usd": 209.2,
+      "importacoes_bi_usd": 158.8,
+      "saldo_bi_usd": 50.4,
+      "parcial": false
+    },
+    {
+      "ano": 2021,
+      "exportacoes_bi_usd": 280.8,
+      "importacoes_bi_usd": 219.4,
+      "saldo_bi_usd": 61.4,
+      "parcial": false
+    },
+    {
+      "ano": 2022,
+      "exportacoes_bi_usd": 334.1,
+      "importacoes_bi_usd": 272.6,
+      "saldo_bi_usd": 61.5,
+      "parcial": false
+    },
+    {
+      "ano": 2023,
+      "exportacoes_bi_usd": 339.7,
+      "importacoes_bi_usd": 240.8,
+      "saldo_bi_usd": 98.9,
+      "parcial": false
+    },
+    {
+      "ano": 2024,
+      "exportacoes_bi_usd": 337.0,
+      "importacoes_bi_usd": 262.9,
+      "saldo_bi_usd": 74.2,
+      "parcial": false
+    },
+    {
+      "ano": 2025,
+      "exportacoes_bi_usd": 348.3,
+      "importacoes_bi_usd": 280.2,
+      "saldo_bi_usd": 68.1,
+      "parcial": false
+    }
+  ],
+  "parcial_2026": {
+    "meses": 9,
+    "exp_2026": 284.7,
+    "imp_2026": 222.3,
+    "saldo_2026": 62.4,
+    "exp_2025": 257.9,
+    "imp_2025": 211.6,
+    "saldo_2025": 46.3
+  },
+  "destinos_exportacao": {
+    "2022": [
+      {
+        "pais": "China",
+        "bi_usd": 89.4,
+        "pct": 26.8
+      },
+      {
+        "pais": "Estados Unidos",
+        "bi_usd": 37.4,
+        "pct": 11.2
+      },
+      {
+        "pais": "Argentina",
+        "bi_usd": 15.3,
+        "pct": 4.6
+      },
+      {
+        "pais": "Países Baixos (Holanda)",
+        "bi_usd": 11.9,
+        "pct": 3.6
+      },
+      {
+        "pais": "Espanha",
+        "bi_usd": 9.7,
+        "pct": 2.9
+      },
+      {
+        "pais": "Chile",
+        "bi_usd": 9.1,
+        "pct": 2.7
+      },
+      {
+        "pais": "Singapura",
+        "bi_usd": 8.4,
+        "pct": 2.5
+      },
+      {
+        "pais": "México",
+        "bi_usd": 7.1,
+        "pct": 2.1
+      }
+    ],
+    "2025": [
+      {
+        "pais": "China",
+        "bi_usd": 99.9,
+        "pct": 28.7
+      },
+      {
+        "pais": "Estados Unidos",
+        "bi_usd": 37.7,
+        "pct": 10.8
+      },
+      {
+        "pais": "Argentina",
+        "bi_usd": 18.1,
+        "pct": 5.2
+      },
+      {
+        "pais": "Países Baixos (Holanda)",
+        "bi_usd": 11.7,
+        "pct": 3.4
+      },
+      {
+        "pais": "Espanha",
+        "bi_usd": 8.8,
+        "pct": 2.5
+      },
+      {
+        "pais": "México",
+        "bi_usd": 7.7,
+        "pct": 2.2
+      },
+      {
+        "pais": "Singapura",
+        "bi_usd": 7.4,
+        "pct": 2.1
+      },
+      {
+        "pais": "Canadá",
+        "bi_usd": 7.3,
+        "pct": 2.1
+      }
+    ]
+  },
+  "pauta_exportacao": {
+    "2022": [
+      {
+        "secao": "Produtos minerais",
+        "bi_usd": 90.3,
+        "pct": 27.0
+      },
+      {
+        "secao": "Produtos do reino vegetal",
+        "bi_usd": 71.3,
+        "pct": 21.3
+      },
+      {
+        "secao": "Produtos das indútrias alimentares; Bebidas, líquidos alcoólicos e vinagres; Tabaco e seus sucedâneos manufaturados",
+        "bi_usd": 33.0,
+        "pct": 9.9
+      },
+      {
+        "secao": "Animais vivos e produtos do reino animal",
+        "bi_usd": 25.7,
+        "pct": 7.7
+      },
+      {
+        "secao": "Metais comuns e suas obras",
+        "bi_usd": 22.4,
+        "pct": 6.7
+      },
+      {
+        "secao": "Máquinas e aparelhos, material elétrico e suas partes; Aparelhos de gravação ou reprodução de som, aparelhos de gravação ou reprodução de imagens e de som em televisão, e suas partes e acessórios",
+        "bi_usd": 16.7,
+        "pct": 5.0
+      },
+      {
+        "secao": "Material de transporte",
+        "bi_usd": 15.5,
+        "pct": 4.6
+      },
+      {
+        "secao": "Produtos das indústrias químicas ou indústrias conexas",
+        "bi_usd": 14.0,
+        "pct": 4.2
+      }
+    ],
+    "2025": [
+      {
+        "secao": "Produtos minerais",
+        "bi_usd": 91.7,
+        "pct": 26.3
+      },
+      {
+        "secao": "Produtos do reino vegetal",
+        "bi_usd": 72.1,
+        "pct": 20.7
+      },
+      {
+        "secao": "Produtos das indútrias alimentares; Bebidas, líquidos alcoólicos e vinagres; Tabaco e seus sucedâneos manufaturados",
+        "bi_usd": 36.5,
+        "pct": 10.5
+      },
+      {
+        "secao": "Animais vivos e produtos do reino animal",
+        "bi_usd": 32.7,
+        "pct": 9.4
+      },
+      {
+        "secao": "Material de transporte",
+        "bi_usd": 20.3,
+        "pct": 5.8
+      },
+      {
+        "secao": "Máquinas e aparelhos, material elétrico e suas partes; Aparelhos de gravação ou reprodução de som, aparelhos de gravação ou reprodução de imagens e de som em televisão, e suas partes e acessórios",
+        "bi_usd": 19.0,
+        "pct": 5.5
+      },
+      {
+        "secao": "Metais comuns e suas obras",
+        "bi_usd": 18.4,
+        "pct": 5.3
+      },
+      {
+        "secao": "Produtos das indústrias químicas ou indústrias conexas",
+        "bi_usd": 12.9,
+        "pct": 3.7
+      }
+    ]
+  }
+}

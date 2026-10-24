@@ -13,6 +13,10 @@ import os
 
 DATA = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SGS = "https://www3.bcb.gov.br/sgspub/"
+
+
+def sgs_csv(codigo):
+    return f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados?formato=csv"
 SIDRA = "https://sidra.ibge.gov.br/"
 FBSP = "https://forumseguranca.org.br/anuario-brasileiro-seguranca-publica/"
 SIS = "https://www.ibge.gov.br/estatisticas/sociais/trabalho/9221-sintese-de-indicadores-sociais.html"
@@ -50,7 +54,7 @@ def indicadores_dependentes():
         saida.append(ind("Inadimplência", "Inadimplência da carteira de crédito de pessoas físicas (atraso > 90 dias)",
                          f"{fmt_pct(dez22, 2)} (dez/2022)", f"{fmt_pct(ult['pf_total'], 2)} ({ult['mes']:02d}/{ult['ano']})", dez22, ult["pf_total"], "% da carteira", "bolsonaro",
                          f"Média no período: {fmt_pct(sum(pf_b) / len(pf_b), 2)} com Bolsonaro e {fmt_pct(sum(pf_l) / len(pf_l), 2)} com Lula. Cartão rotativo: {fmt_pct(next(r['cartao_rotativo'] for r in inad if r['periodo'] == '2022-12'), 1)} (dez/2022) e {fmt_pct(ult['cartao_rotativo'], 1)} ({ult['mes']:02d}/{ult['ano']}). A alta coincide com a Selic elevada e com o endividamento recorde das famílias (CNC).",
-                         "Banco Central — SGS 21084 e 21127", SGS))
+                         "Banco Central — SGS 21084 e 21127", sgs_csv(21084)))
     casa = ler("contas_casa.json", [])
     if casa:
         def serie(campo, a0, a1):
@@ -110,9 +114,9 @@ SCORECARD = {
             "IBGE — PNAD Contínua (SIDRA 6390)", SIDRA + "tabela/6390"),
         ind("Inflação", "IPCA acumulado no mandato", "26,93% (48 meses)", "18,87% (45 meses)", 26.93, 18.87, "% acumulado", "lula",
             "Bolsonaro: 4,31% / 4,52% / 10,06% / 5,78%; pico de 12,13% em 12 meses (abr/2022). Lula: 4,62% / 4,83% / 4,26% / 3,95% (jan–set/2026); pico de 5,53% (abr/2025).",
-            "IBGE — IPCA (BCB SGS 433)", SGS),
+            "IBGE — IPCA (BCB SGS 433)", sgs_csv(433)),
         ind("Inflação", "IPCA médio anualizado", "6,14% a.a.", "4,72% a.a.", 6.14, 4.72, "% ao ano", "lula",
-            "Taxa anual equivalente ao acumulado de cada período (corrige a diferença no número de meses).", "IBGE — IPCA", SGS),
+            "Taxa anual equivalente ao acumulado de cada período (corrige a diferença no número de meses).", "IBGE — IPCA (BCB SGS 433)", sgs_csv(433)),
         ind("Inflação", "Alimentação no domicílio (IPCA)", "+56,1%", "+14,0%", 56.1, 14.0, "% acumulado", "lula",
             "Óleo de soja (+140,7%), feijão (+112,8%) e carnes (+72,6%) puxaram a alta com Bolsonaro; com Lula, café (+44,3%) e gasolina (+32,2%) foram os maiores aumentos.",
             "IBGE — SIDRA 1419/7060", SIDRA + "tabela/7060"),
@@ -120,19 +124,19 @@ SCORECARD = {
             "Safra 2024/25: 350,2 Mt (12º lev., set/2025); 2025/26: 361,7 Mt (set/2026). Clima e preços internacionais pesam mais que a política federal de curto prazo.",
             "CONAB — levantamentos de safra", "https://www.gov.br/conab/pt-br/atuacao/informacoes-agropecuarias/safras/safra-de-graos"),
         ind("Setor Externo", "Maior superávit comercial do mandato", "US$ 61,5 bi (2022)", "US$ 98,9 bi (2023)", 61.5, 98.9, "US$ bilhões", "lula",
-            "2023 é o recorde da série. Depois: US$ 74,2 bi (2024) e US$ 68,3 bi (2025), com exportações recordes de US$ 348,7 bi em 2025.",
-            "MDIC/Secex", "https://comexstat.mdic.gov.br/"),
+            "2023 é o recorde da série. Depois: US$ 74,2 bi (2024) e US$ 68,1 bi (2025), com exportações recordes de US$ 348,3 bi em 2025 (valores do ComexStat em 21/10/2026; o MDIC revisa os números e versões anteriores traziam 68,3 e 348,7).",
+            "MDIC/Secex — ComexStat", "https://comexstat.mdic.gov.br/pt/geral"),
         ind("Monetário & Juros", "Taxa Selic média", "6,5% a.a.", "13,3% a.a.", 6.51, 13.27, "% ao ano", "bolsonaro",
             "Mínima histórica de 2,00% em 2020–21; 13,75% no fim de 2022. Com Lula, chegou a 15,00% (jun/2025) e estava em 13,75% em out/2026. O BC é autônomo desde 2021.",
-            "Banco Central — SGS 432", SGS),
+            "Banco Central — SGS 432", sgs_csv(432)),
         ind("Câmbio", "Dólar PTAX médio", "R$ 4,92", "R$ 5,28", 4.92, 5.28, "R$/US$", "bolsonaro",
-            "Média das médias anuais. O dólar fechou 2024 em R$ 6,19 (máxima nominal) e estava em R$ 5,01 em out/2026.", "Banco Central — SGS 1", SGS),
+            "Média das médias anuais. O dólar fechou 2024 em R$ 6,19 (máxima nominal) e estava em R$ 5,01 em out/2026.", "Banco Central — SGS 1", sgs_csv(1)),
         ind("Fiscal", "Dívida bruta do governo geral (% PIB)", "71,7% (dez/2022)", "82,9% (ago/2026)", 71.68, 82.87, "% do PIB", "bolsonaro",
             "Bolsonaro: 74,4% → 86,9% (pandemia) → 71,7% (inflação alta infla o PIB nominal). Lula: alta contínua com déficits e juros elevados. Em % do PIB, o pico da série segue sendo 2020.",
-            "Banco Central — SGS 13762", SGS),
+            "Banco Central — SGS 13762", sgs_csv(13762)),
         ind("Fiscal", "Resultado primário do setor público (média anual, % PIB)", "-2,0% (+0,4% sem 2020)", "-0,9%", -2.03, -0.93, "% do PIB", "empate",
             "Bolsonaro: déficit de 9,2% do PIB em 2020 (pandemia) e superávits em 2021–22. Lula: déficit de 2,3% em 2023 (inclui precatórios represados) e déficits menores depois.",
-            "Banco Central — SGS 5793 (sinal invertido)", SGS),
+            "Banco Central — SGS 5793 (sinal invertido)", sgs_csv(5793)),
         ind("Indústria", "Produção industrial (índice médio, 2022=100)", "99,4", "102,8", 99.4, 102.8, "índice", "lula",
             "Média do índice dessazonalizado da PIM-PF disponível na base em cada período.", "IBGE — PIM-PF (SIDRA 8888)", SIDRA + "tabela/8888"),
         ind("Segurança Pública", "Mortes violentas intencionais (total anual)", "47.508 (2022)", "40.775 (2025)", 47508, 40775, "mortes", "lula",
@@ -148,9 +152,9 @@ SCORECARD = {
             "Queda gradual e estrutural, puxada pela substituição de gerações.", "IBGE — PNAD Contínua Educação (SIDRA 7113)", SIDRA + "tabela/7113"),
         ind("Custo de Vida", "Cestas básicas compradas pelo salário mínimo (SP)", "1,62 (ago/2022)", "1,80 (ago/2026)", 1.62, 1.80, "cestas", "lula",
             "Ganho de 11,3%. No debate da Band, Lula falou em \"2,2 cestas\" — número classificado como exagerado pelas checagens.", "DIEESE, via Agência Lupa", LUPA_BAND),
-        ind("Meio Ambiente", "Desmatamento na Amazônia (PRODES, média anual)", "11.403 km²", "7.126 km²", 11403, 7126, "km²/ano", "lula",
-            "Bolsonaro: 10.129 / 10.851 / 13.038 / 11.594 km². Lula: 9.064 (2023; o período ago/22–jul/23 cobre os dois governos) / 6.518 / 5.796 km² (2025, menor em 11 anos).",
-            "Inpe — PRODES", "https://terrabrasilis.dpi.inpe.br/"),
+        ind("Meio Ambiente", "Desmatamento na Amazônia (PRODES, média anual)", "11.403 km²", "7.104 km²", 11403, 7104, "km²/ano", "lula",
+            "Bolsonaro: 10.129 / 10.851 / 13.038 / 11.594 km². Lula: 9.064 (2023; o período ago/22–jul/23 cobre os dois governos) / 6.518 / 5.731 km² (2025, consolidado). A estimativa de 2026 (3.335 km², 16/10/2026) é a menor da série desde 1988 e ainda não entra na média.",
+            "Inpe — PRODES", "https://terrabrasilis.dpi.inpe.br/app/dashboard/deforestation/biomes/legal_amazon/rates"),
     ] + indicadores_dependentes(),
 }
 
@@ -209,6 +213,45 @@ def aplicar_direcao(indicadores):
 
 aplicar_direcao(SCORECARD["indicadores"])
 
+# Comparabilidade entre os dois períodos: "ok" = mesma série e mesma metodologia; "ajustado" = períodos de tamanhos ou datas
+# diferentes, com ajuste ou ressalva simples; "ressalva" = metodologia, cobertura ou natureza do número diferem entre os lados.
+COMPARAB = {
+    "Crescimento médio anual do PIB": ("ok", "Mesma série (Contas Nacionais). Lula tem só anos fechados; 2026 fica fora da média."),
+    "Taxa de desocupação média": ("ok", "Mesma pesquisa (PNAD Contínua). Em 2020–21 parte das entrevistas foi por telefone."),
+    "Saldo de empregos formais (CAGED)": ("ressalva", "2019 vem do CAGED antigo e 2020 em diante do Novo CAGED (metodologia diferente); os períodos têm 48 e 44 meses, então o placar usa a média mensal."),
+    "Rendimento médio real habitual (fim do período)": ("ajustado", "Mesma série, deflacionada para a mesma data, mas o fim do período de Lula é o dado mais recente, não o fim do mandato."),
+    "IPCA acumulado no mandato": ("ajustado", "Períodos de 48 e 45 meses; por isso o placar usa o IPCA médio anualizado."),
+    "IPCA médio anualizado": ("ok", "Taxa anual equivalente em cada período, o que corrige a diferença no número de meses."),
+    "Alimentação no domicílio (IPCA)": ("ajustado", "Acumulado em 48 e 45 meses; o placar usa a taxa anual equivalente."),
+    "Maior safra de grãos do mandato (CONAB)": ("ressalva", "É um máximo, que favorece o período com mais safras (4 contra 3), e a safra 2025/26 ainda é estimativa da CONAB, não resultado final."),
+    "Maior superávit comercial do mandato": ("ressalva", "É um máximo entre 4 anos contra 3; o recorde depende do câmbio e do preço de commodities, não só de política."),
+    "Taxa Selic média": ("ok", "Mesma série do Banco Central, média diária de cada período."),
+    "Dólar PTAX médio": ("ok", "Mesma série do Banco Central, média das médias anuais."),
+    "Dívida bruta do governo geral (% PIB)": ("ajustado", "Estoque no fim de cada período; o de Lula é o dado mais recente (ago/2026), não o fim do mandato."),
+    "Resultado primário do setor público (média anual, % PIB)": ("ok", "Mesma série do Banco Central; o valor sem 2020 mostra o efeito da pandemia."),
+    "Produção industrial (índice médio, 2022=100)": ("ajustado", "Média do índice dessazonalizado em períodos de tamanhos diferentes."),
+    "Mortes violentas intencionais (total anual)": ("ressalva", "Compara um ano de cada governo (2022 e 2025), não o mandato inteiro; o Fórum revisa anos anteriores a cada edição do Anuário e o registro depende de cada estado."),
+    "Feminicídios (anual)": ("ressalva", "Compara um ano de cada governo; a notificação e a tipificação do crime mudaram ao longo da série, o que pode explicar parte da alta."),
+    "Pobreza (linha do Banco Mundial)": ("ajustado", "Mesma série do IBGE, mas o último ano disponível de Lula é 2024; 2020–21 teve coleta atípica."),
+    "Índice de Gini (renda domiciliar per capita)": ("ok", "Mesma série da PNAD Contínua; 2025 é o dado mais recente."),
+    "Taxa de analfabetismo (15 anos ou mais)": ("ok", "Mesma série da PNAD Contínua."),
+    "Cestas básicas compradas pelo salário mínimo (SP)": ("ok", "Mesmo mês (agosto), mesma cesta e mesma cidade do DIEESE."),
+    "Desmatamento na Amazônia (PRODES, média anual)": ("ressalva", "O ano PRODES vai de agosto a julho: 2023 cobre meses dos dois governos; Lula tem 3 anos contra 4 de Bolsonaro."),
+    "Inadimplência da carteira de crédito de pessoas físicas (atraso > 90 dias)": ("ajustado", "Mesma série do Banco Central, comparando um ponto no fim de cada período; a média do período está na observação."),
+    "Energia elétrica residencial (IPCA)": ("ajustado", "Acumulado em 48 e 45 meses; o placar usa a taxa anual equivalente."),
+    "Taxa de água e esgoto (IPCA)": ("ajustado", "Acumulado em 48 e 45 meses; o placar usa a taxa anual equivalente."),
+    "Domicílios com esgoto adequado (rede ou fossa ligada à rede)": ("ok", "Mesma série da PNAD; não há coleta em 2020 e 2021."),
+}
+
+
+def aplicar_comparabilidade(indicadores):
+    for i in indicadores:
+        nivel, texto = COMPARAB.get(i["indicador"], ("ajustado", "Sem classificação."))
+        i["comparabilidade"], i["comparabilidade_nota"] = nivel, texto
+
+
+aplicar_comparabilidade(SCORECARD["indicadores"])
+
 SOCIAIS_AMBIENTAIS = {
     "metadados": {"atualizado_em": "2026-10-20"},
     "pobreza": {
@@ -224,13 +267,14 @@ SOCIAIS_AMBIENTAIS = {
         ],
     },
     "desmatamento_prodes": {
-        "fonte": "Inpe — PRODES Amazônia Legal (ano de agosto a julho)", "url": "https://terrabrasilis.dpi.inpe.br/",
-        "nota": "O ano PRODES vai de agosto a julho: o dado de 2023 (ago/2022–jul/2023) cobre 5 meses de Bolsonaro e 7 de Lula.",
+        "fonte": "Inpe — PRODES Amazônia Legal (ano de agosto a julho), TerraBrasilis", "url": "https://terrabrasilis.dpi.inpe.br/app/dashboard/deforestation/biomes/legal_amazon/rates",
+        "nota": "O ano PRODES vai de agosto a julho: o dado de 2023 (ago/2022–jul/2023) cobre 5 meses de Bolsonaro e 7 de Lula. Série do TerraBrasilis (atualizada em 16/10/2026): 2025 consolidado em 5.731 km² (a estimativa de out/2025 era 5.796) e 2026 é estimativa (3.335 km²), fora das médias.",
         "serie": [
             {"ano": 2018, "governo": "Temer", "km2": 7536}, {"ano": 2019, "governo": "Bolsonaro", "km2": 10129},
             {"ano": 2020, "governo": "Bolsonaro", "km2": 10851}, {"ano": 2021, "governo": "Bolsonaro", "km2": 13038},
             {"ano": 2022, "governo": "Bolsonaro", "km2": 11594}, {"ano": 2023, "governo": "Lula", "km2": 9064},
-            {"ano": 2024, "governo": "Lula", "km2": 6518}, {"ano": 2025, "governo": "Lula", "km2": 5796},
+            {"ano": 2024, "governo": "Lula", "km2": 6518}, {"ano": 2025, "governo": "Lula", "km2": 5731},
+            {"ano": 2026, "governo": "Lula", "km2": 3335, "estimativa": True},
         ],
     },
     "analfabetismo": {
@@ -251,16 +295,17 @@ SOCIAIS_AMBIENTAIS["desmatamento_cerrado"] = {
         {"ano": 2021, "governo": "Bolsonaro", "km2": 8531}, {"ano": 2022, "governo": "Bolsonaro", "km2": 10689},
         {"ano": 2023, "governo": "Lula", "km2": 11012}, {"ano": 2024, "governo": "Lula", "km2": 8174},
         {"ano": 2025, "governo": "Lula", "km2": 7235},
+        {"ano": 2026, "governo": "Lula", "km2": 5517, "estimativa": True},
     ],
 }
 SOCIAIS_AMBIENTAIS["queimadas"] = {
-    "fonte": "Inpe — Programa Queimadas (focos de calor no Brasil, satélite de referência)", "url": "https://www.poder360.com.br/poder-sustentavel/brasil-tem-queda-de-518-no-numero-de-focos-de-queimadas-em-2025/",
-    "nota": "2024 teve a seca mais severa da série histórica e o maior número de focos desde 2010. 2025 é parcial (até 23/12). Totais nacionais de 2021 e 2022 não foram confirmados nesta revisão e ficam em branco.",
+    "fonte": "Inpe — Programa Queimadas (focos de calor no Brasil, satélite de referência): contagem das linhas dos CSVs anuais", "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/",
+    "nota": "Contagem direta dos arquivos anuais abertos do Inpe (satélite de referência). 2024 teve a seca mais severa da série e o maior número de focos desde 2010; 2025 já é o ano completo. Focos de calor não são área queimada nem equivalem a incêndios distintos.",
     "serie": [
-        {"ano": 2019, "governo": "Bolsonaro", "focos": 197632}, {"ano": 2020, "governo": "Bolsonaro", "focos": 222798},
-        {"ano": 2021, "governo": "Bolsonaro", "focos": None}, {"ano": 2022, "governo": "Bolsonaro", "focos": None},
+        {"ano": 2019, "governo": "Bolsonaro", "focos": 197632}, {"ano": 2020, "governo": "Bolsonaro", "focos": 222797},
+        {"ano": 2021, "governo": "Bolsonaro", "focos": 184081}, {"ano": 2022, "governo": "Bolsonaro", "focos": 200763},
         {"ano": 2023, "governo": "Lula", "focos": 189901}, {"ano": 2024, "governo": "Lula", "focos": 278299},
-        {"ano": 2025, "governo": "Lula", "focos": 134047},
+        {"ano": 2025, "governo": "Lula", "focos": 136393},
     ],
 }
 SOCIAIS_AMBIENTAIS["emissoes"] = {
@@ -272,9 +317,9 @@ SOCIAIS_AMBIENTAIS["emissoes"] = {
     ],
 }
 SOCIAIS_AMBIENTAIS["terras_indigenas"] = {
-    "fonte": "Agência Gov / MPI (balanço de mar/2026)", "url": "https://agenciagov.ebc.com.br/noticias/202603/em-tres-anos-presidente-lula-homologou-20-terras-indigenas-em-todo-o-brasil",
-    "nota": "Bolsonaro não homologou nenhuma terra indígena (2019–2022). Lula homologou 20 (cerca de 2,5 milhões de hectares) de 2023 a mar/2026; a Funai lista mais de 240 áreas ainda pendentes. Em 2023 o Congresso aprovou o marco temporal (Lei 14.701) derrubando vetos de Lula.",
-    "serie": [{"governo": "Bolsonaro", "periodo": "2019–2022", "homologadas": 0}, {"governo": "Lula", "periodo": "2023–mar/2026", "homologadas": 20}],
+    "fonte": "Ministério dos Povos Indígenas (balanço de mar/2026, Agência Gov) e Instituto Socioambiental (ISA)", "url": "https://acervo.socioambiental.org/acervo/area-protegida/terra-indigena-uirapuru-ti",
+    "nota": "Bolsonaro não homologou nenhuma terra indígena (2019–2022). Lula chegou a 20 terras homologadas desde 2023 em 18/11/2025, quando assinou as quatro mais recentes (Manoki, Uirapuru, Estação Parecis e Kaxuyana-Tunayana, cerca de 2,45 milhões de hectares no total das quatro); a Funai lista mais de 240 áreas ainda pendentes. Em 2023 o Congresso aprovou o marco temporal (Lei 14.701) derrubando vetos de Lula.",
+    "serie": [{"governo": "Bolsonaro", "periodo": "2019–2022", "homologadas": 0}, {"governo": "Lula", "periodo": "2023–nov/2025", "homologadas": 20}],
 }
 
 MINORIAS = {
@@ -291,10 +336,10 @@ MINORIAS = {
     },
     "pessoas_trans": {
         "fonte": "ANTRA — Dossiês anuais de assassinatos de pessoas trans", "url": "https://www.band.com.br/noticias/80-pessoas-trans-e-travestis-foram-assassinadas-no-brasil-em-2025-202601260814",
-        "nota": "A ANTRA alerta para subnotificação: em 2025 os assassinatos caíram, mas as tentativas de homicídio subiram. O Brasil lidera o ranking mundial pelo 18º ano. 2021 não confirmado nesta revisão.",
+        "nota": "A ANTRA alerta para subnotificação: em 2025 os assassinatos caíram, mas as tentativas de homicídio subiram. O Brasil lidera o ranking mundial pelo 18º ano. 2021 (140 casos) conferido na cobertura do dossiê da época.",
         "serie": [
             {"ano": 2019, "governo": "Bolsonaro", "assassinatos": 124}, {"ano": 2020, "governo": "Bolsonaro", "assassinatos": 175},
-            {"ano": 2021, "governo": "Bolsonaro", "assassinatos": None}, {"ano": 2022, "governo": "Bolsonaro", "assassinatos": 131},
+            {"ano": 2021, "governo": "Bolsonaro", "assassinatos": 140}, {"ano": 2022, "governo": "Bolsonaro", "assassinatos": 131},
             {"ano": 2023, "governo": "Lula", "assassinatos": 145}, {"ano": 2024, "governo": "Lula", "assassinatos": 122},
             {"ano": 2025, "governo": "Lula", "assassinatos": 80},
         ],
@@ -396,6 +441,31 @@ AUDITORIA = [
     ("Inadimplência (3ª revisão)", "Balanço do Desenrola", "15,2 milhões de pessoas, R$ 53,1 bi e desconto médio de 83%", "10,7 milhões de pessoas e R$ 29 bi até dez/2023 (balanço intermediário); faixa 2 com descontos médios de 90% e 85%", "Ministério da Fazenda e B3, via Istoé Dinheiro", "Não encontramos balanço final do programa."),
     ("Saneamento (3ª revisão)", "Marco do Saneamento — números do setor", "Rascunho com \"66 leilões, R$ 370 bi, 1.550 cidades\" (da busca, não da fonte)", "51 projetos, R$ 423,5 bi previstos e 2,4 mil municípios (Trata Brasil/GO Associados, jul/2026)", "Conjur", "Conferido na matéria original antes de entrar no painel."),
     ("Repercussão (3ª revisão)", "AtlasIntel — Desenrola 67% e Pé-de-Meia 61%", "Apareciam só no resumo da busca", "Confirmados em duas matérias independentes (Plantão Brasil e Fetec-PR); Gás do Povo 60% também confirmado", "AtlasIntel/Bloomberg (3 a 8/out/2026)", "O InfoMoney lista só parte das medidas."),
+    ("Auditoria de pendências (4ª revisão)", "Cesta básica do DIEESE (São Paulo, dez/ano)", "2018: 467,41 · 2023: 772,51 · 2024: 810,15 · 2025: 835,40; % do salário mínimo de 2022 = 65,3%", "2018: 471,44 · 2023: 761,01 · 2024: 841,29 · 2025: 845,95; % do salário mínimo líquido de 2022 = 70,58%", "DIEESE — boletins de dezembro (2018 a 2025)", "Os valores de 2018, 2023, 2024 e 2025 estavam errados. O percentual agora é do salário mínimo líquido, como o DIEESE calcula."),
+    ("Auditoria de pendências (4ª revisão)", "IDEB nacional", "2017: 5,8/4,7/3,8 · série parava em 2023", "2019, 2021, 2023 e 2025 (6,3 / 5,3 / 4,5 no último); 2017 removido por não ter sido confirmado", "Inep (divulgação de 05/08/2026) e Exame", "O IDEB 2025 saiu em 5/ago/2026."),
+    ("Auditoria de pendências (4ª revisão)", "Orçamento do MEC", "R$ 118,5 bi (2019) a R$ 169,5 bi (2025), sem fonte, com 2025 projetado", "Despesa paga, em R$ bi de dez/2024: 164,6 · 152,3 · 151,9 · 156,4 · 172,6 · 174,9 (2019 a 2024)", "Todos Pela Educação, com Siafi", "Valores deflacionados pelo IPCA; 2025 ainda não disponível."),
+    ("Auditoria de pendências (4ª revisão)", "Queimadas 2021 e 2022", "Em branco", "184.081 e 200.763 focos (também 2020 = 222.797 e 2025 = 136.393, ano completo)", "Inpe — CSVs anuais do Programa Queimadas", "Contagem direta das linhas dos arquivos abertos."),
+    ("Auditoria de pendências (4ª revisão)", "Assassinatos de pessoas trans em 2021", "Em branco", "140 casos", "ANTRA, via CNN Brasil", ""),
+    ("Auditoria de pendências (4ª revisão)", "Armas e drogas (segurança)", "Registros de CACs 783.385 x 142.000; apreensão de cocaína 398,5 x 215,2 t; maconha 1.850 x 1.120 t", "Armas apreendidas pela PF: 8.812 (2019–2022) x 9.373 (2023–out/2026); acervo de CACs de ~350 mil para mais de 1 milhão", "Agência Lupa e Instituto Sou da Paz", "Os números de drogas e de registros de CACs não foram confirmados e saíram do painel."),
+    ("Auditoria de pendências (4ª revisão)", "Textos soltos (inflação e silvicultura)", "\"Deflação de grãos no atacado\", \"estados como MS, MG, PR e BA\" e \"mais de 80%\" sem cálculo", "Frases ligadas a dados: IPCA 4,62% / 4,83% / 4,26% (2023–25) e silvicultura = 84% do valor florestal em 2024", "IBGE (IPCA e PEVS)", "Afirmações sem fonte foram removidas."),
+    ("Transparência e usabilidade (5ª revisão)", "Texto do painel e da Metodologia", "\"Baseada estritamente em dados públicos oficiais\" e \"Sem viés seletivo… na íntegra\"", "Texto passou a dizer que a base é principalmente oficial, com estudos de entidades, checagens e reportagens, e a Metodologia lista critérios, limites e o que o painel não mede", "Revisão do próprio painel", "As frases anteriores prometiam mais do que o painel entrega: há seleção de indicadores e fontes não oficiais."),
+    ("Transparência e usabilidade (5ª revisão)", "Tipos de fonte por página", "Não havia", "Cada página mostra os tipos de fonte usados (dado oficial, estudo de entidade, checagem, pesquisa, reportagem, promessa, cálculo do painel)", "Painel", ""),
+    ("Transparência e usabilidade (5ª revisão)", "Comparação de períodos de tamanhos diferentes", "Só mandato completo (48 x 44–45 meses)", "Modos \"mesmo período\", \"Bolsonaro sem 2020\" e mandatos completos para desemprego, renda real e IPCA; filtro de eixos no placar", "IBGE (PNAD, IPCA); cálculo do painel", "Indicadores anuais (PIB, CAGED, dívida, segurança) ficam fora do recorte alinhado por não terem série mensal fechada."),
+    ("Transparência e usabilidade (5ª revisão)", "Propostas de campanha: texto dos planos", "Só resumos de imprensa", "53 propostas com página conferida nos PDFs dos planos de Lula (84 págs.) e Flávio (76 págs.)", "Programa de governo de Lula e plano de Flávio (PDFs); o arquivo do TSE bloqueou download automático, então foram usadas cópias de Congresso em Foco e Poder360", "Páginas confirmadas por busca de palavra-chave na página; textos são paráfrases do painel."),
+    ("Transparência e usabilidade (5ª revisão)", "UOL Confere e Comprova", "Não incluídos", "Buscados; nenhum veredito explícito sobre falas dos candidatos foi encontrado, então não entram na contagem", "Buscas em 21/10/2026", "Debate da Globo (23/10) ainda não aconteceu."),
+    ("Educação (6ª revisão)", "Dados recentes da aba de Educação", "Só IDEB, analfabetismo e orçamento até 2024", "Adicionados PISA 2025 (leitura 408, matemática 377, ciências 409; 2018 e 2022 para comparação), ICA 56% ➔ 59% ➔ 66%, Censo Escolar 2025 (tempo integral 15,1% ➔ 25,8%, internet nas escolas 82,8% ➔ 94,5%) e Pé-de-Meia com a ressalva de que são números do MEC", "OCDE/Inep (via Poder360), Inep (ICA), Agência Brasil/Censo Escolar, Gazeta SP", "Orçamento pago do MEC em 2025, notas do Enem 2025 e Saeb 2025 não foram localizados em fonte confirmável e estão listados como pendentes na aba."),
+    ("Educação (6ª revisão)", "Orçamento do MEC 2025 e 2026", "Série de valores pagos terminava em 2024", "Incluído o orçamento atualizado (dotação) do Portal da Transparência: R$ 236,17 bi (2025) e R$ 269,60 bi (2026, em execução), em reais correntes, em cartão separado", "Portal da Transparência (valores informados pelo usuário; o site bloqueia acesso automatizado)", "Não é comparável com a série do Anuário (valores pagos deflacionados). O valor pago de 2025 e 2026 continua pendente."),
+    ("Saúde (7ª revisão)", "Nova página de Saúde", "Não havia", "Expectativa de vida e mortalidade infantil (IBGE), dengue, Covid-19 (óbitos acumulados), vacinação (municípios na meta) e as políticas de saúde, todos com fonte", "IBGE, Ministério da Saúde via imprensa e boletins, CNM", "Gasto federal em saúde por ano, cobertura vacinal nacional, filas do SUS e dados de 2019–2021 de mortalidade infantil não foram confirmados e estão listados como pendentes na página. Os números de dengue e Covid vêm de painéis oficiais citados pela imprensa e variam conforme a data de corte."),
+    ("Comércio exterior (7ª revisão)", "Nova página Comércio Exterior (ComexStat)", "Superávit comercial só no scorecard, sem série própria", "Exportações, importações e saldo de 2018 a 2025, 2026 parcial até setembro contra o mesmo período de 2025, destinos e pauta por seção, direto da API do ComexStat/MDIC", "MDIC/Secex — ComexStat (API pública)", "Os números de 2022 a 2024 conferem com o scorecard (61,5, 98,9 e 74,2). Para 2025 o MDIC já revisou: 68,1 de saldo e 348,3 de exportações, contra 68,3 e 348,7 nas versões anteriores; o scorecard foi atualizado."),
+    ("Meio ambiente (8ª revisão)", "PRODES Amazônia 2025 e 2026", "2025 = 5.796 km² (estimativa de out/2025)", "2025 = 5.731 km² (consolidado) e 2026 = 3.335 km² (estimativa de 16/10/2026, menor da série); Cerrado 2026 = 5.517 km² (estimativa)", "Inpe — TerraBrasilis (arquivo de taxas do painel PRODES) e Poder360 (16/10/2026)", "Médias por governo continuam só com anos consolidados; a estimativa de 2026 aparece no gráfico, marcada."),
+    ("Série histórica (8ª revisão)", "Página FHC a Lula 3", "Só Bolsonaro x Lula 3", "15 indicadores para 9 mandatos desde 1995 (PIB, IPCA, Selic, saldo comercial, desemprego, salário mínimo real, renda, Gini, pobreza, extrema pobreza, homicídios, dívida líquida e bruta, primário, desmatamento)", "Banco Central (SGS), Ipeadata (IBGE harmonizado pelo Ipea, Atlas da Violência) e Inpe (TerraBrasilis)", "Adaptações: desemprego antes de 2013 é a PNAD antiga reescalada pela razão PNADC/PNAD de 2013–2014 (estimativa do painel); dívida e primário só desde 2001–2006, sem preencher com outra metodologia; 2016 conta para Temer nos dados anuais. Valores por mandato podem diferir um pouco do scorecard Bolsonaro x Lula por usarem outra agregação (ex.: média geométrica do PIB)."),
+    ("Série histórica (9ª revisão)", "Todos os governos em cada aba", "Página separada só com 15 indicadores", "Seletor no topo de 18 abas (padrão Bolsonaro x Lula 3, com opção de todos os governos): ao trocar o par, a aba inteira é refeita no mesmo formato para os governos escolhidos, com 35 indicadores (IDEB, PISA, analfabetismo, CAGED, inflação de alimentos, dólar, exportações, importações, safra, indústria, abate, tarifa de energia, inadimplência, saúde, desemprego de pretos e pardos e os 15 anteriores)", "Banco Central (SGS), Ipeadata, Inep (planilha oficial do Ideb e relatório PISA 2025), Inpe", "Onde não há série comparável o quadro mostra *; onde o valor vem de outra metodologia (PNAD antiga reescalada, Censo, projeção do IBGE, CAGED antigo) o número leva *. Cada linha tem link 'dados ↗' para a série exata; nos rodapés, códigos SGS e SIDRA viram links diretos."),
+    ("Visão Geral (10ª revisão)", "Visão Geral para qualquer par de governos", "Outros pares tinham um visual diferente do Bolsonaro x Lula", "Mesmos cartões, resumo em 10 números, radar, placar com eixos e tabela consolidada para os 72 pares possíveis; cores pelo partido do presidente na época (PSDB, PT, MDB, PSL/PL), com tons diferentes para mandatos do mesmo partido", "Base histórica do painel (Banco Central, Ipeadata, Inep, Inpe)", "No radar de outros pares, cada eixo é a posição do governo entre os nove mandatos (0 = pior, 100 = melhor), porque vários indicadores podem ser negativos. Câmbio e importações entram como 'depende de contexto'. A comparação alinhada (mesmo período) só existe para Bolsonaro x Lula 3."),
+    ("Fontes (11ª revisão)", "Links de fonte", "Links do Ipeadata quebravam no meio (aspas e parênteses no endereço) e três páginas passaram a pedir login (Agência Gov e Inep)", "Cada série aponta para a página oficial legível (SIDRA, Banco Central, CONAB, Atlas da Violência, IBGE); o dado bruto do Ipeadata virou link complementar com endereço codificado; substituídos os links fora do ar", "Varredura automática de 164 links em 22/10/2026", "Também corrigida a nota das terras indígenas: os ~2,5 milhões de hectares eram só das quatro homologações de 18/11/2025, não do total de 20."),
+    ("Abas e propostas (12ª revisão)", "Outros governos em todas as abas e planos de governo", "Ao trocar o par, as abas temáticas mudavam de layout; não havia os planos dos presidentes eleitos", "Abas temáticas mantêm o formato do Bolsonaro x Lula (cartões A ➔ B, gráficos numerados com fonte, gráficos mês a mês desde a posse e contexto no fim) para qualquer par; aba Propostas ganhou 67 propostas dos planos de FHC (1994, 1998), Lula (2002, 2006, 2022), Dilma (2010, 2014), Temer (Ponte para o Futuro, 2015) e Bolsonaro (2018)", "PDFs dos planos (SciELO/Centro Edelstein, UFG, Fundação Perseu Abramo, Conjur, Fiocruz, Pleno News, RTP); séries mensais do Banco Central e Ipeadata", "Cada proposta foi conferida por palavra-chave na página citada do PDF (67 de 67). São paráfrases do painel; o texto original prevalece."),
+    ("Saúde (13ª revisão)", "Médicos, leitos, hospitais, gasto federal e vacinação", "A aba tinha só expectativa de vida, dengue, Covid e municípios na meta de vacinação", "Médicos por 10 mil habitantes e leitos do SUS (CNES/DATASUS, 2010–2025), hospitais gerais, despesa da União na função Saúde (Tesouro/SICONFI, 2014–2025, em valores de 2025 e % do PIB) e cobertura vacinal 2000–2025 (OMS/Unicef)", "CNES/DATASUS via Ipeadata; Tesouro Nacional (SICONFI/DCA); OMS (API aberta); Banco Central (PIB e IPCA)", "A série de médicos do CNES conta cadastros e difere da Demografia Médica (597 mil médicos em 2024). A vacinação usa a estimativa da OMS, que difere um pouco do Ministério (ex.: pólio 2019: 72% na OMS e 84% no Ministério). Cobertura da atenção primária, filas e gasto de estados e municípios seguem pendentes."),
+    ("Saúde (13ª revisão)", "Programas de saúde de cada governo", "Só 2 políticas de saúde (Bolsonaro e Lula 3)", "21 programas de FHC a Lula 3, em linguagem simples, cada um com pontos positivos, críticas e link da fonte; leis conferidas no Planalto", "Planalto, Ipea, Tesouro, TCU, CGU, CNS, Ciência & Saúde Coletiva, Fiocruz e imprensa", "Onde só há dado do governo ou do setor interessado, o texto avisa. Duas situações foram corrigidas na conferência: a EC 95 consta como substituída pela LC 200/2023, e o piso da enfermagem como em vigor com assistência da União (não verificamos a data exata do fim da suspensão do STF). Dilma 2 e vários programas menores ainda não foram mapeados."),
+    ("Cores e comparações (13ª revisão)", "Cores dos governos e queda da pobreza/Gini", "Lula em coral e Dilma em vermelho escuro; pobreza, Gini e dívida apareciam como variação negativa (\"-11 x -8\")", "Lula em vermelho forte e Dilma em vermelho claro; pobreza, extrema pobreza e Gini passaram a \"queda no mandato\" (positivo = caiu, maior queda = melhor); dívida e tarifa indicam \"negativo = caiu\"", "Conferência por força bruta de todos os pares de mandatos (13 casos com dois valores negativos)", "A lógica de quem é \"melhor\" já estava correta (menor é melhor, então o mais negativo vence); o problema era de leitura, não de conta."),
     ("Pipeline", "build_database.py", "Sobrescrevia o scorecard com versão menor (12 de 17 itens) e gravava valores fixos", "Selic, câmbio, dívida, PIB, IPCA e Gini vêm das APIs; scorecard e CONAB não são mais sobrescritos", "—", ""),
 ]
 

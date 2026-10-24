@@ -15,12 +15,13 @@ from modules.ui_components import (
 
 def render_tab_food_basket():
     render_section_header(
-        "🛒 Cesta Básica & Preços Específicos",
+        "Cesta Básica & Preços Específicos",
         "Custo da cesta básica (DIEESE), poder de compra do salário mínimo e variação oficial dos preços de alimentos, "
         "combustíveis e energia em cada mandato (IPCA/IBGE).",
     )
 
     df_dieese, _ = get_cesta_basica_data()
+    cesta_nota = load_json("cesta_basica.json").get("nota_dieese", "")
     cesta = load_json("cesta_basica.json")
     poder = cesta.get("poder_compra_salario_minimo", {})
     df_itens, fonte_itens = get_precos_itens_data()
@@ -44,8 +45,8 @@ def render_tab_food_basket():
         b = df_dieese[df_dieese["governo"] == "Bolsonaro"].iloc[-1]
         l = df_dieese[df_dieese["governo"] == "Lula"].iloc[-1]
         with col3:
-            render_compare_stat("% do salário mínimo gasto com a cesta (SP)", f"{fmt_br(b['pct_salario_minimo'])}%", f"{fmt_br(l['pct_salario_minimo'])}%",
-                                f"{b['ano']} ➔ {l['ano']} · DIEESE (valor anual, não auditado)", better="lula")
+            render_compare_stat("% do salário mínimo líquido gasto com a cesta (SP)", f"{fmt_br(b['pct_salario_minimo'])}%", f"{fmt_br(l['pct_salario_minimo'])}%",
+                                f"Dez/{b['ano']} ➔ dez/{l['ano']} · DIEESE", better="lula")
 
     st.markdown("---")
 
@@ -69,10 +70,20 @@ def render_tab_food_basket():
         fig.add_trace(go.Bar(y=d["item"], x=d["variacao_lula_pct"], name=f"Lula ({int(d['meses_lula'].max())} meses)", orientation="h",
                              marker_color=COLOR_LULA, text=d["variacao_lula_pct"].apply(lambda v: f"{v:+.1f}%".replace(".", ",")),
                              textposition="outside", hovertemplate="%{y}: %{x:+.1f}%<extra>Lula</extra>"))
-        fig.update_layout(barmode="group")
-        apply_plotly_theme(fig, title="Variação acumulada de preços no mandato (%)", height=max(380, 52 * len(d) + 120))
+        fig.update_layout(barmode="group", bargap=0.3, bargroupgap=0.06)
+        apply_plotly_theme(fig, title="Variação acumulada de preços no mandato (%)", height=max(420, 78 * len(d) + 130))
         fig.update_layout(hovermode="closest")
-        st.plotly_chart(fig, use_container_width=True)
+        # Faixas alternadas e linhas entre os itens, para separar cada alimento
+        for i in range(len(d)):
+            if i % 2 == 0:
+                fig.add_hrect(y0=i - 0.5, y1=i + 0.5, fillcolor="rgba(148,163,184,0.07)", line_width=0, layer="below")
+            if i:
+                fig.add_hline(y=i - 0.5, line_width=1, line_color="rgba(148,163,184,0.35)", layer="below")
+        topo = max(d["variacao_bolsonaro_pct"].max(), d["variacao_lula_pct"].max())
+        fundo = min(0, d["variacao_bolsonaro_pct"].min(), d["variacao_lula_pct"].min())
+        fig.update_xaxes(range=[fundo * 1.6 - (8 if fundo < 0 else 0), topo * 1.18], zeroline=True, zerolinecolor="#94a3b8", zerolinewidth=1.5, showgrid=True)
+        fig.update_yaxes(showgrid=False, tickfont=dict(size=13, color="#f8fafc"))
+        st.plotly_chart(fig, width="stretch")
         render_source(f"{fonte_itens}. Último mês: {df_itens['ultimo_mes'].max()[4:]}/{df_itens['ultimo_mes'].max()[:4]}",
                       "https://sidra.ibge.gov.br/tabela/7060")
 
@@ -100,7 +111,7 @@ def render_tab_food_basket():
                 textfont=dict(color="#ffffff", size=11), hovertemplate="<b>Ano:</b> %{x}<br><b>Custo:</b> R$ %{y:,.2f}<extra></extra>",
             ))
             apply_plotly_theme(fig_cesta, title="Custo nominal da cesta básica em São Paulo (R$)")
-            st.plotly_chart(fig_cesta, use_container_width=True)
+            st.plotly_chart(fig_cesta, width="stretch")
 
     with col_c2:
         st.subheader("3. Horas de trabalho para comprar a cesta")
@@ -112,6 +123,6 @@ def render_tab_food_basket():
                 textfont=dict(color="#ffffff", size=11), hovertemplate="<b>Ano:</b> %{x}<br><b>Jornada:</b> %{y:.1f} horas<extra></extra>",
             ))
             apply_plotly_theme(fig_horas, title="Horas de trabalho (salário mínimo) para comprar a cesta")
-            st.plotly_chart(fig_horas, use_container_width=True)
-    render_source("DIEESE — Pesquisa Nacional da Cesta Básica (São Paulo). Valores anuais mantidos da versão anterior, ainda não auditados.",
-                  "https://www.dieese.org.br/cesta/")
+            st.plotly_chart(fig_horas, width="stretch")
+    render_source("DIEESE — boletins de dezembro da Pesquisa Nacional da Cesta Básica (São Paulo). " + cesta_nota,
+                  "https://www.dieese.org.br/analisecestabasica/2025/202512cestabasica.pdf")

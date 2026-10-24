@@ -31,7 +31,7 @@ def _bar_by_gov(x, y, governos, title, fmt, hover_unit, height=400):
 
 def render_tab_social_environment():
     render_section_header(
-        "🧾 Contas Públicas, Pobreza & Desigualdade",
+        "Contas Públicas, Pobreza & Desigualdade",
         "Resultado primário, dívida líquida e custo de juros (Banco Central), pobreza e desigualdade de renda (IBGE). Dados ambientais estão na página \"Meio Ambiente & Clima\".",
     )
 
@@ -88,7 +88,7 @@ def render_tab_social_environment():
         fig = _bar_by_gov([_rotulo_ano(r) for _, r in d.iterrows()], d["resultado_primario_pib_pct"], d["governo"],
                           "Resultado primário (% do PIB)", lambda v: f"{v:+.2f}%".replace(".", ","), "% do PIB")
         fig.add_hline(y=0, line_color="#64748b", line_width=1)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source("Banco Central — SGS 5793 (necessidade de financiamento primário, sinal invertido)", SGS_URL)
         st.markdown(
             '<div class="info-box"><b>Leitura:</b> o rombo de 2020 (-9,2% do PIB) veio dos gastos emergenciais da pandemia. '
@@ -109,16 +109,16 @@ def render_tab_social_environment():
             fig.add_trace(go.Scatter(x=x, y=df_ind["divida_liquida_pib_pct"], name="Dívida líquida (DLSP)", mode="lines+markers",
                                      line=dict(color="#38BDF8", width=3)))
             fig.add_vrect(x0=-0.5, x1=3.5, fillcolor="#3B82F6", opacity=0.06, line_width=0, annotation_text="Bolsonaro", annotation_position="top left")
-            fig.add_vrect(x0=3.5, x1=len(x) - 0.5, fillcolor="#F43F5E", opacity=0.06, line_width=0, annotation_text="Lula", annotation_position="top left")
+            fig.add_vrect(x0=3.5, x1=len(x) - 0.5, fillcolor="#EF2B2D", opacity=0.06, line_width=0, annotation_text="Lula", annotation_position="top left")
             apply_plotly_theme(fig, title="Endividamento público (% do PIB)", height=400)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source("Banco Central — SGS 13762 e 4513", SGS_URL)
         with col_b:
             st.subheader("3. Custo dos juros da dívida (% PIB)")
             d = df_ind.dropna(subset=["juros_nominais_pib_pct"])
             fig = _bar_by_gov([_rotulo_ano(r) for _, r in d.iterrows()], d["juros_nominais_pib_pct"], d["governo"],
                               "Juros nominais pagos (% do PIB, 12 meses)", lambda v: f"{v:.1f}%".replace(".", ","), "% do PIB")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source("Banco Central — SGS 5727. Em 2020 inclui efeito de swaps cambiais.", SGS_URL)
 
     st.markdown("---")
@@ -137,7 +137,7 @@ def render_tab_social_environment():
                                      text=df_pob["extrema_pobreza_pct"].apply(lambda v: "" if pd.isna(v) else f"{v:.1f}%".replace(".", ",")),
                                      textposition="top center"))
             apply_plotly_theme(fig, title="Proporção da população abaixo das linhas do Banco Mundial", height=420)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source(extras["pobreza"]["fonte"] + ". " + extras["pobreza"]["nota"], extras["pobreza"]["url"])
     with col_g:
         st.subheader("5. Desigualdade de renda (Gini)")
@@ -150,6 +150,6 @@ def render_tab_social_environment():
                 hovertemplate="<b>%{x}</b><br>Gini: %{y:.3f}<extra></extra>",
             ))
             apply_plotly_theme(fig, title="Índice de Gini do rendimento domiciliar per capita", height=420)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source("IBGE — PNAD Contínua, SIDRA 7435", "https://sidra.ibge.gov.br/tabela/7435")
 

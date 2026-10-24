@@ -5952,7 +5952,7 @@
           "lado": "A favor de Flávio",
           "fonte": "Banco Central (SGS 13762)",
           "texto": "A dívida bruta subiu de 71,7% do PIB (dez/2022) para 82,9% (ago/2026) — alta de 11 pontos em menos de quatro anos.",
-          "url": "https://www3.bcb.gov.br/sgspub/"
+          "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13762/dados?formato=csv"
         },
         {
           "lado": "Contra a fala",

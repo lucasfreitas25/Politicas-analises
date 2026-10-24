@@ -16,10 +16,10 @@ SGS_URL = "https://www3.bcb.gov.br/sgspub/"
 
 # (coluna, rótulo, cor) das modalidades de crédito de pessoas físicas
 MODALIDADES = [
-    ("cartao_rotativo", "Cartão de crédito rotativo", "#F43F5E"),
+    ("cartao_rotativo", "Cartão de crédito rotativo", "#EF2B2D"),
     ("cheque_especial", "Cheque especial", "#F59E0B"),
     ("credito_pessoal_nao_consignado", "Crédito pessoal não consignado", "#A78BFA"),
-    ("cartao_parcelado", "Cartão parcelado", "#FB7185"),
+    ("cartao_parcelado", "Cartão parcelado", "#F87171"),
     ("veiculos", "Aquisição de veículos", "#38BDF8"),
     ("consignado_total", "Consignado (total)", "#10B981"),
     ("imobiliario", "Financiamento imobiliário", "#94A3B8"),
@@ -34,13 +34,13 @@ def _faixas_governo(fig, periodos):
         fig.add_vrect(x0=periodos[idx_b[0]], x1=periodos[idx_b[-1]], fillcolor="#3B82F6", opacity=0.07, line_width=0,
                       annotation_text="Bolsonaro", annotation_position="top left")
     if idx_l:
-        fig.add_vrect(x0=periodos[idx_l[0]], x1=periodos[idx_l[-1]], fillcolor="#F43F5E", opacity=0.07, line_width=0,
+        fig.add_vrect(x0=periodos[idx_l[0]], x1=periodos[idx_l[-1]], fillcolor="#EF2B2D", opacity=0.07, line_width=0,
                       annotation_text="Lula", annotation_position="top left")
 
 
 def render_tab_indebtedness():
     render_section_header(
-        "💳 Inadimplência: carteiras em atraso e contas não pagas",
+        "Inadimplência: carteiras em atraso e contas não pagas",
         "Só o que está em atraso: a taxa de inadimplência das carteiras de crédito de pessoas físicas (Banco Central: parcelas com mais de 90 dias de atraso) "
         "e as medições de pessoas e famílias com contas atrasadas.",
     )
@@ -82,14 +82,14 @@ def render_tab_indebtedness():
     st.caption("Mensal, desde jan/2019. Pessoas físicas em comparação com o total da carteira (pessoas físicas e empresas).")
     periodos = df["periodo"].tolist()
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=periodos, y=df["pf_total"], name="Pessoas físicas", mode="lines", line=dict(color="#F43F5E", width=3),
+    fig.add_trace(go.Scatter(x=periodos, y=df["pf_total"], name="Pessoas físicas", mode="lines", line=dict(color="#EF2B2D", width=3),
                              hovertemplate="%{x}<br>Pessoas físicas: %{y:.2f}%<extra></extra>"))
     fig.add_trace(go.Scatter(x=periodos, y=df["total"], name="Carteira total", mode="lines", line=dict(color="#94A3B8", width=2, dash="dot"),
                              hovertemplate="%{x}<br>Total: %{y:.2f}%<extra></extra>"))
     _faixas_governo(fig, periodos)
     apply_plotly_theme(fig, title="Taxa de inadimplência (%)", height=430)
     fig.update_xaxes(nticks=10, tickangle=-30)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     render_source("Banco Central — SGS 21084 (pessoas físicas) e 21082 (total). Inclui operações com recursos livres e direcionados.", SGS_URL)
 
     # ---------------- Médias por mandato
@@ -104,7 +104,7 @@ def render_tab_indebtedness():
                          text=[f"{l[c].mean():.2f}%".replace(".", ",") for _, c in linhas], textposition="outside"))
     fig.update_layout(barmode="group")
     apply_plotly_theme(fig, title="Inadimplência média no período (% da carteira)", height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     render_source("Banco Central — SGS 21082, 21084, 21112 e 21145; média simples dos meses de cada mandato.", SGS_URL)
 
     st.markdown("---")
@@ -120,7 +120,7 @@ def render_tab_indebtedness():
     _faixas_governo(fig, periodos)
     apply_plotly_theme(fig, title="Inadimplência por modalidade (%)", height=450)
     fig.update_xaxes(nticks=10, tickangle=-30)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     render_source("Banco Central — SGS 21127 (rotativo), 21113 (cheque especial), 21114 (pessoal), 21121 (veículos), 21119 (consignado), 21128 (parcelado), 21151 (imobiliário) e 21148 (rural).", SGS_URL)
     st.markdown(
         '<div class="info-box"><b>Como ler:</b> a inadimplência do <b>rotativo do cartão</b> é a mais alta do sistema (66,2% em ago/2026) porque só cai nesse crédito quem já não consegue pagar a fatura inteira. '
@@ -137,7 +137,7 @@ def render_tab_indebtedness():
     pontos = pd.DataFrame(extra.get("pessoas_e_familias", []))
     if not pontos.empty:
         st.dataframe(
-            pontos[["fonte", "ponto", "valor", "detalhe", "url"]], use_container_width=True, hide_index=True,
+            pontos[["fonte", "ponto", "valor", "detalhe", "url"]], width="stretch", hide_index=True,
             column_config={"fonte": "Pesquisa", "ponto": "Mês", "valor": "Valor", "detalhe": st.column_config.TextColumn("Observação", width="large"),
                            "url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗")},
         )
@@ -148,7 +148,7 @@ def render_tab_indebtedness():
         st.subheader("5. Renegociação de dívidas: Desenrola")
         st.markdown(
             f'<div class="info-box"><b>Balanço do Desenrola:</b> {des["resumo"]}<br/>{des["desenrola_3"]}<br/>'
-            f'<span style="font-size:0.8rem;">📎 Fonte: <a href="{des["url"]}" target="_blank">{des["fonte"]}</a>. '
+            f'<span style="font-size:0.8rem;">Fonte: <a href="{des["url"]}" target="_blank">{des["fonte"]}</a>. '
             'Não encontramos o balanço final de encerramento do programa; os números são parciais.</span></div>',
             unsafe_allow_html=True,
         )

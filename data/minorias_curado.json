@@ -32,7 +32,7 @@
   "pessoas_trans": {
     "fonte": "ANTRA — Dossiês anuais de assassinatos de pessoas trans",
     "url": "https://www.band.com.br/noticias/80-pessoas-trans-e-travestis-foram-assassinadas-no-brasil-em-2025-202601260814",
-    "nota": "A ANTRA alerta para subnotificação: em 2025 os assassinatos caíram, mas as tentativas de homicídio subiram. O Brasil lidera o ranking mundial pelo 18º ano. 2021 não confirmado nesta revisão.",
+    "nota": "A ANTRA alerta para subnotificação: em 2025 os assassinatos caíram, mas as tentativas de homicídio subiram. O Brasil lidera o ranking mundial pelo 18º ano. 2021 (140 casos) conferido na cobertura do dossiê da época.",
     "serie": [
       {
         "ano": 2019,
@@ -47,7 +47,7 @@
       {
         "ano": 2021,
         "governo": "Bolsonaro",
-        "assassinatos": null
+        "assassinatos": 140
       },
       {
         "ano": 2022,

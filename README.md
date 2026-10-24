@@ -149,3 +149,19 @@ Politicas analises/
     ├── macro.json
     └── scorecard.json
 ```
+
+## Atualização de 21/10/2026
+- Tipos de fonte por página (`modules/ux.py`), glossário central e Metodologia reescrita (critérios, limites, downloads).
+- Visão Geral: "Resumo em 10 números", comparação alinhada (`modules/alinhado.py`: mesmo período, Bolsonaro sem 2020) e filtro de eixos no placar.
+- Propostas de campanha: 53 trechos com página conferida nos PDFs dos planos (`data/_fontes/gerar_propostas.py`).
+- Acessibilidade: modo para daltonismo, tema claro experimental, CSS para celular e impressão.
+
+## Série histórica (22/10/2026)
+- Seletor de governos no topo das abas temáticas e da Visão Geral (`modules/historico_ui.py`): padrão Bolsonaro x Lula 3 (aba original); outro par ou "Todos os governos" refaz a aba com 35 indicadores para 9 mandatos desde 1995.
+- Coleta: `python data/_fontes/coletar_historico.py` (Banco Central, Ipeadata e Inpe/TerraBrasilis) gera `data/historico.json`.
+- PRODES atualizado pela série oficial do TerraBrasilis: 2025 consolidado = 5.731 km²; 2026 estimado = 3.335 km².
+
+## Saúde e programas por governo (23/10/2026)
+- Aba Saúde: médicos, leitos, hospitais, gasto federal, vacinação, dengue, Covid e programas de cada governo. Séries em `data/saude_series.json`
+  (`python data/_fontes/coletar_saude.py`: Ipeadata/CNES, Tesouro/SICONFI e API da OMS); textos em `data/saude.json` (`gerar_saude.py`).
+- `data/programas_governo.json` (`gerar_programas_governo.py`): programas de FHC a Lula 3 com pontos positivos, críticas e fonte (hoje só Saúde).

@@ -6,11 +6,16 @@ import pandas as pd
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
 @st.cache_data(ttl=3600)
+def _carregar(filepath, mtime):
+    """O mtime entra na chave do cache: quando o arquivo muda, o painel recarrega sem precisar reiniciar."""
+    with open(filepath, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def load_json(filename):
     filepath = os.path.join(DATA_DIR, filename)
     if os.path.exists(filepath):
-        with open(filepath, "r", encoding="utf-8") as f:
-            return json.load(f)
+        return _carregar(filepath, os.path.getmtime(filepath))
     return {}
 
 def get_pnadc_data():

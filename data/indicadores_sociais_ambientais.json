@@ -46,9 +46,9 @@
     ]
   },
   "desmatamento_prodes": {
-    "fonte": "Inpe — PRODES Amazônia Legal (ano de agosto a julho)",
-    "url": "https://terrabrasilis.dpi.inpe.br/",
-    "nota": "O ano PRODES vai de agosto a julho: o dado de 2023 (ago/2022–jul/2023) cobre 5 meses de Bolsonaro e 7 de Lula.",
+    "fonte": "Inpe — PRODES Amazônia Legal (ano de agosto a julho), TerraBrasilis",
+    "url": "https://terrabrasilis.dpi.inpe.br/app/dashboard/deforestation/biomes/legal_amazon/rates",
+    "nota": "O ano PRODES vai de agosto a julho: o dado de 2023 (ago/2022–jul/2023) cobre 5 meses de Bolsonaro e 7 de Lula. Série do TerraBrasilis (atualizada em 16/10/2026): 2025 consolidado em 5.731 km² (a estimativa de out/2025 era 5.796) e 2026 é estimativa (3.335 km²), fora das médias.",
     "serie": [
       {
         "ano": 2018,
@@ -88,7 +88,13 @@
       {
         "ano": 2025,
         "governo": "Lula",
-        "km2": 5796
+        "km2": 5731
+      },
+      {
+        "ano": 2026,
+        "governo": "Lula",
+        "km2": 3335,
+        "estimativa": true
       }
     ]
   },
@@ -162,13 +168,19 @@
         "ano": 2025,
         "governo": "Lula",
         "km2": 7235
+      },
+      {
+        "ano": 2026,
+        "governo": "Lula",
+        "km2": 5517,
+        "estimativa": true
       }
     ]
   },
   "queimadas": {
-    "fonte": "Inpe — Programa Queimadas (focos de calor no Brasil, satélite de referência)",
-    "url": "https://www.poder360.com.br/poder-sustentavel/brasil-tem-queda-de-518-no-numero-de-focos-de-queimadas-em-2025/",
-    "nota": "2024 teve a seca mais severa da série histórica e o maior número de focos desde 2010. 2025 é parcial (até 23/12). Totais nacionais de 2021 e 2022 não foram confirmados nesta revisão e ficam em branco.",
+    "fonte": "Inpe — Programa Queimadas (focos de calor no Brasil, satélite de referência): contagem das linhas dos CSVs anuais",
+    "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/",
+    "nota": "Contagem direta dos arquivos anuais abertos do Inpe (satélite de referência). 2024 teve a seca mais severa da série e o maior número de focos desde 2010; 2025 já é o ano completo. Focos de calor não são área queimada nem equivalem a incêndios distintos.",
     "serie": [
       {
         "ano": 2019,
@@ -178,17 +190,17 @@
       {
         "ano": 2020,
         "governo": "Bolsonaro",
-        "focos": 222798
+        "focos": 222797
       },
       {
         "ano": 2021,
         "governo": "Bolsonaro",
-        "focos": null
+        "focos": 184081
       },
       {
         "ano": 2022,
         "governo": "Bolsonaro",
-        "focos": null
+        "focos": 200763
       },
       {
         "ano": 2023,
@@ -203,7 +215,7 @@
       {
         "ano": 2025,
         "governo": "Lula",
-        "focos": 134047
+        "focos": 136393
       }
     ]
   },
@@ -227,9 +239,9 @@
     ]
   },
   "terras_indigenas": {
-    "fonte": "Agência Gov / MPI (balanço de mar/2026)",
-    "url": "https://agenciagov.ebc.com.br/noticias/202603/em-tres-anos-presidente-lula-homologou-20-terras-indigenas-em-todo-o-brasil",
-    "nota": "Bolsonaro não homologou nenhuma terra indígena (2019–2022). Lula homologou 20 (cerca de 2,5 milhões de hectares) de 2023 a mar/2026; a Funai lista mais de 240 áreas ainda pendentes. Em 2023 o Congresso aprovou o marco temporal (Lei 14.701) derrubando vetos de Lula.",
+    "fonte": "Ministério dos Povos Indígenas (balanço de mar/2026, Agência Gov) e Instituto Socioambiental (ISA)",
+    "url": "https://acervo.socioambiental.org/acervo/area-protegida/terra-indigena-uirapuru-ti",
+    "nota": "Bolsonaro não homologou nenhuma terra indígena (2019–2022). Lula chegou a 20 terras homologadas desde 2023 em 18/11/2025, quando assinou as quatro mais recentes (Manoki, Uirapuru, Estação Parecis e Kaxuyana-Tunayana, cerca de 2,45 milhões de hectares no total das quatro); a Funai lista mais de 240 áreas ainda pendentes. Em 2023 o Congresso aprovou o marco temporal (Lei 14.701) derrubando vetos de Lula.",
     "serie": [
       {
         "governo": "Bolsonaro",
@@ -238,7 +250,7 @@
       },
       {
         "governo": "Lula",
-        "periodo": "2023–mar/2026",
+        "periodo": "2023–nov/2025",
         "homologadas": 20
       }
     ]

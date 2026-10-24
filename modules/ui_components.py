@@ -1,10 +1,12 @@
+import html as html_mod
+import re
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 
 # Paleta vibrante e de alto contraste
 COLOR_BOLSONARO = "#3B82F6"   # Azul Real Vibrante
-COLOR_LULA = "#F43F5E"        # Carmim / Coral Vibrante
+COLOR_LULA = "#EF2B2D"        # Carmim / Coral Vibrante
 COLOR_ACCENT = "#10B981"      # Verde Esmeralda
 COLOR_NEUTRAL = "#94A3B8"     # Slate Claro
 COLOR_GOLD = "#F59E0B"        # Âmbar Dourado
@@ -56,30 +58,102 @@ def apply_plotly_theme(fig, title="", height=420):
             title_font=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif")
         )
     )
+    if st.session_state.get("modo_daltonico"):
+        _aplicar_daltonismo(fig)
     return fig
+
+
+CVD_MAP = {"#3b82f6": "#0072B2", "#ef2b2d": "#E69F00", "#60a5fa": "#56B4E9", "#f87171": "#E69F00"}
+
+
+def _aplicar_daltonismo(fig):
+    """Paleta segura para daltonismo (azul/laranja), padrões nas barras e traços distintos nas linhas."""
+    for tr in fig.data:
+        marker = getattr(tr, "marker", None)
+        cor = getattr(marker, "color", None) if marker is not None else None
+        if isinstance(cor, str):
+            novo = CVD_MAP.get(cor.lower())
+            if novo:
+                tr.marker.color = novo
+                if tr.type == "bar":
+                    tr.marker.pattern = dict(shape="/" if novo == "#E69F00" else "", fgcolor="rgba(0,0,0,0.35)")
+        elif isinstance(cor, (list, tuple)) and tr.type == "bar":
+            cores = [CVD_MAP.get(str(c).lower(), c) for c in cor]
+            tr.marker.color = cores
+            tr.marker.pattern = dict(shape=["/" if c == "#E69F00" else "" for c in cores], fgcolor="rgba(0,0,0,0.35)")
+        line = getattr(tr, "line", None)
+        lcor = getattr(line, "color", None) if line is not None else None
+        if isinstance(lcor, str) and lcor.lower() in CVD_MAP:
+            tr.line.color = CVD_MAP[lcor.lower()]
+            if lcor.lower() in ("#ef2b2d", "#f87171"):
+                tr.line.dash = "dash"
 
 def render_hero_banner():
     banner_html = (
         '<div class="hero-container">'
-        '<div class="hero-title">📊 Observatório Macroeconômico: Governo Bolsonaro vs. Governo Lula</div>'
+        '<div class="hero-title">Observatório Macroeconômico: Entre Governos</div>'
         '<div class="hero-subtitle">'
-        'Análise comparativa aprofundada, independente e baseada estritamente em dados públicos oficiais do '
-        '<b>IBGE</b> (PNAD Contínua, IPCA, PAM, PPM, PEVS, PIM-PF, Contas Nacionais), <b>CONAB</b>, <b>Banco Central do Brasil</b> e <b>Ministério do Trabalho</b>.'
+        'Comparação independente, ancorada principalmente em dados públicos oficiais do '
+        '<b>IBGE</b>, <b>Banco Central</b>, <b>Ministério do Trabalho</b>, <b>CONAB</b> e <b>Inpe</b>, complementada por estudos de entidades, checagens e reportagens. '
+        'Cada página indica os tipos de fonte usados.'
         '</div>'
-        '<div class="hero-badges">'
-        '<span class="badge-tag badge-ibge">🏛️ IBGE SIDRA Oficial</span>'
-        '<span class="badge-tag badge-conab">🌾 CONAB Grãos</span>'
-        '<span class="badge-tag badge-bcb">🏦 Banco Central (SGS)</span>'
-        '<span class="badge-tag" style="background: rgba(59, 130, 246, 0.18); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4);">💼 Novo CAGED</span>'
-        '<span class="badge-tag" style="background: rgba(168, 85, 247, 0.18); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4);">⏱️ 2019 — 2026</span>'
-        '<span class="badge-tag" style="background: rgba(239, 68, 68, 0.16); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4);">🗳️ Checagens Eleição 2026</span>'
-        '<span class="badge-tag" style="background: rgba(148, 163, 184, 0.16); color: #e2e8f0; border: 1px solid rgba(148, 163, 184, 0.4);">🔎 Dados auditados em 20/10/2026</span>'
         '</div>'
         '</div>'
     )
     st.markdown(banner_html, unsafe_allow_html=True)
 
 GOV_COLORS = {"Bolsonaro": COLOR_BOLSONARO, "Lula": COLOR_LULA}
+
+# Paleta por mandato com base no partido do presidente na época, variando o tom entre mandatos do mesmo partido:
+# PSDB (FHC) azul-ciano tucano · PT (Lula e Dilma) vermelho · MDB (Temer) verde · PSL/PL (Bolsonaro) azul.
+# Bolsonaro foi eleito pelo PSL, ficou sem partido de nov/2019 a nov/2021 e se filiou ao PL; o azul é a cor dos dois partidos.
+PARTIDO = {"FHC 1": "PSDB", "FHC 2": "PSDB", "Lula 1": "PT", "Lula 2": "PT", "Lula 3": "PT",
+           "Dilma 1": "PT", "Dilma 2": "PT", "Temer": "MDB", "Bolsonaro": "PSL/PL"}
+COR_MANDATO = {
+    "FHC 1": "#22D3EE", "FHC 2": "#0891B2",
+    "Lula 1": "#B91C1C", "Lula 2": "#DC2626", "Lula 3": COLOR_LULA,
+    "Dilma 1": "#FECACA", "Dilma 2": "#F87171",
+    "Temer": "#22C55E", "Bolsonaro": COLOR_BOLSONARO,
+}
+COR_CLARA = {
+    "FHC 1": "#A5F3FC", "FHC 2": "#67E8F9",
+    "Lula 1": "#FCA5A5", "Lula 2": "#FCA5A5", "Lula 3": "#FCA5A5",
+    "Dilma 1": "#FEE2E2", "Dilma 2": "#FECACA",
+    "Temer": "#86EFAC", "Bolsonaro": "#93C5FD",
+}
+PERIODO = {"FHC 1": "1995–98", "FHC 2": "1999–2002", "Lula 1": "2003–06", "Lula 2": "2007–10", "Dilma 1": "2011–14",
+           "Dilma 2": "2015–mai/16", "Temer": "mai/16–2018", "Bolsonaro": "2019–22", "Lula 3": "2023–atual"}
+
+
+def classe_gov(governo):
+    """Classe CSS de um mandato (gx-fhc-1, gx-lula-3...)."""
+    return "gx-" + governo.lower().replace(" ", "-")
+
+
+def hex_rgba(cor, alfa):
+    cor = cor.lstrip("#")
+    r, g, b = int(cor[0:2], 16), int(cor[2:4], 16), int(cor[4:6], 16)
+    return f"rgba({r},{g},{b},{alfa})"
+
+
+def css_governos():
+    """Regras de cor de cada mandato para os cartões, selos e tabela da Visão Geral (mesmo visual de Bolsonaro x Lula)."""
+    regras = []
+    for g, cor in COR_MANDATO.items():
+        c, clara = classe_gov(g), COR_CLARA[g]
+        regras.append(
+            f".gov-row.{c}{{background:{hex_rgba(cor, 0.14)} !important;border-left:4px solid {cor} !important;"
+            f"border-top:1px solid {hex_rgba(cor, 0.2)} !important;border-bottom:1px solid {hex_rgba(cor, 0.2)} !important;"
+            f"border-right:1px solid {hex_rgba(cor, 0.2)} !important;}}"
+            f".gov-val.{c},.val-main.{c},.gov-name.{c},.compare-val.{c}{{color:{clara} !important;}}"
+            f".mini-badge.{c}{{background:{cor} !important;color:#0b0f19 !important;}}"
+            f".score-table .val-cell.win-{c}{{background:{hex_rgba(cor, 0.12)} !important;border-left-color:{cor} !important;}}"
+            f".resumo-lado.{c}{{color:{clara} !important;}} .resumo-lado.{c}.vence{{background:{hex_rgba(cor, 0.13)} !important;border-color:{cor} !important;}}"
+            f".resumo-lado.{c} .compare-val{{color:{clara} !important;}}"
+            f".kpi-card.borda-{c},.prop-card.borda-{c}{{border-top:3px solid {cor} !important;}}"
+        )
+    return "<style>" + "".join(regras) + "</style>"
+
 
 # Cores das faixas de veredito das checagens (verde = verdade ... vermelho = mentira)
 VERDICT_COLORS = {
@@ -91,6 +165,8 @@ VERDICT_COLORS = {
 VERDICT_ORDER = ["Verdade", "Meia-verdade", "Mentira", "Sem comprovação"]
 
 def gov_color(governo):
+    if governo in COR_MANDATO:
+        return COR_MANDATO[governo]
     for nome, cor in GOV_COLORS.items():
         if nome in str(governo):
             return cor
@@ -100,10 +176,40 @@ def render_section_header(title, subtitle):
     st.markdown(f'<div class="section-title">{title}</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="section-subtitle">{subtitle}</div>', unsafe_allow_html=True)
 
+_SERIES = re.compile(r"\b(SGS|SIDRA|tabelas?)\s+(\d{1,6}(?:(?:,\s*|\s+e\s+)\d{1,6})*)")
+SGS_GENERICO = "https://www3.bcb.gov.br/sgspub/"
+
+
+def _link_serie(sistema, numero):
+    if sistema == "SGS":
+        return f'<a href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.{numero}/dados?formato=csv" target="_blank">{numero}</a>'
+    return f'<a href="https://sidra.ibge.gov.br/tabela/{numero}" target="_blank">{numero}</a>'
+
+
+def _linkar_series(texto):
+    """Transforma 'SGS 433', 'SGS 21082, 21084 e 21145' e 'SIDRA 7060' em links para as séries exatas usadas."""
+    def troca(m):
+        sistema = "SGS" if m.group(1) == "SGS" else "SIDRA"
+        numeros = re.sub(r"\d{1,6}", lambda n: _link_serie(sistema, n.group(0)), m.group(2))
+        return f"{m.group(1)} {numeros}"
+
+    out, dentro_de_link = [], False
+    for p in re.split(r"(<[^>]+>)", texto):
+        if p.startswith("<"):
+            dentro_de_link = p.lower().startswith("<a ") or (dentro_de_link and not p.lower().startswith("</a"))
+            out.append(p)
+        else:
+            out.append(p if dentro_de_link else _SERIES.sub(troca, p))
+    return "".join(out)
+
+
 def render_source(text, url=None):
-    """Rodapé de fonte padronizado abaixo de gráficos e tabelas."""
-    link = f' · <a href="{url}" target="_blank">abrir fonte ↗</a>' if url else ""
-    st.markdown(f'<div class="source-note">📎 Fonte: {text}{link}</div>', unsafe_allow_html=True)
+    """Rodapé de fonte padronizado abaixo de gráficos e tabelas. Códigos de série (SGS, SIDRA) viram links diretos."""
+    text = _linkar_series(text)
+    if url == SGS_GENERICO:
+        url = None  # os links das séries já apontam para os dados exatos
+    link = f' · <a href="{html_mod.escape(url, quote=True)}" target="_blank">abrir fonte ↗</a>' if url else ""
+    st.markdown(f'<div class="source-note">Fonte: {text}{link}</div>', unsafe_allow_html=True)
 
 def render_compare_stat(title, val_bols, val_lula, foot="", better=None):
     """Cartão compacto 'antes ➔ depois'. better: 'bolsonaro', 'lula' ou None (sem destaque)."""
@@ -129,20 +235,24 @@ def fmt_br(valor, casas=1):
     txt = f"{valor:,.{casas}f}"
     return txt.replace(",", "X").replace(".", ",").replace("X", ".")
 
-def render_kpi_card(title, val_bols, val_lula, unit="", note=""):
+def render_kpi_card(title, val_bols, val_lula, unit="", note="", nome_a="Bolsonaro (2019-22)", nome_b="Lula (2023-atual)",
+                    cls_a="bolsonaro", cls_b="lula"):
+    """Cartão com os dois governos empilhados. Por padrão Bolsonaro x Lula; cls_a/cls_b trocam as cores (classes gx-...)."""
+    estilo_a = ' style="color: #93c5fd;"' if cls_a == "bolsonaro" else ""
+    estilo_b = ' style="color: #fca5a5;"' if cls_b == "lula" else ""
     card_html = (
         '<div class="kpi-card">'
         '<div class="kpi-title">'
         f'<span>{title}</span>'
         f'<span style="font-size: 0.75rem; color: #38bdf8; font-weight: 600;">{unit}</span>'
         '</div>'
-        '<div class="gov-row bolsonaro">'
-        '<span class="gov-name" style="color: #93c5fd;">Bolsonaro (2019-22)</span>'
-        f'<span class="gov-val bolsonaro">{val_bols}</span>'
+        f'<div class="gov-row {cls_a}">'
+        f'<span class="gov-name {cls_a}"{estilo_a}>{nome_a}</span>'
+        f'<span class="gov-val {cls_a}">{val_bols}</span>'
         '</div>'
-        '<div class="gov-row lula">'
-        '<span class="gov-name" style="color: #fda4af;">Lula (2023-atual)</span>'
-        f'<span class="gov-val lula">{val_lula}</span>'
+        f'<div class="gov-row {cls_b}">'
+        f'<span class="gov-name {cls_b}"{estilo_b}>{nome_b}</span>'
+        f'<span class="gov-val {cls_b}">{val_lula}</span>'
         '</div>'
         f'<div class="kpi-foot">{note}</div>'
         '</div>'

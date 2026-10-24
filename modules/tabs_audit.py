@@ -5,7 +5,7 @@ from modules.ui_components import render_section_header
 
 def render_tab_audit():
     render_section_header(
-        "🔎 Auditoria dos Dados (Pente-fino de 20/10/2026)",
+        "Auditoria dos Dados (Pente-fino de 20/10/2026)",
         "Todos os números que estavam errados, desatualizados ou sem fonte na versão anterior do painel, o valor corrigido e de onde ele veio.",
     )
 
@@ -33,7 +33,7 @@ def render_tab_audit():
         df = df[df["area"] == area]
 
     st.dataframe(
-        df, use_container_width=True, hide_index=True, height=min(80 + 36 * len(df), 900),
+        df, width="stretch", hide_index=True, height=min(80 + 36 * len(df), 900),
         column_config={
             "area": "Área", "item": st.column_config.TextColumn("Indicador", width="medium"),
             "antes": st.column_config.TextColumn("Antes (incorreto)", width="medium"),

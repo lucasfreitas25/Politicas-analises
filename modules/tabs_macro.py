@@ -13,7 +13,7 @@ from modules.ui_components import (
 )
 
 def render_tab_macro():
-    st.markdown('<div class="section-title">🏛️ Macroeconomia & Finanças Públicas</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Macroeconomia & Finanças Públicas</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Produto Interno Bruto (IBGE Contas Nacionais), Balança Comercial (MDIC), Taxa Selic, Câmbio PTAX e Dívida Bruta (Banco Central).</div>',
         unsafe_allow_html=True
@@ -43,7 +43,7 @@ def render_tab_macro():
             customdata=df_anual["governo"]
         ))
         apply_plotly_theme(fig_pib, title="Crescimento Real do PIB Anual (%)")
-        st.plotly_chart(fig_pib, use_container_width=True)
+        st.plotly_chart(fig_pib, width="stretch")
         render_source("IBGE — Contas Nacionais (SIDRA 6784; * = acumulado em 4 trimestres, ano em curso)", "https://sidra.ibge.gov.br/tabela/5932")
 
     # 2. Balança Comercial & Superávit
@@ -68,8 +68,8 @@ def render_tab_macro():
             hovertemplate="<b>Ano:</b> %{x}<br><b>Saldo Comercial:</b> US$ %{y:.1f} bilhões<extra></extra>"
         ))
         apply_plotly_theme(fig_bal, title="Saldo Anual da Balança Comercial (US$ Bilhões)")
-        st.plotly_chart(fig_bal, use_container_width=True)
-        render_source("MDIC/Secex — ComexStat (2026 omitido: ano em curso)", "https://comexstat.mdic.gov.br/")
+        st.plotly_chart(fig_bal, width="stretch")
+        render_source("MDIC/Secex — ComexStat (2026 omitido: ano em curso)", "https://comexstat.mdic.gov.br/pt/geral")
 
     # 3. Selic e Câmbio Dólar em duas colunas
     col_m1, col_m2 = st.columns(2)
@@ -90,7 +90,7 @@ def render_tab_macro():
                 hovertemplate="<b>Ano:</b> %{x}<br><b>Selic Média:</b> %{y:.2f}%<extra></extra>"
             ))
             apply_plotly_theme(fig_selic, title="Taxa Selic Média Anual (% a.a.)")
-            st.plotly_chart(fig_selic, use_container_width=True)
+            st.plotly_chart(fig_selic, width="stretch")
 
     with col_m2:
         st.subheader("Dólar PTAX Médio (R$/US$)")
@@ -108,7 +108,7 @@ def render_tab_macro():
                 hovertemplate="<b>Ano:</b> %{x}<br><b>Câmbio Médio:</b> R$ %{y:.2f}<extra></extra>"
             ))
             apply_plotly_theme(fig_dol, title="Taxa de Câmbio Média (R$ por US$)")
-            st.plotly_chart(fig_dol, use_container_width=True)
+            st.plotly_chart(fig_dol, width="stretch")
 
     # 4. Dívida Pública Bruta / PIB
     st.subheader("3. Dívida Bruta do Governo Geral (% do PIB)")
@@ -133,13 +133,13 @@ def render_tab_macro():
         apply_plotly_theme(fig_div, title="Dívida Bruta do Governo Geral (% PIB)")
         fig_div.update_xaxes(ticktext=[f"{r.ano}*" if getattr(r, "parcial", False) else str(r.ano) for r in df_ind.itertuples()],
                              tickvals=df_ind["ano"].astype(str))
-        st.plotly_chart(fig_div, use_container_width=True)
+        st.plotly_chart(fig_div, width="stretch")
         render_source("Banco Central — SGS 13762, posição de dezembro (* = último mês disponível). Selic: SGS 432; câmbio: SGS 1.", "https://www3.bcb.gov.br/sgspub/")
 
     # Box Explicativo Macroeconômico
     st.markdown("""
     <div class="info-box">
-      <b>🏛️ Equilíbrio Macroeconômico e Fiscal:</b><br/>
+      <b>Equilíbrio Macroeconômico e Fiscal:</b><br/>
       • <b>Desempenho do PIB:</b> Bolsonaro teve média de 1,5% ao ano, puxada para baixo pela pandemia (2020: -3,3%) e compensada pela reabertura (2021: +4,8%). Lula teve média de 3,0% em 2023–2025 (3,2%, 3,4% e 2,3%), com desaceleração em 2025–26 sob juros altos.<br/>
       • <b>Juros:</b> a Selic foi da mínima histórica de 2,00% (2020–21) a 13,75% (fim de 2022). Com Lula, subiu até 15,00% em junho de 2025 — maior nível desde 2006 — e voltou a 13,75% em 2026.<br/>
       • <b>Setor Externo:</b> em 2023 o superávit comercial bateu o recorde de US$ 98,9 bilhões; em 2025, US$ 68,3 bilhões, com exportações recordes apesar do tarifaço dos EUA.<br/>

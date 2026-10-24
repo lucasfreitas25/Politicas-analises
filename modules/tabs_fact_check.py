@@ -14,7 +14,7 @@ from modules.ui_components import (
 CANDIDATOS = ["Lula", "Flávio Bolsonaro"]
 CAND_CLASS = {"Lula": "lula", "Flávio Bolsonaro": "flavio"}
 CAND_LABEL = {"Lula": "Lula (PT)", "Flávio Bolsonaro": "Flávio Bolsonaro (PL)"}
-CAT_ICON = {"Verdade": "✅", "Meia-verdade": "⚖️", "Mentira": "❌", "Sem comprovação": "❔"}
+CAT_ICON = {"Verdade": "✔", "Meia-verdade": "≈", "Mentira": "✖", "Sem comprovação": "?"}
 PLURAL = {"Verdade": "Verdades", "Meia-verdade": "Meias-verdades", "Mentira": "Mentiras", "Sem comprovação": "Sem comprovação"}
 SEVERIDADE = {"Verdade": 0, "Meia-verdade": 1, "Sem comprovação": 2, "Mentira": 3}
 MODO_UNICO = "Falas únicas (sem repetição)"
@@ -63,7 +63,7 @@ def _score_tile(cats, candidato, unidade):
         if n:
             segs.append(f'<div style="width:{pct:.2f}%; background:{VERDICT_COLORS[cat]};" title="{cat}: {n}"></div>')
         legend.append(f'<div><span class="dot" style="background:{VERDICT_COLORS[cat]}"></span>{cat}: <b>{n}</b> ({pct:.0f}%)</div>')
-    cor = "#fda4af" if candidato == "Lula" else "#93c5fd"
+    cor = "#fca5a5" if candidato == "Lula" else "#93c5fd"
     st.markdown(
         '<div class="score-tile">'
         f'<h4 style="color:{cor};">{CAND_LABEL[candidato]} <span style="color:#94a3b8; font-size:0.8rem; font-weight:600;">· {total} {unidade}</span></h4>'
@@ -105,11 +105,11 @@ def _fala_card(row):
     if row["n_checagens"] > 1:
         selos.append(f'<span class="tag-soft">checada {row["n_checagens"]}x</span>')
     if row["n_eventos"] > 1:
-        selos.append(f'<span class="tag-soft">🔁 repetida em {row["n_eventos"]} eventos</span>')
+        selos.append(f'<span class="tag-soft">repetida em {row["n_eventos"]} eventos</span>')
     if row["divergencia"]:
-        selos.append('<span class="tag-warn">⚠️ agências divergem</span>')
+        selos.append('<span class="tag-warn">⚠ agências divergem</span>')
     if row["contrapontos"]:
-        selos.append('<span class="tag-soft">🗣️ com contraponto</span>')
+        selos.append('<span class="tag-soft">com contraponto</span>')
 
     vereditos = "".join(
         '<div class="verdict-line">'
@@ -132,7 +132,7 @@ def _fala_card(row):
         unsafe_allow_html=True,
     )
     if row["contrapontos"]:
-        with st.expander("🗣️ Contrapontos — o outro lado e outros veículos"):
+        with st.expander("Contrapontos — o outro lado e outros veículos"):
             for cp in row["contrapontos"]:
                 classe = "cp-favor" if cp["lado"].startswith("A favor") else "cp-contra"
                 st.markdown(
@@ -177,7 +177,7 @@ def _chart_by_theme(u):
             tab[c] = 0
     tab = tab.loc[tab.sum(axis=1).sort_values().index]
     fig = go.Figure()
-    for cand, cor in (("Lula", "#F43F5E"), ("Flávio Bolsonaro", "#3B82F6")):
+    for cand, cor in (("Lula", "#EF2B2D"), ("Flávio Bolsonaro", "#3B82F6")):
         fig.add_trace(go.Bar(y=tab.index, x=tab[cand], name=cand, orientation="h", marker_color=cor,
                              hovertemplate="%{y}<br>" + cand + ": %{x}<extra></extra>"))
     fig.update_layout(barmode="group")
@@ -188,7 +188,7 @@ def _chart_by_theme(u):
 
 def render_tab_fact_check():
     render_section_header(
-        "🗳️ Checagem de Fatos — Eleição Presidencial 2026",
+        "Checagem de Fatos — Eleição Presidencial 2026",
         "O que as agências verificaram nas falas de <b>Lula (PT)</b> e <b>Flávio Bolsonaro (PL)</b> nas entrevistas da TV Globo "
         "e no debate da Band — sem repetições, com o veredito de cada agência e contrapontos de outros veículos.",
     )
@@ -206,6 +206,14 @@ def render_tab_fact_check():
         '<b>Meia-verdade</b> (impreciso, exagerado, subestimado, enganoso, falta contexto), <b>Mentira</b> (falso) e <b>Sem comprovação</b> '
         '(insustentável). Nas falas mais disputadas há <b>contrapontos</b>: o argumento do próprio candidato e de veículos com linhas editoriais '
         f'diferentes, porque o enquadramento também depende do ponto de vista. {html.escape(meta.get("cobertura", ""))}</div>',
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        '<div class="info-box"><b>Cobertura em 21/10/2026:</b> as agências incluídas são Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica. '
+        'Busquei checagens de falas dos dois candidatos no UOL Confere e no Projeto Comprova e não encontrei veredito explícito sobre elas; '
+        'por isso nenhuma das duas entra na contagem, em vez de classificar por conta própria. O <b>debate da Globo (23/10)</b> ainda não aconteceu '
+        'e será incluído quando as agências publicarem.</div>',
         unsafe_allow_html=True,
     )
 
@@ -257,15 +265,15 @@ def render_tab_fact_check():
 
     g1, g2 = st.columns([1.25, 1])
     with g1:
-        st.plotly_chart(_chart_by_event(f), use_container_width=True)
+        st.plotly_chart(_chart_by_event(f), width="stretch")
     with g2:
-        st.plotly_chart(_chart_by_theme(u), use_container_width=True)
+        st.plotly_chart(_chart_by_theme(u), width="stretch")
     render_source("Agência Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica; contrapontos de Poder360, Metrópoles, Revista Oeste, "
                   "Gazeta do Povo, Instituto Mises, Agência Câmara e Datafolha/FBSP — compilação de 20/10/2026")
 
     # ---------------- Listas por veredito
     st.subheader("Todas as falas checadas")
-    abas = st.tabs([f"{CAT_ICON[c]} {PLURAL[c]} ({int((base['categoria'] == c).sum())})" for c in VERDICT_ORDER] + ["📋 Tabela completa"])
+    abas = st.tabs([f"{CAT_ICON[c]} {PLURAL[c]} ({int((base['categoria'] == c).sum())})" for c in VERDICT_ORDER] + ["Tabela completa"])
     for aba, cat in zip(abas[:4], VERDICT_ORDER):
         with aba:
             sub = base[base["categoria"] == cat].sort_values("data")
@@ -281,7 +289,7 @@ def render_tab_fact_check():
     with abas[4]:
         tabela = f[["candidato", "data", "evento", "agencia", "tema", "titulo_fala", "afirmacao", "veredito_original", "categoria", "explicacao", "fonte_url"]].sort_values(["data", "candidato"])
         st.dataframe(
-            tabela, use_container_width=True, hide_index=True, height=520,
+            tabela, width="stretch", hide_index=True, height=520,
             column_config={
                 "candidato": "Candidato", "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY"),
                 "evento": "Evento", "agencia": "Agência", "tema": "Tema",
@@ -292,7 +300,7 @@ def render_tab_fact_check():
                 "fonte_url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗"),
             },
         )
-        st.download_button("📥 Baixar checagens filtradas (CSV)", tabela.to_csv(index=False).encode("utf-8-sig"),
+        st.download_button("Baixar checagens filtradas (CSV)", tabela.to_csv(index=False).encode("utf-8-sig"),
                            file_name="checagens_lula_flavio_2026.csv", mime="text/csv")
 
     # ---------------- Placar oficial publicado pelas agências
@@ -306,13 +314,13 @@ def render_tab_fact_check():
         dp["% verdadeiro"] = (100 * dp["verdadeiro"] / dp["total"]).round(1)
         st.dataframe(
             dp[["evento", "candidato", "total", "verdadeiro", "impreciso", "falso", "% verdadeiro", "% falso", "url"]],
-            use_container_width=True, hide_index=True,
+            width="stretch", hide_index=True,
             column_config={"url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗"),
                            "evento": "Evento", "candidato": "Candidato", "total": "Total"},
         )
 
     st.markdown(
-        '<div class="info-box"><b>⚠️ Limites desta comparação:</b> agências escolhem o que checar e usam escalas diferentes; '
+        '<div class="info-box"><b>⚠ Limites desta comparação:</b> agências escolhem o que checar e usam escalas diferentes; '
         'contagens não medem de forma absoluta \"quem mente mais\". No debate da Band, Lula fez mais afirmações verificáveis '
         '(47 contra 29 no Ranking dos Políticos), por isso o placar mostra percentuais. Os contrapontos reproduzem argumentos publicados '
         'por campanhas e veículos — não são endossados por este painel. O debate da TV Globo de 23/10 ainda não havia ocorrido na data desta compilação.</div>',

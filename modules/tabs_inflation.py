@@ -12,7 +12,7 @@ from modules.ui_components import (
 )
 
 def render_tab_inflation():
-    st.markdown('<div class="section-title">📈 Inflação e Preços: IPCA (IBGE)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Inflação e Preços: IPCA (IBGE)</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Acompanhamento oficial do Índice Nacional de Preços ao Consumidor Amplo (IPCA), metas do CMN, trajetória acumulada nos mandatos e decomposição setorial por grupos de consumo.</div>',
         unsafe_allow_html=True
@@ -42,7 +42,7 @@ def render_tab_inflation():
         st.markdown(f"""
         <div class="kpi-card" style="text-align: center;">
           <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">IPCA Total Lula (Acumulado)</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #fda4af; font-family: monospace; margin: 8px 0;">{l_res.get('acumulado_total_pct')}%</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #fca5a5; font-family: monospace; margin: 8px 0;">{l_res.get('acumulado_total_pct')}%</div>
           <div style="font-size: 0.75rem; color: #94a3b8;">Jan/2023 a {l_res.get('anos', [{}])[-1].get('ano', '')} · {l_res.get('meses', '')} meses</div>
         </div>
         """, unsafe_allow_html=True)
@@ -60,7 +60,7 @@ def render_tab_inflation():
         st.markdown(f"""
         <div class="kpi-card" style="text-align: center;">
           <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Média Anualizada Lula</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #fb7185; font-family: monospace; margin: 8px 0;">{l_res.get('media_anual_pct')}%</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #f87171; font-family: monospace; margin: 8px 0;">{l_res.get('media_anual_pct')}%</div>
           <div style="font-size: 0.75rem; color: #94a3b8;">Pico em 12 meses: {l_res.get('maior_12m_pct')}% ({l_res.get('maior_12m_mes')})</div>
         </div>
         """, unsafe_allow_html=True)
@@ -100,7 +100,7 @@ def render_tab_inflation():
     fig_acum.update_xaxes(title_text="Mês de Mandato (1 = Janeiro do 1º ano)", dtick=5)
     fig_acum.update_yaxes(title_text="Inflação Acumulada (%)")
     apply_plotly_theme(fig_acum, title="Trajetória da Inflação Acumulada no Mandato (%)")
-    st.plotly_chart(fig_acum, use_container_width=True)
+    st.plotly_chart(fig_acum, width="stretch")
 
     # 3. IPCA Mensal e Histórico Completo
     st.subheader("2. Série Histórica Mensal do IPCA (%)")
@@ -122,7 +122,7 @@ def render_tab_inflation():
     ))
     fig_bars.update_xaxes(nticks=14, tickangle=-45)
     apply_plotly_theme(fig_bars, title="Variação Mensal do IPCA (%) — Cores por Governo")
-    st.plotly_chart(fig_bars, use_container_width=True)
+    st.plotly_chart(fig_bars, width="stretch")
 
     # 4. Decomposição pelos 9 Grupos do IBGE
     st.subheader("3. Decomposição Setorial do IPCA (Grupos de Consumo)")
@@ -146,14 +146,14 @@ def render_tab_inflation():
                 hovertemplate="<b>Grupo:</b> %{y}<br><b>Variação 12M:</b> %{x:.2f}%<extra></extra>"
             ))
             apply_plotly_theme(fig_grp, title=f"Inflação em 12 Meses por Grupo de Consumo ({ult_periodo})")
-            st.plotly_chart(fig_grp, use_container_width=True)
+            st.plotly_chart(fig_grp, width="stretch")
 
     # Box Explicativo da Inflação
     st.markdown("""
     <div class="info-box">
-      <b>🔍 Fatores Inflacionários Chave:</b><br/>
+      <b>Fatores Inflacionários Chave:</b><br/>
       • <b>Choques Globais (2020-2022):</b> A pandemia desarticulou cadeias logísticas de frete marítimo, microchips e insumos agrícolas (fertilizantes), somada ao início da Guerra na Ucrânia em 2022 que explodiu os preços de combustíveis e commodities alimentares (soja, trigo).<br/>
       • <b>Deflação do ICMS (2022):</b> Em meados de 2022, a aprovação do teto de ICMS sobre combustíveis e energia pelo Congresso Nacional provocou três meses de deflação artificial (-0,68% em jul, -0,36% em ago e -0,29% em set), desacelerando o IPCA anual daquele ano.<br/>
-      • <b>Estabilização (2023-atual):</b> A normalização das cadeias globais de suprimento, a deflação de grãos no atacado pela supersafra de 2023 e o ciclo de juros altos do Banco Central mantiveram o IPCA controlado na faixa de 4% a 5% ao ano.
+      • <b>2023 em diante:</b> o IPCA fechou 2023 em 4,62%, 2024 em 4,83% e 2025 em 4,26%, e acumulava 3,95% até setembro de 2026 (IBGE).
     </div>
     """, unsafe_allow_html=True)

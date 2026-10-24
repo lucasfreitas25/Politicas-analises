@@ -14,13 +14,22 @@ from modules.ui_components import (
 
 
 def _media(serie, gov, campo):
-    vals = [p[campo] for p in serie if p["governo"] == gov and p.get(campo) is not None]
+    vals = [p[campo] for p in serie if p["governo"] == gov and p.get(campo) is not None and not p.get("estimativa")]
     return sum(vals) / len(vals) if vals else None
+
+
+def _card_evolucao(titulo, antes, depois, nota):
+    """Cartão de evolução dentro de um mesmo governo (sem colunas Bolsonaro x Lula)."""
+    st.markdown(
+        f'<div class="kpi-card compare-stat" style="border-top:3px solid #EF2B2D;"><div class="compare-title">{titulo}</div>'
+        f'<div class="compare-values"><span class="compare-val" style="color:#fca5a5 !important;">{antes}</span>'
+        f'<span style="color:#64748b;"> ➔ </span><span class="compare-val" style="color:#fca5a5 !important;">{depois}</span></div>'
+        f'<div class="compare-foot">{nota}</div></div>', unsafe_allow_html=True)
 
 
 def render_tab_environment():
     render_section_header(
-        "🌳 Meio Ambiente & Clima",
+        "Meio Ambiente & Clima",
         "Desmatamento na Amazônia e no Cerrado (Inpe/PRODES), queimadas (Inpe), emissões de gases de efeito estufa (SEEG), "
         "terras indígenas e as principais políticas ambientais de cada governo.",
     )
@@ -45,8 +54,8 @@ def render_tab_environment():
     if emis:
         s = emis["serie"]
         with c3:
-            render_compare_stat("Emissões brutas (GtCO2e)", fmt_br(s[0]["brutas"], 2), fmt_br(s[-1]["brutas"], 2),
-                                f"{s[0]['ano']} ➔ {s[-1]['ano']} · queda de 16,7% (SEEG)", better="lula")
+            _card_evolucao("Emissões brutas, dentro do governo Lula (GtCO2e)", f"{fmt_br(s[0]['brutas'], 2)} ({s[0]['ano']})", f"{fmt_br(s[-1]['brutas'], 2)} ({s[-1]['ano']})",
+                           "Queda de 16,7% (SEEG 13). A edição atual da base não traz anos do governo Bolsonaro, então não há comparação entre governos.")
     if fogo:
         f = {p["ano"]: p["focos"] for p in fogo["serie"]}
         c4, c5, _ = st.columns(3)
@@ -54,14 +63,14 @@ def render_tab_environment():
             render_compare_stat("Focos de queimada (pior ano de cada governo)", fmt_br(f[2020], 0), fmt_br(f[2024], 0),
                                 "2020 (Bolsonaro) x 2024 (Lula, seca recorde)", better="bolsonaro")
         with c5:
-            render_compare_stat("Focos de queimada (ano mais recente)", fmt_br(f[2024], 0), fmt_br(f[2025], 0),
-                                "2024 ➔ 2025 (parcial, -51,8%)", better="lula")
+            _card_evolucao("Focos de queimada, dentro do governo Lula", f"{fmt_br(f[2024], 0)} (2024)", f"{fmt_br(f[2025], 0)} (2025)",
+                           f"{100 * (f[2025] / f[2024] - 1):+.0f}% de 2024 para 2025 (ano completo, Inpe). 2024 foi o ano da seca recorde.".replace(".", ","))
 
     st.markdown("---")
 
     # ---------------- Desmatamento
     st.subheader("1. Desmatamento por bioma (PRODES, km² por ano)")
-    st.caption("O ano PRODES vai de agosto a julho — o dado de 2023 inclui cinco meses do governo Bolsonaro.")
+    st.caption("O ano PRODES vai de agosto a julho — o dado de 2023 inclui cinco meses do governo Bolsonaro. 2026 é estimativa do Inpe (out/2026) e não entra nas médias.")
     if amz and cer:
         da, dc = pd.DataFrame(amz["serie"]), pd.DataFrame(cer["serie"])
         fig = go.Figure()
@@ -70,10 +79,10 @@ def render_tab_environment():
         fig.add_trace(go.Bar(x=dc["ano"].astype(str), y=dc["km2"], name="Cerrado", marker_color="#F59E0B",
                              text=dc["km2"].apply(lambda v: fmt_br(v, 0)), textposition="outside"))
         fig.add_vrect(x0=0.5, x1=4.5, fillcolor="#3B82F6", opacity=0.06, line_width=0, annotation_text="Bolsonaro", annotation_position="top left")
-        fig.add_vrect(x0=4.5, x1=7.5, fillcolor="#F43F5E", opacity=0.06, line_width=0, annotation_text="Lula", annotation_position="top left")
+        fig.add_vrect(x0=4.5, x1=8.5, fillcolor="#EF2B2D", opacity=0.06, line_width=0, annotation_text="Lula", annotation_position="top left")
         fig.update_layout(barmode="group")
         apply_plotly_theme(fig, title="Área desmatada (km²)", height=440)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         render_source(amz["fonte"] + " e " + cer["fonte"] + ". " + cer["nota"], cer["url"])
 
     col_q, col_e = st.columns(2)
@@ -84,7 +93,7 @@ def render_tab_environment():
             fig = go.Figure(go.Bar(x=dq["ano"].astype(str), y=dq["focos"], marker_color=[gov_color(g) for g in dq["governo"]],
                                    text=dq["focos"].apply(lambda v: "s/ dado" if pd.isna(v) else fmt_br(v, 0)), textposition="outside"))
             apply_plotly_theme(fig, title="Focos de calor detectados por satélite", height=400)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source(fogo["fonte"] + ". " + fogo["nota"], fogo["url"])
     with col_e:
         st.subheader("3. Emissões de gases de efeito estufa")
@@ -97,7 +106,7 @@ def render_tab_environment():
                                  text=de["liquidas"].apply(lambda v: fmt_br(v, 2)), textposition="outside"))
             fig.update_layout(barmode="group")
             apply_plotly_theme(fig, title="Emissões do Brasil (GtCO2e)", height=400)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             render_source(emis["fonte"] + ". " + emis["nota"], emis["url"])
 
     ti = extras.get("terras_indigenas", {})

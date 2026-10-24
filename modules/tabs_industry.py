@@ -11,7 +11,7 @@ from modules.ui_components import (
 )
 
 def render_tab_industry():
-    st.markdown('<div class="section-title">🏭 Indústria: PIM-PF (IBGE)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Indústria: PIM-PF (IBGE)</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">Desempenho da Produção Física Industrial brasileira segundo a Pesquisa Industrial Mensal (PIM-PF - IBGE).</div>',
         unsafe_allow_html=True
@@ -76,7 +76,7 @@ def render_tab_industry():
 
         fig_pim.update_xaxes(nticks=12, tickangle=-25)
         apply_plotly_theme(fig_pim, title=f"Produção da Indústria Geral — {var_sel}")
-        st.plotly_chart(fig_pim, use_container_width=True)
+        st.plotly_chart(fig_pim, width="stretch")
 
     # 2. Comparativo Setorial: Transformação vs Extrativa
     st.subheader("2. Indústrias Extrativas vs. Indústrias de Transformação")
@@ -100,7 +100,7 @@ def render_tab_industry():
                 textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif")
             ))
             apply_plotly_theme(fig_ext, title="Média: Indústrias Extrativas (Petróleo/Minério)")
-            st.plotly_chart(fig_ext, use_container_width=True)
+            st.plotly_chart(fig_ext, width="stretch")
 
     with col_i2:
         df_transf = df_filtered[df_filtered["atividade"].str.contains("transforma", case=False, na=False)]
@@ -118,12 +118,12 @@ def render_tab_industry():
                 textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif")
             ))
             apply_plotly_theme(fig_transf, title="Média: Indústrias de Transformação (Manufatura)")
-            st.plotly_chart(fig_transf, use_container_width=True)
+            st.plotly_chart(fig_transf, width="stretch")
 
     # Box Explicativo da Indústria
     st.markdown("""
     <div class="info-box">
-      <b>🏭 Análise Estrutural da Indústria Nacional:</b><br/>
+      <b>Análise Estrutural da Indústria Nacional:</b><br/>
       • <b>Indústria Extrativa (Destaque Positivo):</b> Ambos os governos contaram com forte expansão da produção de petróleo na camada pré-sal (liderada pela Petrobras) e da produção de minério de ferro pela Vale, garantindo números robustos e superávit de divisas.<br/>
       • <b>Indústria de Transformação:</b> O setor manufatureiro enfrentou maiores desafios de produtividade e custo Brasil. Durante o governo Bolsonaro sofreu com paralisações em cadeias automotivas e escassez de componentes; no governo Lula vem ensaiando recuperação puxada por bens de consumo e incentivos setoriais (Nova Indústria Brasil - NIB).
     </div>

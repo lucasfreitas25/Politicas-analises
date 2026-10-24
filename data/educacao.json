@@ -1,13 +1,6 @@
 {
   "ideb": [
     {
-      "ano": 2017,
-      "governo": "Temer",
-      "anos_iniciais": 5.8,
-      "anos_finais": 4.7,
-      "ensino_medio": 3.8
-    },
-    {
       "ano": 2019,
       "governo": "Bolsonaro",
       "anos_iniciais": 5.9,
@@ -27,6 +20,13 @@
       "anos_iniciais": 6.0,
       "anos_finais": 5.0,
       "ensino_medio": 4.3
+    },
+    {
+      "ano": 2025,
+      "governo": "Lula",
+      "anos_iniciais": 6.3,
+      "anos_finais": 5.3,
+      "ensino_medio": 4.5
     }
   ],
   "analfabetismo_pnadc": [
@@ -65,44 +65,47 @@
     {
       "ano": 2019,
       "governo": "Bolsonaro",
-      "orcamento_pago": 118.5,
-      "orcamento_discricionario": 20.8
+      "orcamento_pago": 164.6
     },
     {
       "ano": 2020,
       "governo": "Bolsonaro",
-      "orcamento_pago": 116.3,
-      "orcamento_discricionario": 18.2
+      "orcamento_pago": 152.3
     },
     {
       "ano": 2021,
       "governo": "Bolsonaro",
-      "orcamento_pago": 117.9,
-      "orcamento_discricionario": 17.5
+      "orcamento_pago": 151.9
     },
     {
       "ano": 2022,
       "governo": "Bolsonaro",
-      "orcamento_pago": 121.2,
-      "orcamento_discricionario": 19.1
+      "orcamento_pago": 156.4
     },
     {
       "ano": 2023,
       "governo": "Lula",
-      "orcamento_pago": 142.8,
-      "orcamento_discricionario": 24.6
+      "orcamento_pago": 172.6
     },
     {
       "ano": 2024,
       "governo": "Lula",
-      "orcamento_pago": 158.4,
-      "orcamento_discricionario": 27.2
+      "orcamento_pago": 174.9
     },
     {
       "ano": 2025,
       "governo": "Lula",
-      "orcamento_pago": 169.5,
-      "orcamento_discricionario": 29.8
+      "orcamento_pago": 175.6,
+      "nominal": 180.6,
+      "fonte": "portal"
+    },
+    {
+      "ano": 2026,
+      "governo": "Lula",
+      "orcamento_pago": 174.7,
+      "nominal": 174.7,
+      "fonte": "portal",
+      "parcial": true
     }
   ],
   "programas_impacto": [
@@ -135,5 +138,109 @@
       "criticas": "Resultados dependem de execução na ponta pelas prefeituras e requerem anos para aferição no Saeb."
     }
   ],
-  "nota_analfabetismo": "IBGE, PNAD Contínua Educação (SIDRA 7113). Não houve coleta do módulo em 2020 e 2021 (pandemia)."
+  "nota_analfabetismo": "IBGE, PNAD Contínua Educação (SIDRA 7113). Não houve coleta do módulo em 2020 e 2021 (pandemia).",
+  "nota_ideb": "Ideb nacional (redes pública e privada), Inep. 2023 e 2025 conferidos na divulgação do Inep de 05/08/2026; 2019 e 2021 na cobertura da Exame. O valor de 2017 saiu do painel por não ter sido confirmado.",
+  "fonte_ideb": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/ideb/ideb-avanca-em-todas-as-etapas-da-educacao-basica",
+  "nota_orcamento": "Despesa paga do MEC. 2019–2024: Anuário Brasileiro da Educação Básica 2025 (Todos Pela Educação), em R$ bilhões de dez/2024 (deflacionados pelo IPCA). 2025: R$ 180,6 bi correntes do Portal da Transparência, deflacionados pelo painel pela média do IPCA de 2025 em relação a dez/2024 (fator 1,028). 2026: R$ 174,7 bi correntes, valor parcial em execução, sem deflacionar. As duas fontes podem ter critérios diferentes; a quebra de fonte entre 2024 e 2025 não pôde ser testada.",
+  "fonte_orcamento": "https://portaldatransparencia.gov.br/orgaos-superiores/26000?ano=2025",
+  "pisa": {
+    "fonte": "OCDE/Inep — PISA (alunos de 15 anos). 2025 divulgado em 08/09/2026; 2018 e 2022 nas divulgações anteriores",
+    "url": "https://www.poder360.com.br/poder-educacao/educacao-no-brasil-avanca-mas-segue-distante-da-media-da-ocde/",
+    "nota": "A prova de 2022 foi aplicada no governo Bolsonaro (resultado divulgado em dez/2023) e a de 2025 no governo Lula. Em 2025 a média da OCDE caiu nas três áreas, o que também reduz a distância do Brasil. Leitura e matemática de 2025 seguem abaixo dos picos anteriores (413 em 2018 e 389 em 2012); ciências é a maior nota da série.",
+    "serie": [
+      {
+        "ano": 2018,
+        "governo": "Anterior (Temer)",
+        "leitura": 413,
+        "matematica": 384,
+        "ciencias": 404
+      },
+      {
+        "ano": 2022,
+        "governo": "Bolsonaro",
+        "leitura": 410,
+        "matematica": 379,
+        "ciencias": 403
+      },
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "leitura": 408,
+        "matematica": 377,
+        "ciencias": 409
+      }
+    ],
+    "ocde_2025": {
+      "leitura": 466,
+      "matematica": 469,
+      "ciencias": 486
+    }
+  },
+  "alfabetizacao_ica": {
+    "fonte": "Inep — Indicador Criança Alfabetizada (ICA), 2º ano do ensino fundamental, via Agência Brasil",
+    "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/educacao/audio/2026-03/brasil-supera-meta-e-tem-66-das-criancas-alfabetizadas-na-idade-certa",
+    "nota": "O ICA começou a ser medido em 2023, então não há ponto do governo Bolsonaro para comparar. Meta de 2025: 64%; resultado: 66% (divulgado em 23/03/2026). Dado do Inep.",
+    "serie": [
+      {
+        "ano": 2023,
+        "pct": 56
+      },
+      {
+        "ano": 2024,
+        "pct": 59
+      },
+      {
+        "ano": 2025,
+        "pct": 66
+      }
+    ]
+  },
+  "censo_escolar": {
+    "fonte": "Inep — Censo Escolar 2025 (divulgado em 26/02/2026; indicadores de fluxo em 26/06/2026)",
+    "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-02/um-em-cada-quatro-alunos-da-rede-publica-estuda-em-tempo-integral",
+    "nota": "O Censo é declaratório (as escolas informam). Matrículas caíram 2,3% em 2025 principalmente por redução da população em idade escolar.",
+    "matriculas_2025_mi": 46.0,
+    "matriculas_2024_mi": 47.1,
+    "tempo_integral_publica_pct": {
+      "2021": 15.1,
+      "2025": 25.8
+    },
+    "escolas_com_internet_pct": {
+      "2021": 82.8,
+      "2025": 94.5
+    },
+    "ensino_medio_publico_2022_2025": {
+      "abandono": -61,
+      "reprovacao": -62,
+      "distorcao_idade_serie": -28
+    },
+    "nota_fluxo": "Variações relativas entre 2022 e 2025 divulgadas pelo MEC a partir do Censo; as taxas absolutas não vieram nas matérias consultadas."
+  },
+  "pe_de_meia": {
+    "fonte": "MEC, via Agência Brasil (jun/2026) e Gazeta SP",
+    "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-06/censo-escolar-brasil-reduz-reprovacao-abandono-e-atraso-estudantil",
+    "nota": "O MEC informa 7,2 milhões de estudantes beneficiados desde 2024 (em abril/2026 falava em 5,6 milhões atendidos) e atribui ao programa a queda do abandono. São dados do próprio ministério; reportagem da Gazeta SP aponta que o MEC não sabe quantos alunos deixaram o programa, e uma estimativa independente citada nela é mais modesta (abandono de 26,4% sem o auxílio contra 19,9% com ele, entre os mais vulneráveis)."
+  },
+  "pendencias": [
+    "Enem 2025: encontrei só a presença (cerca de 70% dos 4,8 milhões de inscritos fizeram as duas provas); as médias por área e a redação não foram confirmadas.",
+    "Saeb 2025 por etapa e proficiência em português e matemática: não localizado em fonte oficial aberta.",
+    "Despesa paga do MEC de 2019 a 2024 do mesmo Portal da Transparência: hoje essa parte vem do Anuário, e o ideal seria uma série única."
+  ],
+  "orcamento_atualizado_portal": {
+    "fonte": "Portal da Transparência — Ministério da Educação (órgão superior 26000), orçamento atualizado",
+    "url": "https://portaldatransparencia.gov.br/orgaos-superiores/26000?ano=2026",
+    "nota": "Valores informados pelo usuário do painel a partir do portal (o site bloqueia acesso automatizado). É a dotação autorizada para o ano, em reais correntes, e não a despesa paga: não é comparável com a série do Anuário (valores pagos, deflacionados). 2026 ainda está em execução.",
+    "serie": [
+      {
+        "ano": 2025,
+        "governo": "Lula",
+        "bi": 236.17
+      },
+      {
+        "ano": 2026,
+        "governo": "Lula",
+        "bi": 269.6
+      }
+    ]
+  }
 }

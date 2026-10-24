@@ -1,0 +1,278 @@
+{
+  "atualizado_em": "2026-10-23",
+  "medicos_por_10mil": {
+    "serie": {
+      "2010": 14.944,
+      "2011": 15.04,
+      "2012": 15.292,
+      "2013": 15.856,
+      "2014": 16.828,
+      "2015": 17.267,
+      "2016": 17.757,
+      "2017": 18.417,
+      "2018": 19.07,
+      "2019": 19.566,
+      "2020": 20.206,
+      "2021": 21.368,
+      "2022": 22.486,
+      "2023": 23.741,
+      "2024": 25.428,
+      "2025": 26.989
+    },
+    "fonte": "CNES/DATASUS via Ipeadata (SUS_NMMED10MHUF)",
+    "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie%28SERCODIGO=%27SUS_NMMED10MHUF%27%29",
+    "nota": "Número médio mensal de médicos cadastrados no CNES por 10 mil habitantes. Conta cadastros em estabelecimentos de saúde, então difere do total de médicos com registro nos conselhos (Demografia Médica) e pode contar o mesmo médico mais de uma vez."
+  },
+  "leitos": {
+    "sus_por_10mil": {
+      "2010": 17.264,
+      "2011": 16.911,
+      "2012": 16.525,
+      "2013": 16.146,
+      "2014": 15.916,
+      "2015": 15.449,
+      "2016": 15.084,
+      "2017": 14.747,
+      "2018": 14.466,
+      "2019": 14.152,
+      "2020": 14.823,
+      "2021": 14.9,
+      "2022": 14.72,
+      "2023": 14.586,
+      "2024": 14.68,
+      "2025": 14.756
+    },
+    "total_por_10mil": {
+      "2010": 23.673,
+      "2011": 23.381,
+      "2012": 23.002,
+      "2013": 22.661,
+      "2014": 22.463,
+      "2015": 21.768,
+      "2016": 21.388,
+      "2017": 21.205,
+      "2018": 20.926,
+      "2019": 20.605,
+      "2020": 21.184,
+      "2021": 21.359,
+      "2022": 21.281,
+      "2023": 21.201,
+      "2024": 21.296,
+      "2025": 21.419
+    },
+    "total": {
+      "2010": 461365.75,
+      "2011": 459673.833,
+      "2012": 456164.5,
+      "2013": 453238.0,
+      "2014": 453109.417,
+      "2015": 442934.0,
+      "2016": 438787.917,
+      "2017": 438536.833,
+      "2018": 436291.333,
+      "2019": 432999.5,
+      "2020": 443097.167,
+      "2021": 448765.25,
+      "2022": 448733.333,
+      "2023": 448821.083,
+      "2024": 452715.417,
+      "2025": 457132.417
+    },
+    "uti_sus_por_10mil": {
+      "2010": 1.236,
+      "2011": 1.283,
+      "2012": 1.331,
+      "2013": 1.315,
+      "2014": 1.345,
+      "2015": 1.372,
+      "2016": 1.379,
+      "2017": 1.437,
+      "2018": 1.45,
+      "2019": 1.485,
+      "2020": 1.894,
+      "2021": 2.728,
+      "2022": 2.005,
+      "2023": 1.954,
+      "2024": 1.996,
+      "2025": 2.049
+    },
+    "fonte": "CNES/DATASUS via Ipeadata (SIS_NMLTINTSUS1000HUF, SIS_NMLTINT1000HUF, SIS_NMLTINTUF, SIS_NMLTCMPSUS1000HUF)",
+    "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie%28SERCODIGO=%27SIS_NMLTINTSUS1000HUF%27%29",
+    "nota": "Leitos de internação (média mensal). Os leitos complementares (UTI e unidade intermediária) cresceram na pandemia (2020–2021) e voltaram a cair depois."
+  },
+  "hospitais_gerais": {
+    "serie": {
+      "2010": 5200.917,
+      "2011": 5171.417,
+      "2012": 5165.917,
+      "2013": 5190.417,
+      "2014": 5224.0,
+      "2015": 5105.75,
+      "2016": 5085.667,
+      "2017": 5120.333,
+      "2018": 5124.333,
+      "2019": 5095.667,
+      "2020": 5262.083,
+      "2021": 5400.333,
+      "2022": 5396.917,
+      "2023": 5376.0,
+      "2024": 5421.583,
+      "2025": 5510.583
+    },
+    "fonte": "CNES/DATASUS via Ipeadata (SIS_HOSPGERUF)",
+    "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie%28SERCODIGO=%27SIS_HOSPGERUF%27%29",
+    "nota": "Média mensal de estabelecimentos do tipo hospital geral (públicos e privados)."
+  },
+  "gasto_federal_saude": {
+    "serie": {
+      "2014": {
+        "pago_real_2025_bi": 156.6,
+        "empenhado_real_2025_bi": 170.9,
+        "pago_bi": 84.8,
+        "empenhado_bi": 92.5,
+        "pago_pct_pib": 1.47
+      },
+      "2015": {
+        "pago_real_2025_bi": 156.1,
+        "empenhado_real_2025_bi": 170.0,
+        "pago_bi": 92.2,
+        "empenhado_bi": 100.4,
+        "pago_pct_pib": 1.54
+      },
+      "2016": {
+        "pago_real_2025_bi": 153.4,
+        "empenhado_real_2025_bi": 165.9,
+        "pago_bi": 98.5,
+        "empenhado_bi": 106.5,
+        "pago_pct_pib": 1.57
+      },
+      "2017": {
+        "pago_real_2025_bi": 151.9,
+        "empenhado_real_2025_bi": 174.3,
+        "pago_bi": 100.9,
+        "empenhado_bi": 115.8,
+        "pago_pct_pib": 1.53
+      },
+      "2018": {
+        "pago_real_2025_bi": 154.6,
+        "empenhado_real_2025_bi": 172.9,
+        "pago_bi": 106.4,
+        "empenhado_bi": 119.1,
+        "pago_pct_pib": 1.52
+      },
+      "2019": {
+        "pago_real_2025_bi": 157.3,
+        "empenhado_real_2025_bi": 173.8,
+        "pago_bi": 112.3,
+        "empenhado_bi": 124.1,
+        "pago_pct_pib": 1.52
+      },
+      "2020": {
+        "pago_real_2025_bi": 201.8,
+        "empenhado_real_2025_bi": 221.0,
+        "pago_bi": 148.7,
+        "empenhado_bi": 162.9,
+        "pago_pct_pib": 1.95
+      },
+      "2021": {
+        "pago_real_2025_bi": 199.9,
+        "empenhado_real_2025_bi": 226.3,
+        "pago_bi": 159.6,
+        "empenhado_bi": 180.7,
+        "pago_pct_pib": 1.77
+      },
+      "2022": {
+        "pago_real_2025_bi": 154.9,
+        "empenhado_real_2025_bi": 175.7,
+        "pago_bi": 135.1,
+        "empenhado_bi": 153.2,
+        "pago_pct_pib": 1.34
+      },
+      "2023": {
+        "pago_real_2025_bi": 174.8,
+        "empenhado_real_2025_bi": 200.8,
+        "pago_bi": 159.5,
+        "empenhado_bi": 183.2,
+        "pago_pct_pib": 1.46
+      },
+      "2024": {
+        "pago_real_2025_bi": 201.7,
+        "empenhado_real_2025_bi": 229.8,
+        "pago_bi": 192.1,
+        "empenhado_bi": 218.9,
+        "pago_pct_pib": 1.63
+      },
+      "2025": {
+        "pago_real_2025_bi": 214.6,
+        "empenhado_real_2025_bi": 238.6,
+        "pago_bi": 214.6,
+        "empenhado_bi": 238.6,
+        "pago_pct_pib": 1.68
+      }
+    },
+    "fonte": "Tesouro Nacional — SICONFI, Declaração de Contas Anuais (DCA-Anexo I-E), função 10 Saúde, União",
+    "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-E&id_ente=1",
+    "nota": "Despesa da União na função Saúde (inclui tudo o que o governo federal gasta com saúde, não só o piso constitucional). Valores reais a preços médios de 2025 (IPCA); % do PIB com o PIB nominal do Banco Central (SGS 1207). 2020 e 2021 incluem os créditos extraordinários da Covid-19. A série pública começa em 2014."
+  },
+  "vacinacao_oms": {
+    "poliomielite_3_doses": {
+      "2000": 94.0,
+      "2001": 91.0,
+      "2002": 92.0,
+      "2003": 97.0,
+      "2004": 96.0,
+      "2005": 98.0,
+      "2006": 99.0,
+      "2007": 99.0,
+      "2008": 96.0,
+      "2009": 99.0,
+      "2010": 96.0,
+      "2011": 98.0,
+      "2012": 96.0,
+      "2013": 96.0,
+      "2014": 96.0,
+      "2015": 96.0,
+      "2016": 89.0,
+      "2017": 82.0,
+      "2018": 87.0,
+      "2019": 72.0,
+      "2020": 77.0,
+      "2021": 68.0,
+      "2022": 77.0,
+      "2023": 85.0,
+      "2024": 90.0,
+      "2025": 86.0
+    },
+    "sarampo_1_dose": {
+      "2000": 98.0,
+      "2001": 98.0,
+      "2002": 99.0,
+      "2003": 99.0,
+      "2004": 99.0,
+      "2005": 99.0,
+      "2006": 99.0,
+      "2007": 99.0,
+      "2008": 99.0,
+      "2009": 99.0,
+      "2010": 99.0,
+      "2011": 99.0,
+      "2012": 95.0,
+      "2013": 97.0,
+      "2014": 93.0,
+      "2015": 96.0,
+      "2016": 89.0,
+      "2017": 83.0,
+      "2018": 87.0,
+      "2019": 70.0,
+      "2020": 77.0,
+      "2021": 68.0,
+      "2022": 77.0,
+      "2023": 86.0,
+      "2024": 90.0,
+      "2025": 86.0
+    },
+    "fonte": "OMS/Unicef — estimativas nacionais de cobertura (WUENIC), via API aberta da OMS",
+    "url": "https://ghoapi.azureedge.net/api/WHS4_117?$filter=SpatialDim%20eq%20%27BRA%27",
+    "nota": "Estimativas internacionais, calculadas a partir dos dados do Ministério da Saúde e de inquéritos; podem diferir um pouco dos números do SI-PNI (por exemplo, para 2019 a OMS estima 72% na pólio, e o Ministério divulgou 84%). A meta é 95%."
+  }
+}
