@@ -71,7 +71,7 @@ def _comparador_historico(a, b, todos):
     simbolo, desc = CMP[ind["comparabilidade"]]
     st.markdown(
         f'<div class="info-box"><b>Análise e contexto:</b><br/>{html.escape(ind["metodo"])} {html.escape(ind.get("nota", ""))}<br/>'
-        f'<b>Comparabilidade:</b> {simbolo} {html.escape(desc)}. * = dado de outra metodologia ou sem dado comparável; † = ano parcial.</div>', unsafe_allow_html=True)
+        f'<b>Comparabilidade:</b> {simbolo} {html.escape(desc)}. * = dado de outra metodologia ou sem dado comparável; ↑ = ano parcial.</div>', unsafe_allow_html=True)
     render_source(html.escape(ind["fonte"]), ind["url"])
     if todos:
         st.caption("Para ver todos os indicadores de uma vez, use a Visão Geral com \"Todos os governos\".")

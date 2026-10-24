@@ -322,7 +322,7 @@ def _texto(ind, gov, v):
         txt = num + UNIDADE_CURTA.get(u, " " + u)
     outra = {_ano_gov(int(a)) for a in ind.get("outra_metodologia", [])}
     parcial = {_ano_gov(int(a)) for a in ind.get("parcial", [])}
-    return txt + ("*" if gov in outra else "") + ("†" if gov in parcial else "")
+    return txt + ("*" if gov in outra else "") + ("↑" if gov in parcial else "")
 
 
 def _indicadores_par(a, b):
@@ -495,7 +495,7 @@ def _tabela(ctx, indicators):
     df_filtered = df_filtered.assign(_o=df_filtered["categoria"].map({c: i for i, c in enumerate(ORDEM_CAT)}).fillna(99)).sort_values("_o", kind="stable")
     st.caption(f"{len(df_filtered)} de {len(df_score)} indicadores. **Comparabilidade:** ✔ mesma série e metodologia · ≈ períodos de tamanhos ou datas diferentes, com ajuste · "
                "⚠ metodologia, cobertura ou natureza do número diferem entre os dois lados (leia a ressalva na tabela)."
-               + ("" if ctx["padrao"] else " **Sem dado*** = não há série comparável para esse governo; número com * = dado de outra metodologia; † = ano parcial."))
+               + ("" if ctx["padrao"] else " **Sem dado*** = não há série comparável para esse governo; número com * = dado de outra metodologia; ↑ = ano parcial."))
 
     from modules.ui_components import eh_celular
     if eh_celular():

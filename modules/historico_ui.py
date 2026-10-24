@@ -69,7 +69,7 @@ def seta_txt(ind):
 
 
 def _marcados(ind):
-    """Mandatos cujo valor usa ano de outra metodologia (*) ou ano parcial (†)."""
+    """Mandatos cujo valor usa ano de outra metodologia (*) ou ano parcial (↑)."""
     outra = {ano_gov(int(a)) for a in ind.get("outra_metodologia", [])}
     parcial = {ano_gov(int(a)) for a in ind.get("parcial", [])}
     return outra, parcial
@@ -116,7 +116,7 @@ def quadro_cartoes_html(indicadores, governos):
             cor = COR_MANDATO.get(g, "#64748b")
             if g not in pos:
                 continue
-            marca = ("*" if g in outra else "") + ("†" if g in parcial else "")
+            marca = ("*" if g in outra else "") + ("↑" if g in parcial else "")
             classe = "hist-c0" if sem_lado else _classe(pos[g], len(com))
             top = " 🥇" if pos[g] == 0 and not sem_lado and len(com) > 1 else ""
             chips.append(f'<div class="chip-gov {classe}" style="border-left-color:{cor};"><span>{html.escape(g)}</span>'
@@ -154,7 +154,7 @@ def quadro_html(indicadores, governos, destaque=None):
             if g not in pos:
                 cel.append('<td class="hist-val hist-vazio" title="sem dado comparável">*</td>')
                 continue
-            marca = ("*" if g in outra else "") + ("†" if g in parcial else "")
+            marca = ("*" if g in outra else "") + ("↑" if g in parcial else "")
             top = '<span class="hist-top">1º</span>' if pos[g] == 0 and not sem_lado else ""
             cel.append(f'<td class="hist-val {'hist-c0' if sem_lado else _classe(pos[g], len(com))}" title="{html.escape(g)}: {pos[g] + 1}º de {len(com)}">'
                        f'{fmt(vals[g], ind["unidade"])}{marca}{top}</td>')
@@ -171,7 +171,7 @@ def quadro_html(indicadores, governos, destaque=None):
 
 LEGENDA = ("Cores comparam os mandatos dentro de cada linha (verde = melhor posição, vermelho = pior). "
            "✔ mesma metodologia · ≈ ajustada · ⚠ metodologia muda ou falta parte da série · "
-           "**\\*** sem dado comparável, ou valor que usa dado de outra metodologia · **†** ano parcial · \"dados ↗\" abre a série exata usada.")
+           "**\\*** sem dado comparável, ou valor que usa dado de outra metodologia · **↑** ano parcial · \"dados ↗\" abre a série exata usada.")
 
 
 # ======================================================================= comparação na aba inteira
@@ -349,8 +349,8 @@ def render_seletor():
         a = c1.selectbox("Governo A", governos, key="_w_gov_a", on_change=_guardar, args=("_w_gov_a", "gov_a"))
         c2.markdown("<div class='sel-x'>x</div>", unsafe_allow_html=True)
         b = c3.selectbox("Governo B", governos, key="_w_gov_b", on_change=_guardar, args=("_w_gov_b", "gov_b"))
-        todos = c4.toggle(TODOS, key=w_todos, on_change=_guardar, args=(w_todos, k_todos),
-                          help="Mostra os 9 mandatos de FHC a Lula 3 lado a lado.")
+        todos = False  # o modo "Todos os governos" foi retirado do seletor
+        st.session_state[k_todos] = False
         if (a, b) != PADRAO or todos:
             if c4.button("↺ Voltar para Bolsonaro x Lula 3", key="gov_reset", width="stretch"):
                 st.session_state["gov_reset_pedido"] = True
@@ -388,7 +388,7 @@ def _valor_txt(ind, gov):
     if v is None:
         return "Sem dado*"
     outra, parcial = _marcados(ind)
-    return fmt(v, ind["unidade"]) + ("*" if gov in outra else "") + ("†" if gov in parcial else "")
+    return fmt(v, ind["unidade"]) + ("*" if gov in outra else "") + ("↑" if gov in parcial else "")
 
 
 def _stat_par(ind, a, b):
@@ -479,7 +479,7 @@ def _grafico_anual_par(ind, chave, governos_sel):
         sub = anual[[ano_gov(a) == g for a in anual.index]]
         if sub.empty:
             continue
-        rot = [fmt(v, ind["unidade"] if ind["unidade"] not in VARIACAO else "") + ("*" if x in outra else "") + ("†" if x in parcial else "")
+        rot = [fmt(v, ind["unidade"] if ind["unidade"] not in VARIACAO else "") + ("*" if x in outra else "") + ("↑" if x in parcial else "")
                for x, v in sub.items()]
         fig.add_trace(go.Bar(
             x=[str(x) for x in sub.index], y=sub.values, name=g,
@@ -668,7 +668,7 @@ def _visao_geral_todos(d, sel, titulo):
     st.markdown(
         f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
         '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
-        'estoques viram variação no mandato). Indicadores sem dado de pelo menos dois dos governos escolhidos ficam ocultos; número com * = dado de outra metodologia; † = ano parcial. '
+        'estoques viram variação no mandato). Indicadores sem dado de pelo menos dois dos governos escolhidos ficam ocultos; número com * = dado de outra metodologia; ↑ = ano parcial. '
         'Partes da aba que só existem para Bolsonaro x Lula 3 (políticas, notícias, detalhamentos) aparecem ao voltar ao padrão.</span></div>',
         unsafe_allow_html=True)
 
@@ -779,7 +779,7 @@ def render_aba_comparada(aba, a, b, todos):
     st.markdown(
         f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
         '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
-        'estoques viram variação no mandato). Gráficos e seções sem dado de pelo menos dois dos governos escolhidos ficam ocultos; número com * = dado de outra metodologia; † = ano parcial. '
+        'estoques viram variação no mandato). Gráficos e seções sem dado de pelo menos dois dos governos escolhidos ficam ocultos; número com * = dado de outra metodologia; ↑ = ano parcial. '
         'Detalhes que só existem para Bolsonaro x Lula 3 (notícias, recortes por bioma ou modalidade) aparecem ao voltar ao padrão.</span></div>',
         unsafe_allow_html=True)
     return True
