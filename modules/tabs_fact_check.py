@@ -169,12 +169,12 @@ def _chart_by_event(f):
     fig.update_layout(barmode="stack")
     apply_plotly_theme(fig, title="Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)", height=max(380, (74 if cel else 40) * len(ordem) + 190))
     fig.update_layout(hovermode="closest", xaxis=dict(range=[0, 100], ticksuffix="%", tickfont=dict(size=11 if cel else 12), tickangle=0, **({"tickvals": [0, 50, 100]} if cel else {})),
-                      yaxis=dict(autorange="reversed", tickfont=dict(size=11 if cel else 13, color="#f8fafc"), automargin=True, showticklabels=not cel),
+                      yaxis=dict(autorange="reversed", tickfont=dict(size=10 if cel else 11, color="#f8fafc"), automargin=True, showticklabels=not cel),
                       bargap=0.55 if cel else 0.25)
     if cel:  # nome do evento logo acima de cada barra, que ocupa a largura toda
         for r in rotulos:
             fig.add_annotation(x=0, xref="x", y=r, yref="y", text=r, showarrow=False, xanchor="left", yanchor="bottom", yshift=19,
-                               font=dict(color="#f8fafc", size=11))
+                               font=dict(color="#f8fafc", size=10))
     return fig
 
 

@@ -49,13 +49,14 @@ def _ajuste_celular(fig, title, height):
     titulo = quebrar(title, 34)
     n_titulo = titulo.count("<br>") + 1
     n_leg = sum(1 for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None))
-    linhas_leg = max(1, -(-n_leg // 2)) if n_leg > 1 else 0
+    linhas_leg = max(1, -(-n_leg // 4)) if n_leg > 1 else 0
     alt = max(330, min(int(height), 520)) if height <= 520 else int(height)
     fig.update_layout(
         title={"text": f"<b>{titulo}</b>", "font": {"size": 13}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"},
         margin={"l": 8, "r": 12, "t": 36 + 17 * n_titulo + 20 * linhas_leg + 14, "b": 36},
         plot_bgcolor="#111827",
-        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""}},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""},
+                "entrywidthmode": "pixels", "entrywidth": 80, "itemwidth": 30, "tracegroupgap": 0},
         height=alt,
     )
     fig.update_xaxes(automargin=True, tickfont={"size": 10}, title_font={"size": 11}, nticks=6)
@@ -70,7 +71,7 @@ def finalizar_celular(fig):
     titulo = re.sub(r"<[^>]+>", " ", (fig.layout.title.text or "")).replace("  ", " ").strip()
     n_titulo = quebrar(titulo, 34).count("<br>") + 1 if titulo else 0
     n_leg = sum(1 for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None))
-    linhas_leg = max(1, -(-n_leg // 2)) if n_leg > 1 else 0
+    linhas_leg = max(1, -(-n_leg // 4)) if n_leg > 1 else 0
     alt = int(fig.layout.height or 420)
     m = fig.layout.margin
     polar = any(t.type == "scatterpolar" for t in fig.data)
@@ -78,7 +79,8 @@ def finalizar_celular(fig):
         title={"text": f"<b>{quebrar(titulo, 34)}</b>", "font": {"size": 13}, "x": 0.02, "xanchor": "left", "y": 1 - 26 / alt, "yanchor": "top"} if titulo else {},
         margin={"l": max(min(int(m.l or 8), 60), 44 if polar else 8), "r": max(min(int(m.r or 12), 60), 44 if polar else 12),
                 "t": (36 + 17 * n_titulo + 20 * linhas_leg + 14) if titulo else 30, "b": max(int(m.b or 36), 36)},
-        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""}},
+        legend={"orientation": "h", "yanchor": "bottom", "y": 1.0, "xanchor": "left", "x": 0, "font": {"size": 10}, "title": {"text": ""},
+                "entrywidthmode": "pixels", "entrywidth": 80, "itemwidth": 30, "tracegroupgap": 0},
     )
     if polar:
         fig.update_layout(height=min(alt, 400))
@@ -105,7 +107,7 @@ def _ano_do_valor(v):
         return None
     if isinstance(v, (int, float)):
         return int(v) if float(v).is_integer() and 1990 <= v <= 2100 else None
-    if isinstance(v, str) and len(v) <= 14:
+    if isinstance(v, str) and len(v) <= 24:
         m = _ANO_RE.search(v)
         return int(m.group(1)) if m else None
     return None
@@ -321,7 +323,7 @@ def _legenda_junto_do_titulo(fig):
     largura = sum(len(n) * 7 + 46 for n in nomes)
     linhas = max(1, -(-largura // 760))
     fig.update_layout(margin=dict(t=34 + 22 * linhas + 12),
-                      legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0))
+                      legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0, entrywidthmode="pixels", entrywidth=max(60, min(120, largura // len(nomes) - 20)), itemwidth=30))
 
 
 def apply_plotly_theme(fig, title="", height=420):

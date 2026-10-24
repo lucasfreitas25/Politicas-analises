@@ -620,3 +620,20 @@ abbr[title] { text-decoration: underline dotted #64748b !important; text-underli
 .lados-m .lado-m { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: flex-start !important; }
 .lados-m .lado-nome { text-align: center !important; }
 .score-table th { text-align: center !important; }
+
+/* Tabela comparativa no celular, compacta */
+.cmp-card { padding: 7px 9px !important; margin-bottom: 5px !important; }
+.cmp-card .ind-card-t { font-size: 0.8rem !important; margin-bottom: 4px !important; line-height: 1.25 !important; }
+.dir-mini { color: #94a3b8 !important; font-size: 0.64rem !important; font-weight: 600 !important; white-space: nowrap !important; }
+.cmp-l { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 4px !important; }
+.cmp-c { border: 1px solid transparent !important; border-radius: 6px !important; padding: 3px 6px !important; text-align: center !important; min-width: 0 !important; background: rgba(148, 163, 184, 0.07) !important; }
+.cmp-n { display: block !important; font-size: 0.6rem !important; font-weight: 800 !important; letter-spacing: 0.03em !important; text-transform: uppercase !important; }
+.cmp-c b { color: #f8fafc !important; font-size: 0.9rem !important; overflow-wrap: anywhere !important; }
+.cmp-c i { color: #94a3b8 !important; font-style: normal !important; font-size: 0.66rem !important; overflow-wrap: anywhere !important; }
+.cmp-card .ind-ctx { margin-top: 3px !important; }
+.cmp-card .ind-ctx summary { font-size: 0.68rem !important; }
+.ind-card { padding: 8px 10px !important; margin-bottom: 6px !important; }
+.chip-gov { padding: 3px 6px !important; }
+.chip-gov span { font-size: 0.66rem !important; }
+.chip-gov b { font-size: 0.8rem !important; }
+.chip-grid { gap: 3px !important; }

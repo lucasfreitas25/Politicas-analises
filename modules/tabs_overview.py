@@ -444,7 +444,7 @@ def _radar(ctx, categories, values_a, values_b, txt_a, txt_b, legenda):
 
 
 def _tabela_cartoes(ctx, df_filtered):
-    """Tabela comparativa no celular: um cartão enxuto por indicador (os dois valores lado a lado, o melhor marcado); o contexto fica recolhido."""
+    """Tabela comparativa no celular, bem compacta: título curto, os dois valores lado a lado (o melhor com ✓ e a cor do governo) e o contexto recolhido."""
     saida, categoria_atual = [], None
     for _, row in df_filtered.iterrows():
         if row["categoria"] != categoria_atual:
@@ -453,14 +453,20 @@ def _tabela_cartoes(ctx, df_filtered):
         neutro = row["melhor"] == "empate"
         maior_melhor = bool(row.get("maior_melhor", True))
         fonte = (f' <a href="{html.escape(row["fonte_url"], quote=True)}" target="_blank">{html.escape(row["fonte"])}</a>' if row.get("fonte_url") else "")
-        lados = "".join(
-            _celula_valor(row[chave], row["melhor"] == chave, chave, neutro, ctx).replace("<td", f'<div class="lado-m" data-gov="{html.escape(nome)}"', 1).replace("</td>", "</div>")
-            for chave, nome in (("bolsonaro", ctx["a"]), ("lula", ctx["b"])))
+
+        def celula(chave, nome, cor, clara):
+            vence = row["melhor"] == chave and not neutro
+            texto = html.escape(str(row[chave]))
+            principal, detalhe = (texto.split(" (", 1) + [""])[:2] if " (" in texto else (texto, "")
+            detalhe = f" ({detalhe}" if detalhe else ""
+            estilo = f"border-color:{cor};background:{cor}22;" if vence else ""
+            return (f'<div class="cmp-c" style="{estilo}"><span class="cmp-n" style="color:{clara};">{html.escape(nome)}{" ✓" if vence else ""}</span>'
+                    f'<b>{principal}</b><i>{detalhe}</i></div>')
         contexto = f'{gl(html.escape(row["observacao"]))}{fonte}'
         saida.append(
-            f'<div class="ind-card"><div class="ind-card-t"><b>{html.escape(row["indicador"])}</b>'
-            f'<div class="dir-tag {"dir-up" if maior_melhor else "dir-down"}">{DIRECAO_TXT[maior_melhor]}</div></div>'
-            f'<div class="lados-m"><div class="lado-nome">{html.escape(ctx["a"])}</div><div class="lado-nome">{html.escape(ctx["b"])}</div>{lados}</div>'
+            f'<div class="ind-card cmp-card"><div class="ind-card-t"><b>{html.escape(row["indicador"])}</b> '
+            f'<span class="dir-mini">{"↑ maior é melhor" if maior_melhor else "↓ menor é melhor"}</span></div>'
+            f'<div class="cmp-l">{celula("bolsonaro", ctx["a"], ctx["cor_a"], ctx["claro_a"])}{celula("lula", ctx["b"], ctx["cor_b"], ctx["claro_b"])}</div>'
             f'<details class="ind-ctx"><summary>Contexto e fonte</summary><div>{contexto}</div></details></div>')
     st.markdown("".join(saida), unsafe_allow_html=True)
 
