@@ -163,11 +163,11 @@ TRIBUTOS = [
     t("Lula 3", "2025", "Isenção de Imposto de Renda até R$ 5 mil por mês", "Imposto", "Redução", "Em vigor",
       "Quem ganha até R$ 5 mil por mês deixa de pagar Imposto de Renda, com desconto decrescente até R$ 7.350.",
       "Em vigor desde janeiro de 2026.", "Lei 15.270/2025", PL + "_ato2023-2026/2025/lei/L15270.htm",
-      [f("Resumo da lei: isenção até R$ 5 mil e desconto até R$ 7.350.", "Hondatar (resumo)", "https://www.hondatar.com.br/publicada-a-lei-15-270-2025-sancao-do-pl-1087-2025-que-amplia-a-isencao-do-irpf-e-tributa-lucros-e-dividendos-a-partir-de-2026/")]),
+      [f("Resumo da lei: isenção até R$ 5 mil e desconto até R$ 7.350.", "Hondatar (resumo)", "https://www.hondatar.com.br/?p=9744")]),
     t("Lula 3", "2025", "Tributação mínima de altas rendas e de dividendos", "Imposto", "Criação", "Em vigor",
       "Quem recebe mais de R$ 600 mil por ano passa a pagar um imposto mínimo de até 10%, e dividendos acima de R$ 50 mil por mês têm retenção de 10%.",
       "Em vigor desde janeiro de 2026.", "Lei 15.270/2025", PL + "_ato2023-2026/2025/lei/L15270.htm",
-      [f("Resumo da lei: tributação mínima de até 10% e retenção de 10% sobre dividendos.", "Hondatar (resumo)", "https://www.hondatar.com.br/publicada-a-lei-15-270-2025-sancao-do-pl-1087-2025-que-amplia-a-isencao-do-irpf-e-tributa-lucros-e-dividendos-a-partir-de-2026/")], qtd=2),
+      [f("Resumo da lei: tributação mínima de até 10% e retenção de 10% sobre dividendos.", "Hondatar (resumo)", "https://www.hondatar.com.br/?p=9744")], qtd=2),
 ]
 
 
