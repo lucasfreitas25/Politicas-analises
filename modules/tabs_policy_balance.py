@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from modules.data_loader import get_politicas_data, get_leis_data
-from modules.ui_components import apply_plotly_theme, render_section_header, COLOR_LULA, COR_MANDATO, PARTIDO, PERIODO
+from modules.ui_components import mostrar_tabela, apply_plotly_theme, render_section_header, COLOR_LULA, COR_MANDATO, PARTIDO, PERIODO
 from modules.ux import gl
 
 # Na base de Bolsonaro x Lula o governo atual se chama "Lula"; nas demais bases, "Lula 3"
@@ -259,8 +259,8 @@ def _aba_leis(leis, govs):
     st.plotly_chart(fig, width="stretch")
 
     tabela = f.sort_values("data")[["data", "governo", "norma", "area", "resumo", "situacao", "texto_oficial", "manchete", "url_imprensa"]]
-    st.dataframe(
-        tabela, width="stretch", hide_index=True, height=560,
+    mostrar_tabela(
+        tabela, titulo_col="norma", width="stretch", hide_index=True, height=560,
         column_config={
             "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY"), "governo": "Governo", "norma": "Norma", "area": "Área",
             "resumo": st.column_config.TextColumn("O que faz", width="large"), "situacao": st.column_config.TextColumn("Situação", width="medium"),

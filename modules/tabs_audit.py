@@ -1,6 +1,6 @@
 import streamlit as st
 from modules.data_loader import get_auditoria_data
-from modules.ui_components import render_section_header
+from modules.ui_components import render_section_header, mostrar_tabela
 
 
 def render_tab_audit():
@@ -32,8 +32,8 @@ def render_tab_audit():
     if area and area != "Todas":
         df = df[df["area"] == area]
 
-    st.dataframe(
-        df, width="stretch", hide_index=True, height=min(80 + 36 * len(df), 900),
+    mostrar_tabela(
+        df, titulo_col="item", width="stretch", hide_index=True, height=min(80 + 36 * len(df), 900),
         column_config={
             "area": "Área", "item": st.column_config.TextColumn("Indicador", width="medium"),
             "antes": st.column_config.TextColumn("Antes (incorreto)", width="medium"),

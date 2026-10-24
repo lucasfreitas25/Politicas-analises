@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from modules.data_loader import get_checagens_data, load_json
 from modules.ui_components import (
+    mostrar_tabela,
     apply_plotly_theme,
     render_section_header,
     render_source,
@@ -154,6 +155,8 @@ def _chart_by_event(f):
     total = tab.sum(axis=1)
     from modules.ui_components import eh_celular, quebrar
     cel = eh_celular()
+    if cel:
+        return _evento_cartoes_html(ordem, tab, pct, total)
     rotulos = [(quebrar(f"{g} ({int(total[g])})", 20) if cel else f"{g} ({int(total[g])})") for g in ordem]
     fig = go.Figure()
     for cat in VERDICT_ORDER:
@@ -169,9 +172,21 @@ def _chart_by_event(f):
     apply_plotly_theme(fig, title="Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)", height=max(380, (56 if cel else 40) * len(ordem) + 190))
     fig.update_layout(hovermode="closest", xaxis=dict(range=[0, 100], ticksuffix="%", tickfont=dict(size=11 if cel else 12), tickangle=0, **({"tickvals": [0, 50, 100]} if cel else {})),
                       yaxis=dict(autorange="reversed", tickfont=dict(size=11 if cel else 13, color="#f8fafc"), automargin=True),
-                      legend=dict(orientation="h", y=-0.09, x=0, xanchor="left", yanchor="top", font=dict(size=12)), bargap=0.25,
-                      margin=dict(l=10, r=20, t=70, b=90))
+                      bargap=0.25)
     return fig
+
+
+def _evento_cartoes_html(ordem, tab, pct, total):
+    """Celular: um bloco por candidato e evento (nome inteiro em cima, barra empilhada embaixo), sem rótulos espremidos no eixo."""
+    chips = "".join(f'<span class="ev-chip"><i style="background:{VERDICT_COLORS[c]}"></i>{c}</span>' for c in VERDICT_ORDER if c in tab.columns)
+    linhas = []
+    for g in ordem:
+        segs = "".join(
+            f'<div style="width:{pct.loc[g, c]:.2f}%;background:{VERDICT_COLORS[c]}" title="{c}: {int(tab.loc[g, c])}">{pct.loc[g, c]:.0f}%</div>'
+            for c in VERDICT_ORDER if c in tab.columns and tab.loc[g, c] > 0)
+        linhas.append(f'<div class="ev-row"><div class="ev-nome">{html.escape(g)} <span>({int(total[g])} checagens)</span></div><div class="ev-bar">{segs}</div></div>')
+    return (f'<div class="ev-bloco"><div class="ev-tit">Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)</div>'
+            f'<div class="ev-leg">{chips}</div>{"".join(linhas)}</div>')
 
 
 def _chart_by_theme(u):
@@ -188,7 +203,7 @@ def _chart_by_theme(u):
                              hovertemplate="%{y}<br>" + cand + ": %{x}<extra></extra>"))
     fig.update_layout(barmode="group")
     apply_plotly_theme(fig, title="Falsas ou sem comprovação, por tema (nº de falas)", height=max(360, 34 * len(tab) + 150))
-    fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.12, x=0.5, xanchor="center", yanchor="top"))
+    fig.update_layout(hovermode="closest")
     return fig
 
 
@@ -206,7 +221,11 @@ def _conteudo(f, contrapontos, unico, cands, chave):
 
     g1, g2 = st.columns([1.25, 1])
     with g1:
-        st.plotly_chart(_chart_by_event(f), width="stretch", key=f"{chave}_ev")
+        fig_ev = _chart_by_event(f)
+        if isinstance(fig_ev, str):
+            st.markdown(fig_ev, unsafe_allow_html=True)
+        else:
+            st.plotly_chart(fig_ev, width="stretch", key=f"{chave}_ev")
     with g2:
         st.plotly_chart(_chart_by_theme(u), width="stretch", key=f"{chave}_tema")
     render_source("Agência Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica; contrapontos de Poder360, Metrópoles, Revista Oeste, "
@@ -228,8 +247,8 @@ def _conteudo(f, contrapontos, unico, cands, chave):
     with abas[4]:
         colunas = ["candidato", "data", "evento", "agencia", "tema", "titulo_fala", "afirmacao", "veredito_original", "categoria", "explicacao", "fonte_url"]
         tabela = f[colunas].sort_values(["data", "candidato"])
-        st.dataframe(
-            tabela, width="stretch", hide_index=True, height=520,
+        mostrar_tabela(
+            tabela, titulo_col="titulo_fala", width="stretch", hide_index=True, height=520,
             column_config={
                 "candidato": "Candidato", "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY"),
                 "evento": "Evento", "agencia": "Agência", "tema": "Tema",
@@ -340,7 +359,7 @@ def render_tab_fact_check():
         dp["total"] = dp[["verdadeiro", "impreciso", "falso"]].sum(axis=1)
         dp["% falso"] = (100 * dp["falso"] / dp["total"]).round(1)
         dp["% verdadeiro"] = (100 * dp["verdadeiro"] / dp["total"]).round(1)
-        st.dataframe(
+        mostrar_tabela(
             dp[["evento", "candidato", "total", "verdadeiro", "impreciso", "falso", "% verdadeiro", "% falso", "url"]],
             width="stretch", hide_index=True,
             column_config={"url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗"),

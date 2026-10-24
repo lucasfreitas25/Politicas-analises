@@ -1,3 +1,4 @@
+import hashlib
 import html as html_mod
 import re
 import streamlit as st
@@ -85,13 +86,154 @@ def finalizar_celular(fig):
     return fig
 
 
+_ANO_RE = re.compile(r"(?<!\d)((?:19|20)\d{2})(?!\d)")
+_TIPOS_TEMPO = ("bar", "scatter", "scattergl")
+
+
+def _ano_do_valor(v):
+    """Ano de um valor do eixo x (2019, '2019', '03/2021', '2021-03-01', data), ou None se não parecer data."""
+    if v is None:
+        return None
+    if hasattr(v, "item"):
+        try:
+            v = v.item()
+        except Exception:
+            pass
+    if hasattr(v, "year"):
+        return int(v.year)
+    if isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        return int(v) if float(v).is_integer() and 1990 <= v <= 2100 else None
+    if isinstance(v, str) and len(v) <= 14:
+        m = _ANO_RE.search(v)
+        return int(m.group(1)) if m else None
+    return None
+
+
+def _anos_por_traco(fig):
+    """Lista com o ano de cada ponto de cada traço, se o eixo x do gráfico for o tempo (barras/linhas verticais); senão None."""
+    if not fig.data:
+        return None
+    saida = []
+    for tr in fig.data:
+        if tr.type not in _TIPOS_TEMPO or getattr(tr, "orientation", None) == "h":
+            return None
+        xs = tr.x
+        if xs is None or len(xs) == 0:
+            saida.append([])
+            continue
+        anos = [_ano_do_valor(v) for v in xs]
+        if sum(a is not None for a in anos) < 0.9 * len(anos):
+            return None
+        saida.append(anos)
+    return saida if any(saida) else None
+
+
+def _recorta_figura(fig, anos_tr, manter):
+    """Deixa só os pontos cujo ano passa em `manter(ano)`; vale para x, y, textos, cores por ponto, anotações e faixas."""
+    def pega(v, idx, n):
+        if v is None:
+            return v
+        try:
+            if len(v) == n and not isinstance(v, str):
+                return [v[i] for i in idx]
+        except TypeError:
+            pass
+        return v
+
+    for tr, anos in zip(fig.data, anos_tr):
+        n = len(anos)
+        if not n:
+            continue
+        idx = [i for i, a in enumerate(anos) if a is not None and manter(a)]
+        if len(idx) == n:
+            continue
+        for campo in ("x", "y", "text", "hovertext", "customdata"):
+            try:
+                setattr(tr, campo, pega(getattr(tr, campo), idx, n))
+            except Exception:
+                pass
+        for obj, campo in ((tr.marker, "color"), (tr.marker, "opacity"), (tr.marker, "size"), (tr.line, "color")) if hasattr(tr, "line") else ((tr.marker, "color"), (tr.marker, "opacity")):
+            try:
+                setattr(obj, campo, pega(getattr(obj, campo), idx, n))
+            except Exception:
+                pass
+        try:
+            if tr.marker.pattern.shape is not None:
+                tr.marker.pattern.shape = pega(tr.marker.pattern.shape, idx, n)
+        except Exception:
+            pass
+    ann = []
+    for a in fig.layout.annotations or []:
+        ano = _ano_do_valor(a.x) if a.x is not None else None
+        if ano is None or manter(ano):
+            ann.append(a)
+    fig.layout.annotations = ann
+    formas = []
+    for sh in fig.layout.shapes or []:
+        a0, a1 = _ano_do_valor(sh.x0), _ano_do_valor(sh.x1)
+        if a0 is not None and a1 is not None and not any(manter(a) for a in range(a0, a1 + 1)):
+            continue
+        formas.append(sh)
+    fig.layout.shapes = formas
+    cats = []
+    for tr in fig.data:
+        for v in (tr.x if tr.x is not None else []):
+            if v not in cats:
+                cats.append(v)
+    rng = fig.layout.xaxis.range
+    if rng is not None and fig.layout.xaxis.type == "category" and cats:
+        fig.update_xaxes(range=[-0.5, len(cats) - 0.5])
+
+
+def filtrar_periodo(fig, chave_extra=""):
+    """Corta o gráfico aos governos escolhidos na página e põe um mini filtro de período (deslizante) quando há 4 anos ou mais.
+    Vale para todo gráfico com tempo no eixo x; os demais seguem como estão."""
+    if not isinstance(fig, go.Figure):
+        return fig
+    anos_tr = _anos_por_traco(fig)
+    if not anos_tr:
+        return fig
+    try:
+        from modules.historico_ui import ABAS_COMPARAVEIS, ano_gov, governos_da_pagina
+        escolhidos = set(governos_da_pagina()) if st.session_state.get("_pagina_atual") in ABAS_COMPARAVEIS else None
+    except Exception:
+        escolhidos = None
+    no_governo = (lambda a: ano_gov(a) in escolhidos) if escolhidos else (lambda a: True)
+    todos = sorted({a for anos in anos_tr for a in anos if a is not None and no_governo(a)})
+    if not todos:
+        return fig
+    faixa = (todos[0], todos[-1])
+    if len(todos) >= 4:
+        titulo = re.sub(r"<[^>]+>", " ", fig.layout.title.text or "")
+        cont = st.session_state.setdefault("_graf_cont", {})
+        base = "per_" + hashlib.md5((titulo + "|".join(str(t.name) for t in fig.data) + str(chave_extra)).encode("utf-8")).hexdigest()[:10]
+        cont[base] = cont.get(base, 0) + 1
+        chave = f"{base}_{cont[base]}"
+        atual = st.session_state.get(chave)
+        if not (isinstance(atual, (tuple, list)) and len(atual) == 2):
+            st.session_state[chave] = faixa
+        else:
+            a, b = max(todos[0], min(todos[-1], atual[0])), max(todos[0], min(todos[-1], atual[1]))
+            st.session_state[chave] = (a, b) if a <= b else faixa
+        faixa = st.slider("📅 Período", todos[0], todos[-1], key=chave, help="Escolha de que ano a que ano mostrar neste gráfico.")
+    _recorta_figura(fig, anos_tr, lambda a: no_governo(a) and faixa[0] <= a <= faixa[1])
+    return fig
+
+
 def ativar_modo_celular():
-    """Faz todo st.plotly_chart passar por finalizar_celular quando o modo celular está ligado."""
+    """Faz todo st.plotly_chart passar pelo filtro de governo e período e, no celular, por finalizar_celular."""
+    st.session_state["_graf_cont"] = {}
     if getattr(st, "_celular_ativo", False):
         return
     original = st.plotly_chart
 
     def plotly_chart(figure_or_data, *args, **kwargs):
+        try:
+            filtrar_periodo(figure_or_data, kwargs.get("key", ""))
+        except Exception:
+            pass
         if eh_celular():
             try:
                 finalizar_celular(figure_or_data)
@@ -103,15 +245,27 @@ def ativar_modo_celular():
     st._celular_ativo = True
 
 
-def mostrar_tabela(df, titulo_col=None, max_linhas_celular=80, **kwargs):
-    """No computador, a tabela de sempre (st.dataframe). No celular, um cartão por linha, para não precisar rolar de lado.
-    Tabelas com mais de `max_linhas_celular` linhas continuam como tabela (cartões ficariam longos demais)."""
-    if not eh_celular() or len(df) > max_linhas_celular:
+def mostrar_tabela(df, titulo_col=None, max_linhas_celular=40, **kwargs):
+    """No computador, a tabela de sempre (st.dataframe). No celular, um cartão por linha, para não precisar rolar de lado;
+    tabelas longas mostram `max_linhas_celular` cartões por vez, com botão para ver mais (nada de tabela larga no celular)."""
+    if not eh_celular():
         return st.dataframe(df, **kwargs)
     colunas = list(df.columns)
     titulo_col = titulo_col or next((c for c in colunas if str(c).lower() in ("indicador", "política", "politica", "norma", "tributo")), colunas[0])
+    chave = "_mais_" + str(abs(hash((tuple(map(str, colunas)), len(df), str(df.iloc[0].tolist()) if len(df) else ""))))
+    mostrar = st.session_state.get(chave, max_linhas_celular)
+    cfg = kwargs.get("column_config") or {}
+
+    def rotulo(c):
+        x = cfg.get(c)
+        if isinstance(x, str):
+            return x
+        if isinstance(x, dict) and x.get("label"):
+            return x["label"]
+        return str(c)
+
     cartoes = []
-    for _, linha in df.iterrows():
+    for _, linha in df.head(mostrar).iterrows():
         itens = []
         for c in colunas:
             if c == titulo_col:
@@ -119,12 +273,19 @@ def mostrar_tabela(df, titulo_col=None, max_linhas_celular=80, **kwargs):
             v = linha[c]
             if v is None or (isinstance(v, float) and v != v) or str(v).strip() == "":
                 continue
+            if hasattr(v, "strftime"):
+                v = v.strftime("%d/%m/%Y")
             txt = html_mod.escape(str(v))
             if str(v).startswith("http"):
                 txt = f'<a href="{html_mod.escape(str(v), quote=True)}" target="_blank">abrir ↗</a>'
-            itens.append(f'<div class="tab-item"><span>{html_mod.escape(str(c))}</span><b>{txt}</b></div>')
+            itens.append(f'<div class="tab-item"><span>{html_mod.escape(rotulo(c))}</span><b>{txt}</b></div>')
         cartoes.append(f'<div class="ind-card"><div class="ind-card-t"><b>{html_mod.escape(str(linha[titulo_col]))}</b></div>{"".join(itens)}</div>')
     st.markdown("".join(cartoes), unsafe_allow_html=True)
+    if len(df) > mostrar:
+        st.caption(f"Mostrando {mostrar} de {len(df)}.")
+        if st.button(f"Ver mais {min(max_linhas_celular, len(df) - mostrar)}", key=chave + "_b", width="stretch"):
+            st.session_state[chave] = mostrar + max_linhas_celular
+            st.rerun()
 
 
 def _eixo_sem_folga(fig):

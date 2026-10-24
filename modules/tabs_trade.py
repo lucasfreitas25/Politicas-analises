@@ -4,6 +4,7 @@ import streamlit as st
 import plotly.graph_objects as go
 from modules.data_loader import load_json
 from modules.ui_components import (
+    mostrar_tabela,
     apply_plotly_theme,
     render_section_header,
     render_source,
@@ -71,7 +72,7 @@ def render_tab_trade():
     fig.update_layout(barmode="group")
     apply_plotly_theme(fig, title="Balança comercial (US$ bilhões, FOB)", height=440)
     st.plotly_chart(fig, width="stretch")
-    st.caption("2018 foi o último ano do governo anterior ao de Bolsonaro e serve só de referência. Valores em dólares correntes, sem correção pela inflação americana.")
+    st.caption("Valores em dólares correntes, sem correção pela inflação americana.")
 
     # ---------------- Cor por governo: saldo
     colunas = st.columns(2)
@@ -85,7 +86,7 @@ def render_tab_trade():
         resumo = anual[anual["ano"] >= 2019].groupby("governo")[["exportacoes_bi_usd", "importacoes_bi_usd", "saldo_bi_usd"]].mean().round(1)
         resumo.columns = ["Exportações", "Importações", "Saldo"]
         resumo["Anos"] = anual[anual["ano"] >= 2019].groupby("governo")["ano"].count()
-        st.dataframe(resumo.reset_index().rename(columns={"governo": "Governo"}), width="stretch", hide_index=True)
+        mostrar_tabela(resumo.reset_index().rename(columns={"governo": "Governo"}), width="stretch", hide_index=True)
         st.caption("Bolsonaro: 2019–2022 (4 anos). Lula: 2023–2025 (3 anos fechados). Médias de períodos de tamanhos diferentes.")
 
     if parcial:

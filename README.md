@@ -189,3 +189,7 @@ Politicas analises/
 
 - O painel liga o **modo celular** sozinho quando o navegador é de celular (User-Agent); o botão "Modo celular" na barra lateral força ligado ou desligado em qualquer tela. Nesse modo as tabelas largas viram cartões empilhados, os títulos de gráfico quebram em linhas, a legenda fica acima do gráfico e os gráficos de itens de preço ganham altura.
 - Com "Todos os governos" ligado há o filtro **"Governos mostrados"** para tirar ou pôr cada mandato; a escolha vale para todas as abas e fica em `gov_lista`.
+
+## Filtros dos gráficos
+- Todo gráfico com tempo no eixo x passa por `filtrar_periodo` (`modules/ui_components.py`): mostra só os anos dos governos escolhidos na página e, com 4 anos ou mais, um deslizante "📅 Período" para recortar o gráfico. Gráficos sem tempo no eixo seguem como estão.
+- No celular, tabelas viram cartões (40 por vez, com "Ver mais") e os vereditos por evento da checagem viram blocos com barra empilhada.

@@ -2,7 +2,7 @@ import html
 import streamlit as st
 import pandas as pd
 from modules.data_loader import get_propostas_data
-from modules.ui_components import render_section_header
+from modules.ui_components import render_section_header, mostrar_tabela
 
 
 def _ausente(item):
@@ -129,7 +129,7 @@ def _render_2026():
         "Itens (Lula)": [len(t["lula"]) for t in temas],
         "Itens (Flávio)": [len(t["flavio"]) for t in temas],
     })
-    st.dataframe(quadro, width="stretch", hide_index=True, height=38 * (len(quadro) + 1))
+    mostrar_tabela(quadro, width="stretch", hide_index=True, height=38 * (len(quadro) + 1))
     st.caption("\"Parcial\" = o plano cobre parte do tema, e as fontes consultadas não citam o resto. \"Não consta\" significa que as fontes não citam o tema — não prova que o plano completo seja omisso.")
 
     # ---------------- Filtros

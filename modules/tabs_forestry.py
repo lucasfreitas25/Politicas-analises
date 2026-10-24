@@ -88,7 +88,8 @@ def render_tab_forestry():
     # Box Explicativo da PEVS
     def _total(df, ano):
         return float(df[(df["ano"] == ano) & (df["produto"] == "Total")]["valor_producao_mil_reais"].sum())
-    s24, e24, s18, e18 = _total(df_silv, 2024), _total(df_extr, 2024), _total(df_silv, 2018), _total(df_extr, 2018)
+    ult = int(max(df_silv["ano"].max(), df_extr["ano"].max()))
+    s24, e24, s18, e18 = _total(df_silv, ult), _total(df_extr, ult), _total(df_silv, 2019), _total(df_extr, 2019)
     share_silv = f"{100 * s24 / (s24 + e24):.0f}".replace(".", ",") if s24 + e24 else "—"
     share_silv_18 = f"{100 * s18 / (s18 + e18):.0f}".replace(".", ",") if s18 + e18 else "—"
     silv_bi = f"{s24 / 1e6:.1f}".replace(".", ",")
@@ -96,7 +97,7 @@ def render_tab_forestry():
     st.markdown(f"""
     <div class="info-box">
       <b>Silvicultura e extrativismo:</b><br/>
-      • <b>Silvicultura em alta:</b> as florestas plantadas responderam por {share_silv}% do valor da produção florestal em 2024 (R$ {silv_bi} bi), contra {share_silv_18}% em 2018 (PEVS/IBGE).<br/>
-      • <b>Extrativismo:</b> a extração vegetal nativa somou R$ {extr_bi} bi em 2024 (PEVS/IBGE).
+      • <b>Silvicultura em alta:</b> as florestas plantadas responderam por {share_silv}% do valor da produção florestal em {ult} (R$ {silv_bi} bi), contra {share_silv_18}% em 2019 (PEVS/IBGE).<br/>
+      • <b>Extrativismo:</b> a extração vegetal nativa somou R$ {extr_bi} bi em {ult} (PEVS/IBGE).
     </div>
     """, unsafe_allow_html=True)

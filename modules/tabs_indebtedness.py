@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from modules.data_loader import get_inadimplencia_bcb, get_inadimplencia_data
 from modules.ui_components import (
+    mostrar_tabela,
     apply_plotly_theme,
     render_section_header,
     render_source,
@@ -136,7 +137,7 @@ def render_tab_indebtedness():
     st.caption("São as únicas medições que conseguimos confirmar em fonte pública. Não formam uma série contínua e mudam de metodologia entre pesquisas.")
     pontos = pd.DataFrame(extra.get("pessoas_e_familias", []))
     if not pontos.empty:
-        st.dataframe(
+        mostrar_tabela(
             pontos[["fonte", "ponto", "valor", "detalhe", "url"]], width="stretch", hide_index=True,
             column_config={"fonte": "Pesquisa", "ponto": "Mês", "valor": "Valor", "detalhe": st.column_config.TextColumn("Observação", width="large"),
                            "url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗")},
