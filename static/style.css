@@ -541,3 +541,37 @@ abbr[title] { text-decoration: underline dotted #64748b !important; text-underli
 .prog-rep { background: rgba(148,163,184,0.07) !important; padding: 8px 10px !important; border-radius: 6px !important; margin-top: 6px !important; font-size: 0.82rem !important; color: #e2e8f0 !important; line-height: 1.5 !important; }
 .prog-rep a { color: #38bdf8 !important; text-decoration: none !important; }
 .prog-bom .src, .prog-ruim .src { color: #94a3b8 !important; font-size: 0.78rem !important; }
+
+/* Seletor de governos */
+.sel-x { text-align: center !important; font-weight: 800 !important; color: #94a3b8 !important; padding-bottom: 8px !important; }
+
+/* Celular: leitura mais limpa em telas estreitas */
+@media (max-width: 640px) {
+  .sel-x { display: none !important; }
+  .hero-subtitle { display: none !important; }
+  .hero-container { margin-bottom: 8px !important; }
+  .section-subtitle { font-size: 0.85rem !important; }
+  [data-testid="stHeading"] h3, .stSubheader { font-size: 1.05rem !important; line-height: 1.3 !important; }
+  h3 { font-size: 1.08rem !important; }
+  .info-box { padding: 10px 12px !important; }
+  .compare-stat { min-height: 0 !important; }
+  .compare-title { font-size: 0.72rem !important; }
+  .compare-values { gap: 6px !important; flex-wrap: wrap !important; justify-content: center !important; }
+  .compare-foot { font-size: 0.68rem !important; }
+  .modebar, .modebar-container { display: none !important; }
+  .js-plotly-plot .gtitle { font-size: 12px !important; }
+  .js-plotly-plot .legend text { font-size: 10px !important; }
+  [data-testid="stMetricValue"] { font-size: 1.4rem !important; }
+  [data-testid="stSegmentedControl"] button, [data-testid="stPills"] button { font-size: 0.78rem !important; padding: 2px 8px !important; }
+  .fonte-tipos { margin-bottom: 8px !important; }
+  .policy-card .check-meta, .prog-meta { flex-wrap: wrap !important; gap: 4px !important; }
+  .score-tile h4 { font-size: 0.95rem !important; }
+  .stDataFrame { font-size: 0.78rem !important; }
+}
+@media (max-width: 640px) {
+  .st-key-seletor_gov [data-testid="stHorizontalBlock"] { flex-wrap: wrap !important; gap: 8px !important; }
+  .st-key-seletor_gov [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(1),
+  .st-key-seletor_gov [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(3) { min-width: 46% !important; flex: 1 1 46% !important; }
+  .st-key-seletor_gov [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(2) { display: none !important; }
+  .st-key-seletor_gov [data-testid="stCaptionContainer"] { font-size: 0.78rem !important; }
+}

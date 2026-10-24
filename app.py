@@ -6,7 +6,7 @@ st.set_page_config(
     page_title="Observatório de Governos: dados oficiais de FHC a Lula 3 | Checagens 2026",
     page_icon="🇧🇷",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="auto"
 )
 
 # Carregar estilos CSS customizados
