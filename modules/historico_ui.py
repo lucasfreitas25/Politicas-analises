@@ -300,11 +300,15 @@ def render_seletor():
     # A escolha fica em chaves próprias (gov_a, gov_b, gov_todos), separadas das chaves dos campos (_w_...).
     # O Streamlit apaga o estado de um campo quando a página seguinte não o desenha; sem essa separação,
     # ao trocar de página o seletor caía no primeiro item da lista (FHC 1 x FHC 1).
+    # Governo A e B valem para o painel todo; o modo "Todos os governos" vale só para a página em que foi ligado,
+    # para não aparecer ligado de repente em outra aba (por exemplo, a de Saúde).
+    pg = st.session_state.get("_pagina_atual", "")
+    k_todos, w_todos = f"gov_todos_{pg}", f"_w_gov_todos_{pg}"
     if st.session_state.pop("gov_reset_pedido", False):
-        st.session_state["gov_a"], st.session_state["gov_b"], st.session_state["gov_todos"] = PADRAO[0], PADRAO[1], False
-        for k in ("_w_gov_a", "_w_gov_b", "_w_gov_todos"):
+        st.session_state["gov_a"], st.session_state["gov_b"], st.session_state[k_todos] = PADRAO[0], PADRAO[1], False
+        for k in ("_w_gov_a", "_w_gov_b", w_todos):
             st.session_state.pop(k, None)
-    for k, v in (("gov_a", PADRAO[0]), ("gov_b", PADRAO[1]), ("gov_todos", False)):
+    for k, v in (("gov_a", PADRAO[0]), ("gov_b", PADRAO[1]), (k_todos, False)):
         st.session_state.setdefault(k, v)
     if st.session_state["gov_a"] not in governos:
         st.session_state["gov_a"] = PADRAO[0]
@@ -317,12 +321,12 @@ def render_seletor():
     with st.container(border=True, key="seletor_gov"):
         st.caption("Escolha os governos que quer comparar, de FHC a Lula 3. O padrão é Bolsonaro x Lula 3.")
         c1, c2, c3, c4 = st.columns([2.2, 0.35, 2.2, 1.9], vertical_alignment="bottom")
-        for campo, chave in (("_w_gov_a", "gov_a"), ("_w_gov_b", "gov_b"), ("_w_gov_todos", "gov_todos")):
+        for campo, chave in (("_w_gov_a", "gov_a"), ("_w_gov_b", "gov_b"), (w_todos, k_todos)):
             st.session_state[campo] = st.session_state[chave]
         a = c1.selectbox("Governo A", governos, key="_w_gov_a", on_change=_guardar, args=("_w_gov_a", "gov_a"))
         c2.markdown("<div class='sel-x'>x</div>", unsafe_allow_html=True)
         b = c3.selectbox("Governo B", governos, key="_w_gov_b", on_change=_guardar, args=("_w_gov_b", "gov_b"))
-        todos = c4.toggle(TODOS, key="_w_gov_todos", on_change=_guardar, args=("_w_gov_todos", "gov_todos"),
+        todos = c4.toggle(TODOS, key=w_todos, on_change=_guardar, args=(w_todos, k_todos),
                           help="Mostra os 9 mandatos de FHC a Lula 3 lado a lado.")
         if (a, b) != PADRAO or todos:
             if c4.button("↺ Voltar para Bolsonaro x Lula 3", key="gov_reset", width="stretch"):
@@ -335,7 +339,7 @@ def render_seletor():
             st.session_state["_w_gov_lista"] = st.session_state["gov_lista"]
             st.pills("Governos mostrados (toque para tirar ou pôr)", governos, selection_mode="multi", key="_w_gov_lista",
                      on_change=lambda: st.session_state.__setitem__("gov_lista", st.session_state["_w_gov_lista"] or list(governos)))
-    st.session_state["gov_a"], st.session_state["gov_b"], st.session_state["gov_todos"] = a, b, todos
+    st.session_state["gov_a"], st.session_state["gov_b"], st.session_state[k_todos] = a, b, todos
     return a, b, todos
 
 

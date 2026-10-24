@@ -152,7 +152,7 @@ Politicas analises/
 
 ## Atualização de 21/10/2026
 - Tipos de fonte por página (`modules/ux.py`), glossário central e Metodologia reescrita (critérios, limites, downloads).
-- Visão Geral: "Resumo em 10 números", comparação alinhada (`modules/alinhado.py`: mesmo período, Bolsonaro sem 2020) e filtro de eixos no placar.
+- Visão Geral: "Resumo em 10 números" e filtro de eixos no placar.
 - Propostas de campanha: 53 trechos com página conferida nos PDFs dos planos (`data/_fontes/gerar_propostas.py`).
 - Acessibilidade: modo para daltonismo, tema claro experimental, CSS para celular e impressão.
 

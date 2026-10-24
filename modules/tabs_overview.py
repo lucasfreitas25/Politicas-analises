@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from modules.data_loader import get_scorecard, load_json
-from modules.alinhado import render_comparacao_alinhada
 from modules.ux import gl
 from modules.ui_components import (
     render_kpi_card,
@@ -579,7 +578,6 @@ def render_tab_overview():
     st.markdown("---")
     _resumo_10(por_nome, ctx)
     st.markdown("---")
-    render_comparacao_alinhada()
     st.markdown("---")
 
     # 2. Radar calculado a partir do scorecard

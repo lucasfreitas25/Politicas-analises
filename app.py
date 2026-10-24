@@ -142,6 +142,7 @@ with st.sidebar:
 
 # Renderizar página selecionada. Nas abas com série longa, o seletor no topo troca os governos comparados na aba inteira;
 # o padrão (Bolsonaro x Lula 3) mostra a aba original, completa.
+st.session_state["_pagina_atual"] = pagina_atual
 if pagina_atual in ABAS_COMPARAVEIS:
     gov_a, gov_b, gov_todos = render_seletor()
     # Na Visão Geral, um par diferente usa o mesmo painel (cartões, radar, placar e tabela) com outros governos

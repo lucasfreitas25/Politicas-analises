@@ -127,6 +127,28 @@ def mostrar_tabela(df, titulo_col=None, max_linhas_celular=80, **kwargs):
     st.markdown("".join(cartoes), unsafe_allow_html=True)
 
 
+def _eixo_sem_folga(fig):
+    """Eixo de categorias com anotações: o Plotly abre espaço vazio nas pontas para caber o texto das anotações.
+    Fixa o eixo nos dados e ancora cada anotação para o lado de dentro, assim o gráfico ocupa a largura toda."""
+    if not fig.layout.annotations:
+        return
+    cats = []
+    for t in fig.data:
+        xs = getattr(t, "x", None)
+        if xs is None:
+            continue
+        for v in xs:
+            if isinstance(v, str) and v not in cats:
+                cats.append(v)
+    if len(cats) < 12:
+        return
+    fig.update_xaxes(type="category", range=[-0.5, len(cats) - 0.5])
+    for a in fig.layout.annotations:
+        if isinstance(a.x, str) and a.x in cats:
+            f = cats.index(a.x) / (len(cats) - 1)
+            a.xanchor = "right" if f > 0.65 else ("left" if f < 0.35 else "center")
+
+
 def apply_plotly_theme(fig, title="", height=420):
     fig.update_layout(
         title={
@@ -174,6 +196,7 @@ def apply_plotly_theme(fig, title="", height=420):
             title_font=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif")
         )
     )
+    _eixo_sem_folga(fig)
     if st.session_state.get("modo_daltonico"):
         _aplicar_daltonismo(fig)
     if eh_celular():

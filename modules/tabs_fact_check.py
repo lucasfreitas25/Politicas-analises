@@ -144,28 +144,33 @@ def _fala_card(row):
 
 
 def _chart_by_event(f):
-    """Barras empilhadas (%) por evento e candidato, sobre as checagens filtradas."""
+    """Barras horizontais empilhadas (%) por candidato e evento: os nomes dos eventos ficam no eixo vertical, em tamanho de leitura."""
     df = f.copy()
     curto = df["evento"].map(_curto)
-    df["grupo"] = "<b>" + df["candidato"].str.replace(" Bolsonaro", "", regex=False) + "</b><br>" + curto + "<br>" + pd.to_datetime(df["data"]).dt.strftime("%d/%m")
+    df["grupo"] = df["candidato"].str.replace(" Bolsonaro", "", regex=False) + " · " + curto + " · " + pd.to_datetime(df["data"]).dt.strftime("%d/%m")
     ordem = df[["data", "candidato", "grupo"]].drop_duplicates().sort_values(["data", "candidato"])["grupo"].tolist()
     tab = df.groupby(["grupo", "categoria"]).size().unstack(fill_value=0).reindex(ordem)
     pct = tab.div(tab.sum(axis=1), axis=0) * 100
+    total = tab.sum(axis=1)
+    from modules.ui_components import eh_celular, quebrar
+    cel = eh_celular()
+    rotulos = [(quebrar(f"{g} ({int(total[g])})", 20) if cel else f"{g} ({int(total[g])})") for g in ordem]
     fig = go.Figure()
     for cat in VERDICT_ORDER:
         if cat not in tab.columns:
             continue
         fig.add_trace(go.Bar(
-            x=pct.index, y=pct[cat], name=cat, marker_color=VERDICT_COLORS[cat],
-            customdata=tab[cat], text=[f"{v:.0f}%" if v >= 7 else "" for v in pct[cat]],
-            textposition="inside", insidetextfont=dict(color="#0b0f19", size=11),
-            hovertemplate="%{x}<br>" + cat + ": %{customdata} (%{y:.0f}%)<extra></extra>",
+            y=rotulos, x=pct[cat].reindex(ordem), name=cat, marker_color=VERDICT_COLORS[cat], orientation="h",
+            customdata=tab[cat].reindex(ordem), text=[f"{v:.0f}%" if v >= 12 else "" for v in pct[cat].reindex(ordem)],
+            textposition="inside", textangle=0, insidetextfont=dict(color="#0b0f19", size=12),
+            hovertemplate="%{y}<br>" + cat + ": %{customdata} (%{x:.0f}%)<extra></extra>",
         ))
     fig.update_layout(barmode="stack")
-    apply_plotly_theme(fig, title="Vereditos por evento (% das checagens)", height=430)
-    fig.update_layout(hovermode="closest", yaxis=dict(range=[0, 100], ticksuffix="%"), margin=dict(t=60, b=40),
-                      legend=dict(orientation="h", y=-0.22, x=0.5, xanchor="center", yanchor="top"))
-    fig.update_xaxes(tickangle=0, tickfont=dict(size=10))
+    apply_plotly_theme(fig, title="Vereditos por evento (% das checagens)", height=max(380, (56 if cel else 40) * len(ordem) + 190))
+    fig.update_layout(hovermode="closest", xaxis=dict(range=[0, 100], ticksuffix="%", tickfont=dict(size=11 if cel else 12), tickangle=0, **({"tickvals": [0, 50, 100]} if cel else {})),
+                      yaxis=dict(autorange="reversed", tickfont=dict(size=11 if cel else 13, color="#f8fafc"), automargin=True),
+                      legend=dict(orientation="h", y=-0.09, x=0, xanchor="left", yanchor="top", font=dict(size=12)), bargap=0.25,
+                      margin=dict(l=10, r=20, t=70, b=90))
     return fig
 
 
@@ -182,7 +187,7 @@ def _chart_by_theme(u):
         fig.add_trace(go.Bar(y=tab.index, x=tab[cand], name=cand, orientation="h", marker_color=cor,
                              hovertemplate="%{y}<br>" + cand + ": %{x}<extra></extra>"))
     fig.update_layout(barmode="group")
-    apply_plotly_theme(fig, title="Falas falsas ou sem comprovação, por tema (falas únicas)", height=max(360, 34 * len(tab) + 150))
+    apply_plotly_theme(fig, title="Falsas ou sem comprovação, por tema", height=max(360, 34 * len(tab) + 150))
     fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.12, x=0.5, xanchor="center", yanchor="top"))
     return fig
 

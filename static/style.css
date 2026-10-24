@@ -612,3 +612,11 @@ abbr[title] { text-decoration: underline dotted #64748b !important; text-underli
 .ind-ctx { margin-top: 8px !important; }
 .ind-ctx summary { cursor: pointer !important; color: #38bdf8 !important; font-size: 0.76rem !important; font-weight: 700 !important; }
 .ind-ctx div { color: #94a3b8 !important; font-size: 0.76rem !important; line-height: 1.45 !important; margin-top: 4px !important; }
+
+/* Valores centralizados e alinhados na mesma altura, com ou sem o selo MELHOR */
+.score-table .val-cell, .lados-m .lado-m { text-align: center !important; vertical-align: middle !important; }
+.val-top { display: flex !important; justify-content: center !important; align-items: center !important; min-height: 22px !important; margin-bottom: 4px !important; }
+.val-main, .val-detail { text-align: center !important; }
+.lados-m .lado-m { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: flex-start !important; }
+.lados-m .lado-nome { text-align: center !important; }
+.score-table th { text-align: center !important; }
