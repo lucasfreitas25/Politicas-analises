@@ -19,10 +19,11 @@ PLURAL = {"Verdade": "Verdades", "Meia-verdade": "Meias-verdades", "Mentira": "M
 SEVERIDADE = {"Verdade": 0, "Meia-verdade": 1, "Sem comprovação": 2, "Mentira": 3}
 MODO_UNICO = "Falas únicas (sem repetição)"
 MODO_TODAS = "Todas as checagens (por agência)"
+VER_TUDO, VER_EMISSORA, VER_TURNO, VER_CANDIDATO = "Tudo", "Por emissora", "Por turno", "Por candidato"
 
 
 def _curto(evento):
-    return evento.replace("Entrevista TV Globo — ", "Globo ").replace("Debate Band — ", "Band ")
+    return evento.replace("Entrevista TV Globo — ", "Globo ").replace("Debate Band — ", "Band ").replace("Debate TV Globo — ", "Debate Globo ")
 
 
 def _quote(texto):
@@ -186,11 +187,63 @@ def _chart_by_theme(u):
     return fig
 
 
+def _conteudo(f, contrapontos, unico, cands, chave):
+    """Placar, gráficos, listas por veredito e tabela para um recorte das checagens (todo o conjunto ou um grupo)."""
+    u = _consolidar(f, contrapontos)
+    base, unidade = (u, "falas únicas") if unico else (f, "checagens")
+
+    st.subheader("Placar por candidato")
+    st.caption(f"{len(f)} checagens filtradas correspondem a {len(u)} falas diferentes "
+               f"({len(f) - len(u)} repetições removidas na visão de falas únicas).")
+    for col, cand in zip(st.columns(len(cands)), cands):
+        with col:
+            _score_tile(base[base["candidato"] == cand]["categoria"], cand, unidade)
+
+    g1, g2 = st.columns([1.25, 1])
+    with g1:
+        st.plotly_chart(_chart_by_event(f), width="stretch", key=f"{chave}_ev")
+    with g2:
+        st.plotly_chart(_chart_by_theme(u), width="stretch", key=f"{chave}_tema")
+    render_source("Agência Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica; contrapontos de Poder360, Metrópoles, Revista Oeste, "
+                  "Gazeta do Povo, Instituto Mises, Agência Câmara e Datafolha/FBSP — compilação de 23/10/2026")
+
+    st.subheader("Todas as falas checadas")
+    abas = st.tabs([f"{CAT_ICON[c]} {PLURAL[c]} ({int((base['categoria'] == c).sum())})" for c in VERDICT_ORDER] + ["Tabela completa"])
+    for aba, cat in zip(abas[:4], VERDICT_ORDER):
+        with aba:
+            sub = base[base["categoria"] == cat].sort_values("data")
+            for col, cand in zip(st.columns(len(cands)), cands):
+                with col:
+                    parte = sub[sub["candidato"] == cand]
+                    st.markdown(f"**{CAND_LABEL[cand]}** — {len(parte)} {unidade}")
+                    if parte.empty:
+                        st.caption("Nada nesta faixa com os filtros atuais.")
+                    for _, row in parte.iterrows():
+                        _fala_card(row) if unico else _check_card(row)
+    with abas[4]:
+        colunas = ["candidato", "data", "evento", "agencia", "tema", "titulo_fala", "afirmacao", "veredito_original", "categoria", "explicacao", "fonte_url"]
+        tabela = f[colunas].sort_values(["data", "candidato"])
+        st.dataframe(
+            tabela, width="stretch", hide_index=True, height=520,
+            column_config={
+                "candidato": "Candidato", "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY"),
+                "evento": "Evento", "agencia": "Agência", "tema": "Tema",
+                "titulo_fala": st.column_config.TextColumn("Fala (agrupada)", width="medium"),
+                "afirmacao": st.column_config.TextColumn("Fala (como a agência citou)", width="large"),
+                "veredito_original": "Veredito da agência", "categoria": "Faixa",
+                "explicacao": st.column_config.TextColumn("Explicação", width="large"),
+                "fonte_url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗"),
+            },
+        )
+        st.download_button("Baixar checagens filtradas (CSV)", tabela.to_csv(index=False).encode("utf-8-sig"),
+                           file_name="checagens_lula_flavio_2026.csv", mime="text/csv", key=f"{chave}_csv")
+
+
 def render_tab_fact_check():
     render_section_header(
         "Checagem de Fatos — Eleição Presidencial 2026",
         "O que as agências verificaram nas falas de <b>Lula (PT)</b> e <b>Flávio Bolsonaro (PL)</b> nas entrevistas da TV Globo "
-        "e no debate da Band — sem repetições, com o veredito de cada agência e contrapontos de outros veículos.",
+        "e nos debates da Band e da Globo — sem repetições, com o veredito de cada agência e contrapontos de outros veículos.",
     )
 
     df, meta = get_checagens_data()
@@ -210,17 +263,24 @@ def render_tab_fact_check():
     )
 
     st.markdown(
-        '<div class="info-box"><b>Cobertura em 21/10/2026:</b> as agências incluídas são Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica. '
-        'Busquei checagens de falas dos dois candidatos no UOL Confere e no Projeto Comprova e não encontrei veredito explícito sobre elas; '
-        'por isso nenhuma das duas entra na contagem, em vez de classificar por conta própria. O <b>debate da Globo (23/10)</b> ainda não aconteceu '
-        'e será incluído quando as agências publicarem.</div>',
+        '<div class="info-box"><b>Debate da Globo (23/10):</b> '
+        f'{html.escape(meta.get("debate_globo", ""))} '
+        '<a href="https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/" target="_blank">Lupa ao vivo ↗</a> · '
+        '<a href="https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/" target="_blank">Aos Fatos ao vivo ↗</a>. '
+        'As agências incluídas são Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica. UOL Confere e Projeto Comprova não trouxeram veredito '
+        'explícito sobre falas dos dois candidatos, então não entram na contagem, em vez de classificar por conta própria.</div>',
         unsafe_allow_html=True,
     )
 
     # ---------------- Filtros
     df["rotulo_evento"] = (df["evento"] + " (" + pd.to_datetime(df["data"]).dt.strftime("%d/%m") + ")").map(_curto)
     with st.container(border=True):
-        modo = st.segmented_control("Visualização", [MODO_UNICO, MODO_TODAS], default=MODO_UNICO, key="fc_modo") or MODO_UNICO
+        c0, c00 = st.columns([1, 1.2])
+        with c0:
+            ver = st.segmented_control("Ver", [VER_TUDO, VER_EMISSORA, VER_TURNO, VER_CANDIDATO], default=VER_TUDO, key="fc_ver",
+                                       help="Tudo mostra um placar só. Por emissora, por turno ou por candidato separa o resultado em abas.") or VER_TUDO
+        with c00:
+            modo = st.segmented_control("Visualização", [MODO_UNICO, MODO_TODAS], default=MODO_UNICO, key="fc_modo") or MODO_UNICO
         c1, c2, c3 = st.columns([1.3, 1.3, 1])
         with c1:
             agencias = sorted(df["agencia"].unique())
@@ -249,65 +309,26 @@ def render_tab_fact_check():
         st.info("Nenhuma checagem com esses filtros.")
         return
 
-    u = _consolidar(f, contrapontos)
     unico = modo == MODO_UNICO
-    base, unidade = (u, "falas únicas") if unico else (f, "checagens")
-
-    # ---------------- Placar
-    st.subheader("Placar por candidato")
-    st.caption(f"{len(f)} checagens filtradas correspondem a {len(u)} falas diferentes "
-               f"({len(f) - len(u)} repetições removidas na visão de falas únicas).")
-    col_l, col_f = st.columns(2)
-    with col_l:
-        _score_tile(base[base["candidato"] == "Lula"]["categoria"], "Lula", unidade)
-    with col_f:
-        _score_tile(base[base["candidato"] == "Flávio Bolsonaro"]["categoria"], "Flávio Bolsonaro", unidade)
-
-    g1, g2 = st.columns([1.25, 1])
-    with g1:
-        st.plotly_chart(_chart_by_event(f), width="stretch")
-    with g2:
-        st.plotly_chart(_chart_by_theme(u), width="stretch")
-    render_source("Agência Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica; contrapontos de Poder360, Metrópoles, Revista Oeste, "
-                  "Gazeta do Povo, Instituto Mises, Agência Câmara e Datafolha/FBSP — compilação de 20/10/2026")
-
-    # ---------------- Listas por veredito
-    st.subheader("Todas as falas checadas")
-    abas = st.tabs([f"{CAT_ICON[c]} {PLURAL[c]} ({int((base['categoria'] == c).sum())})" for c in VERDICT_ORDER] + ["Tabela completa"])
-    for aba, cat in zip(abas[:4], VERDICT_ORDER):
-        with aba:
-            sub = base[base["categoria"] == cat].sort_values("data")
-            col_a, col_b = st.columns(2)
-            for col, cand in ((col_a, "Lula"), (col_b, "Flávio Bolsonaro")):
-                with col:
-                    parte = sub[sub["candidato"] == cand]
-                    st.markdown(f"**{CAND_LABEL[cand]}** — {len(parte)} {unidade}")
-                    if parte.empty:
-                        st.caption("Nada nesta faixa com os filtros atuais.")
-                    for _, row in parte.iterrows():
-                        _fala_card(row) if unico else _check_card(row)
-    with abas[4]:
-        tabela = f[["candidato", "data", "evento", "agencia", "tema", "titulo_fala", "afirmacao", "veredito_original", "categoria", "explicacao", "fonte_url"]].sort_values(["data", "candidato"])
-        st.dataframe(
-            tabela, width="stretch", hide_index=True, height=520,
-            column_config={
-                "candidato": "Candidato", "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY"),
-                "evento": "Evento", "agencia": "Agência", "tema": "Tema",
-                "titulo_fala": st.column_config.TextColumn("Fala (agrupada)", width="medium"),
-                "afirmacao": st.column_config.TextColumn("Fala (como a agência citou)", width="large"),
-                "veredito_original": "Veredito da agência", "categoria": "Faixa",
-                "explicacao": st.column_config.TextColumn("Explicação", width="large"),
-                "fonte_url": st.column_config.LinkColumn("Fonte", display_text="abrir ↗"),
-            },
-        )
-        st.download_button("Baixar checagens filtradas (CSV)", tabela.to_csv(index=False).encode("utf-8-sig"),
-                           file_name="checagens_lula_flavio_2026.csv", mime="text/csv")
+    if ver == VER_TUDO:
+        _conteudo(f, contrapontos, unico, CANDIDATOS, "fc_tudo")
+    else:
+        coluna = {VER_EMISSORA: "emissora", VER_TURNO: "turno", VER_CANDIDATO: "candidato"}[ver]
+        grupos = [g for g in sorted(f[coluna].unique())]
+        rotulos = [f"{g} ({len(f[f[coluna] == g])} checagens)" for g in grupos]
+        if ver == VER_EMISSORA:
+            st.caption("Globo reúne as entrevistas do Jornal Nacional e o debate da TV Globo; Band é o debate de 18/10.")
+        for aba, g, rot in zip(st.tabs(rotulos), grupos, rotulos):
+            with aba:
+                sub = f[f[coluna] == g]
+                cands = [g] if ver == VER_CANDIDATO else CANDIDATOS
+                _conteudo(sub, contrapontos, unico, cands, f"fc_{coluna}_{g}")
 
     # ---------------- Placar oficial publicado pelas agências
     placares = meta.get("placares_oficiais", [])
     if placares:
         st.subheader("Placar oficial publicado pelo Ranking dos Políticos")
-        st.caption("O Ranking checa a transcrição inteira, o que reduz o viés de seleção das falas.")
+        st.caption("O Ranking checa a transcrição inteira, o que reduz o viés de seleção das falas. Para o debate da Globo (23/10) ainda não havia placar do Ranking.")
         dp = pd.DataFrame(placares)
         dp["total"] = dp[["verdadeiro", "impreciso", "falso"]].sum(axis=1)
         dp["% falso"] = (100 * dp["falso"] / dp["total"]).round(1)
@@ -321,8 +342,9 @@ def render_tab_fact_check():
 
     st.markdown(
         '<div class="info-box"><b>⚠ Limites desta comparação:</b> agências escolhem o que checar e usam escalas diferentes; '
-        'contagens não medem de forma absoluta \"quem mente mais\". No debate da Band, Lula fez mais afirmações verificáveis '
+        'contagens não medem de forma absoluta "quem mente mais". No debate da Band, Lula fez mais afirmações verificáveis '
         '(47 contra 29 no Ranking dos Políticos), por isso o placar mostra percentuais. Os contrapontos reproduzem argumentos publicados '
-        'por campanhas e veículos — não são endossados por este painel. O debate da TV Globo de 23/10 ainda não havia ocorrido na data desta compilação.</div>',
+        'por campanhas e veículos — não são endossados por este painel. As checagens do debate da Globo vêm de páginas ao vivo que as agências '
+        'ainda podem atualizar, e a Lupa pode rever selos depois.</div>',
         unsafe_allow_html=True,
     )
