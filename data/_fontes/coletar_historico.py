@@ -692,6 +692,8 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print("gravado:", OUT)
+    import alinhar_com_versao_padrao  # iguala Bolsonaro e Lula 3 aos números da versão padrão de cada aba
+    alinhar_com_versao_padrao.main()
     for k, v in ind.items():
         print(k, v["mandato"])
 

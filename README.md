@@ -158,7 +158,9 @@ Politicas analises/
 
 ## Série histórica (22/10/2026)
 - Seletor de governos no topo das abas temáticas e da Visão Geral (`modules/historico_ui.py`): padrão Bolsonaro x Lula 3 (aba original); outro par ou "Todos os governos" refaz a aba com 35 indicadores para 9 mandatos desde 1995.
-- Coleta: `python data/_fontes/coletar_historico.py` (Banco Central, Ipeadata e Inpe/TerraBrasilis) gera `data/historico.json`.
+- Coleta: `python data/_fontes/coletar_historico.py` (Banco Central, Ipeadata e Inpe/TerraBrasilis) gera `data/historico.json`. Ao final ele roda `alinhar_com_versao_padrao.py`, que iguala Bolsonaro e Lula 3 aos números da versão padrão de cada aba (macro, PNAD, CONAB, ComexStat); o comércio exterior de 1997–2017 vem de `coletar_comexstat_historico.py` (`data/comexstat_historico.json`).
+- `python data/_fontes/coletar_filtros.py` grava em `historico_extra.json` as séries por tipo (rebanho, produto de origem animal, lavoura, silvicultura, extrativismo) usadas nos filtros das abas comparadas.
+- `python data/_fontes/auditar_dados.py` confere se o mesmo ano e governo dá o mesmo número nas duas versões e se a média de cada mandato bate com os anos (sai com código 1 se houver divergência).
 - PRODES atualizado pela série oficial do TerraBrasilis: 2025 consolidado = 5.731 km²; 2026 estimado = 3.335 km².
 
 ## Saúde e programas por governo (23/10/2026)

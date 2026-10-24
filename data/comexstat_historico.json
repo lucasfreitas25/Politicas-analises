@@ -1,0 +1,107 @@
+{
+ "1997": {
+  "exportacoes_bi_usd": 52.9,
+  "importacoes_bi_usd": 60.5,
+  "saldo_bi_usd": -7.6
+ },
+ "1998": {
+  "exportacoes_bi_usd": 51.1,
+  "importacoes_bi_usd": 58.7,
+  "saldo_bi_usd": -7.6
+ },
+ "1999": {
+  "exportacoes_bi_usd": 47.9,
+  "importacoes_bi_usd": 50.3,
+  "saldo_bi_usd": -2.3
+ },
+ "2000": {
+  "exportacoes_bi_usd": 55.0,
+  "importacoes_bi_usd": 57.0,
+  "saldo_bi_usd": -2.0
+ },
+ "2001": {
+  "exportacoes_bi_usd": 58.0,
+  "importacoes_bi_usd": 56.6,
+  "saldo_bi_usd": 1.5
+ },
+ "2002": {
+  "exportacoes_bi_usd": 60.1,
+  "importacoes_bi_usd": 48.3,
+  "saldo_bi_usd": 11.9
+ },
+ "2003": {
+  "exportacoes_bi_usd": 72.8,
+  "importacoes_bi_usd": 49.3,
+  "saldo_bi_usd": 23.5
+ },
+ "2004": {
+  "exportacoes_bi_usd": 95.1,
+  "importacoes_bi_usd": 63.8,
+  "saldo_bi_usd": 31.3
+ },
+ "2005": {
+  "exportacoes_bi_usd": 118.6,
+  "importacoes_bi_usd": 74.7,
+  "saldo_bi_usd": 43.9
+ },
+ "2006": {
+  "exportacoes_bi_usd": 137.6,
+  "importacoes_bi_usd": 92.5,
+  "saldo_bi_usd": 45.1
+ },
+ "2007": {
+  "exportacoes_bi_usd": 159.8,
+  "importacoes_bi_usd": 122.0,
+  "saldo_bi_usd": 37.8
+ },
+ "2008": {
+  "exportacoes_bi_usd": 195.8,
+  "importacoes_bi_usd": 174.7,
+  "saldo_bi_usd": 21.1
+ },
+ "2009": {
+  "exportacoes_bi_usd": 151.8,
+  "importacoes_bi_usd": 129.4,
+  "saldo_bi_usd": 22.4
+ },
+ "2010": {
+  "exportacoes_bi_usd": 200.4,
+  "importacoes_bi_usd": 183.3,
+  "saldo_bi_usd": 17.1
+ },
+ "2011": {
+  "exportacoes_bi_usd": 253.7,
+  "importacoes_bi_usd": 228.0,
+  "saldo_bi_usd": 25.7
+ },
+ "2012": {
+  "exportacoes_bi_usd": 240.0,
+  "importacoes_bi_usd": 225.2,
+  "saldo_bi_usd": 14.8
+ },
+ "2013": {
+  "exportacoes_bi_usd": 232.5,
+  "importacoes_bi_usd": 241.5,
+  "saldo_bi_usd": -9.0
+ },
+ "2014": {
+  "exportacoes_bi_usd": 220.9,
+  "importacoes_bi_usd": 230.8,
+  "saldo_bi_usd": -9.9
+ },
+ "2015": {
+  "exportacoes_bi_usd": 186.8,
+  "importacoes_bi_usd": 173.1,
+  "saldo_bi_usd": 13.7
+ },
+ "2016": {
+  "exportacoes_bi_usd": 179.5,
+  "importacoes_bi_usd": 139.3,
+  "saldo_bi_usd": 40.2
+ },
+ "2017": {
+  "exportacoes_bi_usd": 215.0,
+  "importacoes_bi_usd": 159.0,
+  "saldo_bi_usd": 56.0
+ }
+}

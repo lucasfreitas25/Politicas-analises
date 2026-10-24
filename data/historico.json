@@ -80,30 +80,30 @@
         "2016": -3.28,
         "2017": 1.32,
         "2018": 1.78,
-        "2019": 1.22,
-        "2020": -3.28,
-        "2021": 4.76,
-        "2022": 3.02,
-        "2023": 3.24,
-        "2024": 3.42,
-        "2025": 2.29
+        "2019": 1.3,
+        "2020": -3.3,
+        "2021": 4.8,
+        "2022": 3.0,
+        "2023": 3.2,
+        "2024": 3.4,
+        "2025": 2.3
       },
       "mandato": {
-        "FHC 1": 2.53,
-        "FHC 2": 2.31,
-        "Lula 1": 3.5,
-        "Lula 2": 4.6,
-        "Dilma 1": 2.34,
+        "FHC 1": 2.54,
+        "FHC 2": 2.32,
+        "Lula 1": 3.52,
+        "Lula 2": 4.64,
+        "Dilma 1": 2.35,
         "Dilma 2": -3.55,
-        "Temer": -0.09,
-        "Bolsonaro": 1.39,
-        "Lula 3": 2.98
+        "Temer": -0.06,
+        "Bolsonaro": 1.45,
+        "Lula 3": 2.97
       },
-      "metodo": "Média geométrica das taxas anuais de cada mandato.",
+      "metodo": "Média simples das taxas anuais de cada mandato. Para Bolsonaro e Lula 3 o painel usa os mesmos dados da versão padrão da aba (a série longa original vale para os governos anteriores).",
       "comparabilidade": "ok",
       "fonte": "IBGE — Contas Nacionais, via Banco Central (SGS 7326)",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.7326/dados?formato=csv",
-      "nota": "Lula 3 com 2023–2025 (2026 ainda não fechado).",
+      "nota": "Lula 3 com 2023–2025 (2026 ainda não fechado). Bolsonaro e Lula 3 usam os valores da versão padrão; os demais, a série do Banco Central (SGS 7326).",
       "abas": [
         "visao-geral",
         "macroeconomia"
@@ -584,14 +584,14 @@
         "2016": 14.08,
         "2017": 10.08,
         "2018": 6.48,
-        "2019": 5.94,
-        "2020": 2.79,
-        "2021": 4.42,
-        "2022": 12.43,
-        "2023": 13.2,
-        "2024": 10.84,
-        "2025": 14.32,
-        "2026": 14.34
+        "2019": 6.04,
+        "2020": 2.89,
+        "2021": 4.54,
+        "2022": 12.55,
+        "2023": 13.3,
+        "2024": 10.94,
+        "2025": 14.42,
+        "2026": 14.43
       },
       "mandato": {
         "FHC 1": 34.3,
@@ -601,10 +601,10 @@
         "Dilma 1": 9.81,
         "Dilma 2": 13.56,
         "Temer": 9.72,
-        "Bolsonaro": 6.39,
-        "Lula 3": 13.12
+        "Bolsonaro": 6.5,
+        "Lula 3": 13.27
       },
-      "metodo": "Média da Selic mensal anualizada em cada mandato.",
+      "metodo": "Média das médias anuais de cada mandato (Lula 3 inclui o ano parcial de 2026). Para Bolsonaro e Lula 3 o painel usa os mesmos dados da versão padrão da aba (a série longa original vale para os governos anteriores).",
       "comparabilidade": "ajustado",
       "fonte": "Banco Central (SGS 4189)",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.4189/dados?formato=csv",
@@ -998,6 +998,9 @@
       "abas": [
         "visao-geral",
         "macroeconomia"
+      ],
+      "parcial": [
+        2026
       ]
     },
     "desemprego": {
@@ -1030,13 +1033,14 @@
         "2016": 11.3666666666667,
         "2017": 12.875,
         "2018": 12.3666666666667,
-        "2019": 12.0333333333333,
-        "2020": 13.475,
+        "2019": 12.03,
+        "2020": 13.47,
         "2021": 13.5,
-        "2022": 9.50833333333333,
-        "2023": 8.04166666666667,
-        "2024": 6.925,
-        "2025": 5.95
+        "2022": 9.51,
+        "2023": 8.04,
+        "2024": 6.92,
+        "2025": 5.95,
+        "2026": 5.59
       },
       "anual_pnad_original": {
         "1992": 7.1960771537,
@@ -1085,9 +1089,9 @@
         "Dilma 2": 8.4,
         "Temer": 12.2,
         "Bolsonaro": 12.13,
-        "Lula 3": 6.97
+        "Lula 3": 6.72
       },
-      "metodo": "PNAD Contínua a partir de 2013. Antes disso, PNAD anual multiplicada por 0.963 (razão média PNADC/PNAD em 2013–2014), para ficar na escala da pesquisa atual.",
+      "metodo": "PNAD Contínua a partir de 2013. Antes disso, PNAD anual multiplicada por 0.963 (razão média PNADC/PNAD em 2013–2014), para ficar na escala da pesquisa atual. Para Bolsonaro e Lula 3, a média de cada mandato é a dos meses (trimestres móveis) da PNAD Contínua, incluindo os meses de 2026 já divulgados.",
       "comparabilidade": "ressalva",
       "fonte": "IBGE — PNAD Contínua (SIDRA 4099; média anual via Ipeadata PAN_TDESOC) e PNAD anual de 1992–2014 (Ipeadata Dese_Pnad)",
       "url": "https://sidra.ibge.gov.br/tabela/4099",
@@ -1294,6 +1298,9 @@
       "abas": [
         "visao-geral",
         "trabalho"
+      ],
+      "parcial": [
+        2026
       ]
     },
     "salario_minimo": {
@@ -2727,7 +2734,8 @@
         "2022": 1.25,
         "2023": -2.28,
         "2024": -0.4,
-        "2025": -0.43
+        "2025": -0.43,
+        "2026": -0.62
       },
       "mandato": {
         "FHC 2": 3.19,
@@ -2737,9 +2745,9 @@
         "Dilma 2": -1.86,
         "Temer": -1.9,
         "Bolsonaro": -2.03,
-        "Lula 3": -1.04
+        "Lula 3": -0.93
       },
-      "metodo": "Média do resultado primário do setor público consolidado em 12 meses até dezembro de cada ano (positivo = superávit).",
+      "metodo": "Média anual do resultado primário (% do PIB) em cada mandato. Para Bolsonaro e Lula 3 o painel usa os mesmos dados da versão padrão da aba (a série longa original vale para os governos anteriores).",
       "comparabilidade": "ressalva",
       "fonte": "Banco Central — NFSP do setor público consolidado, resultado primário em 12 meses (SGS 5793, sinal invertido)",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.5793/dados?formato=csv",
@@ -3038,6 +3046,9 @@
         "visao-geral",
         "macroeconomia",
         "fiscal-social-ambiental"
+      ],
+      "parcial": [
+        2026
       ]
     },
     "saldo_comercial": {
@@ -3048,55 +3059,59 @@
       "anual": {
         "1995": -4.6,
         "1996": -6.6,
-        "1997": -7.8,
+        "1997": -7.6,
         "1998": -7.6,
-        "1999": -2.1,
-        "2000": -1.8,
+        "1999": -2.3,
+        "2000": -2.0,
         "2001": 1.5,
-        "2002": 12.0,
-        "2003": 23.6,
-        "2004": 32.3,
-        "2005": 43.7,
-        "2006": 45.2,
-        "2007": 38.5,
-        "2008": 23.5,
-        "2009": 24.8,
-        "2010": 18.4,
-        "2011": 27.5,
-        "2012": 16.9,
-        "2013": 0.4,
-        "2014": -6.7,
-        "2015": 17.4,
-        "2016": 44.5,
-        "2017": 57.4,
-        "2018": 44.3,
-        "2019": 29.6,
-        "2020": 35.7,
-        "2021": 42.3,
-        "2022": 51.5,
-        "2023": 92.3,
-        "2024": 65.8,
-        "2025": 59.7
+        "2002": 11.9,
+        "2003": 23.5,
+        "2004": 31.3,
+        "2005": 43.9,
+        "2006": 45.1,
+        "2007": 37.8,
+        "2008": 21.1,
+        "2009": 22.4,
+        "2010": 17.1,
+        "2011": 25.7,
+        "2012": 14.8,
+        "2013": -9.0,
+        "2014": -9.9,
+        "2015": 13.7,
+        "2016": 40.2,
+        "2017": 56.0,
+        "2018": 46.6,
+        "2019": 35.2,
+        "2020": 50.4,
+        "2021": 61.4,
+        "2022": 61.5,
+        "2023": 98.9,
+        "2024": 74.2,
+        "2025": 68.1
       },
       "mandato": {
-        "FHC 1": -6.65,
-        "FHC 2": 2.4,
-        "Lula 1": 36.2,
-        "Lula 2": 26.3,
-        "Dilma 1": 9.53,
-        "Dilma 2": 17.4,
-        "Temer": 48.73,
-        "Bolsonaro": 39.77,
-        "Lula 3": 72.6
+        "FHC 1": -6.6,
+        "FHC 2": 2.3,
+        "Lula 1": 36.0,
+        "Lula 2": 24.6,
+        "Dilma 1": 5.4,
+        "Dilma 2": 13.7,
+        "Temer": 47.6,
+        "Bolsonaro": 52.1,
+        "Lula 3": 80.4
       },
-      "metodo": "Média dos saldos anuais da balança comercial (anos fechados).",
+      "metodo": "Média dos valores anuais (anos fechados), em dólares correntes, pelo MDIC/ComexStat (valores FOB).",
       "comparabilidade": "ajustado",
-      "fonte": "Banco Central — balança comercial do balanço de pagamentos (SGS 22707)",
-      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.22707/dados?formato=csv",
-      "nota": "Dólares correntes, sem correção pela inflação americana; o saldo depende muito do câmbio e do preço das commodities.",
+      "fonte": "MDIC/Secex — ComexStat (valores FOB); 1995–1996: Banco Central (balanço de pagamentos)",
+      "url": "https://comexstat.mdic.gov.br/pt/home",
+      "nota": "De 1997 em diante a série é a do MDIC (a mesma da versão padrão); 1995 e 1996 vêm do balanço de pagamentos do Banco Central (marcados com *), que usa outra metodologia. Dólares correntes: o valor depende de preços internacionais.",
       "abas": [
         "visao-geral",
         "comercio-exterior"
+      ],
+      "outra_metodologia": [
+        1995,
+        1996
       ]
     },
     "desmatamento": {
@@ -3195,13 +3210,13 @@
         "2016": -1371.0,
         "2017": -123.0,
         "2018": 421.0,
-        "2019": 560.0,
-        "2020": -189.0,
-        "2021": 2783.0,
-        "2022": 2015.0,
-        "2023": 1456.0,
-        "2024": 1679.0,
-        "2025": 1271.0,
+        "2019": 644.1,
+        "2020": -189.4,
+        "2021": 2782.3,
+        "2022": 2014.9,
+        "2023": 1455.3,
+        "2024": 1677.6,
+        "2025": 1279.5,
         "2026": 1134.0
       },
       "mandato": {
@@ -3211,10 +3226,10 @@
         "Dilma 1": 69.1,
         "Dilma 2": -125.7,
         "Temer": -21.5,
-        "Bolsonaro": 107.7,
-        "Lula 3": 125.9
+        "Bolsonaro": 109.4,
+        "Lula 3": 126.1
       },
-      "metodo": "Saldo mensal médio (admissões menos desligamentos) em cada mandato, em mil vagas por mês.",
+      "metodo": "Saldo de empregos formais por mês, em média, em cada mandato (saldo total dividido pelos meses). Para Bolsonaro e Lula 3 o painel usa os mesmos dados da versão padrão da aba (a série longa original vale para os governos anteriores).",
       "comparabilidade": "ressalva",
       "outra_metodologia": [
         1999,
@@ -4061,11 +4076,11 @@
         "2019": 3.95,
         "2020": 5.16,
         "2021": 5.4,
-        "2022": 5.16,
-        "2023": 4.99,
+        "2022": 5.17,
+        "2023": 5.0,
         "2024": 5.39,
         "2025": 5.59,
-        "2026": 5.15
+        "2026": 5.14
       },
       "mandato": {
         "FHC 1": 1.04,
@@ -4076,9 +4091,9 @@
         "Dilma 2": 3.45,
         "Temer": 3.4,
         "Bolsonaro": 4.92,
-        "Lula 3": 5.29
+        "Lula 3": 5.28
       },
-      "metodo": "Média da cotação de venda mensal em cada mandato (valor nominal).",
+      "metodo": "Média das médias anuais de cada mandato (Lula 3 inclui o ano parcial de 2026). Para Bolsonaro e Lula 3 o painel usa os mesmos dados da versão padrão da aba (a série longa original vale para os governos anteriores).",
       "comparabilidade": "ajustado",
       "fonte": "Banco Central — PTAX venda, média mensal (SGS 3698)",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.3698/dados?formato=csv",
@@ -4470,6 +4485,9 @@
       "mensal_unidade": "R$ por US$",
       "abas": [
         "macroeconomia"
+      ],
+      "parcial": [
+        2026
       ]
     },
     "exportacoes": {
@@ -4480,54 +4498,58 @@
       "anual": {
         "1995": 46.4,
         "1996": 47.7,
-        "1997": 52.8,
-        "1998": 51.0,
-        "1999": 48.2,
-        "2000": 55.2,
-        "2001": 58.1,
-        "2002": 60.3,
-        "2003": 72.9,
-        "2004": 96.1,
-        "2005": 118.4,
-        "2006": 137.7,
-        "2007": 160.5,
-        "2008": 198.2,
-        "2009": 153.5,
-        "2010": 201.2,
-        "2011": 255.4,
-        "2012": 242.0,
-        "2013": 241.5,
-        "2014": 224.0,
-        "2015": 189.9,
-        "2016": 184.3,
-        "2017": 218.0,
-        "2018": 239.5,
-        "2019": 225.8,
-        "2020": 210.7,
-        "2021": 284.0,
-        "2022": 340.2,
-        "2023": 343.8,
-        "2024": 339.9,
-        "2025": 350.5
+        "1997": 52.9,
+        "1998": 51.1,
+        "1999": 47.9,
+        "2000": 55.0,
+        "2001": 58.0,
+        "2002": 60.1,
+        "2003": 72.8,
+        "2004": 95.1,
+        "2005": 118.6,
+        "2006": 137.6,
+        "2007": 159.8,
+        "2008": 195.8,
+        "2009": 151.8,
+        "2010": 200.4,
+        "2011": 253.7,
+        "2012": 240.0,
+        "2013": 232.5,
+        "2014": 220.9,
+        "2015": 186.8,
+        "2016": 179.5,
+        "2017": 215.0,
+        "2018": 231.9,
+        "2019": 221.1,
+        "2020": 209.2,
+        "2021": 280.8,
+        "2022": 334.1,
+        "2023": 339.7,
+        "2024": 337.0,
+        "2025": 348.3
       },
       "mandato": {
-        "FHC 1": 49.48,
-        "FHC 2": 55.45,
-        "Lula 1": 106.28,
-        "Lula 2": 178.35,
-        "Dilma 1": 240.72,
-        "Dilma 2": 189.9,
-        "Temer": 213.93,
-        "Bolsonaro": 265.18,
-        "Lula 3": 344.73
+        "FHC 1": 49.5,
+        "FHC 2": 55.2,
+        "Lula 1": 106.0,
+        "Lula 2": 177.0,
+        "Dilma 1": 236.8,
+        "Dilma 2": 186.8,
+        "Temer": 208.8,
+        "Bolsonaro": 261.3,
+        "Lula 3": 341.7
       },
-      "metodo": "Média dos valores anuais (anos fechados), em dólares correntes.",
+      "metodo": "Média dos valores anuais (anos fechados), em dólares correntes, pelo MDIC/ComexStat (valores FOB).",
       "comparabilidade": "ajustado",
-      "fonte": "Banco Central — balanço de pagamentos (SGS 22708)",
-      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.22708/dados?formato=csv",
-      "nota": "Dólares correntes; o valor depende de preços internacionais. Importação maior não é necessariamente ruim (reflete consumo e investimento).",
+      "fonte": "MDIC/Secex — ComexStat (valores FOB); 1995–1996: Banco Central (balanço de pagamentos)",
+      "url": "https://comexstat.mdic.gov.br/pt/home",
+      "nota": "De 1997 em diante a série é a do MDIC (a mesma da versão padrão); 1995 e 1996 vêm do balanço de pagamentos do Banco Central (marcados com *), que usa outra metodologia. Dólares correntes: o valor depende de preços internacionais.",
       "abas": [
         "comercio-exterior"
+      ],
+      "outra_metodologia": [
+        1995,
+        1996
       ]
     },
     "importacoes": {
@@ -4550,42 +4572,46 @@
         "2006": 92.5,
         "2007": 122.0,
         "2008": 174.7,
-        "2009": 128.7,
-        "2010": 182.8,
-        "2011": 227.9,
-        "2012": 225.1,
-        "2013": 241.1,
-        "2014": 230.7,
-        "2015": 172.5,
-        "2016": 139.7,
-        "2017": 160.6,
-        "2018": 195.2,
-        "2019": 196.2,
-        "2020": 175.0,
-        "2021": 241.7,
-        "2022": 288.7,
-        "2023": 251.5,
-        "2024": 274.0,
-        "2025": 290.8
+        "2009": 129.4,
+        "2010": 183.3,
+        "2011": 228.0,
+        "2012": 225.2,
+        "2013": 241.5,
+        "2014": 230.8,
+        "2015": 173.1,
+        "2016": 139.3,
+        "2017": 159.0,
+        "2018": 185.3,
+        "2019": 185.9,
+        "2020": 158.8,
+        "2021": 219.4,
+        "2022": 272.6,
+        "2023": 240.8,
+        "2024": 262.9,
+        "2025": 280.2
       },
       "mandato": {
-        "FHC 1": 56.12,
-        "FHC 2": 53.05,
-        "Lula 1": 70.08,
-        "Lula 2": 152.05,
-        "Dilma 1": 231.2,
-        "Dilma 2": 172.5,
-        "Temer": 165.17,
-        "Bolsonaro": 225.4,
-        "Lula 3": 272.1
+        "FHC 1": 56.1,
+        "FHC 2": 53.0,
+        "Lula 1": 70.1,
+        "Lula 2": 152.3,
+        "Dilma 1": 231.4,
+        "Dilma 2": 173.1,
+        "Temer": 161.2,
+        "Bolsonaro": 209.2,
+        "Lula 3": 261.3
       },
-      "metodo": "Média dos valores anuais (anos fechados), em dólares correntes.",
+      "metodo": "Média dos valores anuais (anos fechados), em dólares correntes, pelo MDIC/ComexStat (valores FOB).",
       "comparabilidade": "ajustado",
-      "fonte": "Banco Central — balanço de pagamentos (SGS 22709)",
-      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.22709/dados?formato=csv",
-      "nota": "Dólares correntes; o valor depende de preços internacionais. Importação maior não é necessariamente ruim (reflete consumo e investimento).",
+      "fonte": "MDIC/Secex — ComexStat (valores FOB); 1995–1996: Banco Central (balanço de pagamentos)",
+      "url": "https://comexstat.mdic.gov.br/pt/home",
+      "nota": "De 1997 em diante a série é a do MDIC (a mesma da versão padrão); 1995 e 1996 vêm do balanço de pagamentos do Banco Central (marcados com *), que usa outra metodologia. Dólares correntes: o valor depende de preços internacionais.",
       "abas": [
         "comercio-exterior"
+      ],
+      "outra_metodologia": [
+        1995,
+        1996
       ]
     },
     "safra": {
@@ -4636,13 +4662,14 @@
         "2016": 186.9,
         "2017": 238.6,
         "2018": 231.7,
-        "2019": 246.8,
-        "2020": 258.1,
-        "2021": 257.5,
-        "2022": 273.6,
-        "2023": 320.9,
-        "2024": 297.9,
-        "2025": 354.4
+        "2019": 246.9,
+        "2020": 257.0,
+        "2021": 255.5,
+        "2022": 271.4,
+        "2023": 324.4,
+        "2024": 298.4,
+        "2025": 350.2,
+        "2026": 361.7
       },
       "mandato": {
         "FHC 1": 77.42,
@@ -4652,17 +4679,20 @@
         "Dilma 1": 177.85,
         "Dilma 2": 208.6,
         "Temer": 219.07,
-        "Bolsonaro": 259.0,
-        "Lula 3": 324.4
+        "Bolsonaro": 257.7,
+        "Lula 3": 333.67
       },
-      "metodo": "Média da produção de grãos de cada mandato; cada safra é atribuída ao ano em que termina (2024/25 = 2025).",
+      "metodo": "Média da produção de grãos de cada mandato; cada safra é atribuída ao ano em que termina (2024/25 = 2025). Para Bolsonaro e Lula 3 o painel usa os mesmos dados da versão padrão da aba (a série longa original vale para os governos anteriores).",
       "comparabilidade": "ajustado",
       "fonte": "CONAB — séries históricas de grãos",
       "url": "https://www.gov.br/conab/pt-br/atuacao/informacoes-agropecuarias/safras/series-historicas",
-      "nota": "Produção cresce com área e tecnologia ao longo de décadas, então mandatos mais recentes tendem a ter safras maiores. Clima pesa mais que política no curto prazo.",
+      "nota": "Produção cresce com área e tecnologia ao longo de décadas. Lula 3 inclui a estimativa da safra 2025/26 (2026).",
       "url_extra": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie%28SERCODIGO=%27DEPAE_SAFRA%27%29",
       "abas": [
         "agro"
+      ],
+      "estimativa": [
+        2026
       ]
     },
     "industria": {
