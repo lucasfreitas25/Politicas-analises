@@ -63,7 +63,7 @@ def render_impostos(govs, chave="imp"):
     fig = go.Figure(go.Bar(x=resumo["Governo"], y=resumo["Criados"], marker_color=[COR_MANDATO[g] for g in resumo["Governo"]],
                            text=resumo["Criados"], textposition="outside", textfont=dict(color="#ffffff"),
                            customdata=[PARTIDO[g] + " · " + PERIODO[g] for g in resumo["Governo"]], hovertemplate="<b>%{x}</b> (%{customdata})<br>%{y} tributos ou regimes criados<extra></extra>"))
-    apply_plotly_theme(fig, title="Tributos e regimes de tributação criados em cada governo", height=340)
+    apply_plotly_theme(fig, title="Tributos e regimes de tributação criados em cada governo (nº)", height=340)
     fig.update_layout(hovermode="closest", showlegend=False)
     st.plotly_chart(fig, width="stretch")
     st.caption("Conta tributos e regimes de tributação novos. Mudança de alíquota de tributo que já existia (aumento ou redução por decreto ou lei) aparece em outra coluna e não entra aqui.")
@@ -74,7 +74,7 @@ def render_impostos(govs, chave="imp"):
                                                               "Extinto ou revogado": "Extintos ou revogados", "Barrado ou revertido": "Barrados ou revertidos"}[c]],
                              name=c, marker_color=cor))
     cat.update_layout(barmode="stack")
-    apply_plotly_theme(cat, title="Situação das medidas de cada governo (criações, aumentos, reduções e extinções)", height=360)
+    apply_plotly_theme(cat, title="Situação das medidas de cada governo (nº de medidas)", height=360)
     cat.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.2, x=0.5, xanchor="center", yanchor="top"))
     st.plotly_chart(cat, width="stretch")
     from modules.ui_components import mostrar_tabela

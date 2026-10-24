@@ -77,7 +77,7 @@ def render_tab_industry():
             )
 
         fig_pim.update_xaxes(nticks=12, tickangle=-25)
-        apply_plotly_theme(fig_pim, title=f"Produção da Indústria Geral — {var_sel}")
+        apply_plotly_theme(fig_pim, title=f"Produção da Indústria Geral — {var_sel} (índice, 2022 = 100)")
         st.plotly_chart(fig_pim, width="stretch")
 
     # 2. Comparativo Setorial: Transformação vs Extrativa
@@ -101,7 +101,7 @@ def render_tab_industry():
                 textposition="outside",
                 textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif")
             ))
-            apply_plotly_theme(fig_ext, title="Média: Indústrias Extrativas (Petróleo/Minério)")
+            apply_plotly_theme(fig_ext, title="Média: Indústrias Extrativas (Petróleo/Minério), índice 2022 = 100")
             st.plotly_chart(fig_ext, width="stretch")
 
     with col_i2:
@@ -119,7 +119,7 @@ def render_tab_industry():
                 textposition="outside",
                 textfont=dict(color="#ffffff", size=12, family="Plus Jakarta Sans, sans-serif")
             ))
-            apply_plotly_theme(fig_transf, title="Média: Indústrias de Transformação (Manufatura)")
+            apply_plotly_theme(fig_transf, title="Média: Indústrias de Transformação (Manufatura), índice 2022 = 100")
             st.plotly_chart(fig_transf, width="stretch")
 
     # Box Explicativo da Indústria

@@ -134,7 +134,7 @@ def render_tab_social_inclusion():
             fig = go.Figure(go.Bar(x=df_mvi["ano"].astype(str), y=df_mvi["feminicidios"],
                                    marker_color=[gov_color(g) for g in df_mvi["governo"]],
                                    text=df_mvi["feminicidios"].apply(lambda v: fmt_br(v, 0)), textposition="outside"))
-            apply_plotly_theme(fig, title="Feminicídios registrados por ano", height=380)
+            apply_plotly_theme(fig, title="Feminicídios registrados por ano (nº de casos)", height=380)
             st.plotly_chart(fig, width="stretch")
             render_source("FBSP — Anuários Brasileiros de Segurança Pública")
     with col_t:
@@ -143,7 +143,7 @@ def render_tab_social_inclusion():
             fig = go.Figure(go.Bar(x=trans["ano"].astype(str), y=trans["assassinatos"],
                                    marker_color=[gov_color(g) for g in trans["governo"]],
                                    text=trans["assassinatos"].apply(lambda v: "s/ dado" if pd.isna(v) else fmt_br(v, 0)), textposition="outside"))
-            apply_plotly_theme(fig, title="Assassinatos de pessoas trans e travestis", height=380)
+            apply_plotly_theme(fig, title="Assassinatos de pessoas trans e travestis (nº de casos por ano)", height=380)
             st.plotly_chart(fig, width="stretch")
             render_source(curado["pessoas_trans"]["fonte"] + ". " + curado["pessoas_trans"]["nota"], curado["pessoas_trans"]["url"])
 

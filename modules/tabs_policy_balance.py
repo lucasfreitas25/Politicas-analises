@@ -108,7 +108,7 @@ def _aba_por_area(f, areas, layout, area_sel, busca, govs):
             fig.add_trace(go.Bar(y=contagem.index, x=contagem[gov], name=_label(gov), orientation="h", marker_color=_cor(gov),
                                  hovertemplate="%{y}: %{x} políticas<extra>" + gov + "</extra>"))
     fig.update_layout(barmode="group")
-    apply_plotly_theme(fig, title=f"Políticas mapeadas por área ({len(f)} no filtro atual)", height=max(320, (30 if len(govs) <= 2 else 14 * len(govs)) * len(contagem) + 140))
+    apply_plotly_theme(fig, title=f"Políticas mapeadas por área (nº de políticas; {len(f)} no filtro atual)", height=max(320, (30 if len(govs) <= 2 else 14 * len(govs)) * len(contagem) + 140))
     fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.15, x=0.5, xanchor="center", yanchor="top"))
     fig.update_yaxes(autorange="reversed")
     st.plotly_chart(fig, width="stretch")
@@ -187,7 +187,7 @@ def _aba_repercussao(f, govs):
                 fig.add_trace(go.Bar(x=[_label(g) for g in tab.index], y=tab[nivel], name=REPERC_ROTULO[nivel], marker_color=REPERC_COR[nivel],
                                      text=tab[nivel], textposition="inside"))
         fig.update_layout(barmode="stack")
-        apply_plotly_theme(fig, title="Políticas com repercussão medida em pesquisa", height=340)
+        apply_plotly_theme(fig, title="Políticas com repercussão medida em pesquisa (nº de políticas)", height=340)
         fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.2, x=0.5, xanchor="center", yanchor="top"))
         st.plotly_chart(fig, width="stretch")
         for nivel in ("Boa", "Dividida", "Baixa"):

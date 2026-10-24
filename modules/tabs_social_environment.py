@@ -136,7 +136,7 @@ def render_tab_social_environment():
                                      mode="lines+markers+text", line=dict(color="#F59E0B", width=3),
                                      text=df_pob["extrema_pobreza_pct"].apply(lambda v: "" if pd.isna(v) else f"{v:.1f}%".replace(".", ",")),
                                      textposition="top center"))
-            apply_plotly_theme(fig, title="Proporção da população abaixo das linhas do Banco Mundial", height=420)
+            apply_plotly_theme(fig, title="Proporção da população abaixo das linhas do Banco Mundial (% da população)", height=420)
             st.plotly_chart(fig, width="stretch")
             render_source(extras["pobreza"]["fonte"] + ". " + extras["pobreza"]["nota"], extras["pobreza"]["url"])
     with col_g:
@@ -149,7 +149,7 @@ def render_tab_social_environment():
                 text=d["gini"].apply(lambda v: f"{v:.3f}".replace(".", ",")), textposition="top center",
                 hovertemplate="<b>%{x}</b><br>Gini: %{y:.3f}<extra></extra>",
             ))
-            apply_plotly_theme(fig, title="Índice de Gini do rendimento domiciliar per capita", height=420)
+            apply_plotly_theme(fig, title="Índice de Gini do rendimento domiciliar per capita (0 a 1)", height=420)
             st.plotly_chart(fig, width="stretch")
             render_source("IBGE — PNAD Contínua, SIDRA 7435", "https://sidra.ibge.gov.br/tabela/7435")
 

@@ -149,7 +149,7 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
             textfont=dict(color="#ffffff", size=15), hovertemplate=f"{rotulo[g]}: %{{x}} indicadores<extra></extra>",
         ))
     fig.update_layout(barmode="stack")
-    apply_plotly_theme(fig, title="Placar geral: em quantos indicadores cada governo está melhor", height=200)
+    apply_plotly_theme(fig, title="Placar geral: em quantos indicadores cada governo está melhor (nº de indicadores)", height=200)
     fig.update_layout(hovermode="closest", margin=dict(l=20, r=20, t=75, b=30), legend=dict(orientation="h", y=1.18, x=0.5, xanchor="center"))
     fig.update_layout(height=230)
     fig.update_xaxes(range=[0, total], showgrid=False, zeroline=False, showticklabels=False)
@@ -172,7 +172,7 @@ def _grafico_placar(indicadores, ctx, nota_periodos):
             hovertemplate="<b>%{y}</b><br>" + rotulo[g] + ": %{x}<br>%{customdata}<extra></extra>",
         ))
     fig.update_layout(barmode="stack")
-    apply_plotly_theme(fig, title="Por categoria: quantos indicadores cada governo leva", height=max(380, 30 * len(cats) + 130))
+    apply_plotly_theme(fig, title="Por categoria: quantos indicadores cada governo leva (nº de indicadores)", height=max(380, 30 * len(cats) + 130))
     fig.update_layout(hovermode="closest", margin=dict(l=20, r=20, t=70, b=40))
     fig.update_xaxes(dtick=1, title="Número de indicadores", zeroline=False)
     fig.update_yaxes(autorange="reversed")

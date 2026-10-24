@@ -76,8 +76,26 @@ def _classe(rank, n):
     return f"hist-c{1 + round(4 * rank / (n - 1))}"
 
 
+def com_dado(ind, governos):
+    """Governos da lista que têm valor neste indicador."""
+    return [g for g in governos if ind["mandato"].get(g) is not None]
+
+
+def comparavel(ind, governos):
+    """Há o que comparar: pelo menos dois governos com dado (ou o único escolhido, se só um estiver na lista)."""
+    return len(com_dado(ind, governos)) >= min(2, len(governos))
+
+
+def _filtra_quadro(indicadores, governos):
+    """Tira do quadro o que não dá para comparar: indicadores com dado de menos de dois governos e governos sem dado em nenhum indicador."""
+    inds = [i for i in indicadores if comparavel(i, governos)]
+    govs = [g for g in governos if any(i["mandato"].get(g) is not None for i in inds)]
+    return inds, (govs or list(governos))
+
+
 def quadro_cartoes_html(indicadores, governos):
     """Versão para celular do quadro: um cartão por indicador, com um 'selo' por governo (cor = posição entre os mostrados)."""
+    indicadores, governos = _filtra_quadro(indicadores, governos)
     saida, eixo_atual = [], None
     for ind in sorted(indicadores, key=lambda i: ORDEM_EIXO.index(i["eixo"]) if i["eixo"] in ORDEM_EIXO else 9):
         if ind["eixo"] != eixo_atual:
@@ -92,7 +110,6 @@ def quadro_cartoes_html(indicadores, governos):
         for g in governos:
             cor = COR_MANDATO.get(g, "#64748b")
             if g not in pos:
-                chips.append(f'<div class="chip-gov hist-vazio" style="border-left-color:{cor};"><span>{html.escape(g)}</span><b>Sem dado</b></div>')
                 continue
             marca = ("*" if g in outra else "") + ("†" if g in parcial else "")
             classe = "hist-c0" if sem_lado else _classe(pos[g], len(com))
@@ -116,6 +133,7 @@ def quadro_html(indicadores, governos, destaque=None):
     from modules.ui_components import eh_celular
     if eh_celular():
         return quadro_cartoes_html(indicadores, governos)
+    indicadores, governos = _filtra_quadro(indicadores, governos)
     linhas, eixo_atual = [], None
     for ind in sorted(indicadores, key=lambda i: ORDEM_EIXO.index(i["eixo"]) if i["eixo"] in ORDEM_EIXO else 9):
         if ind["eixo"] != eixo_atual:
@@ -179,7 +197,7 @@ TITULOS = {
 ABAS_COMPARAVEIS = set(TITULOS)
 
 # Molde fixo de cada aba: as mesmas seções numeradas da versão padrão (Bolsonaro x Lula 3).
-# Cada seção: (título, [chaves de historico.json], área de programas ou None). Lista vazia = não há série longa: a seção aparece com "Sem dado".
+# Cada seção: (título, [chaves de historico.json], área de programas ou None). Lista vazia = não há série longa: a seção não aparece.
 PROG = "programas"
 MOLDE = {
     "trabalho": [
@@ -343,6 +361,14 @@ def render_seletor():
     return a, b, todos
 
 
+def governos_da_pagina():
+    """Governos escolhidos no seletor da página atual (A e B, ou os marcados no modo Todos)."""
+    a = st.session_state.get("gov_a", PADRAO[0])
+    b = st.session_state.get("gov_b", PADRAO[1])
+    todos = st.session_state.get(f"gov_todos_{st.session_state.get('_pagina_atual', '')}", False)
+    return governos_ativos(todos, a, b)
+
+
 def governos_ativos(todos, a, b):
     """Governos que a página deve mostrar: A e B, ou, no modo Todos, os que estão marcados no filtro (ao menos um)."""
     governos = nomes_governos()
@@ -406,6 +432,7 @@ def _grafico_mensal(d, ind, chave, governos_sel):
             customdata=[ym for ym, _ in pontos], hovertemplate="Mês %{x} (%{customdata}): %{y:.2f}<extra>" + g + "</extra>"))
     titulo = ind["nome"].split(" (")[0]
     apply_plotly_theme(fig, title=f"{titulo} — mês a mês desde a posse ({ind.get('mensal_unidade', '')})", height=420)
+    fig.update_yaxes(title_text=ind.get("mensal_unidade", ""))
     fig.update_xaxes(title="Meses de mandato")
     st.plotly_chart(fig, width="stretch", key=f"par_mensal_{chave}")
 
@@ -440,7 +467,8 @@ def _grafico_anual_par(ind, chave, governos_sel):
             x=[str(x) for x in sub.index], y=sub.values, name=g,
             marker=dict(color=COR_MANDATO.get(g), pattern=dict(shape=["/" if x in outra or x in parcial else "" for x in sub.index], fgcolor="rgba(15,23,42,0.55)")),
             text=rot if len(anual) <= (8 if eh_celular() else 16) else None, textposition="outside", hovertemplate="%{x}: %{y}<extra>" + g + "</extra>"))
-    apply_plotly_theme(fig, title=f"{ind['nome'].split(' (')[0]} — por ano", height=420)
+    apply_plotly_theme(fig, title=f"{ind['nome'].split(' (')[0]} — por ano ({ind['unidade']})", height=420)
+    fig.update_yaxes(title_text=ind["unidade"])
     fig.update_layout(hovermode="closest", bargap=0.25)
     fig.update_xaxes(type="category", categoryorder="category ascending")
     st.plotly_chart(fig, width="stretch", key=f"par_anual_{chave}")
@@ -452,8 +480,21 @@ def _fonte(ind):
     render_source(html.escape(ind["fonte"]) + f". Comparabilidade: {simbolo} {html.escape(desc)}" + extra, ind["url"])
 
 
+def _cat_disponivel(bloco, sel):
+    """Itens do bloco com dado de pelo menos dois dos governos escolhidos, e os governos que aparecem em algum deles."""
+    cats = bloco["categorias"]
+    minimo = min(2, len(sel))
+    nomes = [n for n in cats if sum(1 for g in sel if cats[n].get(g) is not None) >= minimo]
+    govs = [g for g in sel if any(cats[n].get(g) is not None for n in nomes)]
+    return nomes, govs
+
+
 def _grafico_categorias(bloco, sel, chave):
-    """Barras agrupadas (até 3 governos) ou mapa de calor (mais governos): um valor por categoria e por governo."""
+    """Barras agrupadas (até 3 governos) ou mapa de calor (mais governos): um valor por categoria e por governo.
+    Itens e governos sem dado comparável não aparecem."""
+    nomes_ok, sel = _cat_disponivel(bloco, sel)
+    if not nomes_ok or not sel:
+        return False
     cats = bloco["categorias"]
     unidade = bloco.get("unidade", "")
     c1, c2 = st.columns([1, 1.6])
@@ -462,32 +503,34 @@ def _grafico_categorias(bloco, sel, chave):
             modo = st.segmented_control("Mostrar", ["Acumulado no mandato", "Média ao ano"], default="Acumulado no mandato", key=f"cat_modo_{chave}") or "Acumulado no mandato"
         if modo == "Média ao ano":
             cats, unidade = bloco["categorias_ao_ano"], "% ao ano"
-    nomes = list(cats)
+    nomes = [n for n in nomes_ok if n in cats]
     grupos = bloco.get("grupos_de_itens")
     if grupos:
         with c2:
-            g = st.segmented_control("Itens", list(grupos) + ["Todos"], default=list(grupos)[0], key=f"cat_grp_{chave}") or list(grupos)[0]
+            opcoes = [g for g in grupos if any(n in grupos[g] for n in nomes)]
+            g = st.segmented_control("Itens", opcoes + ["Todos"], default=opcoes[0], key=f"cat_grp_{chave}") or opcoes[0]
         if g != "Todos":
             nomes = [n for n in nomes if n in grupos[g]]
+    if not nomes:
+        return False
     from modules.ui_components import eh_celular, quebrar
     celular = eh_celular()
+    texto = lambda v: fmt_br(v) if v is not None else ""
     if celular and len(sel) > 3:
         # muitos governos no celular: um item por vez, com uma barra por governo (o mapa de cores não cabe na tela)
         item = st.selectbox("Escolha o item", nomes, key=f"cat_item_{chave}")
-        vals = [cats[item].get(g) for g in sel]
-        fig = go.Figure(go.Bar(y=sel, x=[v if v is not None else 0 for v in vals], orientation="h", marker_color=[COR_MANDATO.get(g) for g in sel],
-                               text=[fmt_br(v) if v is not None else "Sem dado" for v in vals], textposition="outside", cliponaxis=False,
+        govs_item = [g for g in sel if cats[item].get(g) is not None]
+        vals = [cats[item][g] for g in govs_item]
+        fig = go.Figure(go.Bar(y=govs_item, x=vals, orientation="h", marker_color=[COR_MANDATO.get(g) for g in govs_item],
+                               text=[texto(v) for v in vals], textposition="outside", cliponaxis=False,
                                textfont=dict(size=12, color="#ffffff"), hovertemplate="%{y}: %{text}<extra></extra>"))
-        apply_plotly_theme(fig, title=f"{item} ({unidade})", height=44 * len(sel) + 130)
+        apply_plotly_theme(fig, title=f"{item} ({unidade})", height=44 * len(govs_item) + 130)
         fig.update_yaxes(autorange="reversed", tickfont=dict(size=12, color="#f8fafc"))
         fig.update_layout(showlegend=False, hovermode="closest", margin=dict(l=8, r=40, t=70, b=20))
         st.plotly_chart(fig, width="stretch", key=f"cat_{chave}")
-        faltam = [g for g in sel if cats[item].get(g) is None]
-        if faltam:
-            st.caption("Sem dado: " + ", ".join(faltam) + ".")
         st.caption(bloco.get("metodo", "") + " " + bloco.get("nota", ""))
         render_source(html.escape(bloco["fonte"]), bloco["url"])
-        return
+        return True
     ref = next((x for x in reversed(sel) if any(cats[n].get(x) is not None for n in nomes)), sel[-1])
     nomes = sorted(nomes, key=lambda n: -(cats[n].get(ref) if cats[n].get(ref) is not None else -1e9))
     rotulo = (lambda n: quebrar(n, 22)) if celular else (lambda n: n)
@@ -496,8 +539,8 @@ def _grafico_categorias(bloco, sel, chave):
         for gov in sel:
             vals = [cats[n].get(gov) for n in nomes]
             fig.add_trace(go.Bar(
-                y=[rotulo(n) for n in nomes], x=[v if v is not None else 0 for v in vals], orientation="h", name=gov, marker_color=COR_MANDATO.get(gov),
-                text=[fmt_br(v) if v is not None else "Sem dado" for v in vals], textposition="outside", cliponaxis=False,
+                y=[rotulo(n) for n in nomes], x=vals, orientation="h", name=gov, marker_color=COR_MANDATO.get(gov),
+                text=[texto(v) for v in vals], textposition="outside", cliponaxis=False,
                 textfont=dict(size=11 if celular else 12),
                 hovertemplate="%{y}: %{text}<extra>" + gov + "</extra>"))
         fig.update_layout(barmode="group", bargap=0.25)
@@ -509,16 +552,12 @@ def _grafico_categorias(bloco, sel, chave):
         fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.08, x=0.5, xanchor="center", yanchor="top"))
     else:
         z = [[cats[n].get(gov) for gov in sel] for n in nomes]
-        fig = go.Figure(go.Heatmap(z=z, x=sel, y=nomes, colorscale="RdYlGn" + ("_r" if bloco.get("maior_melhor") is False else ""),
-                                   text=[[fmt_br(v) if v is not None else "Sem dado" for v in linha] for linha in z], texttemplate="%{text}",
+        fig = go.Figure(go.Heatmap(z=z, x=sel, y=[rotulo(n) for n in nomes], colorscale="RdYlGn" + ("_r" if bloco.get("maior_melhor") is False else ""),
+                                   text=[[texto(v) for v in linha] for linha in z], texttemplate="%{text}",
                                    hovertemplate="%{y} · %{x}: %{text}<extra></extra>", showscale=False, xgap=2, ygap=2))
         apply_plotly_theme(fig, title=f"{bloco['nome'].split(' (')[0]} ({unidade})", height=max(380, 30 * len(nomes) + 140))
         fig.update_yaxes(autorange="reversed")
     st.plotly_chart(fig, width="stretch", key=f"cat_{chave}")
-    faltas = {gov: [n for n in nomes if cats[n].get(gov) is None] for gov in sel}
-    faltas = {gov: l for gov, l in faltas.items() if l}
-    if faltas:
-        st.caption("Sem dado: " + "; ".join(f"{gov} ({', '.join(l) if len(l) <= 4 else f'{len(l)} itens'})" for gov, l in faltas.items()) + ".")
     parcial = {n: p for n, p in bloco.get("parcial", {}).items() if n in nomes}
     if parcial:
         trechos = sorted({f"{gov}: {t}" for p in parcial.values() for gov, t in p.items() if gov in sel})
@@ -526,6 +565,7 @@ def _grafico_categorias(bloco, sel, chave):
             st.caption("Período parcial: " + "; ".join(trechos) + ".")
     st.caption(bloco.get("metodo", "") + " " + bloco.get("nota", ""))
     render_source(html.escape(bloco["fonte"]), bloco["url"])
+    return True
 
 
 def cards_padrao(aba, a=PADRAO[0], b=PADRAO[1]):
@@ -542,21 +582,14 @@ def cards_padrao(aba, a=PADRAO[0], b=PADRAO[1]):
             _stat_par({**d["indicadores"][k], "chave": k}, a, b)
 
 
-def _sem_dado(titulo_secao, sel, motivo=None):
-    """Seção sem série longa: mesmo lugar e mesmo título da versão padrão, com 'Sem dado' para cada governo escolhido."""
-    chips = "".join(f'<span style="display:inline-block;margin:2px 6px 2px 0;padding:1px 9px;border-radius:999px;border:1px solid #64748b;font-size:0.78rem;">{html.escape(g)}: <b>Sem dado</b></span>' for g in sel)
-    st.markdown(
-        f'<div class="info-box"><b>Sem dado para comparar estes governos.</b> {chips}<br/>'
-        f'{html.escape(motivo or "Esta medida não tem série longa e comparável nas fontes abertas consultadas, então não dá para colocar os governos escolhidos lado a lado. ")}'
-        'Para Bolsonaro e Lula 3, quando existe, ela aparece na versão padrão da aba (botão "Voltar para Bolsonaro x Lula 3").</div>',
-        unsafe_allow_html=True)
-
-
 def _visao_geral_todos(d, sel, titulo):
     """Visão Geral para vários governos: quadro (ou cartões, no celular) com todos os indicadores e um gráfico ano a ano à escolha."""
     from modules.tabs_overview import CONTEXTO
     from modules.ui_components import PARTIDO, PERIODO
-    inds = [{**v, "chave": k} for k, v in d["indicadores"].items() if "visao-geral" in v.get("abas", [])]
+    inds = [{**v, "chave": k} for k, v in d["indicadores"].items() if "visao-geral" in v.get("abas", []) and comparavel(v, sel)]
+    if not inds:
+        st.info("Nenhum indicador tem dado comparável para os governos escolhidos.")
+        return
     st.markdown(quadro_html(inds, sel), unsafe_allow_html=True)
     st.caption(LEGENDA)
     st.markdown("---")
@@ -565,29 +598,27 @@ def _visao_geral_todos(d, sel, titulo):
     ind = {**d["indicadores"][k], "chave": k}
     st.subheader(f"1. {ind['nome'].split(' (')[0]}")
     st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
-    if _cobertura_mensal(d, ind, sel):
-        _grafico_mensal(d, ind, k, sel)
+    sel_ind = com_dado(ind, sel)
+    if _cobertura_mensal(d, ind, sel_ind):
+        _grafico_mensal(d, ind, k, sel_ind)
         if ind.get("mensal_tipo") == "acumulado":
-            _grafico_anual_par(ind, k, sel)
+            _grafico_anual_par(ind, k, sel_ind)
     else:
-        _grafico_anual_par(ind, k, sel)
-    faltam = [g for g in sel if ind["mandato"].get(g) is None]
-    if faltam:
-        st.caption("Sem dado para: " + ", ".join(faltam) + ".")
+        _grafico_anual_par(ind, k, sel_ind)
     _fonte(ind)
     linhas = "".join(f'• <b>Governo {html.escape(g)} ({PARTIDO[g]}, {PERIODO[g]}):</b> {html.escape(CONTEXTO[g])}<br/>' for g in sel)
     st.markdown(
         f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
         '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
-        'estoques viram variação no mandato). "Sem dado*" = não há série comparável; número com * = dado de outra metodologia; † = ano parcial. '
+        'estoques viram variação no mandato). Indicadores sem dado de pelo menos dois dos governos escolhidos ficam ocultos; número com * = dado de outra metodologia; † = ano parcial. '
         'Partes da aba que só existem para Bolsonaro x Lula 3 (políticas, notícias, detalhamentos) aparecem ao voltar ao padrão.</span></div>',
         unsafe_allow_html=True)
 
 
 def render_aba_comparada(aba, a, b, todos):
     """Refaz a aba para outro par de governos (ou todos) no mesmo molde da aba Bolsonaro x Lula:
-    cabeçalho, cartões 'A ➔ B', as mesmas seções numeradas (com gráfico, 'Sem dado' ou programas) e caixa de contexto no fim.
-    Sempre devolve True: seção sem série mostra 'Sem dado' em vez de voltar ao padrão."""
+    cabeçalho, cartões 'A ➔ B', as mesmas seções numeradas (com gráfico ou programas) e caixa de contexto no fim.
+    Seção ou indicador sem dado de pelo menos dois dos governos escolhidos não aparece. Sempre devolve True."""
     from modules.ui_components import render_section_header, css_governos, PARTIDO, PERIODO
     d = base()
     if a == b and not todos:
@@ -608,11 +639,34 @@ def render_aba_comparada(aba, a, b, todos):
     extras = [k for k in chaves if k not in usados]
     if extras:
         molde = molde + [("Outros indicadores desta aba", extras, None)]
-    todas_chaves = list(dict.fromkeys(k for _, ks, _ in molde for k in ks if not k.startswith("@") and k in d["indicadores"]))
     blocos = categorias()
-    inds = [{**d["indicadores"][k], "chave": k} for k in todas_chaves]
+    from modules.programas_ui import render_programas, programas_unificados
+    programas, _ = programas_unificados()
 
-    # 1. Cartões (ou o quadro com todos os mandatos)
+    # O que dá para comparar: indicador com dado de pelo menos dois dos governos escolhidos; seção sem nenhum item assim fica de fora.
+    secoes, ocultas = [], []
+    for titulo_secao, ks, area_prog in molde:
+        if area_prog:
+            govs_prog = [g for g in sel if any(p["governo"] == g and p["area"] == area_prog for p in programas)]
+            if govs_prog:
+                secoes.append((titulo_secao, [], area_prog, govs_prog))
+            else:
+                ocultas.append(titulo_secao)
+            continue
+        itens = []
+        for k in ks:
+            if k.startswith("@"):
+                if k[1:] in blocos and _cat_disponivel(blocos[k[1:]], sel)[0]:
+                    itens.append(("cat", blocos[k[1:]]))
+            elif k in d["indicadores"] and comparavel(d["indicadores"][k], sel):
+                itens.append(("ind", {**d["indicadores"][k], "chave": k}))
+        if itens:
+            secoes.append((titulo_secao, itens, None, sel))
+        else:
+            ocultas.append(titulo_secao)
+
+    # 1. Cartões (ou o quadro com todos os mandatos): só indicadores que têm dado dos dois lados
+    inds = list({x["chave"]: x for _, itens, _, _ in secoes for t, x in itens if t == "ind"}.values())
     if inds:
         if todos:
             st.markdown(quadro_html(inds, governos), unsafe_allow_html=True)
@@ -624,19 +678,12 @@ def render_aba_comparada(aba, a, b, todos):
                     _stat_par(ind, a, b)
 
     # 2. Seções numeradas, na mesma ordem da versão padrão
-    from modules.programas_ui import render_programas
-    for n, (titulo_secao, ks, area_prog) in enumerate(molde, start=1):
+    for n, (titulo_secao, itens, area_prog, govs_secao) in enumerate(secoes, start=1):
         st.markdown("---")
         st.subheader(f"{n}. {titulo_secao}")
         if area_prog:
-            render_programas(area_prog, sel, titulo=None, chave=f"cmp_{aba}_{n}")
+            render_programas(area_prog, govs_secao, titulo=None, chave=f"cmp_{aba}_{n}")
             continue
-        itens = [("cat", blocos[k[1:]]) if k.startswith("@") and k[1:] in blocos else ("ind", {**d["indicadores"][k], "chave": k})
-                 for k in ks if (k.startswith("@") and k[1:] in blocos) or k in d["indicadores"]]
-        if not itens:
-            _sem_dado(titulo_secao, sel)
-            continue
-        series = [x for t, x in itens if t == "ind"]
         for tipo, x in itens:
             if tipo == "cat":
                 if len(itens) > 1:
@@ -644,19 +691,21 @@ def render_aba_comparada(aba, a, b, todos):
                 _grafico_categorias(x, sel, f"{aba}_{n}_{x['nome'][:20]}")
                 continue
             ind = x
+            sel_ind = com_dado(ind, sel)
             if len(itens) > 1:
                 st.markdown(f"**{ind['nome'].split(' (')[0]}**")
             st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
-            if _cobertura_mensal(d, ind, sel):
-                _grafico_mensal(d, ind, ind["chave"], sel)
+            if _cobertura_mensal(d, ind, sel_ind):
+                _grafico_mensal(d, ind, ind["chave"], sel_ind)
                 if ind.get("mensal_tipo") == "acumulado":
-                    _grafico_anual_par(ind, ind["chave"], sel)
+                    _grafico_anual_par(ind, ind["chave"], sel_ind)
             else:
-                _grafico_anual_par(ind, ind["chave"], sel)
-            faltam = [g for g in sel if ind["mandato"].get(g) is None]
-            if faltam:
-                st.caption("Sem dado para: " + ", ".join(faltam) + ". Nas barras e cartões aparece como \"Sem dado*\".")
+                _grafico_anual_par(ind, ind["chave"], sel_ind)
             _fonte(ind)
+    if not secoes:
+        st.info("Não há dado comparável para os governos escolhidos nesta aba. Troque um dos governos para ver mais.")
+    elif ocultas:
+        st.caption("Ocultado por falta de dado de dois ou mais governos: " + "; ".join(ocultas) + ".")
 
     # 3. Contexto de cada período
     from modules.tabs_overview import CONTEXTO
@@ -664,7 +713,7 @@ def render_aba_comparada(aba, a, b, todos):
     st.markdown(
         f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
         '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
-        'estoques viram variação no mandato). "Sem dado" = não há série comparável para o governo; número com * = dado de outra metodologia; † = ano parcial. '
+        'estoques viram variação no mandato). Gráficos e seções sem dado de pelo menos dois dos governos escolhidos ficam ocultos; número com * = dado de outra metodologia; † = ano parcial. '
         'Detalhes que só existem para Bolsonaro x Lula 3 (notícias, recortes por bioma ou modalidade) aparecem ao voltar ao padrão.</span></div>',
         unsafe_allow_html=True)
     return True

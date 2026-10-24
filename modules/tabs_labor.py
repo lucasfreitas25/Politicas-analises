@@ -176,7 +176,7 @@ def render_tab_labor():
         hovertemplate="<b>Ano:</b> %{x}<br><b>Saldo:</b> %{y:,.0f} vagas<extra></extra>"
     ))
 
-    apply_plotly_theme(fig_caged, title="Saldo Líquido Anual de Empregos Formais (Novo CAGED)")
+    apply_plotly_theme(fig_caged, title="Saldo Líquido Anual de Empregos Formais (Novo CAGED, vagas por ano)")
     st.plotly_chart(fig_caged, width="stretch")
 
     render_source("MTE — Novo CAGED, série com ajustes (inclui declarações fora do prazo; divulgação de dez/2025). 2019 pelo CAGED antigo, de metodologia diferente. 2026 = acumulado de janeiro a agosto.",

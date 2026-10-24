@@ -117,7 +117,7 @@ def render_tab_trade():
             fig = go.Figure(go.Bar(x=df["bi_usd"], y=df["secao"], orientation="h", marker_color=gov_color(gov),
                                    text=[f"{fmt_br(p)}%" for p in df["pct"]], textposition="outside",
                                    hovertemplate="%{y}: US$ %{x:.1f} bi<extra></extra>"))
-            apply_plotly_theme(fig, title=f"Pauta por seção em {ano} ({gov})", height=420)
+            apply_plotly_theme(fig, title=f"Pauta por seção em {ano} ({gov}) · US$ bilhões e % das exportações", height=420)
             fig.update_yaxes(autorange="reversed", tickfont=dict(size=10))
             fig.update_xaxes(range=[0, df["bi_usd"].max() * 1.3])
             fig.update_layout(hovermode="closest", margin=dict(l=20, r=30, t=70, b=30))

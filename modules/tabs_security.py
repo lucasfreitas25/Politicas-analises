@@ -80,7 +80,7 @@ def render_tab_security():
                 textposition="outside",
                 textfont=dict(color="#ffffff", size=12)
             ))
-            apply_plotly_theme(fig_armas, title="Armas de fogo apreendidas pela Polícia Federal")
+            apply_plotly_theme(fig_armas, title="Armas de fogo apreendidas pela Polícia Federal (unidades por ano)")
             st.plotly_chart(fig_armas, width="stretch")
 
     with col_s2:
@@ -99,7 +99,7 @@ def render_tab_security():
                 textfont=dict(color="#ffffff", size=11),
                 hovertemplate="<b>Ano:</b> %{x}<br><b>Feminicídios:</b> %{y:,.0f}<extra></extra>"
             ))
-            apply_plotly_theme(fig_fem, title="Casos Oficiais de Feminicídio (Anual)")
+            apply_plotly_theme(fig_fem, title="Casos Oficiais de Feminicídio (nº de casos por ano)")
             st.plotly_chart(fig_fem, width="stretch")
 
     st.markdown("---")

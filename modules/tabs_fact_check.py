@@ -166,7 +166,7 @@ def _chart_by_event(f):
             hovertemplate="%{y}<br>" + cat + ": %{customdata} (%{x:.0f}%)<extra></extra>",
         ))
     fig.update_layout(barmode="stack")
-    apply_plotly_theme(fig, title="Vereditos por evento (% das checagens)", height=max(380, (56 if cel else 40) * len(ordem) + 190))
+    apply_plotly_theme(fig, title="Vereditos por evento (% das checagens; entre parênteses, o nº de checagens)", height=max(380, (56 if cel else 40) * len(ordem) + 190))
     fig.update_layout(hovermode="closest", xaxis=dict(range=[0, 100], ticksuffix="%", tickfont=dict(size=11 if cel else 12), tickangle=0, **({"tickvals": [0, 50, 100]} if cel else {})),
                       yaxis=dict(autorange="reversed", tickfont=dict(size=11 if cel else 13, color="#f8fafc"), automargin=True),
                       legend=dict(orientation="h", y=-0.09, x=0, xanchor="left", yanchor="top", font=dict(size=12)), bargap=0.25,
@@ -187,7 +187,7 @@ def _chart_by_theme(u):
         fig.add_trace(go.Bar(y=tab.index, x=tab[cand], name=cand, orientation="h", marker_color=cor,
                              hovertemplate="%{y}<br>" + cand + ": %{x}<extra></extra>"))
     fig.update_layout(barmode="group")
-    apply_plotly_theme(fig, title="Falsas ou sem comprovação, por tema", height=max(360, 34 * len(tab) + 150))
+    apply_plotly_theme(fig, title="Falsas ou sem comprovação, por tema (nº de falas)", height=max(360, 34 * len(tab) + 150))
     fig.update_layout(hovermode="closest", legend=dict(orientation="h", y=-0.12, x=0.5, xanchor="center", yanchor="top"))
     return fig
 

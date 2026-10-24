@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 from modules.data_loader import load_json
-from modules.historico_ui import ano_gov
+from modules.historico_ui import ano_gov, governos_da_pagina
 from modules.programas_ui import render_programas
 from modules.ux import gl
 from modules.ui_components import (
@@ -32,8 +32,11 @@ def _barras_por_governo(anos, valores, titulo, texto_fn=None, altura=400, eixo_y
     """Barras por ano coloridas pelo partido do presidente da época (uma série por governo, para a legenda mostrar quem é quem)."""
     fig = go.Figure()
     grupos = {}
+    escolhidos = governos_da_pagina()
     for a, v in zip(anos, valores):
-        grupos.setdefault(ano_gov(int(a)), []).append((a, v))
+        g = ano_gov(int(a))
+        if g in escolhidos:
+            grupos.setdefault(g, []).append((a, v))
     for g, pares in grupos.items():
         xs = [str(a) + ("*" if a in parcial else "") for a, _ in pares]
         ys = [v for _, v in pares]
@@ -163,13 +166,16 @@ def render_tab_health():
     st.subheader("4. Vacinação")
     vv = s["vacinacao_oms"]
     pol, sar = vv["poliomielite_3_doses"], vv["sarampo_1_dose"]
-    anos_v = sorted(int(a) for a in pol)
+    escolhidos = governos_da_pagina()
+    anos_v = sorted(int(a) for a in pol if ano_gov(int(a)) in escolhidos)
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=anos_v, y=[pol[str(a)] for a in anos_v], mode="lines+markers", name="Pólio (3 doses)", line=dict(color="#38BDF8", width=3)))
     fig.add_trace(go.Scatter(x=anos_v, y=[sar[str(a)] for a in anos_v], mode="lines+markers", name="Sarampo/tríplice viral (1ª dose)", line=dict(color="#F59E0B", width=3, dash="dot")))
     fig.add_hline(y=META_VACINA, line_dash="dash", line_color="#10B981", annotation_text=f"Meta: {META_VACINA}%", annotation_position="top left", annotation_font=dict(color="#10B981"))
     for g, ini, fim in (("FHC 1", 1995, 1998), ("FHC 2", 1999, 2002), ("Lula 1", 2003, 2006), ("Lula 2", 2007, 2010), ("Dilma 1", 2011, 2014),
                         ("Dilma 2", 2015, 2015), ("Temer", 2016, 2018), ("Bolsonaro", 2019, 2022), ("Lula 3", 2023, 2025)):
+        if g not in escolhidos:
+            continue
         fig.add_vrect(x0=max(ini, 2000) - 0.5, x1=fim + 0.5, fillcolor=COR_MANDATO[g], opacity=0.10, line_width=0, annotation_text=g if fim >= 2000 else None,
                       annotation_position="bottom left", annotation_font=dict(size=9, color=COR_MANDATO[g]))
     apply_plotly_theme(fig, title="Cobertura vacinal no Brasil (% das crianças, estimativa OMS/Unicef)", height=440)
@@ -198,6 +204,7 @@ def render_tab_health():
     st.subheader("5. Quanto o brasileiro vive e quantos bebês morrem")
     col_a, col_b = st.columns(2)
     with col_a:
+        ev_s = ev_s[[ano_gov(int(a)) in governos_da_pagina() for a in ev_s["ano"]]]
         fig = go.Figure(go.Scatter(x=ev_s["ano"].astype(str), y=ev_s["anos"], mode="lines+markers+text", text=[fmt_br(v) for v in ev_s["anos"]],
                                    textposition="top center", line=dict(color="#10B981", width=3),
                                    marker=dict(size=10, color=[COR_MANDATO.get(ano_gov(int(a))) for a in ev_s["ano"]])))
@@ -245,7 +252,7 @@ def render_tab_health():
     st.markdown("---")
 
     # ---------------- 8. Programas
-    render_programas("Saúde", ["Bolsonaro", "Lula 3"])
+    render_programas("Saúde", [g for g in governos_da_pagina() if g in ("Bolsonaro", "Lula 3")] or ["Bolsonaro", "Lula 3"])
     st.caption("Para ver os programas de outros governos, use o seletor \"Governo A x Governo B\" no topo da página. "
                "A lista completa de políticas de todas as áreas está em \"Políticas, Leis & Repercussão\"; as propostas dos candidatos de 2026 estão em \"Propostas de campanha\".")
     mm = d["mais_medicos_especialistas"]

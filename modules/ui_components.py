@@ -149,6 +149,18 @@ def _eixo_sem_folga(fig):
             a.xanchor = "right" if f > 0.65 else ("left" if f < 0.35 else "center")
 
 
+def _legenda_junto_do_titulo(fig):
+    """Legenda logo abaixo do título (à esquerda) e margem de cima só do tamanho necessário: antes sobrava um vão de 40 px quando a legenda tinha muitos governos."""
+    nomes = [str(t.name) for t in fig.data if getattr(t, "showlegend", None) is not False and getattr(t, "name", None)]
+    if len(nomes) < 2:
+        fig.update_layout(margin=dict(t=58))
+        return
+    largura = sum(len(n) * 7 + 46 for n in nomes)
+    linhas = max(1, -(-largura // 760))
+    fig.update_layout(margin=dict(t=34 + 22 * linhas + 12),
+                      legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0))
+
+
 def apply_plotly_theme(fig, title="", height=420):
     fig.update_layout(
         title={
@@ -197,6 +209,7 @@ def apply_plotly_theme(fig, title="", height=420):
         )
     )
     _eixo_sem_folga(fig)
+    _legenda_junto_do_titulo(fig)
     if st.session_state.get("modo_daltonico"):
         _aplicar_daltonismo(fig)
     if eh_celular():

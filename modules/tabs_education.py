@@ -80,7 +80,7 @@ def render_tab_education():
             textfont=dict(color="#ffffff", size=11)
         ))
         fig_ideb.update_layout(barmode="group")
-        apply_plotly_theme(fig_ideb, title="IDEB Nacional por Ciclo de Ensino")
+        apply_plotly_theme(fig_ideb, title="IDEB Nacional por Ciclo de Ensino (nota de 0 a 10)")
         st.plotly_chart(fig_ideb, width="stretch")
         render_source("Inep — " + edu.get("nota_ideb", "Ideb nacional"), edu.get("fonte_ideb"))
 

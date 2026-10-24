@@ -92,7 +92,7 @@ def render_tab_environment():
             dq = pd.DataFrame(fogo["serie"])
             fig = go.Figure(go.Bar(x=dq["ano"].astype(str), y=dq["focos"], marker_color=[gov_color(g) for g in dq["governo"]],
                                    text=dq["focos"].apply(lambda v: "s/ dado" if pd.isna(v) else fmt_br(v, 0)), textposition="outside"))
-            apply_plotly_theme(fig, title="Focos de calor detectados por satélite", height=400)
+            apply_plotly_theme(fig, title="Focos de calor detectados por satélite (nº de focos por ano)", height=400)
             st.plotly_chart(fig, width="stretch")
             render_source(fogo["fonte"] + ". " + fogo["nota"], fogo["url"])
     with col_e:
