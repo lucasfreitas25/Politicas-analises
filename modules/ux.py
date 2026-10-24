@@ -138,6 +138,63 @@ GLOSSARIO = {
     "OCDE": "Organização para a Cooperação e Desenvolvimento Econômico.",
     "Gini": "Índice de 0 a 1 que mede a desigualdade de renda: quanto menor, menos desigual.",
     "ppm": "—",
+    # --- leis e tributos
+    "MP": "Medida Provisória: norma com força de lei editada pelo presidente, que vale por até 120 dias e precisa ser aprovada pelo Congresso.",
+    "Decreto": "Ato do presidente que regulamenta uma lei ou trata da administração; não precisa passar pelo Congresso, mas não pode contrariar a lei.",
+    "PDL": "Projeto de Decreto Legislativo: o Congresso usa para derrubar um decreto do presidente que passou do limite da lei.",
+    "ADI": "Ação Direta de Inconstitucionalidade: pedido ao STF para derrubar uma lei ou decreto por ferir a Constituição.",
+    "liminar": "Decisão provisória de um juiz, dada antes do julgamento final, para suspender algo de imediato.",
+    "desoneração": "Corte ou isenção de imposto.",
+    "reoneração": "Volta de um imposto que estava reduzido ou zerado.",
+    "alíquota": "Percentual do imposto que incide sobre o valor (por exemplo, 20% de imposto de importação).",
+    "alíquotas": "Percentuais do imposto que incidem sobre o valor.",
+    "Cofins": "Contribuição para o Financiamento da Seguridade Social: tributo federal sobre o faturamento das empresas.",
+    "PIS": "Programa de Integração Social: contribuição federal sobre o faturamento que financia o seguro-desemprego e o abono salarial.",
+    "IPI": "Imposto sobre Produtos Industrializados: imposto federal cobrado de quem fabrica ou importa produtos industrializados.",
+    "IRPF": "Imposto de Renda da Pessoa Física.",
+    "CPMF": "Contribuição Provisória sobre Movimentação Financeira: o imposto do cheque, cobrado sobre cada movimentação bancária de 1997 a 2007.",
+    "CIDE": "Contribuição de Intervenção no Domínio Econômico: tributo usado para corrigir ou financiar um setor (por exemplo, combustíveis).",
+    "Cide": "Contribuição de Intervenção no Domínio Econômico: tributo usado para corrigir ou financiar um setor (por exemplo, combustíveis).",
+    "IBS": "Imposto sobre Bens e Serviços: novo imposto de estados e municípios da reforma tributária, que substitui ICMS e ISS.",
+    "CBS": "Contribuição sobre Bens e Serviços: novo tributo federal da reforma tributária, que substitui PIS e Cofins.",
+    "ISS": "Imposto Sobre Serviços (municipal).",
+    "Imposto Seletivo": "Imposto da reforma tributária sobre bens e serviços prejudiciais à saúde ou ao meio ambiente.",
+    "GGR": "Gross Gaming Revenue: o que as casas de apostas arrecadam menos o que pagam em prêmios.",
+    "come-cotas": "Cobrança antecipada de Imposto de Renda sobre fundos de investimento, feita duas vezes ao ano (maio e novembro).",
+    "Zona Franca de Manaus": "Área com incentivos fiscais no Amazonas para atrair indústrias.",
+    "Receita Federal": "Órgão do Ministério da Fazenda que arrecada tributos federais.",
+    "Camex": "Câmara de Comércio Exterior: define alíquotas de importação e exportação.",
+    "Gecex": "Comitê Executivo de Gestão da Camex: decide as alíquotas do imposto de importação.",
+    "Tesouro": "Tesouro Nacional: órgão que administra as contas e a dívida do governo federal.",
+    "FGTS": "Fundo de Garantia do Tempo de Serviço: reserva depositada pelo empregador na conta do trabalhador.",
+    "CLT": "Consolidação das Leis do Trabalho: principal lei trabalhista do país.",
+    "Fundeb": "Fundo de Manutenção e Desenvolvimento da Educação Básica: reparte recursos entre estados e municípios para a escola pública.",
+    "Fundef": "Fundo do ensino fundamental (1996 a 2006), substituído pelo Fundeb.",
+    "ProUni": "Programa Universidade para Todos: bolsas em faculdades particulares para estudantes de baixa renda.",
+    "Enade": "Exame Nacional de Desempenho dos Estudantes: avalia cursos de graduação.",
+    "Enem": "Exame Nacional do Ensino Médio.",
+    "BNCC": "Base Nacional Comum Curricular: define o que todo aluno deve aprender em cada etapa.",
+    "PISA": "Programa Internacional de Avaliação de Estudantes (OCDE): compara o aprendizado de jovens de 15 anos em vários países.",
+    "SAEB": "Sistema de Avaliação da Educação Básica (Inep): provas que medem o aprendizado nas escolas.",
+    "SNUC": "Sistema Nacional de Unidades de Conservação: regras de parques, reservas e outras áreas protegidas.",
+    "PPCDAm": "Plano de Prevenção e Controle do Desmatamento na Amazônia.",
+    "Ibama": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis: fiscaliza e multa crimes ambientais.",
+    "Datafolha": "Instituto de pesquisa de opinião do grupo Folha.",
+    "Quaest": "Instituto de pesquisa de opinião e eleitoral.",
+    "AtlasIntel": "Instituto de pesquisa de opinião que usa coleta por internet.",
+    "Atlas da Violência": "Publicação anual do Ipea e do Fórum Brasileiro de Segurança Pública com dados de homicídios no país.",
+    "POF": "Pesquisa de Orçamentos Familiares (IBGE): mostra no que as famílias gastam.",
+    "Mover": "Programa Mobilidade Verde e Inovação: incentivos à indústria automotiva (Lei 14.902/2024).",
+    "Remessa Conforme": "Programa da Receita Federal para compras internacionais de plataformas cadastradas.",
+    "Previne Brasil": "Modelo de financiamento da atenção primária do SUS criado em 2019.",
+    "Mais Médicos": "Programa que leva médicos a regiões com poucos profissionais.",
+    "EC 95": "Emenda Constitucional do teto de gastos (2016), que limitou o crescimento da despesa federal à inflação por 20 anos.",
+    "teto de gastos": "Regra de 2016 que limitou o crescimento do gasto federal à inflação do ano anterior; substituída pelo arcabouço fiscal em 2023.",
+    "arcabouço fiscal": "Regra fiscal de 2023 (LC 200) que limita o crescimento do gasto a uma parte do crescimento da receita.",
+    "INSS": "Instituto Nacional do Seguro Social: paga aposentadorias e benefícios previdenciários.",
+    "ONU": "Organização das Nações Unidas.",
+    "Copom": "Comitê de Política Monetária do Banco Central: define a taxa Selic.",
+    "ADCT": "Ato das Disposições Constitucionais Transitórias.",
 }
 GLOSSARIO.pop("ppm")
 
@@ -163,8 +220,34 @@ def gl(texto_html, uma_vez=True):
         visto.add(termo)
         return f'<abbr title="{html.escape(GLOSSARIO[termo], quote=True)}">{termo}</abbr>'
 
-    pedacos = re.split(r"(<[^>]+>)", texto_html)
-    return "".join(p if p.startswith("<") else _regex().sub(troca, p) for p in pedacos)
+    saida, ignorar = [], 0
+    for p in re.split(r"(<[^>]+>)", texto_html):
+        if p.startswith("<"):
+            m = re.match(r"<(/?)(style|script|abbr|svg|textarea|code)\b", p, re.I)
+            if m:
+                ignorar = max(ignorar + (-1 if m.group(1) else 1), 0)
+            saida.append(p)
+        else:
+            saida.append(p if ignorar else _regex().sub(troca, p))
+    return "".join(saida)
+
+
+def ativar_dicas_automaticas():
+    """Faz todo st.markdown(..., unsafe_allow_html=True) do painel ganhar dica ao passar o mouse sobre siglas e termos do glossário."""
+    if getattr(st, "_dicas_ativas", False):
+        return
+    original = st.markdown
+
+    def markdown(body, *args, **kwargs):
+        if kwargs.get("unsafe_allow_html") and isinstance(body, str) and "<abbr" not in body:
+            try:
+                body = gl(body)
+            except Exception:
+                pass
+        return original(body, *args, **kwargs)
+
+    st.markdown = markdown
+    st._dicas_ativas = True
 
 
 # ---------------------------------------------------------------- impressão e acessibilidade
