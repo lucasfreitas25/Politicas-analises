@@ -239,7 +239,7 @@ def ativar_dicas_automaticas():
     original = st.markdown
 
     def markdown(body, *args, **kwargs):
-        if kwargs.get("unsafe_allow_html") and isinstance(body, str) and "<abbr" not in body:
+        if kwargs.get("unsafe_allow_html") and isinstance(body, str) and "<abbr" not in body and "section-title" not in body:
             try:
                 body = gl(body)
             except Exception:

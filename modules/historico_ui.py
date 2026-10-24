@@ -126,8 +126,120 @@ TITULOS = {
     "seguranca": ("Segurança Pública & Criminalidade", "Taxa de homicídios (Atlas da Violência, com dados do Ministério da Saúde)."),
     "inclusao": ("Mulheres, Raça & Minorias", "Desemprego de pretos e pardos, pobreza e desigualdade de renda."),
     "meio-ambiente": ("Meio Ambiente & Clima", "Desmatamento na Amazônia (Inpe/PRODES)."),
+    "silvicultura": ("Silvicultura & Extrativismo: PEVS (IBGE)", "Valor da produção da silvicultura e da extração vegetal nativa (IBGE)."),
 }
-ABAS_COMPARAVEIS = set(TITULOS) | {"silvicultura"}
+ABAS_COMPARAVEIS = set(TITULOS)
+
+# Molde fixo de cada aba: as mesmas seções numeradas da versão padrão (Bolsonaro x Lula 3).
+# Cada seção: (título, [chaves de historico.json], área de programas ou None). Lista vazia = não há série longa: a seção aparece com "Sem dado".
+PROG = "programas"
+MOLDE = {
+    "trabalho": [
+        ("Taxa de Desocupação (%) — PNAD Contínua IBGE", ["desemprego"], None),
+        ("Rendimento Médio Real (R$)", ["renda"], None),
+        ("Massa de Rendimento Real (R$ bi)", [], None),
+        ("Saldo Anual de Vagas com Carteira Assinada (Novo CAGED)", ["caged"], None),
+        ("Salário mínimo real", ["salario_minimo"], None),
+    ],
+    "inflacao": [
+        ("Inflação Acumulada no Mandato (Mês a Mês) e Série Anual do IPCA", ["ipca"], None),
+        ("Inflação dos Alimentos (IPCA)", ["ipca_alimentos"], None),
+        ("Decomposição Setorial do IPCA (Grupos de Consumo)", [], None),
+    ],
+    "cesta-basica": [
+        ("Quanto cada item subiu em cada mandato (IPCA oficial)", ["ipca_alimentos"], None),
+        ("Poder de compra do salário mínimo", ["salario_minimo"], None),
+        ("Custo da cesta básica (R$ nominais, SP)", [], None),
+        ("Horas de trabalho para comprar a cesta", [], None),
+    ],
+    "inadimplencia": [
+        ("Inadimplência da carteira de crédito (% com atraso superior a 90 dias)", ["inadimplencia_pf"], None),
+        ("Onde está o atraso: modalidades de crédito de pessoas físicas", [], None),
+        ("Pessoas e famílias com contas em atraso", [], None),
+        ("Renegociação de dívidas: Desenrola", [], None),
+    ],
+    "energia-agua-esgoto": [
+        ("Quanto a tarifa de energia subiu acima da inflação", ["tarifa_energia"], None),
+        ("Por que a conta de luz subiu", [], None),
+        ("Água e esgoto nos domicílios (IBGE)", [], None),
+        ("Políticas relacionadas", [], "Infraestrutura & Energia"),
+    ],
+    "macroeconomia": [
+        ("Crescimento Anual do PIB (%) — IBGE Contas Nacionais", ["pib"], None),
+        ("Saldo da Balança Comercial Brasileira (US$ Bilhões)", ["saldo_comercial"], None),
+        ("Taxa Selic Média (% a.a.)", ["selic"], None),
+        ("Dólar PTAX Médio (R$/US$)", ["dolar"], None),
+        ("Dívida do Governo Geral (% do PIB)", ["divida_bruta", "divida_liquida"], None),
+        ("Resultado primário (% do PIB)", ["primario"], None),
+    ],
+    "fiscal-social-ambiental": [
+        ("Resultado primário do setor público consolidado (% do PIB)", ["primario"], None),
+        ("Dívida bruta x dívida líquida (% PIB)", ["divida_bruta", "divida_liquida"], None),
+        ("Custo dos juros da dívida (% PIB)", [], None),
+        ("Pobreza e extrema pobreza (% da população)", ["pobreza", "extrema_pobreza"], None),
+        ("Desigualdade de renda (Gini)", ["gini"], None),
+        ("Rendimento médio real", ["renda"], None),
+    ],
+    "agro": [
+        ("Safras Brasileiras de Grãos (CONAB)", ["safra"], None),
+        ("Área plantada e produtividade média", [], None),
+        ("PAM: Produção Agrícola Municipal (IBGE)", [], None),
+    ],
+    "comercio-exterior": [
+        ("Exportações, importações e saldo por ano", ["exportacoes", "importacoes", "saldo_comercial"], None),
+        ("Para onde o Brasil exporta", [], None),
+        ("O que o Brasil exporta", [], None),
+    ],
+    "industria": [
+        ("Evolução Temporal da Produção Física Industrial", ["industria"], None),
+        ("Indústrias Extrativas vs. Indústrias de Transformação", [], None),
+    ],
+    "pecuaria": [
+        ("Efetivo dos Rebanhos Brasileiros (Cabeças)", [], None),
+        ("Abate de bovinos", ["abate_bovinos"], None),
+        ("Produção de Origem Animal (Leite, Ovos, Mel)", [], None),
+    ],
+    "silvicultura": [
+        ("Valor da Produção da Silvicultura (R$ Milhões)", [], None),
+        ("Valor da Produção na Extração Vegetal Nativa (R$ Milhões)", [], None),
+    ],
+    "educacao": [
+        ("Evolução do IDEB por Etapa de Ensino (Inep / MEC)", ["ideb_iniciais", "ideb_finais", "ideb_medio"], None),
+        ("Taxa de Analfabetismo (%) — IBGE", ["analfabetismo"], None),
+        ("Orçamento Executado do MEC (R$ bi)", [], None),
+        ("Aprendizado: PISA (OCDE)", ["pisa_leitura", "pisa_matematica", "pisa_ciencias"], None),
+        ("Alfabetização na idade certa e escola em tempo integral", [], None),
+        ("Principais Políticas Educacionais de Cada Mandato", [], "Educação"),
+    ],
+    "saude": [
+        ("Médicos", ["medicos"], None),
+        ("Hospitais e leitos do SUS", ["leitos_sus"], None),
+        ("Quanto o governo federal gasta com saúde", ["gasto_saude"], None),
+        ("Vacinação", ["vacina_polio", "vacina_sarampo"], None),
+        ("Quanto o brasileiro vive e quantos bebês morrem", ["esperanca_vida", "mortalidade_infantil"], None),
+        ("Dengue: mortes por ano", [], None),
+        ("Covid-19: óbitos acumulados", [], None),
+        ("Programas de cada governo: o que foi feito, o que se diz de bom e as críticas", [], "Saúde"),
+    ],
+    "seguranca": [
+        ("Taxa de Mortes Violentas Intencionais por 100 mil habitantes", ["homicidios"], None),
+        ("Armas de fogo apreendidas pela PF", [], None),
+        ("Feminicídios Registrados no Brasil", [], None),
+        ("Políticas de segurança de cada governo", [], "Segurança Pública"),
+    ],
+    "inclusao": [
+        ("Taxa de desemprego por sexo e cor/raça (%)", ["desemprego_negros"], None),
+        ("Desigualdade de renda e pobreza", ["gini", "pobreza", "extrema_pobreza"], None),
+        ("Violência contra grupos vulneráveis", [], None),
+        ("Políticas para mulheres, negros, indígenas e LGBTQIA+", [], "Direitos & Minorias"),
+    ],
+    "meio-ambiente": [
+        ("Desmatamento (PRODES, Amazônia)", ["desmatamento"], None),
+        ("Focos de queimada no Brasil", [], None),
+        ("Emissões de gases de efeito estufa", [], None),
+        ("Políticas ambientais de cada governo", [], "Meio Ambiente & Clima"),
+    ],
+}
 
 
 def render_seletor():
@@ -253,19 +365,88 @@ def _fonte(ind):
     render_source(html.escape(ind["fonte"]) + f". Comparabilidade: {simbolo} {html.escape(desc)}" + extra, ind["url"])
 
 
+def _sem_dado(titulo_secao, sel, motivo=None):
+    """Seção sem série longa: mesmo lugar e mesmo título da versão padrão, com 'Sem dado' para cada governo escolhido."""
+    chips = "".join(f'<span style="display:inline-block;margin:2px 6px 2px 0;padding:1px 9px;border-radius:999px;border:1px solid #64748b;font-size:0.78rem;">{html.escape(g)}: <b>Sem dado</b></span>' for g in sel)
+    st.markdown(
+        f'<div class="info-box"><b>Sem dado para comparar estes governos.</b> {chips}<br/>'
+        f'{html.escape(motivo or "Esta medida não tem série longa e comparável nas fontes abertas consultadas, então não dá para colocar os governos escolhidos lado a lado. ")}'
+        'Para Bolsonaro e Lula 3, quando existe, ela aparece na versão padrão da aba (botão "Voltar para Bolsonaro x Lula 3").</div>',
+        unsafe_allow_html=True)
+
+
 def render_aba_comparada(aba, a, b, todos):
-    """Refaz a aba para outro par de governos (ou todos) mantendo o formato da aba Bolsonaro x Lula:
-    cabeçalho, cartões 'A ➔ B', gráficos numerados com fonte e caixa de contexto no fim.
-    Retorna False quando o tema não tem série longa — aí o app mostra a versão Bolsonaro x Lula 3."""
+    """Refaz a aba para outro par de governos (ou todos) no mesmo molde da aba Bolsonaro x Lula:
+    cabeçalho, cartões 'A ➔ B', as mesmas seções numeradas (com gráfico, 'Sem dado' ou programas) e caixa de contexto no fim.
+    Sempre devolve True: seção sem série mostra 'Sem dado' em vez de voltar ao padrão."""
     from modules.ui_components import render_section_header, css_governos, PARTIDO, PERIODO
     d = base()
-    chaves = [k for k, v in d.get("indicadores", {}).items() if aba in v.get("abas", [])]
-    if not chaves:
-        st.info("Este tema não tem série longa e comparável desde 1995 nas fontes abertas consultadas, então a aba continua mostrando Bolsonaro x Lula 3.")
-        return False
     if a == b and not todos:
         st.info("Escolha dois governos diferentes.")
         return True
+    st.markdown(css_governos(), unsafe_allow_html=True)
+    governos = nomes_governos(d)
+    sel = governos if todos else [a, b]
+    titulo, sub = TITULOS.get(aba, (aba, ""))
+    render_section_header(titulo, sub + (" Todos os governos, de FHC a Lula 3." if todos else f" {a} x {b}."))
+    molde = MOLDE.get(aba, [])
+    chaves = [k for k, v in d.get("indicadores", {}).items() if aba in v.get("abas", [])]
+    usados = [k for _, ks, _ in molde for k in ks]
+    # indicadores da aba que o molde não citou entram no fim, para nada sumir
+    extras = [k for k in chaves if k not in usados]
+    if extras:
+        molde = molde + [("Outros indicadores desta aba", extras, None)]
+    todas_chaves = list(dict.fromkeys(k for _, ks, _ in molde for k in ks if k in d["indicadores"]))
+    inds = [{**d["indicadores"][k], "chave": k} for k in todas_chaves]
+
+    # 1. Cartões (ou o quadro com todos os mandatos)
+    if inds:
+        if todos:
+            st.markdown(quadro_html(inds, governos), unsafe_allow_html=True)
+            st.caption(LEGENDA)
+        else:
+            cols = st.columns(3)
+            for i, ind in enumerate(inds):
+                with cols[i % 3]:
+                    _stat_par(ind, a, b)
+
+    # 2. Seções numeradas, na mesma ordem da versão padrão
+    from modules.programas_ui import render_programas
+    for n, (titulo_secao, ks, area_prog) in enumerate(molde, start=1):
+        st.markdown("---")
+        st.subheader(f"{n}. {titulo_secao}")
+        if area_prog:
+            render_programas(area_prog, sel, titulo=None, chave=f"cmp_{aba}_{n}")
+            continue
+        series = [{**d["indicadores"][k], "chave": k} for k in ks if k in d["indicadores"]]
+        if not series:
+            _sem_dado(titulo_secao, sel)
+            continue
+        for ind in series:
+            if len(series) > 1:
+                st.markdown(f"**{ind['nome'].split(' (')[0]}**")
+            st.caption(ind["metodo"] + (" " + ind["nota"] if ind.get("nota") else ""))
+            if _cobertura_mensal(d, ind, sel):
+                _grafico_mensal(d, ind, ind["chave"], sel)
+                if ind.get("mensal_tipo") == "acumulado":
+                    _grafico_anual_par(ind, ind["chave"], sel)
+            else:
+                _grafico_anual_par(ind, ind["chave"], sel)
+            faltam = [g for g in sel if ind["mandato"].get(g) is None]
+            if faltam:
+                st.caption("Sem dado para: " + ", ".join(faltam) + ". Nas barras e cartões aparece como \"Sem dado*\".")
+            _fonte(ind)
+
+    # 3. Contexto de cada período
+    from modules.tabs_overview import CONTEXTO
+    linhas = "".join(f'• <b>Governo {html.escape(g)} ({PARTIDO[g]}, {PERIODO[g]}):</b> {html.escape(CONTEXTO[g])}<br/>' for g in sel)
+    st.markdown(
+        f'<div class="info-box"><b>Contexto de cada período:</b><br/>{linhas}'
+        '<span style="color:#94a3b8;font-size:0.8rem;">Séries longas e oficiais agregadas do mesmo jeito para todos os mandatos (acumulados viram taxa por ano; '
+        'estoques viram variação no mandato). "Sem dado" = não há série comparável para o governo; número com * = dado de outra metodologia; † = ano parcial. '
+        'Detalhes que só existem para Bolsonaro x Lula 3 (notícias, recortes por bioma ou modalidade) aparecem ao voltar ao padrão.</span></div>',
+        unsafe_allow_html=True)
+    return True
     st.markdown(css_governos(), unsafe_allow_html=True)
     governos = nomes_governos(d)
     sel = governos if todos else [a, b]
