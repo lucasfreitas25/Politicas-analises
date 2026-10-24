@@ -152,7 +152,7 @@ st.markdown("""
   <b>Aviso:</b> este painel é informativo e apartidário. Reúne dados públicos oficiais e, quando indicado, estudos e checagens de terceiros, sempre com link da fonte.
   A escolha de leis e programas é uma <b>seleção</b> das mais conhecidas, não o conjunto completo, e a cobertura varia de governo para governo (veja o quadro no topo de cada página).
   Resultados de indicadores não provam, sozinhos, que um governo causou a mudança: economia, clima, pandemia e cenário internacional também pesam.
-  Encontrou um erro? Aponte pela <a href="https://github.com/lucasfreitas25/Politicas-analises/issues" target="_blank">página do projeto</a>.
+  Encontrou um erro? Avise quem publicou o painel, com o link da página e da fonte.
 </div>
 <div style="text-align: center; color: #94a3b8; font-size: 0.82rem; padding: 14px 0;">
   <b style="color: #cbd5e1;">Observatório Estatístico</b> • Desenvolvido em Python & Streamlit •

@@ -274,7 +274,7 @@
         {
           "texto": "Em municípios do Rio de Janeiro (2000–2011) houve queda significativa das mortes em hospitais (−16%) e na rua (−27%), mas sem efeito significativo na taxa geral de mortalidade, o que sugere que parte das mortes mudou de lugar.",
           "fonte": "Ipea, Rocha e Fernandes",
-          "url": "https://ppe.ipea.gov.br/index.php/ppe/article/viewFile/1626/1234"
+          "url": "https://ppe.ipea.gov.br/index.php/ppe/article/view/1626"
         },
         {
           "texto": "O número de unidades cresceu mais de 400% entre 2011 e 2016.",
@@ -417,9 +417,9 @@
       ],
       "criticas": [
         {
-          "texto": "Entidades da reforma sanitária e o Conselho Nacional de Saúde estimaram perda de R$ 22,5 bilhões para o SUS entre 2018 e 2020.",
-          "fonte": "Entidades da Reforma Sanitária (CNS, Cebes)",
-          "url": "https://cebes.org.br/site/wp-content/uploads/2020/04/Entidades-da-Reforma-Sanitaria-contra-a-EC-95.pdf"
+          "texto": "O Conselho Nacional de Saúde e entidades da reforma sanitária estimaram perda de R$ 22,5 bilhões para o SUS entre 2018 e 2020. É estimativa de quem critica a regra, e o valor de 2020 usa a lei orçamentária, não o gasto efetivo.",
+          "fonte": "Observatório da Economia Contemporânea",
+          "url": "https://diplomatique.org.br/o-teto-dos-gastos-e-o-desfinanciamento-do-sus/"
         },
         {
           "texto": "A Associação Brasileira de Economia da Saúde estimou R$ 36,9 bilhões de perda entre 2018 e 2022, sem contar os créditos da Covid. Todas essas estimativas vêm de quem critica o teto e usam períodos e bases diferentes.",
