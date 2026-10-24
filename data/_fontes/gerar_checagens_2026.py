@@ -30,6 +30,8 @@ URL = {
     "af_l_ago": "https://www.aosfatos.org/noticias/checamos-entrevista-lula-globo/",
     "af_band": "https://www.aosfatos.org/noticias/checamos-lula-flavio-bolsonaro-debate-band/",
     "est_band": "https://www.estadao.com.br/estadao-verifica/checamos-o-debate-entre-lula-e-flavio-na-band/",
+    "lupa_globo": "https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/",
+    "af_globo": "https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/",
 }
 
 EVENTOS = {
@@ -38,6 +40,7 @@ EVENTOS = {
     "out_l": ("Entrevista TV Globo — 2º turno", "2026-10-15"),
     "out_f": ("Entrevista TV Globo — 2º turno", "2026-10-16"),
     "band": ("Debate Band — 2º turno", "2026-10-18"),
+    "globo_deb": ("Debate TV Globo — 2º turno", "2026-10-23"),
 }
 
 AGENCIA = {"lupa": "Agência Lupa", "af": "Aos Fatos", "rank": "Ranking dos Políticos", "est": "Estadão Verifica"}
@@ -372,16 +375,50 @@ for cand, tema, fala, ver, expl in [
     add(cand, "band", "est", u, tema, fala, ver, expl)
 
 
+
+# ---------------------------------------------------------------- Lupa — debate da TV Globo, 23/10 (última atualização da página: 23h45)
+u = URL["lupa_globo"]
+add(L, "globo_deb", "lupa", u, "Fiscal & Contas Públicas", "\"Nós herdamos 6.000 obras paradas.\"", "Subestimado", "Painel do TCU: 8,6 mil obras paradas e 22,5 mil ativas em agosto de 2022 (26% acima do citado). Em abril de 2026 eram 4,2 mil paradas.")
+add(F, "globo_deb", "lupa", u, "Fiscal & Contas Públicas", "O TCU mostra \"mais de 11.500 obras paralisadas do atual governo\".", "Falta contexto", "A Lista de Alto Risco do TCU indica 11.944 obras paradas em 2024, mas o dado inclui obras com recursos federais de vários governos. O levantamento de abril de 2026 aponta 4.215.")
+add(L, "globo_deb", "lupa", u, "Social", "\"Eu tinha acabado com a fome nesse país em 2012.\"", "Exagerado", "A FAO reconheceu a saída do Brasil do Mapa da Fome em 2014, não em 2012. Os desnutridos caíram de 19 milhões (2002) para 3,4 milhões (2013), mas a fome não foi totalmente erradicada.")
+add(L, "globo_deb", "lupa", u, "Social", "\"Quando eu voltei… tinha 33 milhões de pessoas passando fome.\"", "Verdadeiro", "Levantamento da Rede Penssan (2022) apontou 33,1 milhões em insegurança alimentar grave e 125,2 milhões com algum grau de insegurança.")
+add(F, "globo_deb", "lupa", u, "Economia", "A barra de chocolate passou de 120 g para 80 g por causa da inflação.", "Falso", "Barras de 80 g já eram vendidas em 2022, sob Bolsonaro. A redução vem desde os anos 1990, quando havia barras acima de 200 g.")
+add(L, "globo_deb", "lupa", u, "Economia", "\"Abrimos 700 novos mercados nesse país.\"", "Verdadeiro", "O Ministério da Agricultura anunciou 700 aberturas desde 2023, em 99 destinos.")
+add(L, "globo_deb", "lupa", u, "Economia", "A BR-319 é uma rodovia que \"ninguém teve coragem de fazer\".", "Falta contexto", "A estrada foi construída a partir de 1968 e inaugurada em 1976, sob Geisel, e ficou intrafegável em 1988. Em julho de 2022, sob Bolsonaro, o Ibama emitiu licença prévia para o Trecho do Meio. As obras de asfalto foram retomadas em 2024, no governo Lula.")
+add(F, "globo_deb", "lupa", u, "Fiscal & Contas Públicas", "Lula \"já gastou mais de R$ 400 bilhões para tentar se reeleger\".", "Exagerado", "Ferramenta do Estadão soma R$ 405 bi em medidas de impacto orçamentário, mas R$ 73,2 bi são renúncia fiscal e só R$ 51,1 bi estão fora do orçamento. O total não significa que tudo foi desembolsado, nem comprova motivação eleitoral; o governo nega fins eleitorais.")
+add(F, "globo_deb", "lupa", u, "Social", "Bolsonaro \"passou o Bolsa Família para, no mínimo, R$ 600\".", "Exagerado", "O Auxílio Brasil, criado em 2021, tinha valor mínimo de R$ 400. O aumento para R$ 600 foi decidido em junho de 2022, e a PEC previa R$ 600 só até o fim de 2022; o orçamento de 2023 previa R$ 400.")
+add(F, "globo_deb", "lupa", u, "Social", "\"E nós fizemos o Marco Legal do Saneamento Básico.\"", "Verdadeiro", "A lei de 2020 veio de projeto do Executivo sob Bolsonaro (PL 4.162/2019) e fixa metas de 99% de água e 90% de esgoto até 2033, ampliáveis até 2040.")
+add(F, "globo_deb", "lupa", u, "Economia", "\"A região Centro-Oeste é a região que mais produz alimentos.\"", "Verdadeiro", "O Centro-Oeste tem o maior valor bruto da produção agropecuária, estimado em R$ 431,2 bi; só Mato Grosso soma R$ 225,2 bi (15,6% do nacional).")
+add(F, "globo_deb", "lupa", u, "Fiscal & Contas Públicas", "Fala em \"dívida aí de 11 trilhões de reais\" para o trabalhador pagar.", "Falta contexto", "A dívida bruta do governo geral (federal, INSS, estados e municípios) chegou a R$ 11,1 tri em agosto de 2026, 82,9% do PIB. A dívida federal é de R$ 9,29 tri.")
+add(L, "globo_deb", "lupa", u, "Trajetória dos candidatos", "Flávio chamou o Bolsa Família de \"bolsa farelo\".", "Verdadeiro", "Flávio usou a expressão em 2011 e em publicações no X. Os posts foram apagados, mas recuperados pela imprensa.")
+add(F, "globo_deb", "lupa", u, "Economia", "A Selic \"está aí em torno de 14%\".", "Verdadeiro", "A taxa está em 13,75% ao ano, o mesmo patamar de dezembro de 2022, no fim do governo Bolsonaro.")
+add(L, "globo_deb", "lupa", u, "Economia", "\"A economia não crescia acima de 3% desde que eu deixei a presidência em 2010.\"", "Falso", "O PIB cresceu 3,9% em 2011, 3,0% em 2013, 4,8% em 2021 e 3,0% em 2022. A Lupa já desmentiu a mesma afirmação em outras quatro ocasiões.")
+add(F, "globo_deb", "lupa", u, "Economia", "Sem a gestão Lula, a Selic seria cerca de 7%, uma diferença de 7 pontos.", "Falta contexto", "O Focus de outubro de 2022 projetava 7,75% para 2025, mas era só expectativa do mercado, não meta. Em outubro de 2022 a Selic já estava em 13,75%, sob Bolsonaro, e ficou assim até agosto de 2023.")
+add(F, "globo_deb", "lupa", u, "Economia", "Bolsonaro \"concluiu as obras\" da transposição do São Francisco.", "Exagerado", "Bolsonaro inaugurou trechos, como o Eixo Norte (2020), mas a obra não foi concluída. O Eixo Norte começou em 2007, no governo Lula, e o projeto foi assinado em 2004.")
+add(L, "globo_deb", "lupa", u, "Economia", "\"Nunca se exportou tanto neste país.\"", "Verdadeiro", "Em 2025 as exportações somaram US$ 348,3 bi, recorde da série iniciada em 1997. De janeiro a setembro de 2026 somaram US$ 284,6 bi, alta de 10,4%.")
+add(F, "globo_deb", "lupa", u, "Endividamento", "\"São mais de 80 milhões de brasileiros que estão com as contas atrasadas.\"", "Verdadeiro", "O Serasa registrou 83,9 milhões de inadimplentes em agosto de 2026, cerca de 51% dos adultos.")
+add(F, "globo_deb", "lupa", u, "Saúde", "O vídeo de Bolsonaro imitando falta de ar não era deboche.", "Falso", "Bolsonaro fez a imitação em lives de 18/3 e 6/5 de 2021, criticando a orientação de Mandetta. Ele defendia a ivermectina e a hidroxicloroquina, que a OMS contraindicou para Covid-19.")
+add(F, "globo_deb", "lupa", u, "Economia", "\"Você não tem vergonha de deixar o país quebrado desse jeito?\"", "Falta contexto", "A dívida bruta é a maior desde 2021, mas o PIB cresceu 3,2% em 2023, 3,4% em 2024 e 2,3% em 2025. O desemprego caiu para 5,8 milhões de desocupados e os empregos com carteira chegaram a 39,5 milhões. O déficit primário foi de R$ 47,6 bi em 2024 e R$ 61,6 bi em 2025.")
+add(F, "globo_deb", "lupa", u, "Economia", "Lula \"é o pai do Tigrinho\".", "Falso", "A Lei 13.756/2018, que legalizou as apostas, foi sancionada por Temer. Bolsonaro não cumpriu o prazo de regulamentação, e Lula sancionou a Lei 14.790/2023, que regulamentou o setor.")
+add(L, "globo_deb", "lupa", u, "Economia", "\"O tigrinho foi criado por vocês em 2022.\"", "Falso", "As apostas online foram legalizadas em 2018, sob Temer. Durante o governo Bolsonaro o setor operou sem regras e sem recolhimento de impostos.")
+add(F, "globo_deb", "lupa", u, "Segurança Pública", "O atual governo \"fala que o ladrão de celular não tem que ser preso porque é só roubar uma cervejinha\".", "Falso", "Lula não defendeu o roubo de celulares nem a impunidade. A fala foi editada de um trecho de 2017, em que ele associava a violência à falta de perspectiva econômica; a Lupa já desmentiu a alegação em 2020.")
+add(L, "globo_deb", "lupa", u, "Relações Exteriores", "\"Na Argentina, a pobreza chegou a 40%\" durante o governo Milei.", "Falta contexto", "Dados do Indec mostram 52,4% no primeiro semestre de 2024, 38% no segundo e 31% no primeiro de 2025; em 2026 voltou a subir, para 32,3% no primeiro semestre. A Lupa não achou um dado de 40% que corresponda exatamente à fala.")
+add(L, "globo_deb", "af", URL["af_globo"], "Trajetória dos candidatos", "Flávio chamou o Bolsa Família de \"bolsa farelo\".", "Verdadeiro", "O Aos Fatos diz que é verdade que Flávio usou a expressão em críticas a programas de transferência de renda.")
+
+
 # ---------------------------------------------------------------- Agrupamento de falas repetidas
 # A mesma fala aparece checada por várias agências e, às vezes, repetida pelo candidato
 # em mais de um evento. Cada regra: (candidato, trechos que identificam a fala, chave, título único).
 # A primeira regra que casar vence — por isso as mais específicas vêm antes.
 GRUPOS = [
+    (L, ["Quando eu voltei"], "L-33mi-fome", "Quando voltou à presidência, 33 milhões de pessoas passavam fome"),
+    (L, ["bolsa farelo"], "L-farelo", "Flávio chamou o Bolsa Família de \"bolsa farelo\""),
+    (L, ["6.000 obras", "6 mil obras"], "L-obras6", "Herdou mais de 6 mil obras paradas"),
     (L, ["2,8%"], "L-deficit", "\"Ficou um déficit de 2,8%\" — atribuído ao governo Bolsonaro"),
     (L, ["FMI"], "L-fmi", "Pagou US$ 30 bi ao FMI e deixou reservas elevadas"),
     (L, ["superávit de 0,1% é inédito", "primeira vez que apresenta"], "L-superavit-inedito", "Orçamento com superávit é inédito"),
     (L, ["2027 prevê superávit", "superávit de 0,1%\""], "L-orcamento-2027", "Orçamento de 2027 prevê superávit primário"),
-    (L, ["só cresceu 3%", "só voltou a crescer acima", "só cresceu mais de 3%", "só cresceu acima de 3%", "voltou a crescer mais de 3,5%"], "L-pib-3", "O país só voltou a crescer acima de 3% quando Lula voltou"),
+    (L, ["não crescia acima de 3%", "só cresceu 3%", "só voltou a crescer acima", "só cresceu mais de 3%", "só cresceu acima de 3%", "voltou a crescer mais de 3,5%"], "L-pib-3", "O país só voltou a crescer acima de 3% quando Lula voltou"),
     (L, ["crescendo 7,5%", "cresceu 7,5%", "crescia 7,5%", "sétima economia"], "L-pib-2010", "O Brasil crescia 7,5% e era a 7ª economia do mundo (2010)"),
     (L, ["mentia 11 vezes"], "L-mentia", "Jair Bolsonaro mentia 11 vezes por dia"),
     (L, ["privatizar 95%"], "L-95", "Flávio falou em privatizar 95% das estatais"),
@@ -411,7 +448,7 @@ GRUPOS = [
     (F, ["11 tri", "R$ 11 tri"], "F-divida", "A dívida pública está em R$ 11 trilhões, recorde negativo"),
     (F, ["80 anos"], "F-antifaccao", "Com a Lei Antifacção, líderes ficam até 80 anos presos"),
     (F, ["documentário", "R$ 30 milhões para o Instituto Lula", "por fora"], "F-vorcaro-lula", "Vorcaro pagou R$ 30 milhões a documentário/Instituto Lula"),
-    (F, ["triplicou", "no mínimo R$ 600"], "F-bolsa", "Bolsonaro triplicou o Bolsa Família para R$ 600"),
+    (F, ["triplicou", "no mínimo R$ 600", "no mínimo, R$ 600"], "F-bolsa", "Bolsonaro triplicou o Bolsa Família para R$ 600"),
     (F, ["R$ 7 bi", "R$ 7 bilhões"], "F-viagens", "Lula e Janja gastaram R$ 7 bilhões em viagens"),
     (F, ["criminalidade"], "F-crime", "A criminalidade explodiu / governo é recordista em criminalidade"),
     (F, ["Maré"], "F-dino", "Flávio Dino entrou na Maré sem policiais"),
@@ -579,6 +616,8 @@ def main():
             "titulo_fala": titulo,
             "candidato": cand,
             "evento": nome_ev,
+            "emissora": "Globo" if "Globo" in nome_ev else "Band",
+            "turno": "1º turno" if "1º" in nome_ev else "2º turno",
             "data": data,
             "agencia": AGENCIA[ag],
             "tema": tema,
@@ -591,14 +630,15 @@ def main():
     payload = {
         "metadados": {
             "titulo": "Checagens de fatos — Lula (PT) x Flávio Bolsonaro (PL), eleição presidencial 2026",
-            "atualizado_em": "2026-10-20",
-            "cobertura": "Entrevistas na TV Globo (27–28/08 e 15–16/10) e debate da Band (18/10). Lula e Flávio não compareceram ao debate do 1º turno (Band, 23/08), e os demais debates do 1º turno foram cancelados.",
+            "atualizado_em": "2026-10-23",
+            "cobertura": "Entrevistas na TV Globo (27–28/08 e 15–16/10), debate da Band (18/10) e debate da TV Globo (23/10). Lula e Flávio não compareceram ao debate do 1º turno (Band, 23/08), e os demais debates do 1º turno foram cancelados.",
             "categorias": {
                 "Verdade": "Verdadeiro, correto (inclui 'verdadeiro com ressalva').",
                 "Meia-verdade": "Impreciso, exagerado, subestimado, enganoso, falta contexto ou omissão.",
                 "Mentira": "Falso.",
                 "Sem comprovação": "Insustentável / não há evidência pública que sustente a fala.",
             },
+            "debate_globo": "Debate da TV Globo de 23/10: entram as 25 checagens da Lupa (página ao vivo, última atualização registrada às 23h45) e 1 do Aos Fatos com veredito explícito. O Aos Fatos publicou outras checagens do debate que, na hora da coleta, ainda estavam sem selo (página em atualização), e o Fato ou Fake do g1, escolhido pela Globo, ainda não tinha publicado; elas não entram na contagem enquanto não houver veredito.",
             "aviso": "Cada linha é uma checagem de uma agência. Agências escolhem quais falas checar e usam escalas diferentes; a mesma fala pode aparecer mais de uma vez com vereditos distintos. Contagens não medem 'quem mente mais' de forma absoluta.",
             "placares_oficiais": [
                 {"agencia": "Ranking dos Políticos", "evento": "Debate Band (18/10)", "candidato": "Lula", "verdadeiro": 15, "impreciso": 23, "falso": 9, "url": URL["rank_band"]},
