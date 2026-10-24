@@ -205,7 +205,7 @@ def _conteudo(f, contrapontos, unico, cands, chave):
     with g2:
         st.plotly_chart(_chart_by_theme(u), width="stretch", key=f"{chave}_tema")
     render_source("Agência Lupa, Aos Fatos, Ranking dos Políticos e Estadão Verifica; contrapontos de Poder360, Metrópoles, Revista Oeste, "
-                  "Gazeta do Povo, Instituto Mises, Agência Câmara e Datafolha/FBSP — compilação de 23/10/2026")
+                  "Gazeta do Povo, Instituto Mises, Agência Câmara e Datafolha/FBSP — compilação de 24/10/2026")
 
     st.subheader("Todas as falas checadas")
     abas = st.tabs([f"{CAT_ICON[c]} {PLURAL[c]} ({int((base['categoria'] == c).sum())})" for c in VERDICT_ORDER] + ["Tabela completa"])
@@ -271,6 +271,8 @@ def render_tab_fact_check():
         'explícito sobre falas dos dois candidatos, então não entram na contagem, em vez de classificar por conta própria.</div>',
         unsafe_allow_html=True,
     )
+    if meta.get("metodo_aos_fatos"):
+        st.markdown('<div class="info-box"><b>Como o painel registra cada agência:</b> ' + html.escape(meta["metodo_aos_fatos"]) + '</div>', unsafe_allow_html=True)
 
     # ---------------- Filtros
     df["rotulo_evento"] = (df["evento"] + " (" + pd.to_datetime(df["data"]).dt.strftime("%d/%m") + ")").map(_curto)
